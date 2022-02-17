@@ -16,7 +16,7 @@
 	flex-wrap: wrap;
 	gap: 1em;
 
-	@include media(pc) {
+	@include medya(pc) {
 		bottom: 1em;
 		right: 1em;
 		left: 1em;
@@ -46,7 +46,7 @@
 		text-decoration: none;
 		@include font-size(1rem);
 
-		@include media(tablet) {
+		@include medya(tablet) {
 			text-align: center;
 		}
 
@@ -56,7 +56,7 @@
 			width: 100%;
 			@include text-truncate($satir);
 
-			@include media(laptop) {
+			@include medya(laptop) {
 				$satir: 10;
 				@include text-truncate($satir);
 			}

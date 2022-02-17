@@ -8,7 +8,7 @@ $points: (
 	"telefon": 576,
 );
 
-@mixin media($veri, $tip: max, $prefix: px) {
+@mixin medya($veri, $tip: max, $prefix: px) {
 	$veri-tipi: type-of($veri);
 	$break-point: null;
 

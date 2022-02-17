@@ -6,7 +6,7 @@
 	width: 100%;
 	overflow: hidden;
 
-	@include media(tablet) {
+	@include medya(tablet) {
 		@include font-size(2.5rem);
 		@include margin-top(3rem);
 	}
@@ -32,7 +32,7 @@
 		animation-iteration-count: infinite;
 		animation-timing-function: linear;
 
-		@include media(tablet) {
+		@include medya(tablet) {
 			width: fit-content;
 			min-width: initial;
 			@include padding(0 1rem);
