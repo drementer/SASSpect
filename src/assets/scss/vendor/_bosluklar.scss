@@ -2,15 +2,18 @@
 	_spacing.scss => _bosluklar.scss
 
 	@Bulma & @Bootstrap kütüphanelerini 
-	özellikle @Bulma'yı benimseyerek
-	projeme @Bootstrap.rfs.scss 
-	ile harmanlayarak uyarladım
+	özellikle @Bulma'yı benimseyerek ve
+	@Bootstrap.rfs.scss ile harmanlayarak 
+	uyarladım.
 
 	LICENSE:
 	@Bootstrap: MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE),
 	@Bulma: MIT (https://github.com/jgthms/bulma/blob/master/LICENSE)
 */
 
+/* Boşluklar */
+
+// Degerler
 $bosluk-kisaltmalari: (
 	"margin": "m",
 	"padding": "p",
@@ -32,6 +35,7 @@ $bosluk-degerleri: (
 	"auto": auto,
 );
 
+// Ana hat
 @each $ozellik, $kisaltma in $bosluk-kisaltmalari {
 	@each $isim, $deger in $bosluk-degerleri {
 		// Genel
@@ -110,3 +114,4 @@ $bosluk-degerleri: (
 		}
 	}
 }
+/* Boşluklar SON */

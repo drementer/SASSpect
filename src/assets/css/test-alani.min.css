@@ -9,14 +9,15 @@
 	_spacing.scss => _bosluklar.scss
 
 	@Bulma & @Bootstrap kütüphanelerini 
-	özellikle @Bulma'yı benimseyerek
-	projeme @Bootstrap.rfs.scss 
-	ile harmanlayarak uyarladım
+	özellikle @Bulma'yı benimseyerek ve
+	@Bootstrap.rfs.scss ile harmanlayarak 
+	uyarladım.
 
 	LICENSE:
 	@Bootstrap: MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE),
 	@Bulma: MIT (https://github.com/jgthms/bulma/blob/master/LICENSE)
 */
+/* Boşluklar */
 .m-0 {
   margin: 0;
 }
@@ -677,6 +678,7 @@
   padding-bottom: auto;
 }
 
+/* Boşluklar SON */
 /* Blocklar */
 html,
 body,
