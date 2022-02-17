@@ -50,7 +50,7 @@ $bosluk-prefix: (
 				$auto-kapat: 1;
 				$deger: -$deger;
 			}
-			@if not ($auto-kapat == 1 and $isim == "auto") {
+			@if not($auto-kapat == 1 and $isim == "auto") {
 				// Genel
 				.#{$kisaltma}-#{$prefix-degeri}#{$isim} {
 					@if $ozellik == "margin" {
