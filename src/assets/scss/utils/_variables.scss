@@ -1,7 +1,7 @@
 // Genel
 $beyaz: #ffffff !default;
 $siyah: #000000 !default;
-$kirmizi: red;
+$kirmizi: red !default;
 $mor: #5900ff !default;
 $mor-pasif: lighten($mor, $amount: 30%) !default;
 $mor-aktif: darken($mor, $amount: 15%) !default;
