@@ -4,8 +4,8 @@
 $points: (
 	"pc": 1200,
 	"laptop": 992,
-	"tablet": 769,
-	"telefon": 600,
+	"tablet": 768,
+	"telefon": 576,
 );
 
 @mixin media($veri, $tip: max, $prefix: px) {
