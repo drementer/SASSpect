@@ -912,7 +912,7 @@ div.no-js {
   top: 0;
   right: 0;
   background-color: #f9faff;
-  border-right: 3px solid #6922ee;
+  border-right: 3px solid #3e00b3;
   max-width: 50em;
   z-index: 99;
   margin: 1rem calc(1.325rem + 0.9vw);
@@ -926,7 +926,7 @@ div.no-js {
 }
 div.no-js .__ikon {
   width: 7em;
-  background-color: #6922ee;
+  background-color: #3e00b3;
   align-self: stretch;
   display: flex;
   justify-content: center;
@@ -959,7 +959,7 @@ div.no-js .__icerik p {
   div.no-js {
     border-right: none;
     margin: 0;
-    border-top: 3px solid #6922ee;
+    border-top: 3px solid #3e00b3;
     top: 1em;
     left: 1em;
     right: 1em;
