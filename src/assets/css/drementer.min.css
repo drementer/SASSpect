@@ -1233,7 +1233,7 @@ div.no-js .__icerik p {
 .modal .__arkaplan {
   width: inherit;
   height: inherit;
-  background-color: #00000062;
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   z-index: -1;
 }
@@ -1277,7 +1277,7 @@ div.no-js .__icerik p {
   background-color: #5900ff;
   outline: none;
   border: none;
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1285,18 +1285,18 @@ div.no-js .__icerik p {
           user-select: none;
 }
 .--buton.--tip-2, .--buton.--hayalet {
-  background-color: #fff;
+  background-color: #ffffff;
   border: 1px solid #5900ff;
   color: #5900ff;
 }
 .--buton.--tip-2.--pasif, .--buton.--pasif.--hayalet {
   border: 1px solid var(--mor);
   color: var(--mor);
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .--buton.--tip-2:not(.--pasif):not(.--hayalet):hover, .--buton.--hayalet:not(.--pasif):not(.--hayalet):hover {
   background-color: #5900ff;
-  color: #fff;
+  color: #ffffff;
 }
 .--buton.--hayalet {
   border: none;
@@ -1311,7 +1311,7 @@ div.no-js .__icerik p {
 }
 .--buton.--aktif, .--buton:not(.--pasif):not(.--tip-2):not(.--buton.--hayalet):not(.--hayalet):hover {
   background-color: #3e00b3;
-  color: #fff;
+  color: #ffffff;
 }
 
 /* Butonlar SON */
