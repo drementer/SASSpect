@@ -1,0 +1,50 @@
+$bosluk-kisaltmalari: (
+	"margin": "m",
+	"padding": "p",
+) !default;
+$bosluk-yonleri: (
+	"top": "t",
+	"right": "r",
+	"bottom": "b",
+	"left": "l",
+) !default;
+$bosluk-yatay: "x" !default;
+$bosluk-dikey: "y" !default;
+$bosluk-degerleri: (
+	"0": 0,
+	"1": 0.25rem,
+	"2": 0.5rem,
+	"3": 0.75rem,
+	"4": 1rem,
+	"5": 1.5rem,
+	"6": 3rem,
+	"auto": auto,
+) !default;
+
+@each $ozellik, $kisaltma in $bosluk-kisaltmalari {
+	@each $isim, $deger in $bosluk-degerleri {
+		// All directions
+		.#{$kisaltma}-#{$isim} {
+			#{$ozellik}: $deger !important;
+		} // Cardinal directions
+		@each $direction, $suffix in $bosluk-yonleri {
+			.#{$kisaltma}#{$suffix}-#{$isim} {
+				#{$ozellik}-#{$direction}: $deger !important;
+			}
+		}
+		// Horizontal axis;
+		@if $bosluk-yatay != null {
+			.#{$kisaltma}#{$bosluk-yatay}-#{$isim} {
+				#{$ozellik}-left: $deger !important;
+				#{$ozellik}-right: $deger !important;
+			}
+		}
+		// Vertical axis;
+		@if $bosluk-dikey != null {
+			.#{$kisaltma}#{$bosluk-dikey}-#{$isim} {
+				#{$ozellik}-top: $deger !important;
+				#{$ozellik}-bottom: $deger !important;
+			}
+		}
+	}
+}
