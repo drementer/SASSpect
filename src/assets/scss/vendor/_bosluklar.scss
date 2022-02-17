@@ -1,15 +1,13 @@
-
 // _spacing.scss => _bosluklar.scss
 
-// @Bulma & @Bootstrap kütüphanelerini 
+// @Bulma & @Bootstrap kütüphanelerini
 // özellikle @Bulma.spacing.scss ve
-// @Bootstrap.rfs.scss ile harmanlayarak 
+// @Bootstrap.rfs.scss ile harmanlayarak
 // projeme uyarladım.
 
 // LICENSE:
 // @Bootstrap: MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE),
 // @Bulma: MIT (https://github.com/jgthms/bulma/blob/master/LICENSE)
-
 
 /* Boşluklar */
 
@@ -30,76 +28,94 @@ $bosluk-degerleri: (
 	"2": 0.5rem,
 	"3": 0.75rem,
 	"4": 1rem,
-	"5": 1.5rem,
-	"6": 3rem,
+	"5": 1.25rem,
+	"6": 1.5rem,
+	"7": 1.75rem,
+	"8": 2rem,
+	"9": 2.5rem,
+	"10": 3rem,
 	"auto": auto,
+);
+$bosluk-prefix: (
+	"pozitif": "",
+	"negatif": "n",
 );
 
 // Ana hat
-@each $ozellik, $kisaltma in $bosluk-isimleri {
-	@each $isim, $deger in $bosluk-degerleri {
-		// Genel
-		.#{$kisaltma}-#{$isim} {
-			@if $ozellik == "margin" {
-				@include margin($deger);
-			} @else if $ozellik == "padding" {
-				@include padding($deger);
+@each $prefix-ismi, $prefix-degeri in $bosluk-prefix {
+	@each $ozellik, $kisaltma in $bosluk-isimleri {
+		@each $isim, $deger in $bosluk-degerleri {
+			$auto-kapat: 0;
+			@if $prefix-ismi == "negatif" {
+				$auto-kapat: 1;
+				$deger: -$deger;
 			}
-		}
-		// Tum yonler
-		@each $yon, $yon-kisaltma in $bosluk-yonleri {
-			@if $kisaltma == "m" {
-				.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
-					@if $yon-kisaltma == "t" {
-						@include margin-top($deger);
-					}
-					@if $yon-kisaltma == "r" {
-						@include margin-right($deger);
-					}
-					@if $yon-kisaltma == "b" {
-						@include margin-bottom($deger);
-					}
-					@if $yon-kisaltma == "l" {
-						@include margin-left($deger);
+			@if not ($auto-kapat == 1 and $isim == "auto") {
+				// Genel
+				.#{$kisaltma}-#{$prefix-degeri}#{$isim} {
+					@if $ozellik == "margin" {
+						@include margin($deger);
+					} @else if $ozellik == "padding" {
+						@include padding($deger);
 					}
 				}
-			} @else if $kisaltma == "p" {
-				.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
-					@if $yon-kisaltma == "t" {
-						@include padding-top($deger);
+				// Tum yonler
+				@each $yon, $yon-kisaltma in $bosluk-yonleri {
+					@if $kisaltma == "m" {
+						.#{$kisaltma}#{$yon-kisaltma}-#{$prefix-degeri}#{$isim} {
+							@if $yon-kisaltma == "t" {
+								@include margin-top($deger);
+							}
+							@if $yon-kisaltma == "r" {
+								@include margin-right($deger);
+							}
+							@if $yon-kisaltma == "b" {
+								@include margin-bottom($deger);
+							}
+							@if $yon-kisaltma == "l" {
+								@include margin-left($deger);
+							}
+						}
+					} @else if $kisaltma == "p" {
+						.#{$kisaltma}#{$yon-kisaltma}-#{$prefix-degeri}#{$isim} {
+							@if $yon-kisaltma == "t" {
+								@include padding-top($deger);
+							}
+							@if $yon-kisaltma == "r" {
+								@include padding-right($deger);
+							}
+							@if $yon-kisaltma == "b" {
+								@include padding-bottom($deger);
+							}
+							@if $yon-kisaltma == "l" {
+								@include padding-left($deger);
+							}
+						}
 					}
-					@if $yon-kisaltma == "r" {
+				}
+				// Yataylar
+				.#{$kisaltma}x-#{$prefix-degeri}#{$isim} {
+					@if $ozellik == "margin" {
+						@include margin-left($deger);
+						@include margin-right($deger);
+					} @else if $ozellik == "padding" {
+						@include padding-left($deger);
 						@include padding-right($deger);
 					}
-					@if $yon-kisaltma == "b" {
+				}
+				// Dikeyler
+				.#{$kisaltma}y-#{$prefix-degeri}#{$isim} {
+					@if $ozellik == "margin" {
+						@include margin-top($deger);
+						@include margin-bottom($deger);
+					} @else if $ozellik == "padding" {
+						@include padding-top($deger);
 						@include padding-bottom($deger);
 					}
-					@if $yon-kisaltma == "l" {
-						@include padding-left($deger);
-					}
 				}
-			}
-		}
-		// Yataylar
-		.#{$kisaltma}x-#{$isim} {
-			@if $ozellik == "margin" {
-				@include margin-left($deger);
-				@include margin-right($deger);
-			} @else if $ozellik == "padding" {
-				@include padding-left($deger);
-				@include padding-right($deger);
-			}
-		}
-		// Dikeyler
-		.#{$kisaltma}y-#{$isim} {
-			@if $ozellik == "margin" {
-				@include margin-top($deger);
-				@include margin-bottom($deger);
-			} @else if $ozellik == "padding" {
-				@include padding-top($deger);
-				@include padding-bottom($deger);
 			}
 		}
 	}
 }
+
 /* Boşluklar SON */
