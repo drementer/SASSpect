@@ -667,7 +667,7 @@
 }
 
 /* Boşluklar SON */
-/* Blocklar */
+/* Reset */
 html,
 body,
 p,
@@ -691,8 +691,6 @@ h6 {
   padding: 0;
 }
 
-/* 	 */
-/* Başlıklar */
 h1,
 h2,
 h3,
@@ -702,14 +700,10 @@ h6 {
   font-weight: normal;
 }
 
-/*	 */
-/* Listeler */
 ul {
   list-style: none;
 }
 
-/* 	 */
-/* Form Elemanları */
 button,
 input,
 select,
@@ -717,8 +711,6 @@ textarea {
   font-weight: normal;
 }
 
-/* 	 */
-/* Genel */
 html {
   box-sizing: border-box;
   font-size: 1rem;
@@ -742,7 +734,7 @@ img {
   max-width: 100%;
 }
 
-/* 	 */
+/* Reset SON */
 * {
   font-family: "Fira Code";
   text-rendering: optimizeLegibility !important;
