@@ -4,8 +4,247 @@
     klncarslanburak@gmail.com
     iletisim@drementer.com
 */
-/* Boşluklar */
+/* Reset */
 @import url("https://fonts.googleapis.com/css?family=Fira+Code:300,regular,500,600,700");
+html,
+body,
+p,
+ol,
+ul,
+li,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font-weight: normal;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 1rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Reset SON */
+/* Typography */
+* {
+  font-family: "Fira Code";
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Typography SON */
+#cerez-popup.cerez-popup .__butonlar .--buton {
+  transition: all 200ms ease-in-out;
+}
+
+#cerez-popup.cerez-popup, div.no-js {
+  box-shadow: 4.5px 4.5px 3.6px rgba(0, 0, 0, 0.014), 12.5px 12.5px 10px rgba(0, 0, 0, 0.02), 30.1px 30.1px 24.1px rgba(0, 0, 0, 0.026), 100px 100px 80px rgba(0, 0, 0, 0.04);
+}
+
+/* Flex */
+.kolonlar,
+.satirlar {
+  width: 100%;
+  padding: 1rem calc(1.325rem + 0.9vw);
+  gap: 1em;
+  flex-wrap: nowrap;
+}
+@media (min-width: 1200px) {
+  .kolonlar,
+.satirlar {
+    padding: 1rem 2rem;
+  }
+}
+.kolonlar.--orta *,
+.satirlar.--orta * {
+  text-align: center;
+}
+.kolonlar > .__eleman,
+.satirlar > .__eleman {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  /* height: fit-content; */
+  padding: 1rem calc(1.325rem + 0.9vw);
+}
+@media (min-width: 1200px) {
+  .kolonlar > .__eleman,
+.satirlar > .__eleman {
+    padding: 1rem 2rem;
+  }
+}
+
+.kolonlar {
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 992px) {
+  .kolonlar {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.kolonlar.--orta > .__eleman {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.kolonlar.--kolon-1 {
+  display: block;
+  -moz-columns: calc(15em - 1 * 1em) 1;
+       columns: calc(15em - 1 * 1em) 1;
+}
+.kolonlar.--kolon-1 > *:not(p) {
+  display: inline-block;
+  margin: 0.5rem 1rem 0 1rem;
+  width: 100%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+.kolonlar.--kolon-1.--kirilma > * {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  page-break-inside: avoid;
+}
+.kolonlar.--kolon-2 {
+  display: block;
+  -moz-columns: calc(15em - 2 * 1em) 2;
+       columns: calc(15em - 2 * 1em) 2;
+}
+.kolonlar.--kolon-2 > *:not(p) {
+  display: inline-block;
+  margin: 0.5rem 1rem 0 1rem;
+  width: 100%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+.kolonlar.--kolon-2.--kirilma > * {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  page-break-inside: avoid;
+}
+.kolonlar.--kolon-3 {
+  display: block;
+  -moz-columns: calc(15em - 3 * 1em) 3;
+       columns: calc(15em - 3 * 1em) 3;
+}
+.kolonlar.--kolon-3 > *:not(p) {
+  display: inline-block;
+  margin: 0.5rem 1rem 0 1rem;
+  width: 100%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+.kolonlar.--kolon-3.--kirilma > * {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  page-break-inside: avoid;
+}
+.kolonlar.--kolon-4 {
+  display: block;
+  -moz-columns: calc(15em - 4 * 1em) 4;
+       columns: calc(15em - 4 * 1em) 4;
+}
+.kolonlar.--kolon-4 > *:not(p) {
+  display: inline-block;
+  margin: 0.5rem 1rem 0 1rem;
+  width: 100%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+.kolonlar.--kolon-4.--kirilma > * {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  page-break-inside: avoid;
+}
+.kolonlar.--kolon-5 {
+  display: block;
+  -moz-columns: calc(15em - 5 * 1em) 5;
+       columns: calc(15em - 5 * 1em) 5;
+}
+.kolonlar.--kolon-5 > *:not(p) {
+  display: inline-block;
+  margin: 0.5rem 1rem 0 1rem;
+  width: 100%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+.kolonlar.--kolon-5.--kirilma > * {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.satirlar {
+  display: flex;
+  flex-direction: column;
+}
+.satirlar.--orta > .__eleman {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+/* Flex SON */
+/* Boşluklar */
 .m-0 {
   margin: 0;
 }
@@ -2287,245 +2526,6 @@
 }
 
 /* Boşluklar SON */
-/* Reset */
-html,
-body,
-p,
-ol,
-ul,
-li,
-blockquote,
-figure,
-fieldset,
-legend,
-textarea,
-pre,
-hr,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: normal;
-}
-
-ul {
-  list-style: none;
-}
-
-button,
-input,
-select,
-textarea {
-  font-weight: normal;
-}
-
-html {
-  box-sizing: border-box;
-  font-size: 1rem;
-  scroll-behavior: smooth;
-}
-
-body {
-  overflow-x: hidden;
-}
-
-* {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-tap-highlight-color: transparent;
-}
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-img {
-  height: auto;
-  max-width: 100%;
-}
-
-/* Reset SON */
-/* Typography */
-* {
-  font-family: "Fira Code";
-  text-rendering: optimizeLegibility !important;
-  -webkit-font-smoothing: antialiased !important;
-  -moz-osx-font-smoothing: grayscale !important;
-}
-
-/* Typography SON */
-#cerez-popup.cerez-popup .__butonlar .--buton {
-  transition: all 200ms ease-in-out;
-}
-
-#cerez-popup.cerez-popup, div.no-js {
-  box-shadow: 4.5px 4.5px 3.6px rgba(0, 0, 0, 0.014), 12.5px 12.5px 10px rgba(0, 0, 0, 0.02), 30.1px 30.1px 24.1px rgba(0, 0, 0, 0.026), 100px 100px 80px rgba(0, 0, 0, 0.04);
-}
-
-/* Flex */
-.kolonlar,
-.satirlar {
-  width: 100%;
-  padding: 1rem calc(1.325rem + 0.9vw);
-  gap: 1em;
-  flex-wrap: nowrap;
-}
-@media (min-width: 1200px) {
-  .kolonlar,
-.satirlar {
-    padding: 1rem 2rem;
-  }
-}
-.kolonlar.--orta *,
-.satirlar.--orta * {
-  text-align: center;
-}
-.kolonlar > .__eleman,
-.satirlar > .__eleman {
-  flex-basis: 0;
-  flex-grow: 1;
-  flex-shrink: 1;
-  /* height: fit-content; */
-  padding: 1rem calc(1.325rem + 0.9vw);
-}
-@media (min-width: 1200px) {
-  .kolonlar > .__eleman,
-.satirlar > .__eleman {
-    padding: 1rem 2rem;
-  }
-}
-
-.kolonlar {
-  display: flex;
-  flex-direction: row;
-}
-@media screen and (max-width: 992px) {
-  .kolonlar {
-    display: flex;
-    flex-direction: column;
-  }
-}
-.kolonlar.--orta > .__eleman {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-}
-.kolonlar.--kolon-1 {
-  display: block;
-  -moz-columns: calc(15em - 1 * 1em) 1;
-       columns: calc(15em - 1 * 1em) 1;
-}
-.kolonlar.--kolon-1 > *:not(p) {
-  display: inline-block;
-  margin: 0.5rem 1rem 0 1rem;
-  width: 100%;
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-}
-.kolonlar.--kolon-1.--kirilma > * {
-  -moz-column-break-inside: avoid;
-       break-inside: avoid;
-  page-break-inside: avoid;
-}
-.kolonlar.--kolon-2 {
-  display: block;
-  -moz-columns: calc(15em - 2 * 1em) 2;
-       columns: calc(15em - 2 * 1em) 2;
-}
-.kolonlar.--kolon-2 > *:not(p) {
-  display: inline-block;
-  margin: 0.5rem 1rem 0 1rem;
-  width: 100%;
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-}
-.kolonlar.--kolon-2.--kirilma > * {
-  -moz-column-break-inside: avoid;
-       break-inside: avoid;
-  page-break-inside: avoid;
-}
-.kolonlar.--kolon-3 {
-  display: block;
-  -moz-columns: calc(15em - 3 * 1em) 3;
-       columns: calc(15em - 3 * 1em) 3;
-}
-.kolonlar.--kolon-3 > *:not(p) {
-  display: inline-block;
-  margin: 0.5rem 1rem 0 1rem;
-  width: 100%;
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-}
-.kolonlar.--kolon-3.--kirilma > * {
-  -moz-column-break-inside: avoid;
-       break-inside: avoid;
-  page-break-inside: avoid;
-}
-.kolonlar.--kolon-4 {
-  display: block;
-  -moz-columns: calc(15em - 4 * 1em) 4;
-       columns: calc(15em - 4 * 1em) 4;
-}
-.kolonlar.--kolon-4 > *:not(p) {
-  display: inline-block;
-  margin: 0.5rem 1rem 0 1rem;
-  width: 100%;
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-}
-.kolonlar.--kolon-4.--kirilma > * {
-  -moz-column-break-inside: avoid;
-       break-inside: avoid;
-  page-break-inside: avoid;
-}
-.kolonlar.--kolon-5 {
-  display: block;
-  -moz-columns: calc(15em - 5 * 1em) 5;
-       columns: calc(15em - 5 * 1em) 5;
-}
-.kolonlar.--kolon-5 > *:not(p) {
-  display: inline-block;
-  margin: 0.5rem 1rem 0 1rem;
-  width: 100%;
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-}
-.kolonlar.--kolon-5.--kirilma > * {
-  -moz-column-break-inside: avoid;
-       break-inside: avoid;
-  page-break-inside: avoid;
-}
-
-.satirlar {
-  display: flex;
-  flex-direction: column;
-}
-.satirlar.--orta > .__eleman {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-}
-
-/* Flex SON */
 /* No Js */
 div.no-js {
   position: fixed;
