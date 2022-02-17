@@ -1,12 +1,12 @@
 // Media
 
 // Hazır ayarlar
-$points: (
+$boyutlar: (
 	"pc": 1200,
 	"laptop": 992,
 	"tablet": 768,
 	"telefon": 576,
-);
+) !default;
 
 @mixin medya($veri, $tip: max, $prefix: px) {
 	$veri-tipi: type-of($veri);
@@ -17,7 +17,7 @@ $points: (
 			@content;
 		}
 	} @else if $veri-tipi == string {
-		@each $deger, $index in $points {
+		@each $deger, $index in $boyutlar {
 			@if $veri == $deger {
 				$break-point: $index;
 			}
