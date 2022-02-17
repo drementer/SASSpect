@@ -57,12 +57,12 @@ $bosluk-degerleri: (
 				}
 				@if $yon-kisaltma == "b" {
 					.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
-						@include margin-right($deger);
+						@include margin-bottom($deger);
 					}
 				}
 				@if $yon-kisaltma == "l" {
 					.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
-						@include margin-right($deger);
+						@include margin-left($deger);
 					}
 				}
 			} @else if $kisaltma == "p" {
@@ -78,12 +78,12 @@ $bosluk-degerleri: (
 				}
 				@if $yon-kisaltma == "b" {
 					.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
-						@include padding-right($deger);
+						@include padding-bottom($deger);
 					}
 				}
 				@if $yon-kisaltma == "l" {
 					.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
-						@include padding-right($deger);
+						@include padding-left($deger);
 					}
 				}
 			}
