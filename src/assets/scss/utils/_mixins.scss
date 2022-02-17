@@ -28,7 +28,7 @@ $points: (
 				@content;
 			}
 		} @else {
-			@warn "Hatalı breakpoint değeri";
+			@error "Hatalı breakpoint değeri: #{$veri}";
 		}
 	}
 }
