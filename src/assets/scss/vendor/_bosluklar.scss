@@ -1,0 +1,54 @@
+/* 
+	@Bulma & @Bootstrap kütüphanelerini 
+	özellikle @Bulma benimseyerek
+	projeme uygun hale getirdim
+*/
+$bosluk-kisaltmalari: (
+	"margin": "m",
+	"padding": "p",
+);
+$bosluk-yonleri: (
+	"top": "t",
+	"right": "r",
+	"bottom": "b",
+	"left": "l",
+);
+$bosluk-degerleri: (
+	"0": 0,
+	"1": 0.25rem,
+	"2": 0.5rem,
+	"3": 0.75rem,
+	"4": 1rem,
+	"5": 1.5rem,
+	"6": 3rem,
+	"auto": auto,
+);
+
+@each $ozellik, $kisaltma in $bosluk-kisaltmalari {
+	@each $isim, $deger in $bosluk-degerleri {
+		// Genel
+		.#{$kisaltma}-#{$isim} {
+			@if $ozellik == "margin" {
+				@include margin($deger);
+			} @else if $ozellik == "padding" {
+				@include padding($deger);
+			}
+		}
+		// Tum yonler
+		@each $yon, $yon-kisaltma in $bosluk-yonleri {
+			.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
+				#{$ozellik}-#{$yon}: $deger !important;
+			}
+		}
+		// Yataylar
+		.#{$kisaltma}x-#{$isim} {
+			#{$ozellik}-left: $deger !important;
+			#{$ozellik}-right: $deger !important;
+		}
+		// Dikeyler
+		.#{$kisaltma}y-#{$isim} {
+			#{$ozellik}-top: $deger !important;
+			#{$ozellik}-bottom: $deger !important;
+		}
+	}
+}
