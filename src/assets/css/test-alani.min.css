@@ -735,6 +735,7 @@ img {
 }
 
 /* Reset SON */
+/* Typography */
 * {
   font-family: "Fira Code";
   text-rendering: optimizeLegibility !important;
@@ -742,16 +743,7 @@ img {
   -moz-osx-font-smoothing: grayscale !important;
 }
 
-/* Media */
-/* Media SON */
-/* Tema */
-/* Tema SON */
-/* Font Face */
-/* Font Face SON */
-/* Genel */
-/* Genel SON */
-/* Flex */
-/* Flex SON */
+/* Typography SON */
 #cerez-popup.cerez-popup .__butonlar .--buton {
   transition: all 200ms ease-in-out;
 }
@@ -760,6 +752,7 @@ img {
   box-shadow: 4.5px 4.5px 3.6px rgba(0, 0, 0, 0.014), 12.5px 12.5px 10px rgba(0, 0, 0, 0.02), 30.1px 30.1px 24.1px rgba(0, 0, 0, 0.026), 100px 100px 80px rgba(0, 0, 0, 0.04);
 }
 
+/* Flex */
 .kolonlar,
 .satirlar {
   width: 100%;
@@ -912,6 +905,8 @@ img {
   justify-content: center;
 }
 
+/* Flex SON */
+/* No Js */
 div.no-js {
   position: fixed;
   top: 0;
@@ -977,6 +972,8 @@ div.no-js .__icerik p {
   }
 }
 
+/* No Js SON */
+/* Çerez Popup */
 #cerez-popup.cerez-popup {
   z-index: 99;
   position: fixed;
@@ -1069,6 +1066,8 @@ div.no-js .__icerik p {
   border-bottom-color: #5900ff;
 }
 
+/* Çerez Popup SON */
+/* Kart */
 .kart {
   font-size: 1em;
   max-width: 18em;
@@ -1110,6 +1109,8 @@ div.no-js .__icerik p {
      object-fit: scale-down;
 }
 
+/* Kart SON */
+/* Hero Slider */
 .__hero-slider {
   font-size: calc(1.475rem + 2.7vw);
   margin: calc(1.325rem + 0.9vw) 0;
@@ -1156,7 +1157,7 @@ div.no-js .__icerik p {
 .__hero-slider .__yazi {
   display: inline-block;
   text-align: center;
-  width: calc(100%/7);
+  width: calc(100% / 7);
   min-width: 8em;
   position: relative;
   left: -30%;
@@ -1213,6 +1214,8 @@ div.no-js .__icerik p {
   }
 }
 
+/* Hero Slider SON */
+/* Modal */
 .modal {
   width: 100%;
   height: 100%;
@@ -1254,6 +1257,8 @@ div.no-js .__icerik p {
   width: 100%;
 }
 
+/* Modal SON */
+/* Bıtonlar */
 .--buton.--pasif, .--buton.--tip-2.--pasif, .--buton.--pasif.--hayalet {
   --mor: #bd99ff;
   cursor: not-allowed;
@@ -1309,6 +1314,8 @@ div.no-js .__icerik p {
   color: #fff;
 }
 
+/* Butonlar SON */
+/* Base */
 @media screen and (max-width: 992px) {
   html {
     font-size: 0.875rem;
@@ -1327,6 +1334,7 @@ div.no-js .__icerik p {
   margin: auto;
 }
 
+/* Base SON */
 main.test h1,
 main.test h2,
 main.test h3,

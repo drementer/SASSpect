@@ -1,5 +1,5 @@
 /* Reset */
-//Blocklar
+// Blocklar
 html,
 body,
 p,
@@ -23,7 +23,7 @@ h6 {
 	padding: 0;
 }
 
-//Başlıklar
+// Başlıklar
 h1,
 h2,
 h3,
@@ -33,12 +33,12 @@ h6 {
 	font-weight: normal;
 }
 
-//Listeler
+// Listeler
 ul {
 	list-style: none;
 }
 
-//Form Elemanları
+// orm Elemanları
 button,
 input,
 select,
@@ -46,7 +46,7 @@ textarea {
 	font-weight: normal;
 }
 
-//Genel
+// Genel
 html {
 	box-sizing: border-box;
 	@include font-size(16px);

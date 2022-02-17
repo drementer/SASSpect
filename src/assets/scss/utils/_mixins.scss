@@ -1,4 +1,4 @@
-/* Media */
+// Media
 
 // Hazır ayarlar
 $points: (
@@ -32,18 +32,16 @@ $points: (
 		}
 	}
 }
-/* Media SON */
 
-/* Tema */
+// Tema
 @mixin tema($tema: "default") {
 	$element: #{&};
 	@at-root html[data-theme="#{$tema}"] #{$element} {
 		@content;
 	}
 }
-/* Tema SON */
 
-/* Font Face */
+// Font Face
 @mixin font-face($name, $file) {
 	@font-face {
 		font-family: "#{$name}";
@@ -54,9 +52,8 @@ $points: (
 			url("../fonts/#{$file}.svg?#webfont") format("svg");
 	}
 }
-/* Font Face SON */
 
-/* Genel */
+// Genel
 @mixin background(
 	$url,
 	$size: cover,
@@ -80,9 +77,8 @@ $points: (
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-/* Genel SON */
 
-/* Flex */
+// Flex
 @mixin flex {
 	display: flex;
 }
@@ -112,4 +108,3 @@ $points: (
 	@include flex-column;
 	@include flex-center;
 }
-/* Flex SON */

@@ -1,3 +1,4 @@
+/* Base */
 html {
     @include media(laptop) {
         @include font-size(14px);
@@ -15,3 +16,4 @@ html {
 .--mx-auto{
     margin: auto;
 }
+/* Base SON */
