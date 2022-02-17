@@ -23,23 +23,23 @@ $bosluk-degerleri: (
 
 @each $ozellik, $kisaltma in $bosluk-kisaltmalari {
 	@each $isim, $deger in $bosluk-degerleri {
-		// All directions
+		// Tum yonler
 		.#{$kisaltma}-#{$isim} {
 			#{$ozellik}: $deger !important;
-		} // Cardinal directions
+		}
 		@each $direction, $suffix in $bosluk-yonleri {
 			.#{$kisaltma}#{$suffix}-#{$isim} {
 				#{$ozellik}-#{$direction}: $deger !important;
 			}
 		}
-		// Horizontal axis;
+		// Yataylar
 		@if $bosluk-yatay != null {
 			.#{$kisaltma}#{$bosluk-yatay}-#{$isim} {
 				#{$ozellik}-left: $deger !important;
 				#{$ozellik}-right: $deger !important;
 			}
 		}
-		// Vertical axis;
+		// Dikeyler
 		@if $bosluk-dikey != null {
 			.#{$kisaltma}#{$bosluk-dikey}-#{$isim} {
 				#{$ozellik}-top: $deger !important;
