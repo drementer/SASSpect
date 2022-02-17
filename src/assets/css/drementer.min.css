@@ -4,18 +4,6 @@
     klncarslanburak@gmail.com
     iletisim@drementer.com
 */
-/* 
-	_spacing.scss => _bosluklar.scss
-
-	@Bulma & @Bootstrap kütüphanelerini 
-	özellikle @Bulma'yı benimseyerek ve
-	@Bootstrap.rfs.scss ile harmanlayarak 
-	uyarladım.
-
-	LICENSE:
-	@Bootstrap: MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE),
-	@Bulma: MIT (https://github.com/jgthms/bulma/blob/master/LICENSE)
-*/
 /* Boşluklar */
 @import url("https://fonts.googleapis.com/css?family=Fira+Code:300,regular,500,600,700");
 .m-0 {
