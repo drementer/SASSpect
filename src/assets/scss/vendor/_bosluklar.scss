@@ -2,9 +2,9 @@
 	_spacing.scss => _bosluklar.scss
 
 	@Bulma & @Bootstrap kütüphanelerini 
-	özellikle @Bulma'yı benimseyerek ve
+	özellikle @Bulma.spacing.scss ve
 	@Bootstrap.rfs.scss ile harmanlayarak 
-	uyarladım.
+	projeme uyarladım.
 
 	LICENSE:
 	@Bootstrap: MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE),
@@ -14,7 +14,7 @@
 /* Boşluklar */
 
 // Degerler
-$bosluk-kisaltmalari: (
+$bosluk-isimleri: (
 	"margin": "m",
 	"padding": "p",
 );
@@ -36,7 +36,7 @@ $bosluk-degerleri: (
 );
 
 // Ana hat
-@each $ozellik, $kisaltma in $bosluk-kisaltmalari {
+@each $ozellik, $kisaltma in $bosluk-isimleri {
 	@each $isim, $deger in $bosluk-degerleri {
 		// Genel
 		.#{$kisaltma}-#{$isim} {
@@ -49,44 +49,32 @@ $bosluk-degerleri: (
 		// Tum yonler
 		@each $yon, $yon-kisaltma in $bosluk-yonleri {
 			@if $kisaltma == "m" {
-				@if $yon-kisaltma == "t" {
-					.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
+				.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
+					@if $yon-kisaltma == "t" {
 						@include margin-top($deger);
 					}
-				}
-				@if $yon-kisaltma == "r" {
-					.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
+					@if $yon-kisaltma == "r" {
 						@include margin-right($deger);
 					}
-				}
-				@if $yon-kisaltma == "b" {
-					.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
+					@if $yon-kisaltma == "b" {
 						@include margin-bottom($deger);
 					}
-				}
-				@if $yon-kisaltma == "l" {
-					.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
+					@if $yon-kisaltma == "l" {
 						@include margin-left($deger);
 					}
 				}
 			} @else if $kisaltma == "p" {
-				@if $yon-kisaltma == "t" {
-					.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
+				.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
+					@if $yon-kisaltma == "t" {
 						@include padding-top($deger);
 					}
-				}
-				@if $yon-kisaltma == "r" {
-					.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
+					@if $yon-kisaltma == "r" {
 						@include padding-right($deger);
 					}
-				}
-				@if $yon-kisaltma == "b" {
-					.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
+					@if $yon-kisaltma == "b" {
 						@include padding-bottom($deger);
 					}
-				}
-				@if $yon-kisaltma == "l" {
-					.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
+					@if $yon-kisaltma == "l" {
 						@include padding-left($deger);
 					}
 				}
