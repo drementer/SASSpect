@@ -12,12 +12,16 @@ p,
 ol,
 ul,
 li,
+dl,
+dt,
+dd,
 blockquote,
 figure,
 fieldset,
 legend,
 textarea,
 pre,
+iframe,
 hr,
 h1,
 h2,
@@ -51,7 +55,7 @@ textarea {
 
 html {
   box-sizing: border-box;
-  font-size: 1rem;
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 
@@ -67,9 +71,24 @@ body {
   box-sizing: inherit;
 }
 
-img {
+img,
+video {
   height: auto;
   max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
 }
 
 /* Reset SON */
