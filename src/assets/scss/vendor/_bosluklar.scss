@@ -44,19 +44,69 @@ $bosluk-degerleri: (
 		}
 		// Tum yonler
 		@each $yon, $yon-kisaltma in $bosluk-yonleri {
-			.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
-				#{$ozellik}-#{$yon}: $deger !important;
+			@if $kisaltma == "m" {
+				@if $yon-kisaltma == "t" {
+					.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
+						@include margin-top($deger);
+					}
+				}
+				@if $yon-kisaltma == "r" {
+					.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
+						@include margin-right($deger);
+					}
+				}
+				@if $yon-kisaltma == "b" {
+					.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
+						@include margin-right($deger);
+					}
+				}
+				@if $yon-kisaltma == "l" {
+					.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
+						@include margin-right($deger);
+					}
+				}
+			} @else if $kisaltma == "p" {
+				@if $yon-kisaltma == "t" {
+					.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
+						@include padding-top($deger);
+					}
+				}
+				@if $yon-kisaltma == "r" {
+					.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
+						@include padding-right($deger);
+					}
+				}
+				@if $yon-kisaltma == "b" {
+					.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
+						@include padding-right($deger);
+					}
+				}
+				@if $yon-kisaltma == "l" {
+					.#{$kisaltma}#{$yon-kisaltma}-#{$isim} {
+						@include padding-right($deger);
+					}
+				}
 			}
 		}
 		// Yataylar
 		.#{$kisaltma}x-#{$isim} {
-			#{$ozellik}-left: $deger !important;
-			#{$ozellik}-right: $deger !important;
+			@if $ozellik == "margin" {
+				@include margin-left($deger);
+				@include margin-right($deger);
+			} @else if $ozellik == "padding" {
+				@include padding-left($deger);
+				@include padding-right($deger);
+			}
 		}
 		// Dikeyler
 		.#{$kisaltma}y-#{$isim} {
-			#{$ozellik}-top: $deger !important;
-			#{$ozellik}-bottom: $deger !important;
+			@if $ozellik == "margin" {
+				@include margin-top($deger);
+				@include margin-bottom($deger);
+			} @else if $ozellik == "padding" {
+				@include padding-top($deger);
+				@include padding-bottom($deger);
+			}
 		}
 	}
 }
