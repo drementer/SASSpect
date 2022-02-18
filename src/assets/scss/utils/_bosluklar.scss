@@ -52,28 +52,30 @@ $bosluk-prefix: (
 			}
 			@if not($auto-kapat == 1 and $isim == "auto") {
 				@if not($auto-kapat == 1 and $ozellik == "padding") {
-					// Genel
-					.#{$kisaltma}-#{$prefix-degeri}#{$isim} {
-						@include rfs($deger, $ozellik);
-					}
-
-					// Tum yonler
-					@each $yon, $yon-kisaltma in $bosluk-yonleri {
-						.#{$kisaltma}#{$yon-kisaltma}-#{$prefix-degeri}#{$isim} {
-							@include rfs($deger, #{$ozellik}-#{$yon});
+					@if not($ozellik == "padding" and $isim == "auto") {
+						// Genel
+						.#{$kisaltma}-#{$prefix-degeri}#{$isim} {
+							@include rfs($deger, $ozellik);
 						}
-					}
 
-					// Yataylar
-					.#{$kisaltma}x-#{$prefix-degeri}#{$isim} {
-						@include rfs($deger, #{$ozellik}-left);
-						@include rfs($deger, #{$ozellik}-right);
-					}
+						// Tum yonler
+						@each $yon, $yon-kisaltma in $bosluk-yonleri {
+							.#{$kisaltma}#{$yon-kisaltma}-#{$prefix-degeri}#{$isim} {
+								@include rfs($deger, #{$ozellik}-#{$yon});
+							}
+						}
 
-					// Dikeyler
-					.#{$kisaltma}y-#{$prefix-degeri}#{$isim} {
-						@include rfs($deger, #{$ozellik}-top);
-						@include rfs($deger, #{$ozellik}-bottom);
+						// Yataylar
+						.#{$kisaltma}x-#{$prefix-degeri}#{$isim} {
+							@include rfs($deger, #{$ozellik}-left);
+							@include rfs($deger, #{$ozellik}-right);
+						}
+
+						// Dikeyler
+						.#{$kisaltma}y-#{$prefix-degeri}#{$isim} {
+							@include rfs($deger, #{$ozellik}-top);
+							@include rfs($deger, #{$ozellik}-bottom);
+						}
 					}
 				}
 			}
