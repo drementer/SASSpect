@@ -44,8 +44,9 @@ $bosluk-hali: (
 // Ana hat
 @each $bosluk-hali-isim, $bosluk-hali-deger in $bosluk-hali {
 	@each $bosluk-isimleri-isim, $bosluk-isimleri-deger in $bosluk-isimleri {
-		@each $bosluk-degerleri-isim, $bosluk-degerleri-deger in $bosluk-degerleri {
-
+		@each $bosluk-degerleri-isim,
+			$bosluk-degerleri-deger in $bosluk-degerleri
+		{
 			// Negatif değerlere geçtiğinde
 			$negatif: $bosluk-hali-isim == "negatif";
 			@if $negatif {
@@ -55,40 +56,71 @@ $bosluk-hali: (
 
 			// Dışlanacak değerler
 			// p-auto, pt-auto
-			$padding-auto-kapat: not($bosluk-isimleri-isim == "padding" and $bosluk-degerleri-isim == "auto");
+			$padding-auto-kapat: not(
+				$bosluk-isimleri-isim ==
+					"padding" and
+					$bosluk-degerleri-isim ==
+					"auto"
+			);
 
 			// p-n4, pb-n3
-			$padding-negatif-kapat: not($negatif and $bosluk-isimleri-isim == "padding");
+			$padding-negatif-kapat: not(
+				$negatif and $bosluk-isimleri-isim == "padding"
+			);
 
 			// mt-nauto, m-nauto
-			$negatif-auto-kapat: not($negatif and $bosluk-degerleri-isim == "auto");
+			$negatif-auto-kapat: not(
+				$negatif and $bosluk-degerleri-isim == "auto"
+			);
 			/////////////////////
 
 			// Dışlanan değerler kontrol edilip işleve başlıyor
-			@if ($negatif-auto-kapat) and ($padding-negatif-kapat) and ($padding-auto-kapat){
-
+			@if ($negatif-auto-kapat) and
+				($padding-negatif-kapat) and
+				($padding-auto-kapat)
+			{
 				// Genel
 				.#{$bosluk-isimleri-deger}-#{$bosluk-hali-deger}#{$bosluk-degerleri-isim} {
-					@include rfs($bosluk-degerleri-deger, $bosluk-isimleri-isim);
+					@include rfs(
+						$bosluk-degerleri-deger,
+						$bosluk-isimleri-isim
+					);
 				}
 
 				// Tum yonler
-				@each $bosluk-yonleri-isim, $bosluk-yonleri-deger in $bosluk-yonleri {
+				@each $bosluk-yonleri-isim,
+					$bosluk-yonleri-deger in $bosluk-yonleri
+				{
 					.#{$bosluk-isimleri-deger}#{$bosluk-yonleri-deger}-#{$bosluk-hali-deger}#{$bosluk-degerleri-isim} {
-						@include rfs($bosluk-degerleri-deger, #{$bosluk-isimleri-isim}-#{$bosluk-yonleri-isim});
+						@include rfs(
+							$bosluk-degerleri-deger,
+							#{$bosluk-isimleri-isim}-#{$bosluk-yonleri-isim}
+						);
 					}
 				}
 
 				// Yataylar
 				.#{$bosluk-isimleri-deger}x-#{$bosluk-hali-deger}#{$bosluk-degerleri-isim} {
-					@include rfs($bosluk-degerleri-deger, #{$bosluk-isimleri-isim}-left);
-					@include rfs($bosluk-degerleri-deger, #{$bosluk-isimleri-isim}-right);
+					@include rfs(
+						$bosluk-degerleri-deger,
+						#{$bosluk-isimleri-isim}-left
+					);
+					@include rfs(
+						$bosluk-degerleri-deger,
+						#{$bosluk-isimleri-isim}-right
+					);
 				}
 
 				// Dikeyler
 				.#{$bosluk-isimleri-deger}y-#{$bosluk-hali-deger}#{$bosluk-degerleri-isim} {
-					@include rfs($bosluk-degerleri-deger, #{$bosluk-isimleri-isim}-top);
-					@include rfs($bosluk-degerleri-deger, #{$bosluk-isimleri-isim}-bottom);
+					@include rfs(
+						$bosluk-degerleri-deger,
+						#{$bosluk-isimleri-isim}-top
+					);
+					@include rfs(
+						$bosluk-degerleri-deger,
+						#{$bosluk-isimleri-isim}-bottom
+					);
 				}
 			}
 		}
