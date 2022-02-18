@@ -53,65 +53,26 @@ $bosluk-prefix: (
 			@if not($auto-kapat == 1 and $isim == "auto") {
 				// Genel
 				.#{$kisaltma}-#{$prefix-degeri}#{$isim} {
-					@if $ozellik == "margin" {
-						@include margin($deger);
-					} @else if $ozellik == "padding" {
-						@include padding($deger);
-					}
+					@include rfs($deger, $ozellik);
 				}
+
 				// Tum yonler
 				@each $yon, $yon-kisaltma in $bosluk-yonleri {
-					@if $kisaltma == "m" {
-						.#{$kisaltma}#{$yon-kisaltma}-#{$prefix-degeri}#{$isim} {
-							@if $yon-kisaltma == "t" {
-								@include margin-top($deger);
-							}
-							@if $yon-kisaltma == "r" {
-								@include margin-right($deger);
-							}
-							@if $yon-kisaltma == "b" {
-								@include margin-bottom($deger);
-							}
-							@if $yon-kisaltma == "l" {
-								@include margin-left($deger);
-							}
-						}
-					} @else if $kisaltma == "p" {
-						.#{$kisaltma}#{$yon-kisaltma}-#{$prefix-degeri}#{$isim} {
-							@if $yon-kisaltma == "t" {
-								@include padding-top($deger);
-							}
-							@if $yon-kisaltma == "r" {
-								@include padding-right($deger);
-							}
-							@if $yon-kisaltma == "b" {
-								@include padding-bottom($deger);
-							}
-							@if $yon-kisaltma == "l" {
-								@include padding-left($deger);
-							}
-						}
+					.#{$kisaltma}#{$yon-kisaltma}-#{$prefix-degeri}#{$isim} {
+						@include rfs($deger, #{$ozellik}-#{$yon});
 					}
 				}
+
 				// Yataylar
 				.#{$kisaltma}x-#{$prefix-degeri}#{$isim} {
-					@if $ozellik == "margin" {
-						@include margin-left($deger);
-						@include margin-right($deger);
-					} @else if $ozellik == "padding" {
-						@include padding-left($deger);
-						@include padding-right($deger);
-					}
+					@include rfs($deger, #{$ozellik}-left);
+					@include rfs($deger, #{$ozellik}-right);
 				}
+				
 				// Dikeyler
 				.#{$kisaltma}y-#{$prefix-degeri}#{$isim} {
-					@if $ozellik == "margin" {
-						@include margin-top($deger);
-						@include margin-bottom($deger);
-					} @else if $ozellik == "padding" {
-						@include padding-top($deger);
-						@include padding-bottom($deger);
-					}
+					@include rfs($deger, #{$ozellik}-top);
+					@include rfs($deger, #{$ozellik}-bottom);
 				}
 			}
 		}
