@@ -2,8 +2,12 @@
     by drementer
     klncarslanburak@gmail.com
     iletisim@drementer.com
-	
+
 	MIT LICENSE: (https://github.com/drementer/dred/blob/master/LICENSE)
+
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		_bosluklar.scss bu dosyaya dahil değil
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 */
 
 @charset "utf-8";
@@ -20,7 +24,7 @@
     "base/all",
 
     // Utils
-    "utils/all",
+    "utils/all--bosluksuz",
 
     // Components
     "components/all",
