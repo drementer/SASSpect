@@ -42,7 +42,7 @@ $rfs-factor: 10 !default;
 }
 
 // Mode. Possibilities: "min-media-query", "max-media-query"
-$rfs-mode: min-media-query !default;
+$rfs-mode: max-media-query !default;
 
 // Generate enable or disable classes. Possibilities: false, "enable" or "disable"
 $rfs-class: false !default;
