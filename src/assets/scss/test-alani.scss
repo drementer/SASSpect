@@ -85,3 +85,13 @@ div.background-test {
 		}
 	}
 }
+
+.test3 {
+	@include min-medya(laptop) {
+		margin: auto;
+	}
+	@include max-medya(laptop) {
+		margin: 1rem;
+	}
+	color: green;
+}
