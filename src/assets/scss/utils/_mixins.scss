@@ -33,6 +33,20 @@ $boyutlar: (
 	}
 }
 
+// Medya için kısayollar
+@mixin max-medya($veri) {
+	@include medya($veri, max){
+		@content;
+	};
+}
+
+@mixin min-medya($veri) {
+	@include medya($veri, min){
+		@content;
+	};
+}
+
+
 // Tema
 @mixin tema($tema: "default") {
 	$element: #{&};
