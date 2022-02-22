@@ -95,3 +95,12 @@ div.background-test {
 	}
 	color: green;
 }
+
+.hero-slider {
+	.kapak {
+		position: absolute;
+		inset: 0;
+		z-index: 5;
+		background-color: rgba(255, 255, 255, 0.671);
+	}
+}
