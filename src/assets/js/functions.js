@@ -10,11 +10,11 @@ export var scrool_ac = () => {
 
 
 /* Hero Slider oluşturucu */
-export function hero_slider() {
-	var hero_slider = document.querySelectorAll("div.__hero-slider");
-	hero_slider.forEach((item) => {
+export let hero_slider = () => {
+	const hero_slider = document.querySelectorAll("div.__hero-slider");
+	hero_slider.forEach((slider) => {
 		// Oluşturulacak alt eleman
-		let yazi_sayisi = item.dataset.yaziSayi;
+		let yazi_sayisi = slider.dataset.yaziSayisi;
 
 		// Minimum değerin altında giriş yapıldığında
 		if (yazi_sayisi < 5 || yazi_sayisi == undefined) {
@@ -25,24 +25,25 @@ export function hero_slider() {
 		}
 
 		// Yaziları kapsayacak div oluşturuldu
-		let hero_icerik = document.createElement("div");
+		const hero_icerik = document.createElement("div");
 		hero_icerik.classList.add("__icerik");
 
 		// Yazilar için component oluşturuldu
-		let yazi = document.createElement("div");
+		const yazi = document.createElement("div");
 		yazi.classList.add("__yazi");
-		yazi.innerHTML = item.dataset.yazi;
+		yazi.innerHTML = slider.innerHTML;
+		slider.innerHTML = null;
 
 		// Ebeveyine kapsayici eklendi
-		item.appendChild(hero_icerik);
+		slider.appendChild(hero_icerik);
+		// Oluşturulacak alt eleman
 
 		// Kapsayıcıya istenilen miktarda yazi eklendi
 		for (let i = 1; i <= yazi_sayisi; i++) {
-			hero_icerik.innerHTML += "";
-			hero_icerik.appendChild(yazi);
+			hero_icerik.insertAdjacentHTML("beforeend", yazi.outerHTML);
 		}
 	});
-}
+};
 /* Hero Slider oluşturucu SON */
 
 
