@@ -111,6 +111,19 @@ th {
   box-shadow: 4.5px 4.5px 3.6px rgba(0, 0, 0, 0.014), 12.5px 12.5px 10px rgba(0, 0, 0, 0.02), 30.1px 30.1px 24.1px rgba(0, 0, 0, 0.026), 100px 100px 80px rgba(0, 0, 0, 0.04);
 }
 
+.buton {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 /* Flex */
 .kolonlar,
 .satirlar {
@@ -6440,12 +6453,7 @@ div.no-js .__icerik p {
 
 /* Modal SON */
 /* Butonlar */
-.--buton.--pasif, .--buton.--tip-2.--pasif, .--buton.--pasif.--hayalet {
-  --mor: #bd99ff;
-  cursor: not-allowed;
-}
-
-.--buton {
+.buton {
   padding: 0.5rem 1rem;
   margin: 0.5rem;
   font-size: 1rem;
@@ -6455,44 +6463,69 @@ div.no-js .__icerik p {
   white-space: nowrap;
   text-decoration: none;
   text-transform: capitalize;
-  background-color: #5900ff;
   outline: none;
-  border: none;
+  border: 1px solid transparent;
+  background-color: #5900ff;
   color: #ffffff;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  vertical-align: middle;
 }
-.--buton.--tip-2, .--buton.--hayalet {
-  background-color: #ffffff;
-  border: 1px solid #5900ff;
+
+.buton.--tip-2 {
+  background-color: transparent;
+  border-color: #5900ff;
   color: #5900ff;
 }
-.--buton.--tip-2.--pasif, .--buton.--pasif.--hayalet {
-  border: 1px solid var(--mor);
-  color: var(--mor);
-  background-color: #ffffff;
+.buton.--tip-2.--pasif {
+  background-color: transparent;
+  color: #bd99ff;
 }
-.--buton.--tip-2:not(.--pasif):not(.--hayalet):hover, .--buton.--hayalet:not(.--pasif):not(.--hayalet):hover {
+.buton.--tip-2:not(.--pasif):hover {
   background-color: #5900ff;
   color: #ffffff;
 }
-.--buton.--hayalet {
-  border: none;
+.buton.--pasif {
+  cursor: not-allowed;
+  background-color: #bd99ff;
+  color: #ffffff;
+  border-color: #bd99ff;
+}
+.buton.--hayalet {
+  color: #5900ff;
   background-color: transparent;
+  border-color: transparent;
 }
-.--buton.--pasif {
-  background-color: var(--mor);
+.buton.--hayalet.--pasif {
+  color: #bd99ff;
 }
-.--buton.--buyuk {
+.buton.--hayalet:not(.--pasif):hover {
+  border-color: #5900ff;
+}
+.buton.--buyuk {
   padding: 0.76rem 1.25rem;
   font-size: 1.25rem;
 }
-.--buton.--aktif, .--buton:not(.--pasif):not(.--tip-2):not(.--buton.--hayalet):not(.--hayalet):hover {
+.buton.--aktif, .buton:not(.--pasif):not(.--tip-2):not(.--hayalet):not(.--link):hover {
   background-color: #3e00b3;
   color: #ffffff;
+}
+.buton.--link {
+  color: blue;
+  background-color: transparent;
+}
+.buton.--link:hover {
+  color: blueviolet;
+  text-decoration: underline;
+  background-color: transparent;
+}
+.buton.--link.--pasif {
+  text-decoration: none;
+  color: #bd99ff;
+  border-color: transparent;
 }
 
 /* Butonlar SON */
@@ -6654,4 +6687,8 @@ html[data-theme=default] div.background-test a a a {
   inset: 0;
   z-index: 5;
   background-color: rgba(255, 255, 255, 0.671);
+}
+
+table {
+  margin: 1rem;
 }/*# sourceMappingURL=test-alani.min.css.map */
