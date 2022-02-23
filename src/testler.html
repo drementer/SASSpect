@@ -29,26 +29,68 @@
 			<div class="background-test"></div>
 		</section>
 
-        <section class="butonlar --kapali">
+        <section class="butonlar ">
             <h1>butonlar</h1>
-            <div class="satirlar">
-                <div class="__eleman">
-                    <h4>Varsayılan</h4>
-                    <button class="--buton">ana buton</button>
-                    <button class="--buton --hayalet">hayalet ana buton</button>
-                    <button class="--buton --buyuk">büyük ana buton</button>
-                    <button class="--buton --pasif">pasif ana buton</button>
-                    <button class="--buton --buyuk --pasif">buyuk pasif ana buton</button>
-                </div>
-                <div class="__eleman">
-                    <h4>buton 2</h4>
-                    <button class="--buton --tip-2">buton 2</button>
-                    <button class="--buton --tip-2 --hayalet">hayalet buton 2</button>
-                    <button class="--buton --tip-2 --buyuk">buyuk buton 2</button>
-                    <button class="--buton --tip-2 --pasif">pasif buton 2</button>
-                    <button class="--buton --tip-2 --buyuk --pasif">buyuk pasif buton 2</button>
-                </div>
-            </div>
+			<table>
+				<thead>
+					<tr>
+						<th><h4>tipler</h4></th>
+						<th><h4>normal</h4></th>
+						<th><h4>buyuk</h4></th>
+						<th><h4>pasif</h4></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>ana buton</td>
+						<td>
+							<buton class="buton">buton</buton>
+						</td>
+						<td>
+							<buton class="buton --buyuk">buton</buton>
+						</td>
+						<td>
+							<buton class="buton --buyuk --pasif">buton</buton>
+						</td>
+					</tr>
+					<tr>
+						<td>tip 2</td>
+						<td>
+							<buton class="buton --tip-2">buton</buton>
+						</td>
+						<td>
+							<buton class="buton --tip-2 --buyuk">buton</buton>
+						</td>
+						<td>
+							<buton class="buton --tip-2 --buyuk --pasif">buton</buton>
+						</td>
+					</tr>
+					<tr>
+						<td>hayalet</td>
+						<td>
+							<buton class="buton --hayalet">buton</buton>
+						</td>
+						<td>
+							<buton class="buton --hayalet --buyuk">buton</buton>
+						</td>
+						<td>
+							<buton class="buton --hayalet --buyuk --pasif">buton</buton>
+						</td>
+					</tr>
+					<tr>
+						<td>link</td>
+						<td>
+							<a href="" class="buton --link">link</a>
+						</td>
+						<td>
+							<a href="" class="buton --link --buyuk">link</a>
+						</td>
+						<td>
+							<a href="" class="buton --link --buyuk --pasif">link</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
         </section>
 
         <section class="no-js --kapali">
@@ -316,7 +358,7 @@
             </div>
         </section>
 
-        <section class="hero-slider">
+        <section class="hero-slider --kapali">
 			<div class="kapak"></div>
             <div class="__hero-slider" >drementer</div>
             <div class="__hero-slider --capraz" data-derece="5" data-yazi-sayisi="10">drementer</div>
@@ -332,8 +374,8 @@
                     <p style="--satir-sayisi:2;">Bilginiz olsun diye söylüyorum, bu web sitesi çerez kullanıyor.</p>
                 </a>
                 <div class="__butonlar">
-                    <button class="--buton --kabul">anladım</button>
-                    <button class="--buton --hayalet --daha-sonra">sonra hatırlat</button>
+                    <button class="buton --kabul">anladım</button>
+                    <button class="buton --hayalet --daha-sonra">sonra hatırlat</button>
                 </div>
             </div>
         </section>
@@ -346,7 +388,7 @@
                         src='https://images.unsplash.com/photo-1639862567638-57d4bfb03861?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=704&q=80'
                         alt='' />
                 </div>
-                <button class="--buton --hayalet">
+                <button class="buton --hayalet">
                     <ion-icon name="close-outline"></ion-icon>
                 </button>
             </div>
