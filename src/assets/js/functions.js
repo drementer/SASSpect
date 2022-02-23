@@ -52,7 +52,7 @@ let cerez_popup = () => {
 		cerez_politikasi__deger = localStorage.getItem(cerez_politikasi__isim),
 		cerez_popup = document.getElementById("cerez-popup"),
 		cerez_popup__tuslar = cerez_popup.querySelectorAll(
-			".__butonlar > .--buton"
+			".__butonlar > .buton"
 		),
 		cerez_popup__kapat = () => {
 			if (!cerez_popup.matches(".--kapali")) {
