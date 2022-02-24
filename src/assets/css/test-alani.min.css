@@ -6132,16 +6132,15 @@ div.no-js .__icerik p {
 /* No Js SON */
 /* Çerez Popup */
 #cerez-popup.cerez-popup {
-  z-index: 99;
+  z-index: 10;
   position: fixed;
   bottom: 0;
   right: 0;
   background-color: #f9faff;
   border-right: 3px solid #5900ff;
+  display: none;
   margin: 2rem;
   padding: 1rem 2rem;
-  display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
@@ -6156,6 +6155,10 @@ div.no-js .__icerik p {
   #cerez-popup.cerez-popup {
     padding: 1rem calc(1.325rem + 0.9vw);
   }
+}
+#cerez-popup.cerez-popup.--acik {
+  display: flex;
+  flex-direction: row;
 }
 @media screen and (max-width: 1200px) {
   #cerez-popup.cerez-popup {
