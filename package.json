@@ -1,0 +1,23 @@
+{
+	"name": "dred",
+	"version": "1.1.0",
+	"homepage": "http://drementer.com",
+	"description": "Projelerimin altyapısı",
+	"main": "",
+	"scripts": {
+		"": ""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/drementer/dred.git"
+	},
+	"author": {
+		"name": "drementer",
+		"email": "klncarslanburak@gmail.com",
+		"url": "https://github.com/drementer"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/drementer/dred/issues"
+	}
+}
