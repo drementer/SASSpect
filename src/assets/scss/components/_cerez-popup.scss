@@ -1,20 +1,23 @@
 /* Çerez Popup */
 #cerez-popup.cerez-popup {
-	z-index: 99;
+	z-index: 10;
 	position: fixed;
 	bottom: 0;
 	right: 0;
 	background-color: $no-js__arkaplan;
 	border-right: 3px solid $mor;
-
+	display: none;
 	@include margin(2rem);
 	@include padding(1rem 2rem);
-	@include flex-row;
 	@extend %golge;
 	align-items: center;
 	justify-content: flex-end;
 	flex-wrap: wrap;
 	gap: 1em;
+
+	&.--acik {
+		@include flex-row;
+	}
 
 	@include medya(pc) {
 		bottom: 1em;
