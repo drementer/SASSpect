@@ -1,6 +1,6 @@
 # dred
 
-Kişisel framework
+Projelerimin altyapısı
 
 ## Menu
 
