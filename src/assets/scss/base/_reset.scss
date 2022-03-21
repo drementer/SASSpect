@@ -55,26 +55,6 @@ textarea {
 }
 
 // Genel
-html {
-	box-sizing: border-box;
-	font-size: 16px;
-	scroll-behavior: smooth;
-}
-
-body {
-	overflow-x: hidden;
-}
-
-* {
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	-webkit-tap-highlight-color: transparent;
-	&,
-	&::before,
-	&::after {
-		box-sizing: inherit;
-	}
-}
-
 img,
 video {
 	height: auto;
