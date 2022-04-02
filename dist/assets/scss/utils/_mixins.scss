@@ -1,52 +1,3 @@
-// Media
-
-// Hazır ayarlar
-$boyutlar: (
-	"pc": 1200,
-	"laptop": 992,
-	"tablet": 768,
-	"telefon": 576,
-) !default;
-
-@mixin medya($veri, $tip: max, $prefix: px) {
-	$veri-tipi: type-of($veri);
-	$break-point: null;
-
-	@if $veri-tipi == number {
-		@media screen and (#{$tip}-width: #{$veri}) {
-			@content;
-		}
-	} @else if $veri-tipi == string {
-		@each $deger, $index in $boyutlar {
-			@if $veri == $deger {
-				$break-point: $index;
-			}
-		}
-
-		@if $break-point != null {
-			@media screen and (#{$tip}-width: #{$break-point}#{$prefix}) {
-				@content;
-			}
-		} @else {
-			@error "Hatalı breakpoint değeri: #{$veri}";
-		}
-	}
-}
-
-// Medya için kısayollar
-@mixin max-medya($veri) {
-	@include medya($veri, max){
-		@content;
-	};
-}
-
-@mixin min-medya($veri) {
-	@include medya($veri, min){
-		@content;
-	};
-}
-
-
 // Tema
 @mixin tema($tema: "default") {
 	$element: #{&};
@@ -56,14 +7,14 @@ $boyutlar: (
 }
 
 // Font Face
-@mixin font-face($name, $file) {
+@mixin font-face($font-ismi, $dosya) {
 	@font-face {
-		font-family: "#{$name}";
-		src: url("../fonts/#{$file}.eot");
-		src: url("../fonts/#{$file}.eot?#iefix") format("embedded-opentype"),
-			url("../fonts/#{$file}.woff") format("woff"),
-			url("../fonts/#{$file}.ttf") format("truetype"),
-			url("../fonts/#{$file}.svg?#webfont") format("svg");
+		font-family: "#{$font-ismi}";
+		src: url("../fonts/#{$dosya}.eot");
+		src: url("../fonts/#{$dosya}.eot?#iefix") format("embedded-opentype"),
+			url("../fonts/#{$dosya}.woff") format("woff"),
+			url("../fonts/#{$dosya}.ttf") format("truetype"),
+			url("../fonts/#{$dosya}.svg?#webfont") format("svg");
 	}
 }
 
@@ -90,35 +41,4 @@ $boyutlar: (
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 	text-overflow: ellipsis;
-}
-
-// Flex
-@mixin flex {
-	display: flex;
-}
-
-@mixin flex-center {
-	align-items: center;
-	align-content: center;
-	justify-content: center;
-}
-
-@mixin flex-row {
-	@include flex;
-	flex-direction: row;
-}
-
-@mixin flex-column {
-	@include flex;
-	flex-direction: column;
-}
-
-@mixin flex-center-row {
-	@include flex-row;
-	@include flex-center;
-}
-
-@mixin flex-center-column {
-	@include flex-column;
-	@include flex-center;
 }

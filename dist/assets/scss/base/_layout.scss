@@ -1,0 +1,33 @@
+/* Base */
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+	scroll-behavior: smooth;
+	@include medya(laptop) {
+		font-size: 14px;
+	}
+}
+
+body {
+	overflow-x: hidden;
+}
+
+* {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+	&,
+	&::before,
+	&::after {
+		box-sizing: inherit;
+	}
+	scroll-margin-top: 1.5rem;
+}
+
+.--kapali {
+	display: none !important;
+}
+
+.--acik {
+	display: initial;
+}
+/* Base SON */

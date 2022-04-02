@@ -1,0 +1,62 @@
+// Medya
+
+// Medya boyutları
+$hazir-boyutlar: (
+	"pc": 1200,
+	"laptop": 992,
+	"tablet": 768,
+	"telefon": 576,
+) !default;
+
+// İşlem
+@mixin medya($girilen-deger, $medya-tipi: max) {
+	// Girilen değerin string mi number mı olduğunu sorguluyoruz
+	$girilen-deger-tipi: type-of($girilen-deger);
+
+	// Medya değeri başta boş bırakılıyor
+	$medya-degeri: null;
+
+	// Girilen değer hazır boyutlarda yok ise direkt değer baz alınacak
+	// Eğer girilen değer boyutlarda olsa idi string dönmeliydi
+	@if $girilen-deger-tipi == number {
+		@media screen and (#{$medya-tipi}-width: #{$girilen-deger}) {
+			@content;
+		}
+	} @else if $girilen-deger-tipi == string {
+		// Girilen değer tipi string olduğu için
+		// hazir boyutlarda aratılıyor ve girilen deger
+		// için hazir boyutlarda eşiti bulunursa
+		// $medya-degeri'ne aktarılıyor
+		@each $hazir-boyut-ismi, $hazir-boyut-degeri in $hazir-boyutlar {
+			@if $girilen-deger == $hazir-boyut-ismi {
+				$medya-degeri: $hazir-boyut-degeri;
+			}
+		}
+
+		// Girilen deger hazır boyutlarda eşiti bulunup
+		// eşitinin değeri $medya-degeri'ne aktarıldığında
+		// $medya-degeri baz alınıp işlem yapılıyor
+		@if $medya-degeri != null {
+			@media screen and (#{$medya-tipi}-width: #{$medya-degeri}px) {
+				@content;
+			}
+			// Girilen değer için hazır boyutlarda eşiti bulunamassa
+			// konsola hata mesajı veriliyor
+		} @else {
+			@error "Hatalı breakpoint değeri: #{$girilen-deger}";
+		}
+	}
+}
+
+// Medya için kısayollar
+@mixin max-medya($veri) {
+	@include medya($veri, max) {
+		@content;
+	}
+}
+
+@mixin min-medya($veri) {
+	@include medya($veri, min) {
+		@content;
+	}
+}

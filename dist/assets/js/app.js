@@ -6,5 +6,10 @@
 	MIT LICENSE: (https://github.com/drementer/dred/blob/master/LICENSE)
 */
 
-import * as fonksiyon from './functions.js';
-fonksiyon.app();
+/* İmport */
+import { scrool_ac, scrool_kapat } from "./functions.js";
+import cerez from "./cerez_popup.js";
+cerez();
+import hero from "./hero_slider.js";
+hero();
+/* İmport SON */

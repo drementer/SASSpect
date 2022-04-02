@@ -25,7 +25,7 @@
 		background-color: transparent;
 		border-color: $mor;
 		color: $mor;
-		&.--pasif{
+		&.--pasif {
 			background-color: transparent;
 			color: $mor-pasif;
 		}
@@ -46,7 +46,7 @@
 		color: $mor;
 		background-color: transparent;
 		border-color: transparent;
-		&.--pasif{
+		&.--pasif {
 			color: $mor-pasif;
 		}
 		&:not(.--pasif):hover {
