@@ -15,6 +15,19 @@ div.no-js, #cerez-popup.cerez-popup {
   box-shadow: 4.5px 4.5px 3.6px rgba(0, 0, 0, 0.014), 12.5px 12.5px 10px rgba(0, 0, 0, 0.02), 30.1px 30.1px 24.1px rgba(0, 0, 0, 0.026), 100px 100px 80px rgba(0, 0, 0, 0.04);
 }
 
+.buton {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 /* Boşluklar */
 /* Normal Modlar */
 .m-0 {
@@ -5934,14 +5947,58 @@ th {
           user-select: none;
   vertical-align: middle;
 }
-.buton--2 {
+
+.buton.--tip-2 {
   background-color: transparent;
   border-color: #5900ff;
   color: #5900ff;
 }
-.buton--2:not(.--pasif):hover {
+.buton.--tip-2.--pasif {
+  background-color: transparent;
+  color: #bd99ff;
+}
+.buton.--tip-2:not(.--pasif):hover {
   background-color: #5900ff;
   color: #ffffff;
+}
+.buton.--pasif {
+  cursor: not-allowed;
+  background-color: #bd99ff;
+  color: #ffffff;
+  border-color: #bd99ff;
+}
+.buton.--hayalet {
+  color: #5900ff;
+  background-color: transparent;
+  border-color: transparent;
+}
+.buton.--hayalet.--pasif {
+  color: #bd99ff;
+}
+.buton.--hayalet:not(.--pasif):hover {
+  border-color: #5900ff;
+}
+.buton.--buyuk {
+  padding: 0.76rem 1.25rem;
+  font-size: 1.25rem;
+}
+.buton.--aktif, .buton:not(.--pasif):not(.--tip-2):not(.--hayalet):not(.--link):hover {
+  background-color: #3e00b3;
+  color: #ffffff;
+}
+.buton.--link {
+  color: blue;
+  background-color: transparent;
+}
+.buton.--link:hover {
+  color: blueviolet;
+  text-decoration: underline;
+  background-color: transparent;
+}
+.buton.--link.--pasif {
+  text-decoration: none;
+  color: #bd99ff;
+  border-color: transparent;
 }
 
 /* Butonlar SON */
@@ -6490,151 +6547,4 @@ div.no-js .__icerik p {
   }
 }
 
-/* No Js SON */
-main.test h1,
-main.test h2,
-main.test h3,
-main.test h4 {
-  text-transform: capitalize;
-  margin: 1rem 2rem;
-  font-size: 2rem;
-  margin-left: 4rem;
-}
-@media (max-width: 1200px) {
-  main.test h1,
-main.test h2,
-main.test h3,
-main.test h4 {
-    margin: 1rem calc(1.325rem + 0.9vw);
-  }
-}
-@media (max-width: 1200px) {
-  main.test h1,
-main.test h2,
-main.test h3,
-main.test h4 {
-    font-size: calc(1.325rem + 0.9vw);
-  }
-}
-@media (max-width: 1200px) {
-  main.test h1,
-main.test h2,
-main.test h3,
-main.test h4 {
-    margin-left: calc(1.525rem + 3.3vw);
-  }
-}
-main.test h1:not(h3):not(h4)::after,
-main.test h2:not(h3):not(h4)::after,
-main.test h3:not(h3):not(h4)::after,
-main.test h4:not(h3):not(h4)::after {
-  content: "🠗";
-  margin: 0.5em 0.5em 0;
-  display: block;
-}
-main.test h2 {
-  font-size: 1.5rem;
-  margin-left: 6rem;
-}
-@media (max-width: 1200px) {
-  main.test h2 {
-    font-size: calc(1.275rem + 0.3vw);
-  }
-}
-@media (max-width: 1200px) {
-  main.test h2 {
-    margin-left: calc(1.725rem + 5.7vw);
-  }
-}
-main.test h2::after {
-  margin-left: 1em;
-}
-main.test h3 {
-  font-size: 1.3rem;
-  margin-left: 9rem;
-}
-@media (max-width: 1200px) {
-  main.test h3 {
-    font-size: calc(1.255rem + 0.06vw);
-  }
-}
-@media (max-width: 1200px) {
-  main.test h3 {
-    margin-left: calc(2.025rem + 9.3vw);
-  }
-}
-main.test h4 {
-  font-size: 1.3rem;
-  padding: 1rem;
-  margin-left: 0.5rem;
-  color: #5900ff;
-}
-@media (max-width: 1200px) {
-  main.test h4 {
-    font-size: calc(1.255rem + 0.06vw);
-  }
-}
-main.test .kolonlar-satirlar .kolonlar > *,
-main.test .kolonlar-satirlar .satirlar > * {
-  background-color: #5900ff;
-  color: #ffffff;
-}
-main.test .devam-eden-kolonlar {
-  max-height: 900px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  resize: horizontal;
-  width: 50%;
-  margin: auto;
-}
-main.test .kartlar .kart {
-  height: 30em;
-  width: 20em;
-}
-
-body {
-  min-height: 200vh;
-}
-
-div.background-test {
-  width: 500px;
-  height: 500px;
-  background-image: url("http://unsplash.it/700/400?random&gravity=center");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top left;
-  background-color: red;
-}
-@media screen and (max-width: 992px) {
-  div.background-test {
-    color: yellow;
-  }
-}
-html[data-theme=default] div.background-test a a a {
-  color: red;
-}
-
-.test3 {
-  color: green;
-}
-@media screen and (min-width: 992px) {
-  .test3 {
-    margin: auto;
-  }
-}
-@media screen and (max-width: 992px) {
-  .test3 {
-    margin: 1rem;
-  }
-}
-
-.hero-slider .kapak {
-  position: absolute;
-  inset: 0;
-  z-index: 5;
-  background-color: rgba(255, 255, 255, 0.671);
-}
-
-table {
-  margin: 1rem;
-}/*# sourceMappingURL=test-alani.min.css.map */
+/* No Js SON *//*# sourceMappingURL=main.min.css.map */
