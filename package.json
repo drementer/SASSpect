@@ -7,6 +7,11 @@
 	"scripts": {
 		"": ""
 	},
+	"keywords": [
+		"scss",
+		"css",
+		"framework"
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/drementer/dred.git"
