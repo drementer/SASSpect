@@ -3,7 +3,11 @@ html {
 	box-sizing: border-box;
 	font-size: 16px;
 	scroll-behavior: smooth;
-	@include medya(laptop) {
+	line-height: 1.5;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+
+	@include medya(lg) {
 		font-size: 14px;
 	}
 }
@@ -23,11 +27,8 @@ body {
 	scroll-margin-top: 1.5rem;
 }
 
-.--kapali {
-	display: none !important;
-}
-
-.--acik {
-	display: initial;
+template,
+[kapali] {
+	display: none;
 }
 /* Base SON */

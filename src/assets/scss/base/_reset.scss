@@ -1,4 +1,4 @@
-// minireset.css v0.0.6 
+// minireset.css v0.0.6
 // (https://github.com/jgthms/minireset.css)
 // Projeye uyarladım
 
@@ -30,6 +30,16 @@ h5,
 h6 {
 	margin: 0;
 	padding: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+	display: block;
 }
 
 // Başlıklar
