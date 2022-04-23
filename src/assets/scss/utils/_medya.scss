@@ -2,10 +2,12 @@
 
 // Medya boyutları
 $hazir-boyutlar: (
-	"pc": 1200,
-	"laptop": 992,
-	"tablet": 768,
-	"telefon": 576,
+	"ul": 1400,
+	"xl": 1200,
+	"lg": 992,
+	"md": 768,
+	"sm": 576,
+	"xs": 360,
 ) !default;
 
 // İşlem
