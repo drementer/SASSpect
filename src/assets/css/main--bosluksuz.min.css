@@ -37,6 +37,9 @@ html {
   box-sizing: border-box;
   font-size: 16px;
   scroll-behavior: smooth;
+  line-height: 1.5;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 @media screen and (max-width: 992px) {
   html {
@@ -57,12 +60,9 @@ body {
   box-sizing: inherit;
 }
 
-.--kapali {
-  display: none !important;
-}
-
-.--acik {
-  display: initial;
+template,
+[kapali] {
+  display: none;
 }
 
 /* Base SON */
@@ -92,6 +92,16 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
 }
 
 h1,
