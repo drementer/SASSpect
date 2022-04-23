@@ -72,7 +72,7 @@ div.background-test {
 	$bg-image: url("http://unsplash.it/700/400?random&gravity=center");
 	@include background($bg-image, contain, top left, $test: red);
 
-	@include medya(laptop) {
+	@include medya(lg) {
 		color: yellow;
 	}
 	a {
@@ -87,10 +87,10 @@ div.background-test {
 }
 
 .test3 {
-	@include min-medya(laptop) {
+	@include min-medya(lg) {
 		margin: auto;
 	}
-	@include max-medya(laptop) {
+	@include max-medya(lg) {
 		margin: 1rem;
 	}
 	color: green;

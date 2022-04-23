@@ -12,7 +12,7 @@
 		max-height: none;
 	}
 
-	@include medya(telefon) {
+	@include medya(sm) {
 		width: 100%;
 	}
 

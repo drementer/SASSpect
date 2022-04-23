@@ -19,7 +19,7 @@
 		@include flex-row;
 	}
 
-	@include medya(pc) {
+	@include medya(xl) {
 		bottom: 1em;
 		right: 1em;
 		left: 1em;
@@ -49,7 +49,7 @@
 		text-decoration: none;
 		@include font-size(1rem);
 
-		@include medya(tablet) {
+		@include medya(md) {
 			text-align: center;
 		}
 
@@ -59,7 +59,7 @@
 			width: 100%;
 			@include text-truncate($satir);
 
-			@include medya(laptop) {
+			@include medya(lg) {
 				$satir: 10;
 				@include text-truncate($satir);
 			}

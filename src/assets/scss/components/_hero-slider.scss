@@ -7,7 +7,7 @@
 	overflow: hidden;
 	position: relative;
 
-	@include medya(tablet) {
+	@include medya(md) {
 		@include font-size(2.5rem);
 		@include margin-top(3rem);
 	}
@@ -33,7 +33,7 @@
 		animation-iteration-count: infinite;
 		animation-timing-function: linear;
 
-		@include medya(tablet) {
+		@include medya(md) {
 			width: fit-content;
 			min-width: initial;
 			@include padding(0 1rem);
