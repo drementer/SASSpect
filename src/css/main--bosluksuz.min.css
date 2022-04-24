@@ -12,60 +12,23 @@
 */
 @import url("https://fonts.googleapis.com/css?family=Fira+Code:300,regular,500,600,700");
 #cerez-popup.cerez-popup .__butonlar .--buton {
-  transition: all 200ms ease-in-out;
+  transition: all 150ms ease-out;
 }
 
 div.no-js, #cerez-popup.cerez-popup {
   box-shadow: 4.5px 4.5px 3.6px rgba(0, 0, 0, 0.014), 12.5px 12.5px 10px rgba(0, 0, 0, 0.02), 30.1px 30.1px 24.1px rgba(0, 0, 0, 0.026), 100px 100px 80px rgba(0, 0, 0, 0.04);
 }
 
-.buton {
-  outline: none;
-  border: none;
-  background: none;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
 /* Base */
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-  scroll-behavior: smooth;
-  line-height: 1.5;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-@media screen and (max-width: 992px ) {
-  html {
-    font-size: 14px;
-  }
-}
-
-body {
-  overflow-x: hidden;
-}
-
+/* Typography */
 * {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-tap-highlight-color: transparent;
-  scroll-margin-top: 1.5rem;
-}
-*, *::before, *::after {
-  box-sizing: inherit;
+  font-family: "Fira Code";
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
 }
 
-template,
-[kapali] {
-  display: none;
-}
-
-/* Base SON */
+/* Typography SON */
 /* Reset */
 html,
 body,
@@ -145,15 +108,42 @@ th {
 }
 
 /* Reset SON */
-/* Typography */
-* {
-  font-family: "Fira Code";
-  text-rendering: optimizeLegibility !important;
-  -webkit-font-smoothing: antialiased !important;
-  -moz-osx-font-smoothing: grayscale !important;
+/* Layout */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  line-height: 1.5;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+@media screen and (max-width: 992px ) {
+  html {
+    font-size: 14px;
+  }
 }
 
-/* Typography SON */
+body {
+  overflow-x: hidden;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  scroll-margin-top: 1.5rem;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+template,
+[kapali] {
+  display: none;
+}
+
+/* Layout SON */
+/* Base SON */
+/* Components */
 /* Butonlar */
 .buton {
   padding: 0.5rem 1rem;
@@ -176,7 +166,6 @@ th {
           user-select: none;
   vertical-align: middle;
 }
-
 .buton.--tip-2 {
   background-color: transparent;
   border-color: #5900ff;
@@ -328,148 +317,6 @@ th {
 }
 
 /* Çerez Popup SON */
-/* Hero Slider */
-.__hero-slider {
-  font-size: 3.5rem;
-  margin: 2rem 0;
-  font-weight: 600;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-@media (max-width: 1200px) {
-  .__hero-slider {
-    font-size: calc(1.475rem + 2.7vw);
-  }
-}
-@media (max-width: 1200px) {
-  .__hero-slider {
-    margin: calc(1.325rem + 0.9vw) 0;
-  }
-}
-@media screen and (max-width: 768px ) {
-  .__hero-slider {
-    font-size: 2.5rem;
-    margin-top: 3rem;
-  }
-}
-@media screen and (max-width: 768px ) and (max-width: 1200px) {
-  .__hero-slider {
-    font-size: calc(1.375rem + 1.5vw);
-  }
-}
-@media screen and (max-width: 768px ) and (max-width: 1200px) {
-  .__hero-slider {
-    margin-top: calc(1.425rem + 2.1vw);
-  }
-}
-.__hero-slider .__icerik {
-  width: 200vw;
-  white-space: nowrap;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  height: 2.1ch;
-}
-.__hero-slider .__yazi {
-  display: inline-block;
-  text-align: center;
-  width: 14.2857142857%;
-  min-width: 8em;
-  position: relative;
-  left: -30%;
-  cursor: default;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  -webkit-animation-name: hero-animasyon;
-          animation-name: hero-animasyon;
-  -webkit-animation-duration: 15s;
-          animation-duration: 15s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-}
-@media screen and (max-width: 768px ) {
-  .__hero-slider .__yazi {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    min-width: initial;
-    padding: 0 1rem;
-  }
-}
-.__hero-slider.--duraklat .__yazi {
-  -webkit-animation-name: none !important;
-          animation-name: none !important;
-}
-.__hero-slider.--ters-yon .__yazi {
-  left: -10%;
-  -webkit-animation-name: hero-animasyon--ters-yon;
-          animation-name: hero-animasyon--ters-yon;
-}
-.__hero-slider.--capraz {
-  display: flex;
-  padding-top: 0;
-  padding-bottom: 4.5rem;
-  align-items: center;
-  height: 20rem;
-  font-size: 5rem;
-  color: transparent;
-  height: 10rem;
-  -webkit-text-stroke: 1px black;
-}
-@media (max-width: 1200px) {
-  .__hero-slider.--capraz {
-    padding-bottom: calc(1.575rem + 3.9vw);
-  }
-}
-@media (max-width: 1200px) {
-  .__hero-slider.--capraz {
-    font-size: calc(1.625rem + 4.5vw);
-  }
-}
-.__hero-slider.--capraz .__icerik {
-  transform: rotate(-2deg);
-}
-.__hero-slider.--capraz.--ters-yon {
-  padding-bottom: 0;
-  padding-top: 4.5rem;
-}
-@media (max-width: 1200px) {
-  .__hero-slider.--capraz.--ters-yon {
-    padding-top: calc(1.575rem + 3.9vw);
-  }
-}
-.__hero-slider.--capraz.--ters-yon .__icerik {
-  transform: rotate(2deg);
-}
-@-webkit-keyframes hero-animasyon--ters-yon {
-  to {
-    transform: translateX(-100%);
-  }
-}
-@keyframes hero-animasyon--ters-yon {
-  to {
-    transform: translateX(-100%);
-  }
-}
-@-webkit-keyframes hero-animasyon {
-  to {
-    transform: translateX(100%);
-  }
-}
-@keyframes hero-animasyon {
-  to {
-    transform: translateX(100%);
-  }
-}
-
-/* Hero Slider SON */
 /* Kart */
 .kart {
   font-size: 1em;
@@ -776,4 +623,13 @@ div.no-js .__icerik p {
   }
 }
 
-/* No Js SON *//*# sourceMappingURL=main--bosluksuz.min.css.map */
+/* No Js SON */
+/* Components SON */
+/* Layout */
+/* Layout SON */
+/* Themes */
+/* Dark */
+/* Dark SON */
+/* Defaut */
+/* Defaut SON */
+/* Themes SON *//*# sourceMappingURL=main--bosluksuz.min.css.map */
