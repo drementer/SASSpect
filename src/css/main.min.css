@@ -1714,7 +1714,7 @@ div.no-js, #cerez-popup.cerez-popup {
 
 /* Normal Modlar SON */
 /* Duyarlı Modlar */
-@media screen and (max-width: 1400px ) {
+@media screen and (max-width: 1400px) {
   .m-ul-0 {
     margin: 0;
   }
@@ -2735,7 +2735,7 @@ div.no-js, #cerez-popup.cerez-popup {
     margin-bottom: -3rem;
   }
 }
-@media screen and (max-width: 1200px ) {
+@media screen and (max-width: 1200px) {
   .m-xl-0 {
     margin: 0;
   }
@@ -3756,7 +3756,7 @@ div.no-js, #cerez-popup.cerez-popup {
     margin-bottom: -3rem;
   }
 }
-@media screen and (max-width: 992px ) {
+@media screen and (max-width: 992px) {
   .m-lg-0 {
     margin: 0;
   }
@@ -4777,7 +4777,7 @@ div.no-js, #cerez-popup.cerez-popup {
     margin-bottom: -3rem;
   }
 }
-@media screen and (max-width: 768px ) {
+@media screen and (max-width: 768px) {
   .m-md-0 {
     margin: 0;
   }
@@ -5798,7 +5798,7 @@ div.no-js, #cerez-popup.cerez-popup {
     margin-bottom: -3rem;
   }
 }
-@media screen and (max-width: 576px ) {
+@media screen and (max-width: 576px) {
   .m-sm-0 {
     margin: 0;
   }
@@ -6819,7 +6819,7 @@ div.no-js, #cerez-popup.cerez-popup {
     margin-bottom: -3rem;
   }
 }
-@media screen and (max-width: 360px ) {
+@media screen and (max-width: 360px) {
   .m-xs-0 {
     margin: 0;
   }
@@ -7940,7 +7940,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
-@media screen and (max-width: 992px ) {
+@media screen and (max-width: 992px) {
   html {
     font-size: 14px;
   }
@@ -8073,7 +8073,7 @@ template,
   display: flex;
   flex-direction: row;
 }
-@media screen and (max-width: 1200px ) {
+@media screen and (max-width: 1200px) {
   #cerez-popup.cerez-popup {
     bottom: 1em;
     right: 1em;
@@ -8102,7 +8102,7 @@ template,
   text-decoration: none;
   font-size: 1rem;
 }
-@media screen and (max-width: 768px ) {
+@media screen and (max-width: 768px) {
   #cerez-popup.cerez-popup .__icerik {
     text-align: center;
   }
@@ -8116,7 +8116,7 @@ template,
   overflow: hidden;
   text-overflow: ellipsis;
 }
-@media screen and (max-width: 992px ) {
+@media screen and (max-width: 992px) {
   #cerez-popup.cerez-popup .__icerik p {
     display: -webkit-box;
     -webkit-line-clamp: 10;
@@ -8153,7 +8153,7 @@ template,
   max-width: none;
   max-height: none;
 }
-@media screen and (max-width: 576px ) {
+@media screen and (max-width: 576px) {
   .kart {
     width: 100%;
   }
@@ -8220,7 +8220,7 @@ template,
   display: flex;
   flex-direction: row;
 }
-@media screen and (max-width: 992px ) {
+@media screen and (max-width: 992px) {
   .kolonlar {
     display: flex;
     flex-direction: column;
@@ -8409,7 +8409,7 @@ div.no-js .__ikon {
 div.no-js .__ikon img {
   width: 100%;
 }
-@media screen and (max-width: 768px ) {
+@media screen and (max-width: 768px) {
   div.no-js .__ikon {
     display: none;
   }
@@ -8429,7 +8429,7 @@ div.no-js .__icerik p {
   text-indent: 0.6em;
   color: #130022;
 }
-@media screen and (max-width: 1200px ) {
+@media screen and (max-width: 1200px) {
   div.no-js {
     border-right: none;
     margin: 0;
@@ -8440,7 +8440,7 @@ div.no-js .__icerik p {
     max-width: none;
   }
 }
-@media screen and (max-width: 768px ) {
+@media screen and (max-width: 768px) {
   div.no-js {
     border-radius: 0;
   }
