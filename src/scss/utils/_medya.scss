@@ -45,20 +45,20 @@ $hazir-boyutlar: (
 			// Girilen değer için hazır boyutlarda eşiti bulunamassa
 			// konsola hata mesajı veriliyor
 		} @else {
-			@error "Hatalı breakpoint değeri: #{$girilen-deger}";
+			@error "Hatalı medya değeri: #{$girilen-deger}";
 		}
 	}
 }
 
 // Medya için kısayollar
-@mixin max-medya($veri) {
-	@include medya($veri, max) {
+@mixin max-medya($deger) {
+	@include medya($deger, max) {
 		@content;
 	}
 }
 
-@mixin min-medya($veri) {
-	@include medya($veri, min) {
+@mixin min-medya($deger) {
+	@include medya($deger, min) {
 		@content;
 	}
 }

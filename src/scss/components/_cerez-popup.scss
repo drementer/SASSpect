@@ -57,11 +57,11 @@
 			$satir: var(--satir-sayisi);
 			text-indent: 0.6em;
 			width: 100%;
-			@include text-truncate($satir);
+			@include truncate($satir);
 
 			@include medya(lg) {
 				$satir: 10;
-				@include text-truncate($satir);
+				@include truncate($satir);
 			}
 		}
 

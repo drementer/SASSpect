@@ -35,10 +35,17 @@
 	}
 }
 
-@mixin text-truncate($satir: 2) {
+@mixin truncate($satir: 2) {
 	display: -webkit-box;
 	-webkit-line-clamp: $satir;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+@mixin hardware($backface: true, $perspective: 1000) {
+    @if $backface {
+        backface-visibility: hidden;
+    }
+    perspective: $perspective;
 }
