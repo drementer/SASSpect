@@ -10,6 +10,4 @@
 import { scrool_ac, scrool_kapat } from "./functions.js";
 import cerez from "./cerez_popup.js";
 cerez();
-import hero from "./hero_slider.js";
-hero();
 /* İmport SON */
