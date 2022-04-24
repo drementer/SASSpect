@@ -1,7 +1,7 @@
 {
 	"name": "dred",
-	"version": "1.2.0",
-	"homepage": "http://drementer.com",
+	"version": "1.4.0",
+	"homepage": "https://github.com/drementer/dred",
 	"description": "Projelerimin altyapısı",
 	"main": "",
 	"scripts": {
