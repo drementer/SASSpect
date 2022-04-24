@@ -42,11 +42,11 @@ $hazir-deger: (
 	}
 
 	@if ($max-width != null) and ($min-width != null) {
-		$medya-query: "(min-width: #{$min-width} ) and (max-width: #{$max-width})";
+		$medya-query: "(min-width: #{$min-width}) and (max-width: #{$max-width})";
 	} @else if $max-width {
-		$medya-query: "(max-width: #{$max-width} )";
+		$medya-query: "(max-width: #{$max-width})";
 	} @else if $min-width {
-		$medya-query: "(min-width: #{$min-width} )";
+		$medya-query: "(min-width: #{$min-width})";
 	}
 
 	@media screen and #{$medya-query} {
