@@ -131,8 +131,8 @@ $bosluk-hali: (
 
 /* Duyarlı Modlar */
 // Ana Hat
-@each $hazir-boyut-ismi, $hazir-boyut-degeri in $hazir-boyutlar {
-	@include medya($hazir-boyut-ismi) {
+@each $hazir-deger-ismi, $hazir-deger-degeri in $hazir-deger {
+	@include medya($hazir-deger-ismi) {
 		@each $bosluk-hali-isim, $bosluk-hali-deger in $bosluk-hali {
 			@each $bosluk-isimleri-isim,
 				$bosluk-isimleri-deger in $bosluk-isimleri
