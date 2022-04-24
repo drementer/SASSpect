@@ -1,64 +1,68 @@
 // Medya
 
 // Medya boyutları
-$hazir-boyutlar: (
-	"ul": 1400,
-	"xl": 1200,
-	"lg": 992,
-	"md": 768,
-	"sm": 576,
-	"xs": 360,
+$hazir-deger: (
+	ul: 1400,
+	xl: 1200,
+	lg: 992,
+	md: 768,
+	sm: 576,
+	xs: 360,
 ) !default;
 
-// İşlem
-@mixin medya($girilen-deger, $medya-tipi: max) {
-	// Girilen değerin string mi number mı olduğunu sorguluyoruz
-	$girilen-deger-tipi: type-of($girilen-deger);
-
-	// Medya değeri başta boş bırakılıyor
-	$medya-degeri: null;
-
-	// Girilen değer hazır boyutlarda yok ise direkt değer baz alınacak
-	// Eğer girilen değer boyutlarda olsa idi string dönmeliydi
-	@if $girilen-deger-tipi == number {
-		@media screen and (#{$medya-tipi}-width: #{$girilen-deger}) {
-			@content;
-		}
-	} @else if $girilen-deger-tipi == string {
-		// Girilen değer tipi string olduğu için
-		// hazir boyutlarda aratılıyor ve girilen deger
-		// için hazir boyutlarda eşiti bulunursa
-		// $medya-degeri'ne aktarılıyor
-		@each $hazir-boyut-ismi, $hazir-boyut-degeri in $hazir-boyutlar {
-			@if $girilen-deger == $hazir-boyut-ismi {
-				$medya-degeri: $hazir-boyut-degeri;
-			}
-		}
-
-		// Girilen deger hazır boyutlarda eşiti bulunup
-		// eşitinin değeri $medya-degeri'ne aktarıldığında
-		// $medya-degeri baz alınıp işlem yapılıyor
-		@if $medya-degeri != null {
-			@media screen and (#{$medya-tipi}-width: #{$medya-degeri}px) {
-				@content;
-			}
-			// Girilen değer için hazır boyutlarda eşiti bulunamassa
-			// konsola hata mesajı veriliyor
-		} @else {
-			@error "Hatalı medya değeri: #{$girilen-deger}";
-		}
+// Hazır değeri çekmek için
+@function medya-hazir-deger-al($deger) {
+	@if map-has-key($hazir-deger, $deger) {
+		@return map-get($hazir-deger, $deger);
+	} @else {
+		@warn "#{$deger}'i hazır değerler içinde yok.";
 	}
 }
 
-// Medya için kısayollar
-@mixin max-medya($deger) {
-	@include medya($deger, max) {
+// İşlem
+@mixin medya($bitis: null, $baslangic: null) {
+	$max-width: null;
+	$min-width: null;
+	$medya-query: "";
+
+	@if $bitis {
+		@if type-of($bitis) == number {
+			$max-width: $bitis;
+		} @else {
+			$max-width: #{medya-hazir-deger-al($bitis)}px;
+		}
+	}
+
+	@if $baslangic {
+		@if type-of($baslangic) == number {
+			$min-width: $baslangic;
+		} @else {
+			$min-width: #{medya-hazir-deger-al($baslangic)}px;
+		}
+	}
+
+	@if ($max-width != null) and ($min-width != null) {
+		$medya-query: "(min-width: #{$min-width} ) and (max-width: #{$max-width})";
+	} @else if $max-width {
+		$medya-query: "(max-width: #{$max-width} )";
+	} @else if $min-width {
+		$medya-query: "(min-width: #{$min-width} )";
+	}
+
+	@media screen and #{$medya-query} {
 		@content;
 	}
 }
 
+// Kısayollar
 @mixin min-medya($deger) {
-	@include medya($deger, min) {
+	@include medya(null, $deger) {
+		@content;
+	}
+}
+
+@mixin max-medya($deger) {
+	@include medya($deger) {
 		@content;
 	}
 }
