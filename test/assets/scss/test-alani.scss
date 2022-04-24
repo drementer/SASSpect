@@ -70,7 +70,7 @@ div.background-test {
 	width: 500px;
 	height: 500px;
 	$bg-image: url("http://unsplash.it/700/400?random&gravity=center");
-	@include background($bg-image, contain, top left, $test: red);
+	@include arkaplan($bg-image, contain, top left);
 
 	@include medya(lg) {
 		color: yellow;
