@@ -1,5 +1,5 @@
 /* Butonlar */
-%buton {
+.buton {
 	@include padding(0.5rem 1rem);
 	@include margin(0.5rem);
 	@include font-size(1rem);
@@ -16,10 +16,6 @@
 	cursor: pointer;
 	user-select: none;
 	vertical-align: middle;
-}
-
-.buton {
-	@extend %buton;
 
 	&.--tip-2 {
 		background-color: transparent;
