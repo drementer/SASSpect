@@ -1,49 +1,46 @@
 // Tema
 @mixin tema($tema: "default") {
-	$element: #{&};
-	@at-root html[data-theme="#{$tema}"] #{$element} {
+	@at-root html[data-theme="#{$tema}"] #{&} {
 		@content;
 	}
 }
 
 // Font Face
-@mixin font-face($font-ismi, $dosya) {
+@mixin font-face($font-ismi, $dosya-ismi) {
 	@font-face {
 		font-family: "#{$font-ismi}";
-		src: url("../fonts/#{$dosya}.eot");
-		src: url("../fonts/#{$dosya}.eot?#iefix") format("embedded-opentype"),
-			url("../fonts/#{$dosya}.woff") format("woff"),
-			url("../fonts/#{$dosya}.ttf") format("truetype"),
-			url("../fonts/#{$dosya}.svg?#webfont") format("svg");
+		src: url("../fonts/#{$dosya-ismi}.eot");
+		src: url("../fonts/#{$dosya-ismi}.eot?#iefix") format("embedded-opentype"),
+			url("../fonts/#{$dosya-ismi}.woff") format("woff"),
+			url("../fonts/#{$dosya-ismi}.ttf") format("truetype"),
+			url("../fonts/#{$dosya-ismi}.svg?#webfont") format("svg");
 	}
 }
 
-// Genel
-@mixin background(
+// Arkaplan 
+@mixin arkaplan(
 	$url,
 	$size: cover,
 	$position: center,
 	$repeat: no-repeat,
-	$test: null
 ) {
 	background-image: $url;
 	background-repeat: $repeat;
 	background-size: $size;
 	background-position: $position;
-	@if $test != null {
-		background-color: $test;
-	}
 }
 
-@mixin truncate($satir: 2) {
+// Truncate
+@mixin truncate($max-satir: 2) {
 	display: -webkit-box;
-	-webkit-line-clamp: $satir;
+	-webkit-line-clamp: $max-satir;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
 
-@mixin hardware($backface: true, $perspective: 1000) {
+// Animasyon
+@mixin animasyon($backface: true, $perspective: 1000) {
     @if $backface {
         backface-visibility: hidden;
     }
