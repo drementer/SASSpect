@@ -11,11 +11,11 @@ import {
 	scrool_ac,
 	scrool_kapat,
 	log,
-	isString,
-	isNull,
-	isNumber,
-	goToTop,
-	isDarkMode,
+	is_string,
+	is_null,
+	is_number,
+	gtt,
+	is_dark_mode,
 } from "./functions.js";
 import cerez from "./cerez_popup.js";
 cerez();

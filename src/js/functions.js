@@ -6,17 +6,17 @@ let scrool_kapat = () => {
 		document.querySelector("html, body").style.overflowY = "auto";
 	},
 	log = console.log.bind(document),
-	isString = (value) => {
+	is_string = (value) => {
 		return typeof value === "string" || value instanceof String;
 	},
-	isNull = (value) => {
+	is_null = (value) => {
 		return value !== null || value !== undefined;
 	},
-	isNumber = (value) => {
+	is_number = (value) => {
 		return !isNaN(value);
 	},
-	goToTop = () => window.scrollTo(0, 0),
-	isDarkMode =
+	gtt = () => window.scrollTo(0, 0),
+	is_dark_mode =
 		window.matchMedia &&
 		window.matchMedia("(prefers-color-scheme: dark)").matches;
 /* Genel SON */
@@ -36,10 +36,10 @@ export {
 	scrool_ac,
 	scrool_kapat,
 	log,
-	isString,
-	isNull,
-	isNumber,
-	goToTop,
-	isDarkMode,
+	is_string,
+	is_null,
+	is_number,
+	gtt,
+	is_dark_mode,
 };
 /* Export SON */
