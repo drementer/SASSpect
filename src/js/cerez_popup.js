@@ -33,7 +33,6 @@ export default function () {
 			if (cerez_politikasi__deger) {
 				if (cerez_politikasi__deger === "kabul") {
 					cerez_popup__kapat();
-					console.log("a");
 				}
 			} else {
 				cerez_popup.classList.toggle("--acik");
