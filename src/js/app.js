@@ -7,7 +7,16 @@
 */
 
 /* İmport */
-import { scrool_ac, scrool_kapat } from "./functions.js";
+import {
+	scrool_ac,
+	scrool_kapat,
+	log,
+	isString,
+	isNull,
+	isNumber,
+	goToTop,
+	isDarkMode,
+} from "./functions.js";
 import cerez from "./cerez_popup.js";
 cerez();
 /* İmport SON */
