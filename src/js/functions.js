@@ -1,8 +1,8 @@
 /* Genel */
-let scrool_kapat = () => {
+let scroll_kapat = () => {
 		document.querySelector("html, body").style.overflowY = "hidden";
 	},
-	scrool_ac = () => {
+	scroll_ac = () => {
 		document.querySelector("html, body").style.overflowY = "auto";
 	},
 	log = console.log.bind(document),
@@ -33,8 +33,8 @@ let scrool_kapat = () => {
 
 /* Export */
 export {
-	scrool_ac,
-	scrool_kapat,
+	scroll_ac,
+	scroll_kapat,
 	log,
 	is_string,
 	is_null,

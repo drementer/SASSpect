@@ -8,8 +8,8 @@
 
 /* İmport */
 import {
-	scrool_ac,
-	scrool_kapat,
+	scroll_ac,
+	scroll_kapat,
 	log,
 	is_string,
 	is_null,
