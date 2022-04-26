@@ -11,7 +11,7 @@
   transition: all 150ms ease-out;
 }
 
-div.no-js, #cerez-popup.cerez-popup {
+.no-js, #cerez-popup.cerez-popup {
   box-shadow: 4.5px 4.5px 3.6px rgba(0, 0, 0, 0.014), 12.5px 12.5px 10px rgba(0, 0, 0, 0.02), 30.1px 30.1px 24.1px rgba(0, 0, 0, 0.026), 100px 100px 80px rgba(0, 0, 0, 0.04);
 }
 
@@ -8362,7 +8362,7 @@ template,
 
 /* Modal SON */
 /* No Js */
-div.no-js {
+.no-js {
   position: fixed;
   top: 0;
   right: 0;
@@ -8370,48 +8370,76 @@ div.no-js {
   border-right: 3px solid #3e00b3;
   max-width: 50em;
   z-index: 99;
+  align-content: stretch;
   margin: 1rem 2rem;
   display: flex;
-  align-content: stretch;
 }
 @media (max-width: 1200px) {
-  div.no-js {
+  .no-js {
     margin: 1rem calc(1.325rem + 0.9vw);
   }
 }
-div.no-js .__ikon {
-  width: 7em;
-  background-color: #3e00b3;
-  align-self: stretch;
-  display: flex;
-  justify-content: center;
-  padding: 1em;
-}
-div.no-js .__ikon img {
-  width: 100%;
-}
 @media screen and (max-width: 768px) {
-  div.no-js .__ikon {
-    display: none;
+  .no-js {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
-div.no-js .__icerik {
+.no-js__ikon {
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .no-js__ikon {
+    align-self: stretch;
+  }
+}
+.no-js__ikon ion-icon {
+  width: 7rem;
+  height: 7rem;
+  color: #5900ff;
+}
+@media screen and (max-width: 768px) {
+  .no-js__ikon ion-icon {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .no-js__ikon {
+    background-color: transparent;
+  }
+}
+.no-js__icerik {
   padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
 }
 @media (max-width: 1200px) {
-  div.no-js .__icerik {
+  .no-js__icerik {
     padding: 1rem calc(1.275rem + 0.3vw);
   }
 }
-div.no-js .__icerik p {
+@media screen and (max-width: 768px) {
+  .no-js__icerik {
+    padding: 0.5rem 1rem;
+  }
+}
+.no-js__icerik p {
   font-size: 1rem;
   text-indent: 0.6em;
   color: #130022;
 }
 @media screen and (max-width: 1200px) {
-  div.no-js {
+  .no-js {
     border-right: none;
     margin: 0;
     border-top: 3px solid #3e00b3;
@@ -8422,7 +8450,7 @@ div.no-js .__icerik p {
   }
 }
 @media screen and (max-width: 768px) {
-  div.no-js {
+  .no-js {
     border-radius: 0;
   }
 }
