@@ -37,6 +37,18 @@ main.test {
 		color: $mor;
 	}
 
+	table {
+		th {
+			padding-right: 4rem;
+			@include padding-left(0.5rem);
+		}
+		h4 {
+			padding: 1rem 0;
+			margin: 0;
+			text-align: left;
+		}
+	}
+
 	.kolonlar-satirlar {
 		.kolonlar > *,
 		.satirlar > * {
