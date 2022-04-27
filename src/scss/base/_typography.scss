@@ -69,6 +69,10 @@ label {
 	@include font-size(0.875rem);
 }
 
+span{
+	font-size: inherit;
+}
+
 .caption {
 	font-size: 12px;
 }
