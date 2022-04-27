@@ -8,6 +8,17 @@
 	-moz-osx-font-smoothing: grayscale !important;
 }
 
+html {
+	font-size: 16px;
+	line-height: 1.5;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+
+	@include medya(lg) {
+		font-size: 14px;
+	}
+}
+
 h1,
 h2,
 h3,
