@@ -7846,6 +7846,18 @@
   -moz-osx-font-smoothing: grayscale !important;
 }
 
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -8114,29 +8126,20 @@ th {
 
 /* Reset SON */
 /* Layout */
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-  line-height: 1.5;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-@media screen and (max-width: 992px) {
-  html {
-    font-size: 14px;
-  }
-}
-
-body {
-  overflow-x: hidden;
-}
-
 * {
   scroll-margin-top: 1.5rem;
   transition: all 150ms ease-out;
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 template,
