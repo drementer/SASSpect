@@ -34,8 +34,6 @@
 		flex-wrap: wrap;
 
 		.--buton {
-			@extend %gecis;
-
 			&:not(:last-child):hover {
 				transform: translateY(-5px);
 			}
