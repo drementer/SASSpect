@@ -13,9 +13,16 @@ import {
 	is_string,
 	is_null,
 	is_number,
-	gtt,
+	go_top,
 	is_dark_mode,
-} from "./functions.js";
-import cerez from "./cerez_popup.js";
+	pozisyon
+} from "./__functions.js";
+
+// Çerez
+import cerez from "./__cerez_popup.js";
 cerez();
+
+// Lazy Load
+import lazy_load from "./__io.js";
+lazy_load();
 /* İmport SON */

@@ -1,7 +1,8 @@
-export default function () {
-	let cerez_popup = document.getElementById("cerez-popup");
+/* İşlem */
+const cerez_popup = () => {
+	const cerez_popup = document.getElementById("cerez-popup");
 	if (cerez_popup) {
-		let cerez_politikasi__isim = "cerez-politikasi",
+		const cerez_politikasi__isim = "cerez-politikasi",
 			cerez_politikasi__deger = localStorage.getItem(
 				cerez_politikasi__isim
 			),
@@ -39,4 +40,9 @@ export default function () {
 			);
 		}
 	}
-}
+};
+/* İşlem SON */
+
+/* Export */
+export default cerez_popup;
+/* Export SON */
