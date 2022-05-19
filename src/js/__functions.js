@@ -19,9 +19,9 @@ const scroll_kapat = () => {
 	is_dark_mode =
 		window.matchMedia &&
 		window.matchMedia("(prefers-color-scheme: dark)").matches,
-	pozisyon = (elem) => {
+	pozisyon = (obje) => {
 		// crossbrowser version
-		const box = elem.getBoundingClientRect(),
+		const box = obje.getBoundingClientRect(),
 			body = document.body,
 			docEl = document.documentElement,
 			scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop,
