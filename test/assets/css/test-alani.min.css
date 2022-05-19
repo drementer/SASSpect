@@ -5,7 +5,38 @@
 
 	MIT LICENSE: (https://github.com/drementer/dred/blob/master/LICENSE)
 */
+/*
+	(https://github.com/csstools/sanitize.css/blob/main/reduce-motion.css)
+
+	1. Remove animations when motion is reduced (opinionated).
+	2. Remove fixed background attachments when motion is reduced (opinionated).
+	3. Remove timed scrolling behaviors when motion is reduced (opinionated).
+	4. Remove transitions when motion is reduced (opinionated).
+*/
 @import url("https://fonts.googleapis.com/css?family=Fira+Code:300,regular,500,600,700");
+@media (prefers-reduced-motion: reduce) {
+  *,
+*::before,
+*::after {
+    -webkit-animation-delay: -1ms !important;
+            animation-delay: -1ms !important;
+    /* 1 */
+    -webkit-animation-duration: 1ms !important;
+            animation-duration: 1ms !important;
+    /* 1 */
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    /* 1 */
+    background-attachment: initial !important;
+    /* 2 */
+    scroll-behavior: auto !important;
+    /* 3 */
+    transition-delay: 0s !important;
+    /* 4 */
+    transition-duration: 0s !important;
+    /* 4 */
+  }
+}
 .no-js, .cerez-popup {
   box-shadow: 4.5px 4.5px 3.6px rgba(0, 0, 0, 0.014), 12.5px 12.5px 10px rgba(0, 0, 0, 0.02), 30.1px 30.1px 24.1px rgba(0, 0, 0, 0.026), 100px 100px 80px rgba(0, 0, 0, 0.04);
 }
@@ -8183,37 +8214,6 @@ template,
 }
 
 /* Layout SON */
-/*
-	(https://github.com/csstools/sanitize.css/blob/main/reduce-motion.css)
-
-	1. Remove animations when motion is reduced (opinionated).
-	2. Remove fixed background attachments when motion is reduced (opinionated).
-	3. Remove timed scrolling behaviors when motion is reduced (opinionated).
-	4. Remove transitions when motion is reduced (opinionated).
- */
-@media (prefers-reduced-motion: reduce) {
-  *,
-*::before,
-*::after {
-    -webkit-animation-delay: -1ms !important;
-            animation-delay: -1ms !important;
-    /* 1 */
-    -webkit-animation-duration: 1ms !important;
-            animation-duration: 1ms !important;
-    /* 1 */
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
-    /* 1 */
-    background-attachment: initial !important;
-    /* 2 */
-    scroll-behavior: auto !important;
-    /* 3 */
-    transition-delay: 0s !important;
-    /* 4 */
-    transition-duration: 0s !important;
-    /* 4 */
-  }
-}
 /* Base SON */
 /* Components */
 /* Butonlar */
@@ -8687,6 +8687,7 @@ template,
   top: 0;
   left: 0;
   z-index: 250;
+  direction: ltr;
   contain: layout style size;
   pointer-events: none;
   transition: opacity 0.3s, color 0.4s;
