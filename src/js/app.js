@@ -16,26 +16,26 @@ import {
 	go_top,
 	is_dark_mode,
 	pozisyon,
-} from "./__functions.js";
+} from "./scripts/__functions.js";
 
 // Çerez
-import cerez from "./__cerez-popup.js";
+import cerez from "./components/__cerez-popup.js";
 cerez();
 
 // Sliders
-import sliders from "./__sliders.js";
+import sliders from "./scripts/__sliders.js";
 sliders();
 
 // Lazy Load
-import lazy_load from "./__io.js";
+import lazy_load from "./scripts/__io.js";
 lazy_load();
 
 // Form Elemanları
-import form_elemanlari from "./__form-elemanlari.js";
+import form_elemanlari from "./components/__form-elemanlari.js";
 form_elemanlari();
 
 // Mouse Follower
-import MouseFollower from "./__mouse-follower.js";
+import MouseFollower from "./vendors/__mouse-follower.js";
 MouseFollower.registerGSAP(gsap);
 const cursor = new MouseFollower({
 	el: null,
