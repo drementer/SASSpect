@@ -1,15 +1,16 @@
 /*!
  * Cuberto Mouse Follower
+ * https://cuberto.com/
  *
- * @version 1.0.1
- * @author Cuberto | Artem Dordzhiev (Draft)
+ * @version 1.0.6
+ * @author Cuberto, Artem Dordzhiev (Draft)
  */
 
 export default class MouseFollower {
 	/**
 	 * Register GSAP animation library.
 	 *
-	 * @param {GSAP} gsap GSAP library.
+	 * @param {gsap} gsap GSAP library.
 	 */
 	static registerGSAP(gsap) {
 		MouseFollower.gsap = gsap;
@@ -23,6 +24,7 @@ export default class MouseFollower {
 	 * @param {HTMLElement|null} options.container Cursor container.
 	 * @param {string} options.className Cursor root element class name.
 	 * @param {string} options.innerClassName Inner element class name.
+	 * @param {string} options.textClassName Text element class name.
 	 * @param {string} options.mediaClassName Media element class name.
 	 * @param {string} options.mediaBoxClassName Media inner element class name.
 	 * @param {string} options.iconSvgClassName SVG sprite class name.
@@ -32,10 +34,11 @@ export default class MouseFollower {
 	 * @param {string} options.hiddenState Hidden state name.
 	 * @param {string} options.textState Text state name.
 	 * @param {string} options.iconState Icon state name.
-	 * @param {string} options.activeState Active (mousedown) state name.
+	 * @param {string|null} options.activeState Active (mousedown) state name. Set false to disable.
 	 * @param {string} options.mediaState Media (image/video) state name.
-	 * @param {string} options.visible Is cursor visible by default.
 	 * @param {object} options.stateDetection State detection rules.
+	 * @param {boolean} options.visible Is cursor visible by default.
+	 * @param {boolean} options.visibleOnState Automatically show/hide cursor when state added.
 	 * @param {number} options.speed Cursor movement speed.
 	 * @param {string} options.ease Timing function of cursor movement.
 	 * @param {boolean} options.overwrite Overwrite or remain cursor position when `mousemove` event happens.
@@ -49,10 +52,10 @@ export default class MouseFollower {
 	 * @param {number} options.showTimeout Delay before show.
 	 * @param {boolean} options.hideOnLeave Hide the cursor when mouse leave container.
 	 * @param {number} options.hideTimeout Delay before hiding. It should be equal to the CSS hide animation time.
-	 * @param {array} options.initialPos Array (X, Y) of initial cursor position.
+	 * @param {array} options.initialPos Array (x, y) of initial cursor position.
 	 */
 	constructor(options) {
-		this.gsap = MouseFollower.gsap;
+		this.gsap = MouseFollower.gsap || window.gsap;
 		this.options = Object.assign(
 			{},
 			{
@@ -74,9 +77,9 @@ export default class MouseFollower {
 				mediaState: "-media",
 				stateDetection: {
 					"-pointer": "a,button",
-					"-hidden": "iframe",
 				},
 				visible: true,
+				visibleOnState: false,
 				speed: 0.55,
 				ease: "expo.out",
 				overwrite: true,
@@ -87,7 +90,7 @@ export default class MouseFollower {
 				skewingDelta: 0.001,
 				skewingDeltaMax: 0.15,
 				stickDelta: 0.15,
-				showTimeout: 20,
+				showTimeout: 0,
 				hideOnLeave: true,
 				hideTimeout: 300,
 				hideMediaTimeout: 300,
@@ -95,6 +98,9 @@ export default class MouseFollower {
 			},
 			options
 		);
+
+		if (this.options.visible && options.stateDetection == null)
+			this.options.stateDetection["-hidden"] = "iframe";
 
 		this.el =
 			typeof this.options.el === "string"
@@ -111,6 +117,7 @@ export default class MouseFollower {
 		};
 		this.vel = { x: 0, y: 0 };
 		this.event = {};
+		this.events = [];
 
 		this.init();
 	}
@@ -266,12 +273,14 @@ export default class MouseFollower {
 				{ passive: true }
 			);
 		}
-		this.container.addEventListener("mousedown", this.event.mousedown, {
-			passive: true,
-		});
-		this.container.addEventListener("mouseup", this.event.mouseup, {
-			passive: true,
-		});
+		if (this.options.activeState) {
+			this.container.addEventListener("mousedown", this.event.mousedown, {
+				passive: true,
+			});
+			this.container.addEventListener("mouseup", this.event.mouseup, {
+				passive: true,
+			});
+		}
 		this.container.addEventListener("mousemove", this.event.mousemove, {
 			passive: true,
 		});
@@ -306,6 +315,7 @@ export default class MouseFollower {
 			return;
 		}
 
+		this.trigger("render");
 		this.setter.wc("transform");
 		this.setter.x(this.pos.x);
 		this.setter.y(this.pos.y);
@@ -332,18 +342,20 @@ export default class MouseFollower {
 	 * Show cursor.
 	 */
 	show() {
+		this.trigger("show");
 		clearInterval(this.visibleInt);
-		this.el.classList.remove(this.options.hiddenState);
-		this.visibleInt = setTimeout(
-			() => (this.visible = true),
-			this.options.showTimeout
-		);
+		this.visibleInt = setTimeout(() => {
+			this.el.classList.remove(this.options.hiddenState);
+			this.visible = true;
+			this.render(true);
+		}, this.options.showTimeout);
 	}
 
 	/**
 	 * Hide cursor.
 	 */
 	hide() {
+		this.trigger("hide");
 		clearInterval(this.visibleInt);
 		this.el.classList.add(this.options.hiddenState);
 		this.visibleInt = setTimeout(
@@ -355,10 +367,10 @@ export default class MouseFollower {
 	/**
 	 * Toggle cursor.
 	 *
-	 * @param {boolean} [force=false] Force state.
+	 * @param {boolean} [force] Force state.
 	 */
-	toggle(force = false) {
-		if (!this.visible || force) {
+	toggle(force) {
+		if (force === true || (force !== false && !this.visible)) {
 			this.show();
 		} else {
 			this.hide();
@@ -371,8 +383,10 @@ export default class MouseFollower {
 	 * @param {string} state State name.
 	 */
 	addState(state) {
+		this.trigger("addState", state);
 		if (state === this.options.hiddenState) return this.hide();
 		this.el.classList.add(...state.split(" "));
+		if (this.options.visibleOnState) this.show();
 	}
 
 	/**
@@ -381,18 +395,31 @@ export default class MouseFollower {
 	 * @param {string} state State name.
 	 */
 	removeState(state) {
+		this.trigger("removeState", state);
 		if (state === this.options.hiddenState) return this.show();
 		this.el.classList.remove(...state.split(" "));
+		if (
+			this.options.visibleOnState &&
+			this.el.className === this.options.className
+		)
+			this.hide();
 	}
 
 	/**
 	 * Toggle cursor state.
 	 *
 	 * @param {string} state State name.
-	 * @param {boolean} force Force state.
+	 * @param {boolean} [force] Force state.
 	 */
 	toggleState(state, force) {
-		this.el.classList.toggle(`${state}`, force);
+		if (
+			force === true ||
+			(force !== false && !this.el.classList.contains(state))
+		) {
+			this.addState(state);
+		} else {
+			this.removeState(state);
+		}
 	}
 
 	/**
@@ -462,8 +489,8 @@ export default class MouseFollower {
 	 */
 	setIcon(name, style = "") {
 		this.text.innerHTML =
-			`<svg class="${this.options.iconSvgClassName} ${this.options.iconSvgNamePrefix}${name}"` +
-			` style="${style}"><use xlink:href="${this.options.iconSvgSrc}#${name}"></use></svg>`;
+			`<svg class='${this.options.iconSvgClassName} ${this.options.iconSvgNamePrefix}${name}'` +
+			` style='${style}'><use xlink:href='${this.options.iconSvgSrc}#${name}'></use></svg>`;
 		this.addState(this.options.iconState);
 		this.setSkewing(this.options.skewingIcon);
 	}
@@ -555,6 +582,44 @@ export default class MouseFollower {
 	}
 
 	/**
+	 * Attach an event handler function.
+	 *
+	 * @param {string} event Event name.
+	 * @param {function} callback Callback.
+	 */
+	on(event, callback) {
+		if (!(this.events[event] instanceof Array)) this.off(event);
+		this.events[event].push(callback);
+	}
+
+	/**
+	 * Remove an event handler.
+	 *
+	 * @param {string} event Event name.
+	 * @param {function} [callback] Callback.
+	 */
+	off(event, callback) {
+		if (callback) {
+			this.events[event] = this.events[event].filter(
+				(f) => f !== callback
+			);
+		} else {
+			this.events[event] = [];
+		}
+	}
+
+	/**
+	 * Execute all handlers for the given event type.
+	 *
+	 * @param {string} event Event name.
+	 * @param params Extra parameters.
+	 */
+	trigger(event, ...params) {
+		if (!this.events[event]) return;
+		this.events[event].forEach((f) => f.call(this, this, ...params));
+	}
+
+	/**
 	 * Get cursor options from data attribute of a given element.
 	 *
 	 * @param {HTMLElement} element Element.
@@ -577,6 +642,7 @@ export default class MouseFollower {
 	 * Destroy cursor instance.
 	 */
 	destroy() {
+		this.trigger("destroy");
 		this.gsap.ticker.remove(this.ticker);
 		this.container.removeEventListener("mouseleave", this.event.mouseleave);
 		this.container.removeEventListener("mouseenter", this.event.mouseenter);
