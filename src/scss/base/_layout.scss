@@ -1,7 +1,6 @@
 /* Layout */
 * {
 	scroll-margin-top: 1.5rem;
-	transition: all 250ms ease-out;
 }
 
 html {
@@ -19,5 +18,15 @@ template,
 
 [disabled] {
 	cursor: not-allowed;
+}
+
+.konteyner {
+	@include padding(3rem 2rem);
+	max-width: 1400px;
+	margin: auto;
+
+	@include medya(md) {
+		@include padding(2rem 1rem);
+	}
 }
 /* Layout SON */
