@@ -79,6 +79,10 @@ h6 {
 	}
 }
 
+.caption {
+	font-size: 12px;
+}
+
 p {
 	@include font-size(1rem);
 }
@@ -121,9 +125,5 @@ input,
 select,
 textarea {
 	font-weight: normal;
-}
-
-.caption {
-	font-size: 12px;
 }
 /* Typography SON */
