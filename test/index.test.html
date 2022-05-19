@@ -28,7 +28,6 @@
 			<h1>burak</h1>
 			<div class="background-test"></div>
 		</section>
-
         <section class="butonlar" >
             <h1>butonlar</h1>
 			<table>
@@ -43,16 +42,16 @@
 					<tr>
 						<td>ana buton</td>
 						<td>
-							<button class="buton">buton</button>
+							<button data-cursor-icon="arrow-left" class="buton mf-cursor-inner">buton</button>
 						</td>
 						<td>
-							<button class="buton buton--buyuk">buton</button>
+							<button data-cursor-img="http://unsplash.it/0?random&gravity=center/img/example.png" class="buton buton--buyuk">buton</button>
 						</td>
 					</tr>
 					<tr>
 						<td>tip 2</td>
 						<td>
-							<button class="buton buton--2">buton</button>
+							<button data-cursor-text="Surprise!" data-cursor-stick class="buton buton--2">buton</button>
 						</td>
 						<td>
 							<button class="buton buton--2 buton--buyuk">buton</button>
@@ -385,6 +384,7 @@
     </main>
 
     <!-- Js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script type="module" src="../../src/js/app.js"></script>
     <script type="text/javascript" src="vendor/prism/prism.js"></script>
         <!-- İon İcon -->
