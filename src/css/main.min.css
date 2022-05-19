@@ -7841,16 +7841,20 @@
 /* Typography */
 * {
   font-family: "Fira Code";
+  line-height: 1.5;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+*::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
 }
 
 html {
   font-size: 16px;
-  line-height: 1.5;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
 }
 @media screen and (max-width: 992px) {
   html {
@@ -7864,6 +7868,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-weight: normal;
   text-transform: capitalize;
 }
 h1.sub-head,
@@ -7918,6 +7923,24 @@ h4.display,
 h5.display,
 h6.display {
     font-size: calc(1.725rem + 5.7vw);
+  }
+}
+h1.display--2,
+h2.display--2,
+h3.display--2,
+h4.display--2,
+h5.display--2,
+h6.display--2 {
+  font-size: 4.5rem;
+}
+@media (max-width: 1200px) {
+  h1.display--2,
+h2.display--2,
+h3.display--2,
+h4.display--2,
+h5.display--2,
+h6.display--2 {
+    font-size: calc(1.575rem + 3.9vw);
   }
 }
 h1.display--2,
@@ -8041,21 +8064,70 @@ span {
   font-size: inherit;
 }
 
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+code {
+  font-family: monospace, monospace;
+  font-size: 1rem;
+}
+
+button,
+input,
+select,
+textarea {
+  font-weight: normal;
+}
+
 .caption {
   font-size: 12px;
 }
 
 /* Typography SON */
+/* 
+	(https://github.com/jgthms/minireset.css),
+	(https://github.com/necolas/normalize.css)
+	(https://github.com/csstools/sanitize.css)
+
+	Ve kendi deneyimlerimden yola çıkarak oluşturdum
+*/
 /* Reset */
+* {
+  background-repeat: no-repeat;
+  -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+*::before, *::after {
+  box-sizing: inherit;
+}
+
 html,
 body,
 p,
 ol,
 ul,
 li,
-dl,
-dt,
-dd,
 blockquote,
 figure,
 fieldset,
@@ -8084,24 +8156,8 @@ main {
   display: block;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: normal;
-}
-
 ul {
   list-style: none;
-}
-
-button,
-input,
-select,
-textarea {
-  font-weight: normal;
 }
 
 img,
@@ -8112,10 +8168,12 @@ video {
 
 iframe {
   border: 0;
+  border-style: none;
 }
 
 table {
   border-collapse: collapse;
+  border-color: currentColor;
   border-spacing: 0;
 }
 
@@ -8124,14 +8182,43 @@ th {
   padding: 0;
 }
 
+hr {
+  color: inherit;
+  height: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+svg:not([fill]) {
+  fill: currentColor;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+}
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
 /* Reset SON */
 /* Layout */
 * {
   scroll-margin-top: 1.5rem;
-  transition: all 150ms ease-out;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-tap-highlight-color: transparent;
+  transition: all 250ms ease-out;
 }
 
 html {
@@ -8147,7 +8234,42 @@ template,
   display: none !important;
 }
 
+[disabled] {
+  cursor: not-allowed;
+}
+
 /* Layout SON */
+/*
+	(https://github.com/csstools/sanitize.css/blob/main/reduce-motion.css)
+
+	1. Remove animations when motion is reduced (opinionated).
+	2. Remove fixed background attachments when motion is reduced (opinionated).
+	3. Remove timed scrolling behaviors when motion is reduced (opinionated).
+	4. Remove transitions when motion is reduced (opinionated).
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+*::before,
+*::after {
+    -webkit-animation-delay: -1ms !important;
+            animation-delay: -1ms !important;
+    /* 1 */
+    -webkit-animation-duration: 1ms !important;
+            animation-duration: 1ms !important;
+    /* 1 */
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    /* 1 */
+    background-attachment: initial !important;
+    /* 2 */
+    scroll-behavior: auto !important;
+    /* 3 */
+    transition-delay: 0s !important;
+    /* 4 */
+    transition-duration: 0s !important;
+    /* 4 */
+  }
+}
 /* Base SON */
 /* Components */
 /* Butonlar */
@@ -8532,6 +8654,77 @@ template,
 }
 
 /* No Js SON */
+.go-top {
+  font-size: 1rem;
+  position: fixed;
+  padding: 0.75em;
+  cursor: pointer;
+  border: none;
+  outline: 0;
+  bottom: 2em;
+  right: -5em;
+  border-radius: 5em;
+  width: 3em;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: black;
+  overflow: hidden;
+  z-index: 97;
+  transition: all 200ms cubic-bezier(0.66, 0, 0.34, 1) 0.1s;
+  color: #ffffff;
+  pointer-events: none;
+  opacity: 0.95;
+}
+@media screen and (max-width: 768px) {
+  .go-top {
+    bottom: 1em;
+  }
+}
+.go-top--aktif {
+  pointer-events: all;
+  right: 2em;
+}
+@media screen and (max-width: 768px) {
+  .go-top--aktif {
+    right: 1em;
+  }
+}
+.go-top > ion-icon {
+  color: inherit;
+  font-size: 1.4em;
+  margin: 1px;
+  align-self: flex-start;
+  z-index: 2;
+}
+.go-top > span {
+  position: absolute;
+  right: -10em;
+  white-space: nowrap;
+  opacity: 0;
+  color: inherit;
+  display: block;
+  z-index: 0.5;
+  transition: inherit;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+.go-top > span:first-letter {
+  text-transform: capitalize;
+}
+@media screen and (min-width: 768px) {
+  .go-top:hover {
+    width: 8em;
+    opacity: 1;
+    padding: 0.75em 1em;
+  }
+  .go-top:hover > span {
+    right: 1.3em;
+    opacity: 1;
+  }
+}
+
 /* Components SON */
 /* Layout */
 /* Layout SON */
