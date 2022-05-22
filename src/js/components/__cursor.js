@@ -1,3 +1,4 @@
+/* Cursor */
 import MouseFollower from "../vendors/__mouse-follower.js";
 const cursor = () => {
 	MouseFollower.registerGSAP(gsap);
@@ -40,6 +41,7 @@ const cursor = () => {
 		initialPos: [-window.innerWidth, -window.innerHeight],
 	});
 };
+/* Cursor SON */
 
 /* Export */
 export default cursor;
