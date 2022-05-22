@@ -7,7 +7,8 @@ $z-indexes: (
 	"toast",
 	"no-js",
 	"go-top",
-	"header"
+	"header",
+	"buton"
 ) !default;
 
 $max-z-index: length($z-indexes) + 1 !default;
