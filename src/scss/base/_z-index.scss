@@ -1,0 +1,21 @@
+/* Z-index */
+$z-indexes: (
+	"mf-cursor",
+	"popup",
+	"modal",
+	"sidebar",
+	"toast",
+	"no-js",
+	"go-top",
+	"header"
+) !default;
+
+$max-z-index: length($z-indexes) + 1 !default;
+
+@each $z-index in $z-indexes {
+	$max-z-index: $max-z-index - 1;
+	.#{$z-index} {
+		z-index: $max-z-index;
+	}
+}
+/* Z-index SON */
