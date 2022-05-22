@@ -469,11 +469,11 @@ textarea {
   z-index: 9;
 }
 
-.popup {
+.modal {
   z-index: 8;
 }
 
-.modal {
+.popup {
   z-index: 7;
 }
 
