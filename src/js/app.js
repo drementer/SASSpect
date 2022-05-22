@@ -1,8 +1,7 @@
-/* 
-    by drementer
-    klncarslanburak@gmail.com
-	
-	MIT LICENSE: (https://github.com/drementer/dred/blob/master/LICENSE)
+/*!
+ * @author drementer
+ * klncarslanburak@gmail.com
+ * @license MIT (https://github.com/drementer/dred/blob/master/LICENSE)
 */
 
 /* İmport */
