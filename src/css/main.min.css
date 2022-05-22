@@ -466,39 +466,39 @@ textarea {
 /* Typography SON */
 /* Z-index */
 .mf-cursor {
-  z-index: 9;
+  z-index: 99;
 }
 
 .modal {
-  z-index: 8;
+  z-index: 98;
 }
 
 .popup {
-  z-index: 7;
+  z-index: 97;
 }
 
 .sidebar {
-  z-index: 6;
+  z-index: 96;
 }
 
 .toast {
-  z-index: 5;
+  z-index: 95;
 }
 
 .no-js {
-  z-index: 4;
+  z-index: 94;
 }
 
 .go-top {
-  z-index: 3;
+  z-index: 93;
 }
 
 .header {
-  z-index: 2;
+  z-index: 92;
 }
 
 .buton {
-  z-index: 1;
+  z-index: 91;
 }
 
 /* Z-index SON */
