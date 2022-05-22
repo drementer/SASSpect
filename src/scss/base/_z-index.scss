@@ -1,5 +1,5 @@
 /* Z-index */
-$z-indexes: (
+$liste: (
 	"mf-cursor",
 	"modal",
 	"popup",
@@ -11,12 +11,12 @@ $z-indexes: (
 	"buton"
 ) !default;
 
-$max-z-index: length($z-indexes) + 1 !default;
+$z-index: 99 !default;
 
-@each $z-index in $z-indexes {
-	$max-z-index: $max-z-index - 1;
-	.#{$z-index} {
-		z-index: $max-z-index;
+@each $liste-eleman in $liste {
+	.#{$liste-eleman} {
+		z-index: $z-index;
 	}
+	$z-index: $z-index - 1;
 }
 /* Z-index SON */
