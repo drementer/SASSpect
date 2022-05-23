@@ -43,7 +43,7 @@ const lazy_load = () => {
 				eleman.classList.toggle("yuklendi");
 				eleman.setAttribute("src", medya_src);
 
-				// İlk entrie'den sonra observer'ı kapatıyorum
+				// İlk entry'den sonra observer'ı kapatıyorum
 				observer.disconnect();
 			});
 		}, ayarlar);
