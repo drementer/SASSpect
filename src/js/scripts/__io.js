@@ -1,44 +1,60 @@
 /**
- * @param {HTMLElements} targets intersectionObserver elemanları
- * @param {function} lazyLoad intersectionObserver fonksiyonu
- * @param {object} options lazyLoad ayarları
+ * Export için fonksiyon
+ *
+ * @param {HTMLElements} elemanlar lazy_load'a gönderilecek elemanlar
+ * @param {function} lazy_Load IntersectionObserver için kısayol
  */
-
-const io = () => {
-	const targets = document.querySelectorAll("[data-lazy]");
-
-	const options = {
-		root: null,
-		threshold: 0,
-		rootMargin: "300px 0px",
-	};
+const lazy_load = () => {
+	const elemanlar = document.querySelectorAll("[lazy-load]");
 
 	/**
-	 *  Lazy Load
+	 * Ana fonksiyon
 	 *
-	 * @param {HTMLElement} target intersectionObserver elemanı
-	 * @param {string} src target'in data-lazy attr'si
+	 * @param {HTMLElement} eleman intersectionObserver Api'ye gönderilecek eleman
+	 * @param {function} io IntersectionObserver Api
+	 * @param {object} ayarlar lazy_load ayarları
 	 */
-	const lazyLoad = (target) => {
+	const lazy_load = (eleman) => {
+		const ayarlar = {
+			root: null,
+			threshold: 1,
+			rootMargin: "300px 0px",
+		};
+
+		/**
+		 * IntersectionObserver Api'yi çalıştırmak için
+		 *
+		 * @param {HTMLElement} eleman intersectionObserver Api elemanı
+		 * @param {string} medya_src eleman'ın lazy-load attr'si
+		 */
 		const io = new IntersectionObserver((entries, observer) => {
+			// Eleman her ekrana girdiğinde
 			entries.forEach((entry) => {
+				// Ekrandan diğilse bir şey yapma
 				if (!entry.isIntersecting) {
 					return;
 				}
-				const target = entry.target,
-					src = target.getAttribute("data-lazy");
 
-				target.classList.toggle("yuklendi");
-				target.setAttribute("src", src);
+				// Atamalar
+				const eleman = entry.target,
+					medya_src = eleman.getAttribute("lazy-load");
 
+				// Ana işlev
+				eleman.classList.toggle("yuklendi");
+				eleman.setAttribute("src", medya_src);
+
+				// İlk entrie'den sonra observer'ı kapatıyorum
 				observer.disconnect();
 			});
-		}, options);
+		}, ayarlar);
 
-		io.observe(target);
+		// IntersectionObserver Eleman için çalıştırılıypr
+		io.observe(eleman);
 	};
 
-	targets.forEach(lazyLoad);
+	// Her target için lazy_load fonsiyonu çağrıldı
+	elemanlar.forEach(lazy_load);
 };
 
-export default io;
+// Export
+export default lazy_load;
