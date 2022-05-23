@@ -26,7 +26,7 @@ import sliders from "./scripts/__sliders.js";
 sliders();
 
 // Lazy Load
-import lazy_load from "./scripts/__io.js";
+import lazy_load from "./scripts/__lazy-load.js";
 lazy_load();
 
 // Form Elemanları
