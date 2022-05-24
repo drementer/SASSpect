@@ -1,20 +1,16 @@
 /**
- * Export için fonksiyon
+ * Sayfa yüklenme hızını artırmak için 
+ * görsel içeriklerini ekrana yaklaşınca yükler.
  *
- * @param {HTMLElements} elemanlar lazy_load'a gönderilecek elemanlar
- * @param {function} lazy_Load IntersectionObserver için kısayol
+ * @param {Array} elemanlar lazy_load elemanlarının bulunduğu dizi
+ * @param {function} io IntersectionObserver Api
+ * @param {object} ayarlar io ayarları
+ * @param {elemanlar[i]} eleman io'ya gönderilecek eleman
  */
 const lazy_load = () => {
 	const elemanlar = document.querySelectorAll("[lazy-load]");
 
-	/**
-	 * Ana fonksiyon
-	 *
-	 * @param {HTMLElement} eleman intersectionObserver Api'ye gönderilecek eleman
-	 * @param {function} io IntersectionObserver Api
-	 * @param {object} ayarlar lazy_load ayarları
-	 */
-	const lazy_load = (eleman) => {
+	elemanlar.forEach((eleman) => {
 		const ayarlar = {
 			root: null,
 			threshold: 1,
@@ -22,15 +18,14 @@ const lazy_load = () => {
 		};
 
 		/**
-		 * IntersectionObserver Api'yi çalıştırmak için
+		 * IntersectionObserver Api fonksiyonu
 		 *
-		 * @param {HTMLElement} eleman intersectionObserver Api elemanı
 		 * @param {string} medya_src eleman'ın lazy-load attr'si
 		 */
 		const io = new IntersectionObserver((entries, observer) => {
 			// Eleman her ekrana girdiğinde
 			entries.forEach((entry) => {
-				// Ekrandan diğilse bir şey yapma
+				// Ekrandan değilse bir şey yapma
 				if (!entry.isIntersecting) {
 					return;
 				}
@@ -40,7 +35,7 @@ const lazy_load = () => {
 					medya_src = eleman.getAttribute("lazy-load");
 
 				// Ana işlev
-				eleman.classList.toggle("yuklendi");
+				eleman.classList.add("yuklendi");
 				eleman.setAttribute("src", medya_src);
 
 				// İlk entry'den sonra observer'ı kapatıyorum
@@ -50,10 +45,7 @@ const lazy_load = () => {
 
 		// IntersectionObserver Eleman için çalıştırılıypr
 		io.observe(eleman);
-	};
-
-	// Her target için lazy_load fonsiyonu çağrıldı
-	elemanlar.forEach(lazy_load);
+	});
 };
 
 // Export
