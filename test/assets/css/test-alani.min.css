@@ -634,160 +634,126 @@ template,
 }
 
 /* Çerez Popup SON */
-/* Kolonlar & Satirlar */
-.kolonlar,
-.satirlar {
+/* Kolonlar */
+.kolonlar {
   width: 100%;
-  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
   gap: 1em;
   flex-wrap: nowrap;
 }
-@media (max-width: 1200px) {
-  .kolonlar,
-.satirlar {
-    padding: 1rem calc(1.325rem + 0.9vw);
-  }
-}
-.kolonlar.--orta *,
-.satirlar.--orta * {
-  text-align: center;
-}
-.kolonlar > .__eleman,
-.satirlar > .__eleman {
-  flex-basis: 0;
-  flex-grow: 1;
-  flex-shrink: 1;
-  /* height: fit-content; */
-  padding: 1rem 2rem;
-}
-@media (max-width: 1200px) {
-  .kolonlar > .__eleman,
-.satirlar > .__eleman {
-    padding: 1rem calc(1.325rem + 0.9vw);
-  }
-}
-
-.kolonlar {
-  display: flex;
-  flex-direction: row;
-}
 @media screen and (max-width: 992px) {
   .kolonlar {
+    padding: 0.5rem;
+    gap: 0.5rem;
     display: flex;
     flex-direction: column;
   }
 }
-.kolonlar.--orta > .__eleman {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
+.kolonlar__kolon {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
-.kolonlar.--kolon-1 {
+.kolonlar__kolon + .kolonlar__kolon {
+  margin-top: 1rem;
+}
+@media screen and (max-width: 992px) {
+  .kolonlar__kolon + .kolonlar__kolon {
+    margin-top: 0.5rem;
+  }
+}
+.kolonlar img {
+  width: 100%;
+}
+.kolonlar--kolon-1 {
   display: block;
   -moz-columns: calc(15em - 1 * 1em) 1;
        columns: calc(15em - 1 * 1em) 1;
 }
-.kolonlar.--kolon-1 > *:not(p) {
+.kolonlar--kolon-1 > *:not(p) {
   display: inline-block;
-  margin: 0.5rem 1rem 0 1rem;
   width: 100%;
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
 }
-.kolonlar.--kolon-1.--kirilma > * {
+.kolonlar--kirilma > * {
   -moz-column-break-inside: avoid;
        break-inside: avoid;
   page-break-inside: avoid;
 }
-.kolonlar.--kolon-2 {
+.kolonlar--kolon-2 {
   display: block;
   -moz-columns: calc(15em - 2 * 1em) 2;
        columns: calc(15em - 2 * 1em) 2;
 }
-.kolonlar.--kolon-2 > *:not(p) {
+.kolonlar--kolon-2 > *:not(p) {
   display: inline-block;
-  margin: 0.5rem 1rem 0 1rem;
   width: 100%;
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
 }
-.kolonlar.--kolon-2.--kirilma > * {
+.kolonlar--kirilma > * {
   -moz-column-break-inside: avoid;
        break-inside: avoid;
   page-break-inside: avoid;
 }
-.kolonlar.--kolon-3 {
+.kolonlar--kolon-3 {
   display: block;
   -moz-columns: calc(15em - 3 * 1em) 3;
        columns: calc(15em - 3 * 1em) 3;
 }
-.kolonlar.--kolon-3 > *:not(p) {
+.kolonlar--kolon-3 > *:not(p) {
   display: inline-block;
-  margin: 0.5rem 1rem 0 1rem;
   width: 100%;
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
 }
-.kolonlar.--kolon-3.--kirilma > * {
+.kolonlar--kirilma > * {
   -moz-column-break-inside: avoid;
        break-inside: avoid;
   page-break-inside: avoid;
 }
-.kolonlar.--kolon-4 {
+.kolonlar--kolon-4 {
   display: block;
   -moz-columns: calc(15em - 4 * 1em) 4;
        columns: calc(15em - 4 * 1em) 4;
 }
-.kolonlar.--kolon-4 > *:not(p) {
+.kolonlar--kolon-4 > *:not(p) {
   display: inline-block;
-  margin: 0.5rem 1rem 0 1rem;
   width: 100%;
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
 }
-.kolonlar.--kolon-4.--kirilma > * {
+.kolonlar--kirilma > * {
   -moz-column-break-inside: avoid;
        break-inside: avoid;
   page-break-inside: avoid;
 }
-.kolonlar.--kolon-5 {
+.kolonlar--kolon-5 {
   display: block;
   -moz-columns: calc(15em - 5 * 1em) 5;
        columns: calc(15em - 5 * 1em) 5;
 }
-.kolonlar.--kolon-5 > *:not(p) {
+.kolonlar--kolon-5 > *:not(p) {
   display: inline-block;
-  margin: 0.5rem 1rem 0 1rem;
   width: 100%;
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
 }
-.kolonlar.--kolon-5.--kirilma > * {
+.kolonlar--kirilma > * {
   -moz-column-break-inside: avoid;
        break-inside: avoid;
   page-break-inside: avoid;
 }
 
-.satirlar {
-  display: flex;
-  flex-direction: column;
-}
-.satirlar.--orta > .__eleman {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-}
-
-/* Kolonlar & Satirlar SON */
+/* Kolonlar SON */
 /* No Js */
 .no-js {
   position: fixed;
