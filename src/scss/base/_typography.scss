@@ -117,7 +117,7 @@ sup {
 
 code {
 	font-family: monospace, monospace;
-	font-size: 1rem;
+	@include font-size(1em);
 }
 
 button,
