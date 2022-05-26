@@ -1,9 +1,8 @@
 @charset "UTF-8";
-/* 
-	by drementer
-	klncarslanburak@gmail.com
-
-	MIT LICENSE: (https://github.com/drementer/dred/blob/master/LICENSE)
+/*!
+ * @author drementer
+ * klncarslanburak@gmail.com
+ * @license MIT (https://github.com/drementer/dred/blob/master/LICENSE)
 */
 /* Vendors */
 /* Reduce Motion */
@@ -312,20 +311,20 @@ h6 {
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 3.052rem;
 }
 @media (max-width: 1200px) {
   h1 {
-    font-size: calc(1.475rem + 2.7vw);
+    font-size: calc(1.4302rem + 2.1624vw);
   }
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.441rem;
 }
 @media (max-width: 1200px) {
   h2 {
-    font-size: calc(1.425rem + 2.1vw);
+    font-size: calc(1.3691rem + 1.4292vw);
   }
 }
 
@@ -453,7 +452,7 @@ sup {
 
 code {
   font-family: monospace, monospace;
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 button,
@@ -547,6 +546,8 @@ template,
 
 /* Layout SON */
 /* Base SON */
+/* Layout */
+/* Layout SON */
 /* Components */
 /* Butonlar */
 .buton {
@@ -1012,97 +1013,14 @@ template,
 }
 
 /* Components SON */
-/* Layout */
-/* Layout SON */
+/* Pages */
+/* Pages SON */
 /* Themes */
 /* Dark */
 /* Dark SON */
 /* Defaut */
 /* Defaut SON */
 /* Themes SON */
-main.test h1,
-main.test h2,
-main.test h3,
-main.test h4 {
-  text-transform: capitalize;
-  margin: 1rem 2rem;
-  font-size: 2rem;
-  margin-left: 4rem;
-}
-@media (max-width: 1200px) {
-  main.test h1,
-main.test h2,
-main.test h3,
-main.test h4 {
-    margin: 1rem calc(1.325rem + 0.9vw);
-  }
-}
-@media (max-width: 1200px) {
-  main.test h1,
-main.test h2,
-main.test h3,
-main.test h4 {
-    font-size: calc(1.325rem + 0.9vw);
-  }
-}
-@media (max-width: 1200px) {
-  main.test h1,
-main.test h2,
-main.test h3,
-main.test h4 {
-    margin-left: calc(1.525rem + 3.3vw);
-  }
-}
-main.test h1:not(h3):not(h4)::after,
-main.test h2:not(h3):not(h4)::after,
-main.test h3:not(h3):not(h4)::after,
-main.test h4:not(h3):not(h4)::after {
-  content: "🠗";
-  margin: 0.5em 0.5em 0;
-  display: block;
-}
-main.test h2 {
-  font-size: 1.5rem;
-  margin-left: 6rem;
-}
-@media (max-width: 1200px) {
-  main.test h2 {
-    font-size: calc(1.275rem + 0.3vw);
-  }
-}
-@media (max-width: 1200px) {
-  main.test h2 {
-    margin-left: calc(1.725rem + 5.7vw);
-  }
-}
-main.test h2::after {
-  margin-left: 1em;
-}
-main.test h3 {
-  font-size: 1.3rem;
-  margin-left: 9rem;
-}
-@media (max-width: 1200px) {
-  main.test h3 {
-    font-size: calc(1.255rem + 0.06vw);
-  }
-}
-@media (max-width: 1200px) {
-  main.test h3 {
-    margin-left: calc(2.025rem + 9.3vw);
-  }
-}
-main.test h4 {
-  font-size: 1.3rem;
-  padding: 1rem;
-  margin-left: 0.5rem;
-  color: #5900ff;
-}
-@media (max-width: 1200px) {
-  main.test h4 {
-    font-size: calc(1.255rem + 0.06vw);
-  }
-}
 main.test table th {
   padding-right: 4rem;
   padding-left: 0.5rem;
