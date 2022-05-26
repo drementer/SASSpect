@@ -37,16 +37,6 @@ const scroll_kapat = () => {
 	};
 /* Genel SON */
 
-/*  */
-///		(function () {
-///			some private code that will be executed automatically
-///		})();
-///		(function (a, b) {
-///			var result = a + b;
-///			return result;
-///		})(10, 20);
-/*  */
-
 /* Export */
 export {
 	scroll_ac,
