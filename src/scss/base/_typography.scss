@@ -38,17 +38,17 @@ h6 {
 	1.250 Major Third
 */
 $font-boyutlari: (
-	1: 3.815rem,
-	2: 3.052rem,
-	3: 2.441rem,
-	4: 1.953rem,
-	5: 1.563rem,
-	6: 1.25rem,
+	1: 3.815,
+	2: 3.052,
+	3: 2.441,
+	4: 1.953,
+	5: 1.563,
+	6: 1.25,
 );
 
 @each $font-numarasi, $font-degeri in $font-boyutlari {
 	h#{$font-numarasi} {
-		@include font-size($font-degeri);
+		@include font-size($font-degeri * 1rem);
 	}
 }
 
