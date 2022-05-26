@@ -36,6 +36,14 @@ form_elemanlari();
 // Cursor
 import cursor from "./components/__cursor.js";
 cursor();
+
+// Go Top
+import got_to_top from "./components/__go-top.js";
+got_to_top();
+
+// Loader
+import loader from "./components/__loader.js";
+loader();
 /* İmport SON */
 
 /* Atamalar */
