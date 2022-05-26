@@ -923,6 +923,103 @@ template,
   }
 }
 
+.loader {
+  position: fixed;
+  inset: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  display: grid;
+  place-content: center;
+  z-index: 99999;
+  overflow: hidden;
+  transition: all 200ms ease-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: all;
+  -webkit-clip-path: circle(100% at 50% 50%);
+          clip-path: circle(100% at 50% 50%);
+}
+.loader[kapat] {
+  -webkit-animation: kapat 1s cubic-bezier(0.19, 1, 0.22, 1);
+          animation: kapat 1s cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  pointer-events: all;
+}
+.loader[kapat] .loader__spinner {
+  opacity: 0;
+}
+@-webkit-keyframes kapat {
+  0% {
+    -webkit-clip-path: circle(100% at 50% 50%);
+            clip-path: circle(100% at 50% 50%);
+  }
+  100% {
+    -webkit-clip-path: circle(0% at 50% 50%);
+            clip-path: circle(0% at 50% 50%);
+  }
+}
+@keyframes kapat {
+  0% {
+    -webkit-clip-path: circle(100% at 50% 50%);
+            clip-path: circle(100% at 50% 50%);
+  }
+  100% {
+    -webkit-clip-path: circle(0% at 50% 50%);
+            clip-path: circle(0% at 50% 50%);
+  }
+}
+.loader__spinner {
+  width: 10rem;
+  height: 10rem;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: all 250ms ease-out;
+  position: relative;
+}
+.loader__spinner::after {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  -webkit-animation: pulse 1.2s infinite;
+          animation: pulse 1.2s infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+          animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.loader__spinner img {
+  width: 100%;
+  max-height: 100%;
+}
+@-webkit-keyframes pulse {
+  0% {
+    background-color: #000000;
+    transform: scale(0);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+    transform: scale(1);
+  }
+}
+@keyframes pulse {
+  0% {
+    background-color: #000000;
+    transform: scale(0);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+    transform: scale(1);
+  }
+}
+
 /* Components SON */
 /* Pages */
 /* Pages SON */
