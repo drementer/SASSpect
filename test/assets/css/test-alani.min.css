@@ -4,7 +4,11 @@
  * klncarslanburak@gmail.com
  * @license MIT (https://github.com/drementer/dred/blob/master/LICENSE)
 */
-/* Vendors */
+/* 
+/////////////////////////////////////
+	Vendors
+/////////////////////////////////////
+*/
 /* Reduce Motion */
 /*
 	(https://github.com/csstools/sanitize.css/blob/main/reduce-motion.css)
@@ -156,12 +160,20 @@
   transition-delay: 0s, 0s;
 }
 
-/* Vendors SON */
+/* 
+/////////////////////////////////////
+	Vendors SON
+/////////////////////////////////////
+*/
 .no-js, .cerez-popup {
   box-shadow: 4.5px 4.5px 3.6px rgba(0, 0, 0, 0.014), 12.5px 12.5px 10px rgba(0, 0, 0, 0.02), 30.1px 30.1px 24.1px rgba(0, 0, 0, 0.026), 100px 100px 80px rgba(0, 0, 0, 0.04);
 }
 
-/* Base */
+/*
+/////////////////////////////////////
+	Base
+/////////////////////////////////////
+*/
 /* 
 	(https://github.com/jgthms/minireset.css),
 	(https://github.com/necolas/normalize.css)
@@ -490,10 +502,26 @@ template,
 }
 
 /* Layout SON */
-/* Base SON */
-/* Layout */
-/* Layout SON */
-/* Components */
+/* 
+/////////////////////////////////////
+	Base SON
+/////////////////////////////////////
+*/
+/* 
+/////////////////////////////////////
+	Layout
+/////////////////////////////////////
+*/
+/* 
+/////////////////////////////////////
+	Layout SON
+/////////////////////////////////////
+*/
+/* 
+/////////////////////////////////////
+	Components
+/////////////////////////////////////
+*/
 /* Butonlar */
 .buton {
   padding: 0.5rem 1rem;
@@ -1020,15 +1048,35 @@ template,
   }
 }
 
-/* Components SON */
-/* Pages */
-/* Pages SON */
-/* Themes */
+/* 
+/////////////////////////////////////
+	Components SON
+/////////////////////////////////////
+*/
+/* 
+/////////////////////////////////////
+	Pages
+/////////////////////////////////////
+*/
+/* 
+/////////////////////////////////////
+	Pages SON
+/////////////////////////////////////
+*/
+/* 
+/////////////////////////////////////
+	Themes
+/////////////////////////////////////
+*/
 /* Dark */
 /* Dark SON */
 /* Defaut */
 /* Defaut SON */
-/* Themes SON */
+/* 
+/////////////////////////////////////
+	Themes SON
+/////////////////////////////////////
+*/
 main.test table th {
   padding-right: 4rem;
   padding-left: 0.5rem;
