@@ -310,112 +310,57 @@ h6 {
   text-transform: capitalize;
 }
 
+/* 
+	https://type-scale.com/
+	1.250 Major Third
+*/
 h1 {
-  font-size: 3.052rem;
+  font-size: 3.815rem;
 }
 @media (max-width: 1200px) {
   h1 {
-    font-size: calc(1.4302rem + 2.1624vw);
+    font-size: calc(1.5065rem + 3.078vw);
   }
 }
 
 h2 {
-  font-size: 2.441rem;
+  font-size: 3.052rem;
 }
 @media (max-width: 1200px) {
   h2 {
-    font-size: calc(1.3691rem + 1.4292vw);
+    font-size: calc(1.4302rem + 2.1624vw);
   }
 }
 
 h3 {
-  font-size: 2.5rem;
+  font-size: 2.441rem;
 }
 @media (max-width: 1200px) {
   h3 {
-    font-size: calc(1.375rem + 1.5vw);
+    font-size: calc(1.3691rem + 1.4292vw);
   }
 }
 
 h4 {
-  font-size: 2rem;
+  font-size: 1.953rem;
 }
 @media (max-width: 1200px) {
   h4 {
-    font-size: calc(1.325rem + 0.9vw);
+    font-size: calc(1.3203rem + 0.8436vw);
   }
 }
 
 h5 {
-  font-size: 1.75rem;
+  font-size: 1.563rem;
 }
 @media (max-width: 1200px) {
   h5 {
-    font-size: calc(1.3rem + 0.6vw);
+    font-size: calc(1.2813rem + 0.3756vw);
   }
 }
 
 h6 {
-  font-size: 1.5rem;
-}
-@media (max-width: 1200px) {
-  h6 {
-    font-size: calc(1.275rem + 0.3vw);
-  }
-}
-
-.display {
-  font-size: 6rem;
-}
-@media (max-width: 1200px) {
-  .display {
-    font-size: calc(1.725rem + 5.7vw);
-  }
-}
-.display--2 {
-  font-size: 4.5rem;
-}
-@media (max-width: 1200px) {
-  .display--2 {
-    font-size: calc(1.575rem + 3.9vw);
-  }
-}
-.display--3 {
-  font-size: 4rem;
-}
-@media (max-width: 1200px) {
-  .display--3 {
-    font-size: calc(1.525rem + 3.3vw);
-  }
-}
-.display--4 {
-  font-size: 3rem;
-}
-@media (max-width: 1200px) {
-  .display--4 {
-    font-size: calc(1.425rem + 2.1vw);
-  }
-}
-
-.sub-head {
-  font-size: 2rem;
-}
-@media (max-width: 1200px) {
-  .sub-head {
-    font-size: calc(1.325rem + 0.9vw);
-  }
-}
-.sub-head--2 {
-  font-size: 1.5rem;
-}
-@media (max-width: 1200px) {
-  .sub-head--2 {
-    font-size: calc(1.275rem + 0.3vw);
-  }
-}
-
-.caption {
-  font-size: 12px;
+  font-size: 1.25rem;
 }
 
 p {
