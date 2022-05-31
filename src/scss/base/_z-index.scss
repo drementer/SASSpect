@@ -12,8 +12,8 @@ $liste: (
 
 $z-index: 99 !default;
 
-@each $liste-eleman in $liste {
-	.#{$liste-eleman} {
+@each $eleman in $liste {
+	.#{eleman} {
 		z-index: $z-index;
 	}
 	$z-index: $z-index - 1;
