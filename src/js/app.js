@@ -9,11 +9,7 @@ import {
 	scroll_ac,
 	scroll_kapat,
 	log,
-	is_string,
-	is_null,
-	is_number,
 	go_top,
-	is_dark_mode,
 	pozisyon,
 } from "./scripts/__functions.js";
 

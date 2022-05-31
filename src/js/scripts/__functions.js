@@ -5,21 +5,8 @@ const scroll_kapat = () => {
 		document.querySelector("body").style.overflowY = "auto";
 	},
 	log = console.log.bind(document),
-	is_string = (value) => {
-		return typeof value === "string" || value instanceof String;
-	},
-	is_null = (value) => {
-		return value !== null || value !== undefined;
-	},
-	is_number = (value) => {
-		return !isNaN(value);
-	},
 	go_top = () => window.scrollTo({ top: 0, behavior: "smooth" }),
-	is_dark_mode =
-		window.matchMedia &&
-		window.matchMedia("(prefers-color-scheme: dark)").matches,
 	pozisyon = (obje) => {
-		// crossbrowser version
 		const box = obje.getBoundingClientRect(),
 			body = document.body,
 			docEl = document.documentElement,
@@ -32,17 +19,12 @@ const scroll_kapat = () => {
 			left = box.left + scrollLeft - clientLeft;
 
 		return { top: Math.round(top), left: Math.round(left) };
-		/* return Math.round(top); */
 	};
 
 export {
 	scroll_ac,
 	scroll_kapat,
 	log,
-	is_string,
-	is_null,
-	is_number,
 	go_top,
-	is_dark_mode,
 	pozisyon,
 };
