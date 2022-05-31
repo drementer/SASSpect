@@ -1,4 +1,3 @@
-/* İşlem */
 const cerez_popup = () => {
 	const cerez_popup = document.getElementById("cerez-popup");
 	if (cerez_popup) {
@@ -41,8 +40,5 @@ const cerez_popup = () => {
 		}
 	}
 };
-/* İşlem SON */
 
-/* Export */
 export default cerez_popup;
-/* Export SON */

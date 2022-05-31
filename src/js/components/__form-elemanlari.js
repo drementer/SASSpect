@@ -1,4 +1,3 @@
-/* Form Elemanları */
 const form_elemanlari = () => {
 	/* Textarea */
 	const ta_hizala = (element) => {
@@ -47,8 +46,5 @@ const form_elemanlari = () => {
 	});
 	/* Checkbox & Radio SON */
 };
-/* Form Elemanları SON */
 
-/* Export */
 export default form_elemanlari;
-/* Export  SON */

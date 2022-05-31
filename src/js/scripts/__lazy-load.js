@@ -48,5 +48,4 @@ const lazy_load = () => {
 	});
 };
 
-// Export
 export default lazy_load;

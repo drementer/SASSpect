@@ -1,5 +1,4 @@
-/* Sliders */
-let sliders = () => {
+const sliders = () => {
 	let ayarlar, slide, href, main, sub, sub_ayarlar;
 	document.addEventListener("DOMContentLoaded", function () {
 		/* Slide */
@@ -33,8 +32,5 @@ let sliders = () => {
 		/* Slide SON */
 	});
 };
-/* Sliders SON */
 
-/* Export */
 export default sliders;
-/* Export SON */

@@ -1,4 +1,3 @@
-/* Go Top */
 const go_top = () => {
 	const go_top_buton = document.querySelector(".go-top"),
 		ekran_kontrol = () => {
@@ -27,8 +26,5 @@ const go_top = () => {
 		go_top_buton.addEventListener("click", yukari_cik);
 	}
 };
-/* Go Top SON */
 
-/* Export */
 export default go_top;
-/* Export SON */

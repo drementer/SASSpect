@@ -1,4 +1,3 @@
-/* Loader */
 const loader = () => {
 	const loader = document.querySelector(".loader");
 	if (loader) {
@@ -13,8 +12,5 @@ const loader = () => {
 		);
 	}
 };
-/* Loader Son */
 
-/* Export */
 export default loader;
-/* Export SON */

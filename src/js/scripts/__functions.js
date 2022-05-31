@@ -1,4 +1,3 @@
-/* Genel */
 const scroll_kapat = () => {
 		document.querySelector("body").style.overflowY = "hidden";
 	},
@@ -35,9 +34,7 @@ const scroll_kapat = () => {
 		return { top: Math.round(top), left: Math.round(left) };
 		/* return Math.round(top); */
 	};
-/* Genel SON */
 
-/* Export */
 export {
 	scroll_ac,
 	scroll_kapat,
@@ -49,4 +46,3 @@ export {
 	is_dark_mode,
 	pozisyon,
 };
-/* Export SON */
