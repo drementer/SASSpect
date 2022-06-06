@@ -1,4 +1,4 @@
-import MouseFollower from "../vendors/__mouse-follower.js";
+import MouseFollower from "../vendors/_mouse-follower.js";
 const cursor = () => {
 	MouseFollower.registerGSAP(gsap);
 	const cursor = new MouseFollower({
