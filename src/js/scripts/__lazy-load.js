@@ -1,7 +1,9 @@
-/**
- * Sayfa yüklenme hızını artırmak için 
+/*!
+ * Sayfa yüklenme hızını artırmak için
  * görsel içeriklerini ekrana yaklaşınca yükler.
- *
+ */
+
+/**
  * @param {Array} elemanlar lazy_load elemanlarının bulunduğu dizi
  * @param {function} io IntersectionObserver Api
  * @param {object} ayarlar io ayarları
@@ -38,12 +40,12 @@ const lazy_load = () => {
 				eleman.classList.add("yuklendi");
 				eleman.setAttribute("src", medya_src);
 
-				// İlk entry'den sonra observer'ı kapatıyorum
+				// İlk entry'den sonra observer'ı kapat
 				observer.disconnect();
 			});
 		}, ayarlar);
 
-		// IntersectionObserver Eleman için çalıştırılıypr
+		// IntersectionObserver Eleman için çalıştırılıyor
 		io.observe(eleman);
 	});
 };
