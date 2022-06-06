@@ -11,34 +11,34 @@ import {
 	log,
 	go_top,
 	pozisyon,
-} from "./scripts/__functions.js";
+} from "./scripts/_functions.js";
 
 // Çerez
-import cerez from "./components/__cerez-popup.js";
+import cerez from "./components/_cerez-popup.js";
 cerez();
 
 // Sliders
-import sliders from "./scripts/__sliders.js";
+import sliders from "./scripts/_sliders.js";
 sliders();
 
 // Lazy Load
-import lazy_load from "./scripts/__lazy-load.js";
+import lazy_load from "./scripts/_lazy-load.js";
 lazy_load();
 
 // Form Elemanları
-import form_elemanlari from "./components/__form-elemanlari.js";
+import form_elemanlari from "./components/_form-elemanlari.js";
 form_elemanlari();
 
 // Cursor
-import cursor from "./components/__cursor.js";
+import cursor from "./components/_cursor.js";
 cursor();
 
 // Go Top
-import got_top from "./components/__go-top.js";
+import got_top from "./components/_go-top.js";
 got_top();
 
 // Loader
-import loader from "./components/__loader.js";
+import loader from "./components/_loader.js";
 loader();
 /* İmport SON */
 
