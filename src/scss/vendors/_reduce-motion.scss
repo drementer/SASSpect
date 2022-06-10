@@ -1,39 +1,75 @@
-/*
-	(https://github.com/csstools/sanitize.css/blob/main/reduce-motion.css)
-	
-	1. Remove animations when motion is reduced (opinionated).
-	2. Remove fixed background attachments when motion is reduced (opinionated).
-	3. Remove timed scrolling behaviors when motion is reduced (opinionated).
-	4. Remove transitions when motion is reduced (opinionated).
+/*!
+	@author drementer
+	@license MIT (https://github.com/drementer/reduced-motion.css/blob/master/LICENSE) 	 
 */
 
-@media (prefers-reduced-motion: reduce) {
-	*,
-	*::before,
-	*::after {
-		animation-delay: -1ms !important; /* 1 */
-		animation-duration: 1ms !important; /* 1 */
-		animation-iteration-count: 1 !important; /* 1 */
-		background-attachment: initial !important; /* 2 */
-		scroll-behavior: auto !important; /* 3 */
-		transition-delay: 0s !important; /* 4 */
-		transition-duration: 0s !important; /* 4 */
+/*
+	Remove
+	(1) animations (opinionated),
+	(2) fixed background attachments (opinionated),
+	(3) timed scrolling behaviors (opinionated),
+	(4) ransitions (opinionated)
+	(5) hide marquee elements (opinionated)
+	when motion is reduced.
+*/
+
+$root: reduced-motion;
+
+$not-parameter: "off";
+$parent-not: ":not(*[#{$root}=#{$not-parameter}])";
+$child-not: ":not(*[#{$root}=#{$not-parameter}] *)";
+$not: $parent-not + $child-not;
+
+@mixin content-filler {
+	/* 1 */
+	animation-delay: -1ms !important;
+	animation-duration: 1ms !important;
+	animation-iteration-count: 1 !important;
+
+	/* 2 */
+	background-attachment: initial !important;
+
+	/* 3 */
+	scroll-behavior: auto !important;
+
+	/* 4 */
+	transition-delay: 0s !important;
+	transition-duration: 0s !important;
+}
+@mixin close-marquee {
+	marquee {
+		/* 5 */
+		display: none !important;
+	}
+}
+@mixin media-content-filler() {
+	@media (prefers-reduced-motion: reduce) {
+		@include content-filler;
+	}
+}
+@mixin media-close-marquee() {
+	@media (prefers-reduced-motion: reduce) {
+		@include close-marquee;
 	}
 }
 
-[reduced-motion] {
-	&,
-	*:not(*[reduced-motion="false"] *) {
+[#{$root}] {
+	&#{$not},
+	*#{$not} {
 		&,
 		&::before,
 		&::after {
-			animation-delay: -1ms !important; /* 1 */
-			animation-duration: 1ms !important; /* 1 */
-			animation-iteration-count: 1 !important; /* 1 */
-			background-attachment: initial !important; /* 2 */
-			scroll-behavior: auto !important; /* 3 */
-			transition-delay: 0s !important; /* 4 */
-			transition-duration: 0s !important; /* 4 */
+			@include content-filler();
 		}
+		@include close-marquee();
 	}
+}
+
+* {
+	&,
+	&::before,
+	&::after {
+		@include media-content-filler();
+	}
+	@include media-close-marquee();
 }
