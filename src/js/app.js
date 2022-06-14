@@ -11,7 +11,9 @@ import {
 	log,
 	go_top,
 	pozisyon,
-} from "./scripts/_functions.js";
+	doc,
+	body
+} from "./scripts/_utils.js";
 import sliders from "./scripts/_sliders.js";
 import lazy_load from "./vendor/_lazy-load.js";
 import cerez from "./components/_cerez-popup.js";
@@ -25,7 +27,3 @@ lazy_load();
 form_elemanlari();
 got_top();
 loader();
-
-// Atamalar
-const doc = document,
-	body = doc.body;
