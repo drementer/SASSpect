@@ -1,0 +1,9 @@
+// Tint a color: mix a color with white
+@function tint-color($renk, $agirlik) {
+	@return mix(white, $renk, $agirlik);
+} 
+
+// Shade a color: mix a color with black
+@function shade-color($renk, $agirlik) {
+	@return mix(black, $renk, $agirlik);
+}
