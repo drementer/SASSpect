@@ -1,8 +1,3 @@
-*::-webkit-input-placeholder {
-	color: inherit;
-	opacity: 0.54;
-}
-
 input,
 textarea,
 select {
@@ -16,8 +11,24 @@ select {
 	border: none;
 	display: block;
 
+	@include padding(0.5rem 1rem);
+	z-index: 1;
+
 	&:not([type="email"])::placeholder {
 		text-transform: capitalize;
+	}
+
+	border-radius: 5px;
+	border: 1px solid $metin;
+
+	&:hover,
+	&:focus {
+		border-color: $metin;
+	}
+
+	&::-webkit-input-placeholder {
+		color: inherit;
+		opacity: 0.54;
 	}
 }
 
@@ -68,7 +79,7 @@ input[type="number"] {
 			&::after {
 				content: "*";
 				margin-left: 0.5rem;
-				color: $mor;
+				color: $ana-renk;
 			}
 		}
 	}
@@ -89,11 +100,11 @@ input[type="number"] {
 		input,
 		textarea,
 		select {
-			border-color: $mor;
-			color: $mor;
+			border-color: $ana-renk;
+			color: $ana-renk;
 
 			&::placeholder {
-				color: $mor;
+				color: $ana-renk;
 			}
 		}
 	}
@@ -103,18 +114,6 @@ input[type="number"] {
 		border-radius: 5px;
 		display: block;
 		width: 100%;
-
-		input,
-		textarea,
-		select {
-			border-radius: 5px;
-			border: 1px solid $metin;
-
-			&:hover,
-			&:focus {
-				border-color: $metin;
-			}
-		}
 	}
 
 	&__after {
@@ -131,7 +130,7 @@ input[type="number"] {
 		span {
 			z-index: 2;
 			position: relative;
-			color: $mor;
+			color: $ana-renk;
 		}
 
 		&::after {
@@ -156,13 +155,6 @@ input[type="number"] {
 		display: block;
 		margin-left: 1rem;
 		@include truncate(1);
-	}
-
-	input,
-	textarea,
-	select {
-		@include padding(0.5rem 1rem);
-		z-index: 1;
 	}
 }
 
@@ -202,7 +194,7 @@ input[type="number"] {
 			font-size: 14px;
 			display: block;
 			margin-left: 2rem;
-			color: $mor;
+			color: $ana-renk;
 		}
 	}
 
