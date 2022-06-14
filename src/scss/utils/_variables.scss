@@ -1,19 +1,41 @@
 // Genel
 $mavi: #eff3f4 !default;
-$beyaz: #ffffff !default;
-$siyah: #000000 !default;
+$beyaz: #fff !default;
+$siyah: #000 !default;
 $kirmizi: red !default;
-$mor: #5900ff !default;
-$mor-pasif: lighten($mor, 30%) !default;
-$mor-aktif: darken($mor, 15%) !default;
-$mor-hover: rgba($mor, 0.1) !default;
 
 // Renk Paleti
+$ana-renk: #5900ff !default;
+$ana-renk--100: tint-color($ana-renk, 80%) !default;
+$ana-renk--200: tint-color($ana-renk, 60%) !default;
+$ana-renk--300: tint-color($ana-renk, 40%) !default;
+$ana-renk--400: tint-color($ana-renk, 20%) !default;
+$ana-renk--500: $ana-renk !default;
+$ana-renk--600: shade-color($ana-renk, 20%) !default;
+$ana-renk--700: shade-color($ana-renk, 40%) !default;
+$ana-renk--800: shade-color($ana-renk, 60%) !default;
+$ana-renk--900: shade-color($ana-renk, 80%) !default;
+
+$yan-renk: #00ffd0 !default;
+$yan-renk--100: tint-color($yan-renk, 80%) !default;
+$yan-renk--200: tint-color($yan-renk, 60%) !default;
+$yan-renk--300: tint-color($yan-renk, 40%) !default;
+$yan-renk--400: tint-color($yan-renk, 20%) !default;
+$yan-renk--500: $yan-renk !default;
+$yan-renk--600: shade-color($yan-renk, 20%) !default;
+$yan-renk--700: shade-color($yan-renk, 40%) !default;
+$yan-renk--800: shade-color($yan-renk, 60%) !default;
+$yan-renk--900: shade-color($yan-renk, 80%) !default;
+
+$aksan: #e1ff00 !default;
+$aksan--100: tint-color($aksan, 80%) !default;
+$aksan--200: tint-color($aksan, 60%) !default;
+$aksan--300: tint-color($aksan, 40%) !default;
+$aksan--400: tint-color($aksan, 20%) !default;
+$aksan--500: $aksan !default;
+$aksan--600: shade-color($aksan, 20%) !default;
+$aksan--700: shade-color($aksan, 40%) !default;
+$aksan--800: shade-color($aksan, 60%) !default;
+$aksan--900: shade-color($aksan, 80%) !default;
+
 $metin: #130022 !default;
-
-// No Js
-$no-js__border: $mor-aktif !default;
-$no-js__arkaplan: #f9faff !default;
-
-// Modal
-$modal-arkaplan: rgba($siyah, 0.5) !default;
