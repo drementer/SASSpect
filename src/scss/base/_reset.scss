@@ -7,13 +7,19 @@
 */
 
 * {
-	background-repeat: no-repeat;
 	tab-size: 4;
 	box-sizing: border-box;
+	text-decoration: inherit;
+	background-repeat: no-repeat;
+	scroll-margin-top: 1.5rem;
+	vertical-align: inherit;
+
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-webkit-tap-highlight-color: transparent;
+
 	&::before,
 	&::after {
+		line-height: inherit;
 		box-sizing: inherit;
 	}
 }
@@ -52,10 +58,6 @@ main {
 	display: block;
 }
 
-ul {
-	list-style: none;
-}
-
 img,
 video {
 	height: auto;
@@ -67,6 +69,14 @@ iframe {
 	border-style: none;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	overflow-x: hidden;
+}
+
 table {
 	border-collapse: collapse;
 	border-color: currentColor;
@@ -76,6 +86,15 @@ table {
 td,
 th {
 	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+ol,
+ul {
+	padding-left: 2em;
 }
 
 hr {
@@ -90,6 +109,56 @@ img,
 svg,
 video {
 	vertical-align: middle;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+button,
+input,
+select,
+textarea {
+	font-weight: normal;
+}
+
+small {
+	font-size: 80%;
+}
+
+span {
+	font-size: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	text-transform: capitalize;
+}
+
+output {
+	display: inline-block;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
 }
 
 svg:not([fill]) {
@@ -109,4 +178,17 @@ button,
 	&::-webkit-search-decoration {
 		-webkit-appearance: none;
 	}
+}
+
+code {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+template {
+	display: none !important;
+}
+
+[disabled] {
+	cursor: not-allowed;
 }
