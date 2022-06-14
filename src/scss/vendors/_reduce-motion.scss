@@ -5,11 +5,11 @@
 
 /*
 	Remove
-	(1) animations (opinionated),
-	(2) fixed background attachments (opinionated),
-	(3) timed scrolling behaviors (opinionated),
-	(4) ransitions (opinionated)
-	(5) hide marquee elements (opinionated)
+	(1) animations 						(opinionated),
+	(2) fixed background attachments 	(opinionated),
+	(3) timed scrolling behaviors 		(opinionated),
+	(4) ransitions 						(opinionated),
+	(5) hide marquee elements 			(opinionated)
 	when motion is reduced.
 */
 
@@ -36,20 +36,9 @@ $not: $parent-not + $child-not;
 	transition-delay: 0s !important;
 	transition-duration: 0s !important;
 }
-@mixin close-marquee {
-	marquee {
-		/* 5 */
-		display: none !important;
-	}
-}
 @mixin media-content-filler() {
 	@media (prefers-reduced-motion: reduce) {
 		@include content-filler;
-	}
-}
-@mixin media-close-marquee() {
-	@media (prefers-reduced-motion: reduce) {
-		@include close-marquee;
 	}
 }
 
@@ -61,15 +50,16 @@ $not: $parent-not + $child-not;
 		&::after {
 			@include content-filler();
 		}
-		@include close-marquee();
 	}
 }
 
 * {
-	&,
-	&::before,
-	&::after {
-		@include media-content-filler();
+	&#{$not},
+	*#{$not} {
+		&,
+		&::before,
+		&::after {
+			@include media-content-filler();
+		}
 	}
-	@include media-close-marquee();
 }
