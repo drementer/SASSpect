@@ -1,6 +1,5 @@
 @import "../../../src/scss/main.scss";
 main.test {
-
 	table {
 		th {
 			padding-right: 4rem;
@@ -16,7 +15,7 @@ main.test {
 	.kolonlar-satirlar {
 		.kolonlar > *,
 		.satirlar > * {
-			background-color: $mor;
+			background-color: $ana-renk;
 			color: $beyaz;
 		}
 	}
