@@ -1,3 +1,5 @@
+$cerez-popup__arkaplan: #f9faff !default;
+
 .cerez-popup {
 	@include margin(2rem);
 	@include padding(1rem 2rem);
@@ -7,13 +9,12 @@
 	position: fixed;
 	bottom: 0;
 	right: 0;
-	background-color: $no-js__arkaplan;
-	border-right: 3px solid $mor;
+	background-color: $cerez-popup__arkaplan;
+	border-right: 3px solid $ana-renk;
 	align-items: center;
 	justify-content: flex-end;
 	flex-wrap: wrap;
 	gap: 1em;
-
 
 	@include medya(xl) {
 		bottom: 1em;
@@ -22,7 +23,7 @@
 		margin: 0;
 		justify-content: center;
 		border-right: none;
-		border-top: 3px solid $mor;
+		border-top: 3px solid $ana-renk;
 	}
 
 	&__butonlar {
@@ -53,14 +54,14 @@
 
 			text-transform: capitalize;
 			display: inline-block;
-			color: $mor;
+			color: $ana-renk;
 			border-bottom: 1px solid transparent;
 			transition: none;
 		}
 
 		&:hover {
 			span {
-				border-bottom-color: $mor;
+				border-bottom-color: $ana-renk;
 			}
 		}
 	}

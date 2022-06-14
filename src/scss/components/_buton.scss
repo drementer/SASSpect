@@ -10,28 +10,28 @@
 	text-transform: capitalize;
 	outline: none;
 	border: 1px solid transparent;
-	background-color: $mor;
+	background-color: $ana-renk;
 	color: $beyaz;
 	cursor: pointer;
 	vertical-align: middle;
 
 	&:hover {
-		background-color: $mor-aktif;
+		background-color: $ana-renk--700;
 	}
 
 	&#{&}--2 {
 		background-color: transparent;
-		color: $mor;
+		color: $ana-renk;
 		border-color: currentColor;
 
 		&:hover {
-			background-color: $mor-hover;
+			background-color: $ana-renk--700;
 		}
 	}
 
 	&#{&}--hayalet {
 		background-color: transparent;
-		color: $mor;
+		color: $ana-renk;
 
 		&:hover {
 			border-color: currentColor;
@@ -40,7 +40,7 @@
 
 	&#{&}--link {
 		background-color: transparent;
-		color: $mor;
+		color: $ana-renk;
 		margin: 0;
 		padding: 0;
 
