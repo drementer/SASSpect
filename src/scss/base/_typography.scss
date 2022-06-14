@@ -2,12 +2,14 @@
 
 * {
 	font-family: "Fira Code";
-	line-height: 1.5;
+
+	line-height: 1.2;
 	text-rendering: optimizeLegibility !important;
+
 	-webkit-font-smoothing: antialiased !important;
 	-moz-osx-font-smoothing: grayscale !important;
-	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
 }
 
 html {
@@ -24,8 +26,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: normal;
-	text-transform: capitalize;
+	line-height: 1.5;
 }
 
 /* 
@@ -53,40 +54,4 @@ p {
 
 label {
 	@include font-size(0.875rem);
-}
-
-span {
-	font-size: inherit;
-}
-
-small {
-	font-size: 80%;
-}
-
-sub,
-sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
-}
-
-sub {
-	bottom: -0.25em;
-}
-
-sup {
-	top: -0.5em;
-}
-
-code {
-	font-family: monospace, monospace;
-	@include font-size(1em);
-}
-
-button,
-input,
-select,
-textarea {
-	font-weight: normal;
 }
