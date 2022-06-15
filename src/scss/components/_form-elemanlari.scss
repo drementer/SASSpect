@@ -19,11 +19,11 @@ select {
 	}
 
 	border-radius: 5px;
-	border: 1px solid $metin;
+	border: 1px solid $siyah-3;
 
 	&:hover,
 	&:focus {
-		border-color: $metin;
+		border-color: $siyah-3;
 	}
 
 	&::-webkit-input-placeholder {
@@ -85,7 +85,7 @@ input[type="number"] {
 	}
 
 	&[focus] &__icerik {
-		border-color: $metin;
+		border-color: $siyah-3;
 	}
 
 	&[invalid] &__incorrect-error {
@@ -135,7 +135,7 @@ input[type="number"] {
 
 		&::after {
 			content: "";
-			background-color: $mavi;
+			background-color: $beyaz-2;
 			width: 100%;
 			height: 8px;
 			display: block;
@@ -167,7 +167,7 @@ input[type="number"] {
 
 	a {
 		text-transform: capitalize;
-		color: $metin;
+		color: $siyah-3;
 	}
 }
 
@@ -184,7 +184,7 @@ input[type="number"] {
 
 		&:checked + label .checkbox__label-kutu,
 		&:checked + label .radio__label-kutu {
-			border-color: $metin !important;
+			border-color: $siyah-3 !important;
 		}
 	}
 
@@ -210,7 +210,7 @@ input[type="number"] {
 		height: 1.2rem;
 		min-width: 1.2rem;
 		background-color: transparent;
-		border: 1px solid $metin;
+		border: 1px solid $siyah-3;
 		margin: 2px 0;
 		border-radius: 25%;
 		display: grid;
@@ -219,7 +219,7 @@ input[type="number"] {
 		&::after {
 			content: "✔";
 			display: block;
-			color: $metin;
+			color: $siyah-3;
 			position: relative;
 			transform: scale(0);
 			opacity: 0.5;
