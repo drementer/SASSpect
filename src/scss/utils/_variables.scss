@@ -1,8 +1,11 @@
 // Genel
-$mavi: #eff3f4 !default;
 $beyaz: #fff !default;
+$beyaz-2: #eff3f4 !default;
+
 $siyah: #000 !default;
-$kirmizi: red !default;
+$siyah-2: #0d0d0d !default;
+$siyah-3: #130022 !default;
+
 
 // Renk Paleti
 $ana-renk: #5900ff !default;
@@ -37,5 +40,3 @@ $aksan--600: shade-color($aksan, 20%) !default;
 $aksan--700: shade-color($aksan, 40%) !default;
 $aksan--800: shade-color($aksan, 60%) !default;
 $aksan--900: shade-color($aksan, 80%) !default;
-
-$metin: #130022 !default;
