@@ -1,15 +1,20 @@
 /*!
- * Sayfa yüklenme hızını artırmak için
- * görsel içeriklerini ekrana yaklaşınca yükler.
+ * lazy-load.js
+ * @description Sayfa yüklenme hızını artırmak için görsel içeriklerini ekranın görünür alanına yaklaşınca yükler
+ *
+ * @author drementer
+ * @version 1.0.1
+ * @license MIT
+ * @see {@link https://github.com/drementer/lazy-load.js}
  */
 
-/**
- * @param {Array} elemanlar lazy_load elemanlarının bulunduğu dizi
- * @param {function} io IntersectionObserver Api
- * @param {object} ayarlar io ayarları
- * @param {elemanlar[i]} eleman io'ya gönderilecek eleman
- */
 const lazy_load = () => {
+	/**
+	 * @param {Array} elemanlar lazy_load elemanlarının bulunduğu dizi
+	 * @param {function} io IntersectionObserver Api
+	 * @param {object} ayarlar io ayarları
+	 * @param {elemanlar[i]} eleman io'ya gönderilecek eleman
+	 */
 	const elemanlar = document.querySelectorAll("[lazy-load]");
 
 	elemanlar.forEach((eleman) => {
@@ -45,7 +50,7 @@ const lazy_load = () => {
 			});
 		}, ayarlar);
 
-		// IntersectionObserver Eleman için çalıştırılıyor
+		// IntersectionObserver eleman için çalıştırılıyor
 		io.observe(eleman);
 	});
 };
