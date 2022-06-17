@@ -27,7 +27,8 @@
 
 /// Truncate
 /// Elementin maksimum kaç satır olacaığını belirler
-/// Eğer maksimum satır aşılır ise "..." koyar
+/// Eğer maksimum satır aşılır ise fazla satırları kesip
+/// son satırın sonuna "..." koyar
 /// @param {number} $max-satir [2] - maksimum satır sayısı
 @mixin truncate($max-satir: 2) {
 	display: -webkit-box;
