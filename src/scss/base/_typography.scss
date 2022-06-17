@@ -40,7 +40,7 @@ $font-boyutlari: (
 	4: 1.953,
 	5: 1.563,
 	6: 1.25,
-);
+) !default;
 
 @each $font-numarasi, $font-degeri in $font-boyutlari {
 	h#{$font-numarasi} {
