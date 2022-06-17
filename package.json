@@ -14,10 +14,6 @@
 	"bugs": {
 		"url": "https://github.com/drementer/dred/issues"
 	},
-	"author": {
-		"name": "drementer",
-		"email": "klncarslanburak@gmail.com",
-		"url": "https://github.com/drementer"
-	},
+	"author": "drementer <klncarslanburak@gmail.com> (https://github.com/drementer)",
 	"license": "MIT"
 }
