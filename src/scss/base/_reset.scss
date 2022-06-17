@@ -192,3 +192,15 @@ template {
 [disabled] {
 	cursor: not-allowed;
 }
+
+p,
+span {
+	&:empty {
+		display: none;
+	}
+}
+
+ion-icon {
+	user-select: none;
+	pointer-events: none;
+}
