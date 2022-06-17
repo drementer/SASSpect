@@ -1,23 +1,18 @@
-// Tema
+/// Tema
+/// Temaya özel still ayarlarını yapar
+/// @param {string} $tema [default] - temaya ismi
 @mixin tema($tema: "default") {
 	@at-root html[data-theme="#{$tema}"] #{&} {
 		@content;
 	}
 }
 
-// Font Face
-@mixin font-face($font-ismi, $dosya-ismi) {
-	@font-face {
-		font-family: "#{$font-ismi}";
-		src: url("../fonts/#{$dosya-ismi}.eot");
-		src: url("../fonts/#{$dosya-ismi}.eot?#iefix") format("embedded-opentype"),
-			url("../fonts/#{$dosya-ismi}.woff") format("woff"),
-			url("../fonts/#{$dosya-ismi}.ttf") format("truetype"),
-			url("../fonts/#{$dosya-ismi}.svg?#webfont") format("svg");
-	}
-}
-
-// Arkaplan 
+/// Arkaplan 
+/// Elementin arkaplan resmini ayarlar
+/// @param {string} $url - resim url/yolu
+/// @param {string|number} $size [cover] - resim boyutu
+/// @param {string|number} $position [center]  - resim konumu
+/// @param {string} $repeat [no-repeat] - resmin tekrar edip etmeyeceğini belirler
 @mixin arkaplan(
 	$url,
 	$size: cover,
@@ -30,7 +25,10 @@
 	background-repeat: $repeat;
 }
 
-// Truncate
+/// Truncate
+/// Elementin maksimum kaç satır olacaığını belirler
+/// Eğer maksimum satır aşılır ise "..." koyar
+/// @param {number} $max-satir [2] - maksimum satır sayısı
 @mixin truncate($max-satir: 2) {
 	display: -webkit-box;
 	-webkit-line-clamp: $max-satir;
@@ -39,7 +37,10 @@
 	text-overflow: ellipsis;
 }
 
-// Animasyon
+/// Animasyon
+/// Elemnt için varsayılan animasyon ayarlarını yapar
+/// @param {boolen} $backface [true] - backface-visibility özelliğini belirler
+/// @param {number} $perspective [1000] - elementin perspective özelliğini belirler
 @mixin animasyon($backface: true, $perspective: 1000) {
     @if $backface {
         backface-visibility: hidden;
