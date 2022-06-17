@@ -5,12 +5,7 @@
 	"description": "Projelerimin altyapısı",
 	"keywords": [
 		"scss",
-		"css",
-		"library",
-		"javascript",
-		"scss library",
-		"css library",
-		"js"
+		"javascript"
 	],
 	"repository": {
 		"type": "git",
