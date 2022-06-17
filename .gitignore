@@ -19,13 +19,9 @@ nbproject/
 
 # ENVs
 node_modules
-bower_components
-.env
-
 # Project
 /dist/*
 /src/css/*
-!/dist/robot.txt
 /build/
 /tmp/
 /test/assets/css/*
