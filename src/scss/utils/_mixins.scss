@@ -48,3 +48,47 @@
     }
     perspective: $perspective;
 }
+
+/// z-index sistem
+/// Liste elemanlarının z-index hiyerarşisini belirler
+/// z-index değeri 99'dan liste ise ilk elemanından
+/// başlıyor ve her seferinde z-index 1 azaltılarak
+/// liste elemanı ise 1 arttırılarak devam ediyor
+/// @param {array} $liste - z-index verilecek elemanlar
+/// @param {number} $z-index [99] - z-index başlangıç değeri
+/// @param {string} $eleman - $liste elemanı
+/// @example scss - z-index mixin
+/// $liste: (
+/// 	"liste-elemani1",
+/// 	"liste-elemani2"
+/// );
+/// @include z-index($liste);
+///
+/// Çıktı
+/// .liste-elemani1 { z-index: 99; }
+/// .liste-elemani2 { z-index: 98; }
+///
+/// Buna OHA diyeceksiniz :DDDDDDDDD
+/// @example scss - z-index mixin
+/// $liste: (
+/// 	"buton"
+/// );
+/// .buton{
+/// 	color: red;
+/// 	&-2{
+/// 		color: blue;
+/// 	}
+/// }
+/// @include z-index($liste);
+///
+/// Çıktı
+/// .buton, .buton-2 { z-index: 99; }
+///
+@mixin z-index($liste, $z-index: 99) {
+	@each $eleman in $liste {
+		.#{$eleman} {
+			z-index: $z-index;
+		}
+		$z-index: $z-index - 1;
+	}
+}
