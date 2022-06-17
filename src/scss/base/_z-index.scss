@@ -1,4 +1,4 @@
-$liste: (
+$z-index-listesi: (
 	"loader",
 	"mf-cursor",
 	"modal",
@@ -12,4 +12,4 @@ $liste: (
 	"buton"
 ) !default;
 
-@include z-index($liste);
+@include z-index($z-index-listesi);
