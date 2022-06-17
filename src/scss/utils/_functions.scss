@@ -1,9 +1,15 @@
-// Tint a color: mix a color with white
+/// Tint Color
+/// Tint a color: mix a color with white
+/// @param {string} $renk - tint edilecek renk
+/// @param {number} $agirlik - rengin tint yoğunluğunu belirler
 @function tint-color($renk, $agirlik) {
 	@return mix(white, $renk, $agirlik);
 } 
 
-// Shade a color: mix a color with black
+/// Shade Color
+/// Shade a color: mix a color with black
+/// @param {string} $renk - shade edilecek renk
+/// @param {number} $agirlik - rengin shade yoğunluğunu belirler
 @function shade-color($renk, $agirlik) {
 	@return mix(black, $renk, $agirlik);
 }
