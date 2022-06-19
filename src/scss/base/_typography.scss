@@ -1,23 +1,23 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Code:300,regular,500,600,700");
 
-* {
-	font-family: "Fira Code";
+html {
+	font-family: $root-font-family;
+	font-size: $root-font-size;
 
-	line-height: 1.2;
 	text-rendering: optimizeLegibility !important;
 
 	-webkit-font-smoothing: antialiased !important;
 	-moz-osx-font-smoothing: grayscale !important;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
-}
-
-html {
-	font-size: 16px;
 
 	@include medya(lg) {
-		font-size: 14px;
+		font-size: $root-font-size--mobil;
 	}
+}
+
+body {
+	line-height: $root-line-height;
 }
 
 h1,
@@ -26,7 +26,7 @@ h3,
 h4,
 h5,
 h6 {
-	line-height: 1.5;
+	line-height: $heading-line-height;
 }
 
 /* 
