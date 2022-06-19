@@ -1,5 +1,6 @@
 /// Tema
 /// Temaya özel still ayarlarını yapar
+/// 
 /// @param {string} $tema [default] - temaya ismi
 @mixin tema($tema: "default") {
 	@at-root html[data-theme="#{$tema}"] #{&} {
@@ -9,6 +10,7 @@
 
 /// Arkaplan
 /// Elementin arkaplan resmini ayarlar
+/// 
 /// @param {string} $url - resim (url/dosya yolu)
 /// @param {string|number} $size [cover] - resim boyutu
 /// @param {string|number} $position [center]  - resim konumu
@@ -24,6 +26,7 @@
 /// Elementin maksimum kaç satır olacaığını belirler
 /// Eğer maksimum satır aşılır ise fazla satırları kesip
 /// son satırın sonuna "..." koyar
+/// 
 /// @param {number} $max-satir [2] - maksimum satır sayısı
 @mixin truncate($max-satir: 2) {
 	display: -webkit-box;
@@ -37,6 +40,7 @@
 /// Elementin maksimum kaç satır olacaığını belirler
 /// Eğer maksimum satır aşılır ise fazla satırları kesip
 /// son satıra linear gradient ile şeffaflık yapar
+/// 
 /// @param {number} $max-satir [2] - maksimum satır sayısı
 /// @param {string} $arkaplan-rengi [#fff] - gradient rengi
 @mixin truncate-2($max-satir: 2, $arkaplan-rengi: #fff) {
@@ -62,6 +66,7 @@
 
 /// Animasyon
 /// Elemnt için varsayılan animasyon ayarlarını yapar
+/// 
 /// @param {boolen} $backface [true] - backface-visibility özelliğini belirler
 /// @param {number} $perspective [1000] - elementin perspective özelliğini belirler
 @mixin animasyon($backface: true, $perspective: 1000) {
@@ -76,6 +81,7 @@
 /// z-index değeri 99'dan liste ise ilk elemanından
 /// başlıyor ve her seferinde z-index 1 azaltılarak
 /// liste elemanı ise 1 arttırılarak devam ediyor
+/// 
 /// @param {map} $liste - z-index verilecek elemanlar
 /// @param {string} $eleman - $liste elemanı
 /// @param {number} $z-index [99] - z-index başlangıç değeri
