@@ -33,7 +33,13 @@
 	text-overflow: ellipsis;
 }
 
-@mixin truncate-2($max-satir: 2) {
+/// Truncate 2
+/// Elementin maksimum kaç satır olacaığını belirler
+/// Eğer maksimum satır aşılır ise fazla satırları kesip
+/// son satıra linear gradient ile şeffaflık yapar
+/// @param {number} $max-satir [2] - maksimum satır sayısı
+/// @param {string} $arkaplan-rengi [#fff] - gradient rengi
+@mixin truncate-2($max-satir: 2, $arkaplan-rengi: #fff) {
 	$font-size: 1em;
 	$line-height: $font-size * $root-line-height;
 
