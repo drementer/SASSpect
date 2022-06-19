@@ -1,15 +1,9 @@
 $z-index-listesi: (
-	"loader",
-	"mf-cursor",
-	"modal",
-	"popup",
-	"cerez-popup",
-	"sidebar",
-	"toast",
-	"no-js",
-	"go-top",
-	"header",
-	"buton"
+	".loader",
+	".modal",
+	".popup",
+	".go-top",
+	".nav"
 ) !default;
 
 @include z-index($z-index-listesi);
