@@ -3,6 +3,7 @@
 /// Temaya özel still ayarlarını yapar
 /// 
 /// @param {string} $tema [default] - temaya ismi
+/// 
 @mixin tema($tema: "default") {
 	@at-root html[data-theme="#{$tema}"] #{&} {
 		@content;
@@ -17,6 +18,7 @@
 /// @param {string|number} $size [cover] - resim boyutu
 /// @param {string|number} $position [center]  - resim konumu
 /// @param {string} $repeat [no-repeat] - resmin tekrar edip etmeyeceğini belirler
+/// 
 @mixin arkaplan($url, $size: cover, $position: center, $repeat: no-repeat) {
 	background-image: $url;
 	background-size: $size;
@@ -31,6 +33,7 @@
 /// son satırın sonuna "..." koyar
 /// 
 /// @param {number} $max-satir [2] - maksimum satır sayısı
+/// 
 @mixin truncate($max-satir: 2) {
 	display: -webkit-box;
 	-webkit-line-clamp: $max-satir;
@@ -47,6 +50,7 @@
 /// 
 /// @param {number} $max-satir [2] - maksimum satır sayısı
 /// @param {string} $arkaplan-rengi [#fff] - gradient rengi
+/// 
 @mixin truncate-2($max-satir: 2, $arkaplan-rengi: #fff) {
 	$font-size: 1em;
 	$line-height: $font-size * $root-line-height;
@@ -74,6 +78,7 @@
 /// 
 /// @param {boolen} $backface [true] - backface-visibility özelliğini belirler
 /// @param {number} $perspective [1000] - elementin perspective özelliğini belirler
+/// 
 @mixin animasyon($backface: true, $perspective: 1000) {
 	@if $backface {
 		backface-visibility: hidden;
@@ -122,6 +127,7 @@
 /// @include z-index($liste);
 /// 
 /// @output css - .elm, .elm2, .elm3 { z-index: 99; }
+/// 
 @mixin z-index($liste, $z-index: 99) {
 	@each $eleman in $liste {
 		#{$eleman} {
