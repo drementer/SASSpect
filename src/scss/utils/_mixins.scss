@@ -59,10 +59,10 @@
 /// @param {boolen} $backface [true] - backface-visibility özelliğini belirler
 /// @param {number} $perspective [1000] - elementin perspective özelliğini belirler
 @mixin animasyon($backface: true, $perspective: 1000) {
-    @if $backface {
-        backface-visibility: hidden;
-    }
-    perspective: $perspective;
+	@if $backface {
+		backface-visibility: hidden;
+	}
+	perspective: $perspective;
 }
 
 /// z-index sistem
