@@ -1,9 +1,18 @@
+/* Typografi */
+$root-font-family:			"Fira Code";
+
+$root-font-size:			16px;
+$root-font-size--mobil:		14px;
+
+$root-line-height:			1.2;
+$heading-line-height: 		1.5;
+
 /* Renk Paleti */
 
 $beyaz: #fff !default;
 $beyaz-2: #eff3f4 !default;
 $beyaz-3: #f4f5f5 !default;
-$beyaz-4: #F0F4EF !default;
+$beyaz-4: #f0f4ef !default;
 $beyaz--100: tint-color($beyaz, 80%) !default;
 $beyaz--200: tint-color($beyaz, 60%) !default;
 $beyaz--300: tint-color($beyaz, 40%) !default;
@@ -18,7 +27,7 @@ $siyah: #000 !default;
 $siyah-2: #000814 !default;
 $siyah-3: #130022 !default;
 $siyah-4: #070707 !default;
-$siyah-5: #0A0A0A !default;
+$siyah-5: #0a0a0a !default;
 $siyah--100: tint-color($siyah, 80%) !default;
 $siyah--200: tint-color($siyah, 60%) !default;
 $siyah--300: tint-color($siyah, 40%) !default;
@@ -40,7 +49,7 @@ $ana-renk--700: shade-color($ana-renk, 40%) !default;
 $ana-renk--800: shade-color($ana-renk, 60%) !default;
 $ana-renk--900: shade-color($ana-renk, 80%) !default;
 
-$yan-renk: #F9A620 !default;
+$yan-renk: #f9a620 !default;
 $yan-renk--100: tint-color($yan-renk, 80%) !default;
 $yan-renk--200: tint-color($yan-renk, 60%) !default;
 $yan-renk--300: tint-color($yan-renk, 40%) !default;
