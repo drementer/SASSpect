@@ -7,18 +7,13 @@
 	}
 }
 
-/// Arkaplan 
+/// Arkaplan
 /// Elementin arkaplan resmini ayarlar
-/// @param {string} $url - resim url/yolu
+/// @param {string} $url - resim (url/dosya yolu)
 /// @param {string|number} $size [cover] - resim boyutu
 /// @param {string|number} $position [center]  - resim konumu
 /// @param {string} $repeat [no-repeat] - resmin tekrar edip etmeyeceğini belirler
-@mixin arkaplan(
-	$url,
-	$size: cover,
-	$position: center,
-	$repeat: no-repeat,
-) {
+@mixin arkaplan($url, $size: cover, $position: center, $repeat: no-repeat) {
 	background-image: $url;
 	background-size: $size;
 	background-position: $position;
