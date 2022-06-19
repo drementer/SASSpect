@@ -33,6 +33,27 @@
 	text-overflow: ellipsis;
 }
 
+@mixin truncate-2($max-satir: 2) {
+	$font-size: 1em;
+	$line-height: $font-size * $root-line-height;
+
+	line-height: $line-height;
+	height: $max-satir * $line-height;
+	overflow: hidden;
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		height: $line-height;
+		width: 75%;
+
+		background: linear-gradient(90deg, transparent, white);
+	}
+}
+
 /// Animasyon
 /// Elemnt için varsayılan animasyon ayarlarını yapar
 /// @param {boolen} $backface [true] - backface-visibility özelliğini belirler
