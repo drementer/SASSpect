@@ -2,18 +2,13 @@
 	@include padding(0.5rem 1rem);
 	@include margin(0.5rem);
 	@include font-size(1.2rem);
+	@extend %buton;
 
 	display: inline-flex;
 	justify-content: center;
-
 	position: relative;
-	white-space: nowrap;
-	text-decoration: none;
-	text-transform: capitalize;
-	outline: none;
-	border: 1px solid transparent;
 	vertical-align: middle;
-	cursor: pointer;
+	border: 1px solid transparent;
 	color: $beyaz;
 	background-color: $ana-renk;
 
