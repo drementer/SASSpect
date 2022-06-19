@@ -76,24 +76,22 @@
 /// z-index değeri 99'dan liste ise ilk elemanından
 /// başlıyor ve her seferinde z-index 1 azaltılarak
 /// liste elemanı ise 1 arttırılarak devam ediyor
-/// @param {array} $liste - z-index verilecek elemanlar
-/// @param {number} $z-index [99] - z-index başlangıç değeri
+/// @param {map} $liste - z-index verilecek elemanlar
 /// @param {string} $eleman - $liste elemanı
-/// @example scss - z-index mixin
+/// @param {number} $z-index [99] - z-index başlangıç değeri
+///
+/// @example scss - basit kullanım
 /// $liste: (
-/// 	"liste-elemani1",
-/// 	"liste-elemani2"
+/// 	".elm1",
+/// 	".elm2"
 /// );
 /// @include z-index($liste);
-///
-/// Çıktı
-/// .liste-elemani1 { z-index: 99; }
-/// .liste-elemani2 { z-index: 98; }
-///
-/// Buna OHA diyeceksiniz :DDDDDDDDD
-/// @example scss - z-index mixin
+/// 
+/// @output css - .elm1 { z-index: 99; } .elm2 { z-index: 98; }
+/// 
+/// @example scss - varyant algılama
 /// $liste: (
-/// 	"buton"
+/// 	".buton"
 /// );
 /// .buton{
 /// 	color: red;
@@ -103,12 +101,18 @@
 /// }
 /// @include z-index($liste);
 ///
-/// Çıktı
-/// .buton, .buton-2 { z-index: 99; }
+/// @output css - .buton, .buton-2 { z-index: 99; }
 ///
+/// @example scss - ortak z-index değeri
+/// $liste: (
+/// 	".elm, .elm2, .elm3 "
+/// );
+/// @include z-index($liste);
+/// 
+/// @output css - .elm, .elm2, .elm3 { z-index: 99; }
 @mixin z-index($liste, $z-index: 99) {
 	@each $eleman in $liste {
-		.#{$eleman} {
+		#{$eleman} {
 			z-index: $z-index;
 		}
 		$z-index: $z-index - 1;
