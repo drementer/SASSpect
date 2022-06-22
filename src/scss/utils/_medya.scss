@@ -1,24 +1,4 @@
 // Medya
-
-// Medya boyutları
-$hazir-deger: (
-	ul: 1400,
-	xl: 1200,
-	lg: 992,
-	md: 768,
-	sm: 576,
-	xs: 360,
-) !default;
-
-// Hazır değeri çekmek için
-@function hazir-medya-degeri-al($deger) {
-	@if map-has-key($hazir-deger, $deger) {
-		@return map-get($hazir-deger, $deger);
-	} @else {
-		@warn "#{$deger}'i hazır değerler içinde yok.";
-	}
-}
-
 // İşlem
 @mixin medya($bitis: null, $baslangic: null) {
 	$max-width: null;
