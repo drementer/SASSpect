@@ -131,8 +131,8 @@ $bosluk-hali: (
 
 /* Duyarlı Modlar */
 // Ana Hat
-@each $hazir-deger-ismi, $hazir-deger-degeri in $hazir-deger {
-	@include medya($hazir-deger-ismi) {
+@each $medya-boyutlari-ismi, $medya-boyutlari-degeri in $medya-boyutlari {
+	@include medya($medya-boyutlari-ismi) {
 		@each $bosluk-hali-isim, $bosluk-hali-deger in $bosluk-hali {
 			@each $bosluk-isimleri-isim,
 				$bosluk-isimleri-deger in $bosluk-isimleri
@@ -175,7 +175,7 @@ $bosluk-hali: (
 					{
 						// Tüm yönler
 						// Genel
-						.#{$bosluk-isimleri-deger}-#{$hazir-deger-ismi}-#{$bosluk-hali-deger}#{$bosluk-degerleri-isim} {
+						.#{$bosluk-isimleri-deger}-#{$medya-boyutlari-ismi}-#{$bosluk-hali-deger}#{$bosluk-degerleri-isim} {
 							#{$bosluk-isimleri-isim}: #{$bosluk-degerleri-deger};
 						}
 
@@ -183,19 +183,19 @@ $bosluk-hali: (
 						@each $bosluk-yonleri-isim,
 							$bosluk-yonleri-deger in $bosluk-yonleri
 						{
-							.#{$bosluk-isimleri-deger}#{$bosluk-yonleri-deger}-#{$hazir-deger-ismi}-#{$bosluk-hali-deger}#{$bosluk-degerleri-isim} {
+							.#{$bosluk-isimleri-deger}#{$bosluk-yonleri-deger}-#{$medya-boyutlari-ismi}-#{$bosluk-hali-deger}#{$bosluk-degerleri-isim} {
 								#{$bosluk-isimleri-isim}-#{$bosluk-yonleri-isim}: #{$bosluk-degerleri-deger};
 							}
 						}
 
 						// Yataylar
-						.#{$bosluk-isimleri-deger}x-#{$bosluk-hali-deger}#{$hazir-deger-ismi}-#{$bosluk-degerleri-isim} {
+						.#{$bosluk-isimleri-deger}x-#{$bosluk-hali-deger}#{$medya-boyutlari-ismi}-#{$bosluk-degerleri-isim} {
 							#{$bosluk-isimleri-isim}-left: #{$bosluk-degerleri-deger};
 							#{$bosluk-isimleri-isim}-right: #{$bosluk-degerleri-deger};
 						}
 
 						// Dikeyler
-						.#{$bosluk-isimleri-deger}y-#{$bosluk-hali-deger}#{$hazir-deger-ismi}-#{$bosluk-degerleri-isim} {
+						.#{$bosluk-isimleri-deger}y-#{$bosluk-hali-deger}#{$medya-boyutlari-ismi}-#{$bosluk-degerleri-isim} {
 							#{$bosluk-isimleri-isim}-top: #{$bosluk-degerleri-deger};
 							#{$bosluk-isimleri-isim}-bottom: #{$bosluk-degerleri-deger};
 						}
