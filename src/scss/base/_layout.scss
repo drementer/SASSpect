@@ -11,3 +11,9 @@
 		@include padding(2rem 1rem);
 	}
 }
+
+.hata-ayiklama {
+	* {
+		background-color: rgba(0, 100, 0, 0.1) !important;
+	}
+}
