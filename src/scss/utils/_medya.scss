@@ -51,3 +51,39 @@
 		@content;
 	}
 }
+
+@mixin medya-boyutlarini-goster($boyutlar) {
+	body::after {
+		position: fixed;
+		z-index: 99;
+		right: 0;
+		top: 0;
+		padding: 0.5rem 1rem;
+		background-color: $beyaz-3;
+		border: 1px solid $siyah;
+
+		@each $medya-boyutu-ismi, $medya-boyutu in $boyutlar {
+			$boyut: $medya-boyutu-ismi;
+			$icerik: "#{$medya-boyutu-ismi}";
+			
+			@if $medya-boyutu {
+				$boyut: $medya-boyutu * 1px;
+				$icerik: "#{$medya-boyutu-ismi}: >= #{$boyut}";
+			}
+
+			@include min-medya($boyut) {
+				content: "#{$icerik}";
+			}
+		}
+	}
+}
+
+$medya-boyutlarini-goster: true;
+@if $medya-boyutlarini-goster {
+	$boyutlar: $medya-boyutlari;
+	$boyutlar: (
+		xs: null,
+		sm: 576,
+	);
+	@include medya-boyutlarini-goster($boyutlar);
+}
