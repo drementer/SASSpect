@@ -8,6 +8,17 @@ $root-line-height:			1.2 !default;
 $heading-line-height:		1.5 !default;
 
 
+/* Medya boyutları */
+$medya-boyutlari: (
+	ul: 1400,
+	xl: 1200,
+	lg: 992,
+	md: 768,
+	sm: 576,
+	xs: 360,
+) !default;
+
+
 /* Renk Paleti */
 $beyaz:						#fff !default;
 $beyaz-2:					#eff3f4 !default;
