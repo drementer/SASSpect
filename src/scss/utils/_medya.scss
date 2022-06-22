@@ -8,7 +8,7 @@
 		@if type-of($bitis) == number {
 			$max-width: $bitis;
 		} @else {
-			$max-width: #{hazir-medya-degeri-al($bitis)}px;
+			$max-width: #{hazir-medya-degeri-al($bitis)}#{$varsayilan-medya-unit};
 		}
 	}
 
@@ -16,7 +16,7 @@
 		@if type-of($baslangic) == number {
 			$min-width: $baslangic;
 		} @else {
-			$min-width: #{hazir-medya-degeri-al($baslangic)}px;
+			$min-width: #{hazir-medya-degeri-al($baslangic)}#{$varsayilan-medya-unit};
 		}
 	}
 
