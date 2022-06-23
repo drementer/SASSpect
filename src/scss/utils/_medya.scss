@@ -70,9 +70,9 @@
 ///
 /// Ekranda medya boyutlarını gösterir
 ///
-/// @param {map} $boyutlar - gösterilecek medya boyutları
+/// @param {map} $boyutlar [$medya-boyutlari] - gösterilecek medya boyutları
 ///
-@mixin medya-boyutlarini-goster($boyutlar) {
+@mixin medya-boyutlarini-goster($boyutlar: $medya-boyutlari) {
 	@if $medya-boyutlarini-goster {
 		body::after {
 			position: fixed;
