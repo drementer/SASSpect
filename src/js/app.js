@@ -2,7 +2,7 @@
  * @author drementer
  * klncarslanburak@gmail.com
  * @license MIT (https://github.com/drementer/dred/blob/master/LICENSE)
-*/
+ */
 
 // İmportlar
 import {
@@ -12,7 +12,7 @@ import {
 	go_top,
 	pozisyon,
 	doc,
-	body
+	body,
 } from "./scripts/_utils.js";
 import sliders from "./scripts/_sliders.js";
 import lazy_load from "./vendor/_lazy-load.js";
