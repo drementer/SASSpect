@@ -116,12 +116,22 @@
 	}
 }
 
+/// Ekranda medya boyutlarını gösteri açıp kapatır
+/// @param {boolen} $medya-boyutlarini-goster [true] - özelliği açıp kapatabilirsiniz
 $medya-boyutlarini-goster: true;
 
-$boyutlar: $medya-boyutlari;
-$boyutlar: (
-	xs: null,
-	sm: 576,
-);
+/// Medya boyutları ayarını varsayılan $medya-boyutlari ile kullanılmasını açıp kapatır
+/// @param {boolen} $varsayilan-medya-boyutlarini-kullan [true] - özelliği açıp kapatabilirsiniz
+$varsayilan-medya-boyutlarini-kullan: true;
+@if $varsayilan-medya-boyutlarini-kullan {
+	$boyutlar: $medya-boyutlari;
+} @else {
+	$boyutlar: (
+		xs: null,
+		sm: 576,
+	);
+}
 
+/// Medya boyutlarını gösteri çalıştırır
+/// @param {map} $boyutlar - ekranda gösterilecek boyutları belirler
 @include medya-boyutlarini-goster($boyutlar);
