@@ -22,7 +22,14 @@
 	@return mix(black, $renk, $agirlik);
 }
 
-// Hazır değeri çekmek için
+/// Hazır Medya Değeri Al
+/// 
+/// Medya değerini $medya-boyutlari'dan alır
+/// 
+/// @param {string} $deger - alınacak değer
+/// 
+/// @return {number} - medya değeri
+/// 
 @function hazir-medya-degeri-al($deger) {
 	@if map-has-key($medya-boyutlari, $deger) {
 		@return map-get($medya-boyutlari, $deger);
