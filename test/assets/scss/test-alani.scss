@@ -1,91 +1,91 @@
-@import "../../../src/scss/main.scss";
+@import '../../../src/scss/main.scss';
 main.test {
-	table {
-		th {
-			padding-right: 4rem;
-			@include padding-left(0.5rem);
-		}
-		h4 {
-			padding: 1rem 0;
-			margin: 0;
-			text-align: left;
-		}
-	}
+  table {
+    th {
+      padding-right: 4rem;
+      @include padding-left(0.5rem);
+    }
+    h4 {
+      padding: 1rem 0;
+      margin: 0;
+      text-align: left;
+    }
+  }
 
-	.kolonlar-satirlar {
-		.kolonlar > *,
-		.satirlar > * {
-			background-color: $ana-renk;
-			color: $beyaz;
-		}
-	}
+  .kolonlar-satirlar {
+    .kolonlar > *,
+    .satirlar > * {
+      background-color: $ana-renk;
+      color: $beyaz;
+    }
+  }
 
-	.devam-eden-kolonlar {
-		max-height: 900px;
-		overflow-x: hidden;
-		overflow-y: scroll;
-		resize: horizontal;
-		width: 50%;
-		margin: auto;
-	}
+  .devam-eden-kolonlar {
+    max-height: 900px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    resize: horizontal;
+    width: 50%;
+    margin: auto;
+  }
 
-	.kartlar {
-		.kart {
-			height: 30em;
-			width: 20em;
-		}
-	}
+  .kartlar {
+    .kart {
+      height: 30em;
+      width: 20em;
+    }
+  }
 }
 
 body {
-	min-height: 200vh;
+  min-height: 200vh;
 }
 
 div.background-test {
-	width: 500px;
-	height: 500px;
-	$bg-image: url("http://unsplash.it/700/400?random&gravity=center");
-	@include arkaplan($bg-image, contain, top left);
+  width: 500px;
+  height: 500px;
+  $bg-image: url('http://unsplash.it/700/400?random&gravity=center');
+  @include arkaplan($bg-image, contain, top left);
 
-	@include medya(lg) {
-		color: yellow;
-	}
-	a {
-		a {
-			a {
-				@include tema() {
-					color: red;
-				}
-			}
-		}
-	}
+  @include medya(lg) {
+    color: yellow;
+  }
+  a {
+    a {
+      a {
+        @include tema() {
+          color: red;
+        }
+      }
+    }
+  }
 }
 
 .test3 {
-	@include min-medya(lg) {
-		margin: auto;
-	}
-	@include max-medya(lg) {
-		margin: 1rem;
-	}
-	color: green;
+  @include min-medya(lg) {
+    margin: auto;
+  }
+  @include max-medya(lg) {
+    margin: 1rem;
+  }
+  color: green;
 }
 
 .hero-slider {
-	.kapak {
-		position: absolute;
-		inset: 0;
-		z-index: 5;
-		background-color: rgba(255, 255, 255, 0.671);
-	}
+  .kapak {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.671);
+  }
 }
 
 table {
-	margin: 1rem;
+  margin: 1rem;
 }
 
 @include aralik-medya(md, lg) {
-	.test {
-		color: red;
-	}
+  .test {
+    color: red;
+  }
 }

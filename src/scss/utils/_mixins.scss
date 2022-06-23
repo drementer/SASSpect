@@ -1,98 +1,98 @@
 /// Tema
-/// 
+///
 /// Temaya özel still ayarlarını yapar
-/// 
+///
 /// @param {string} $tema [default] - temaya ismi
-/// 
-@mixin tema($tema: "default") {
-	@at-root html[data-theme="#{$tema}"] #{&} {
-		@content;
-	}
+///
+@mixin tema($tema: 'default') {
+  @at-root html[data-theme='#{$tema}'] #{&} {
+    @content;
+  }
 }
 
 /// Arkaplan
-/// 
+///
 /// Elementin arkaplan resmini ayarlar
-/// 
+///
 /// @param {string} $url - resim (url/dosya yolu)
 /// @param {string | number} $size [cover] - resim boyutu
 /// @param {string | number} $position [center]  - resim konumu
 /// @param {string} $repeat [no-repeat] - resmin tekrar edip etmeyeceğini belirler
-/// 
+///
 @mixin arkaplan($url, $size: cover, $position: center, $repeat: no-repeat) {
-	background-image: $url;
-	background-size: $size;
-	background-position: $position;
-	background-repeat: $repeat;
+  background-image: $url;
+  background-size: $size;
+  background-position: $position;
+  background-repeat: $repeat;
 }
 
 /// Truncate
-/// 
+///
 /// Elementin maksimum kaç satır olacaığını belirler
 /// Eğer maksimum satır aşılır ise fazla satırları kesip
 /// son satırın sonuna "..." koyar
-/// 
+///
 /// @param {number} $max-satir [2] - maksimum satır sayısı
-/// 
+///
 @mixin truncate($max-satir: 2) {
-	display: -webkit-box;
-	-webkit-line-clamp: $max-satir;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
-	text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $max-satir;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /// Truncate 2
-/// 
+///
 /// Elementin maksimum kaç satır olacaığını belirler
 /// Eğer maksimum satır aşılır ise fazla satırları kesip
 /// son satıra linear gradient ile şeffaflık yapar
-/// 
+///
 /// @param {number} $max-satir [2] - maksimum satır sayısı
 /// @param {string} $arkaplan-rengi [#fff] - gradient rengi
-/// 
+///
 @mixin truncate-2($max-satir: 2, $arkaplan-rengi: #fff) {
-	$font-size: 1em;
-	$line-height: $font-size * $root-line-height;
+  $font-size: 1em;
+  $line-height: $font-size * $root-line-height;
 
-	line-height: $line-height;
-	height: $max-satir * $line-height;
-	overflow: hidden;
-	position: relative;
+  line-height: $line-height;
+  height: $max-satir * $line-height;
+  overflow: hidden;
+  position: relative;
 
-	&::after {
-		content: "";
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		height: $line-height;
-		width: 75%;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: $line-height;
+    width: 75%;
 
-		background: linear-gradient(90deg, transparent, $arkaplan-rengi);
-	}
+    background: linear-gradient(90deg, transparent, $arkaplan-rengi);
+  }
 }
 
 /// Animasyon
-/// 
+///
 /// Elemnt için varsayılan animasyon ayarlarını yapar
-/// 
+///
 /// @param {boolen} $backface [true] - backface-visibility özelliğini belirler
 /// @param {number} $perspective [1000] - elementin perspective özelliğini belirler
-/// 
+///
 @mixin animasyon($backface: true, $perspective: 1000) {
-	@if $backface {
-		backface-visibility: hidden;
-	}
-	perspective: $perspective;
+  @if $backface {
+    backface-visibility: hidden;
+  }
+  perspective: $perspective;
 }
 
 /// z-index sistem
-/// 
+///
 /// Liste elemanlarının z-index hiyerarşisini belirler
 /// z-index değeri 99'dan liste ise ilk elemanından
 /// başlıyor ve her seferinde z-index 1 azaltılarak
 /// liste elemanı ise 1 arttırılarak devam ediyor
-/// 
+///
 /// @param {map} $liste - z-index verilecek elemanlar
 /// @param {string} $eleman - $liste elemanı
 /// @param {number} $z-index [99] - z-index başlangıç değeri
@@ -103,9 +103,9 @@
 /// 	".elm2"
 /// );
 /// @include z-index($liste);
-/// 
+///
 /// @output css - .elm1 { z-index: 99; } .elm2 { z-index: 98; }
-/// 
+///
 /// @example scss - varyant algılama
 /// $liste: (
 /// 	".buton"
@@ -125,14 +125,14 @@
 /// 	".elm, .elm2, .elm3 "
 /// );
 /// @include z-index($liste);
-/// 
+///
 /// @output css - .elm, .elm2, .elm3 { z-index: 99; }
-/// 
+///
 @mixin z-index($liste, $z-index: 99) {
-	@each $eleman in $liste {
-		#{$eleman} {
-			z-index: $z-index;
-		}
-		$z-index: $z-index - 1;
-	}
+  @each $eleman in $liste {
+    #{$eleman} {
+      z-index: $z-index;
+    }
+    $z-index: $z-index - 1;
+  }
 }

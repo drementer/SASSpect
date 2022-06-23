@@ -10,76 +10,76 @@
 /// @param {string} $medya-query-tipi - atanan değerlerin unit tipi
 ///
 @mixin medya($bitis: null, $baslangic: null) {
-	$max-width: null;
-	$min-width: null;
-	$medya-query: "";
+  $max-width: null;
+  $min-width: null;
+  $medya-query: '';
 
-	@if $bitis {
-		@if type-of($bitis) == number {
-			$max-width: $bitis;
-		} @else {
-			$max-width: #{hazir-medya-degeri-al($bitis)}#{$varsayilan-medya-unit};
-		}
-	}
+  @if $bitis {
+    @if type-of($bitis) == number {
+      $max-width: $bitis;
+    } @else {
+      $max-width: #{hazir-medya-degeri-al($bitis)}#{$varsayilan-medya-unit};
+    }
+  }
 
-	@if $baslangic {
-		@if type-of($baslangic) == number {
-			$min-width: $baslangic;
-		} @else {
-			$min-width: #{hazir-medya-degeri-al($baslangic)}#{$varsayilan-medya-unit};
-		}
-	}
+  @if $baslangic {
+    @if type-of($baslangic) == number {
+      $min-width: $baslangic;
+    } @else {
+      $min-width: #{hazir-medya-degeri-al($baslangic)}#{$varsayilan-medya-unit};
+    }
+  }
 
-	@if ($max-width != null) and ($min-width != null) {
-		$medya-query: "(min-width: #{$min-width}) and (max-width: #{$max-width})";
-	} @else if $max-width {
-		$medya-query: "(max-width: #{$max-width})";
-	} @else if $min-width {
-		$medya-query: "(min-width: #{$min-width})";
-	}
+  @if ($max-width != null) and ($min-width != null) {
+    $medya-query: '(min-width: #{$min-width}) and (max-width: #{$max-width})';
+  } @else if $max-width {
+    $medya-query: '(max-width: #{$max-width})';
+  } @else if $min-width {
+    $medya-query: '(min-width: #{$min-width})';
+  }
 
-	@media screen and #{$medya-query} {
-		@content;
-	}
+  @media screen and #{$medya-query} {
+    @content;
+  }
 }
 
 // Kısayollar
 
 /// Min Medya
-/// 
+///
 /// Minimum medya ve üzerinde çalışacak sorgu
-/// 
+///
 /// @param {string | number} $deger - girilen max-width değeri
-/// 
+///
 @mixin min-medya($deger) {
-	@include medya(null, $deger) {
-		@content;
-	}
+  @include medya(null, $deger) {
+    @content;
+  }
 }
 
 /// Max Medya
-/// 
+///
 /// Maximum medya ve üzerinde çalışacak sorgu
-/// 
+///
 /// @param {string | number} $deger - girilen max-width değeri
-/// 
+///
 @mixin max-medya($deger) {
-	@include medya($deger) {
-		@content;
-	}
+  @include medya($deger) {
+    @content;
+  }
 }
 
 /// Aralık Medya
-/// 
+///
 /// Maximum medya ve üzerinde çalışacak sorgu
-/// 
+///
 /// @param {string | number} $bitis - girilen max-width değeri
 /// @param {string | number} $baslangic - girilen min-width değeri
-/// 
+///
 @mixin aralik-medya($baslangic, $bitis) {
-	@include medya($bitis, $baslangic) {
-		@content;
-	}
+  @include medya($bitis, $baslangic) {
+    @content;
+  }
 }
 
 /// Medya Boyutlarını Göster
@@ -89,31 +89,31 @@
 /// @param {map} $boyutlar [$medya-boyutlari] - gösterilecek medya boyutları
 ///
 @mixin medya-boyutlarini-goster($boyutlar: $medya-boyutlari) {
-	@if $medya-boyutlarini-goster {
-		body::after {
-			position: fixed;
-			z-index: 99;
-			right: 0;
-			top: 0;
-			padding: 0.5rem 1rem;
-			background-color: $beyaz-3;
-			border: 1px solid $siyah;
+  @if $medya-boyutlarini-goster {
+    body::after {
+      position: fixed;
+      z-index: 99;
+      right: 0;
+      top: 0;
+      padding: 0.5rem 1rem;
+      background-color: $beyaz-3;
+      border: 1px solid $siyah;
 
-			@each $medya-boyutu-ismi, $medya-boyutu in $boyutlar {
-				$boyut: $medya-boyutu-ismi;
-				$icerik: "#{$medya-boyutu-ismi}";
+      @each $medya-boyutu-ismi, $medya-boyutu in $boyutlar {
+        $boyut: $medya-boyutu-ismi;
+        $icerik: '#{$medya-boyutu-ismi}';
 
-				@if $medya-boyutu {
-					$boyut: $medya-boyutu * 1px;
-					$icerik: "#{$medya-boyutu-ismi}: >= #{$boyut}";
-				}
+        @if $medya-boyutu {
+          $boyut: $medya-boyutu * 1px;
+          $icerik: '#{$medya-boyutu-ismi}: >= #{$boyut}';
+        }
 
-				@include min-medya($boyut) {
-					content: "#{$icerik}";
-				}
-			}
-		}
-	}
+        @include min-medya($boyut) {
+          content: '#{$icerik}';
+        }
+      }
+    }
+  }
 }
 
 /// Ekranda medya boyutlarını gösteri açıp kapatır
@@ -124,12 +124,12 @@ $medya-boyutlarini-goster: true;
 /// @param {boolen} $varsayilan-medya-boyutlarini-kullan [true] - özelliği açıp kapatabilirsiniz
 $varsayilan-medya-boyutlarini-kullan: true;
 @if $varsayilan-medya-boyutlarini-kullan {
-	$boyutlar: $medya-boyutlari;
+  $boyutlar: $medya-boyutlari;
 } @else {
-	$boyutlar: (
-		xs: null,
-		sm: 576,
-	);
+  $boyutlar: (
+    xs: null,
+    sm: 576,
+  );
 }
 
 /// Medya boyutlarını gösteri çalıştırır

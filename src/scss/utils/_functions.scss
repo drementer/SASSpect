@@ -1,4 +1,4 @@
-@use "./variables" as *;
+@use './variables' as *;
 
 /// Tint Color
 ///
@@ -8,7 +8,7 @@
 /// @param {number} $agirlik - rengin tint yoğunluğunu belirler
 ///
 @function tint-color($renk, $agirlik) {
-	@return mix(white, $renk, $agirlik);
+  @return mix(white, $renk, $agirlik);
 }
 
 /// Shade Color
@@ -19,22 +19,22 @@
 /// @param {number} $agirlik - rengin shade yoğunluğunu belirler
 ///
 @function shade-color($renk, $agirlik) {
-	@return mix(black, $renk, $agirlik);
+  @return mix(black, $renk, $agirlik);
 }
 
 /// Hazır Medya Değeri Al
-/// 
+///
 /// Medya değerini $medya-boyutlari'dan alır
-/// 
+///
 /// @param {string} $deger - alınacak değer
 /// @param {map} $medya-boyutlari - önceden belirlenmiş medya boyutlari
-/// 
+///
 /// @return {number} - medya değeri
-/// 
+///
 @function hazir-medya-degeri-al($deger) {
-	@if map-has-key($medya-boyutlari, $deger) {
-		@return map-get($medya-boyutlari, $deger);
-	} @else {
-		@warn "#{$deger}'i hazır değerler içinde yok.";
-	}
+  @if map-has-key($medya-boyutlari, $deger) {
+    @return map-get($medya-boyutlari, $deger);
+  } @else {
+    @warn "#{$deger}'i hazır değerler içinde yok.";
+  }
 }

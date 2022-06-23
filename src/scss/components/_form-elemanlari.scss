@@ -1,244 +1,244 @@
 input,
 textarea,
 select {
-	padding: 0;
-	margin: 0;
-	width: 100%;
-	outline: 0;
-	border: none;
-	font-size: inherit;
-	background-color: transparent;
-	border: none;
-	display: block;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  outline: 0;
+  border: none;
+  font-size: inherit;
+  background-color: transparent;
+  border: none;
+  display: block;
 
-	@include padding(0.5rem 1rem);
-	z-index: 1;
+  @include padding(0.5rem 1rem);
+  z-index: 1;
 
-	&:not([type="email"])::placeholder {
-		text-transform: capitalize;
-	}
+  &:not([type='email'])::placeholder {
+    text-transform: capitalize;
+  }
 
-	border-radius: 5px;
-	border: 1px solid $siyah-3;
+  border-radius: 5px;
+  border: 1px solid $siyah-3;
 
-	&:hover,
-	&:focus {
-		border-color: $siyah-3;
-	}
+  &:hover,
+  &:focus {
+    border-color: $siyah-3;
+  }
 
-	&::-webkit-input-placeholder {
-		color: inherit;
-		opacity: 0.54;
-	}
+  &::-webkit-input-placeholder {
+    color: inherit;
+    opacity: 0.54;
+  }
 }
 
 select {
-	min-height: 1.6875rem;
+  min-height: 1.6875rem;
 }
 
 textarea {
-	height: max-content;
-	resize: none;
-	overflow-y: hidden;
-	min-height: 70px !important;
+  height: max-content;
+  resize: none;
+  overflow-y: hidden;
+  min-height: 70px !important;
 
-	&::-webkit-scrollbar {
-		display: none !important;
-	}
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
 
-	&::-moz-scrollbar {
-		display: none !important;
-	}
+  &::-moz-scrollbar {
+    display: none !important;
+  }
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
-input[type="number"] {
-	-moz-appearance: textfield;
+input[type='number'] {
+  -moz-appearance: textfield;
 }
 
 .input {
-	margin: 0;
-	outline: 0;
-	background-color: transparent;
-	gap: 0.5rem;
+  margin: 0;
+  outline: 0;
+  background-color: transparent;
+  gap: 0.5rem;
 
-	@include flex-column;
-	justify-content: flex-start;
-	align-items: flex-start;
+  @include flex-column;
+  justify-content: flex-start;
+  align-items: flex-start;
 
-	label {
-		text-transform: capitalize;
-	}
+  label {
+    text-transform: capitalize;
+  }
 
-	&[required] {
-		label {
-			&::after {
-				content: "*";
-				margin-left: 0.5rem;
-				color: $ana-renk;
-			}
-		}
-	}
+  &[required] {
+    label {
+      &::after {
+        content: '*';
+        margin-left: 0.5rem;
+        color: $ana-renk;
+      }
+    }
+  }
 
-	&[focus] &__icerik {
-		border-color: $siyah-3;
-	}
+  &[focus] &__icerik {
+    border-color: $siyah-3;
+  }
 
-	&[invalid] &__incorrect-error {
-		@include flex;
-	}
+  &[invalid] &__incorrect-error {
+    @include flex;
+  }
 
-	&[null] &__required-error {
-		@include flex;
-	}
+  &[null] &__required-error {
+    @include flex;
+  }
 
-	&[invalid] &__icerik {
-		input,
-		textarea,
-		select {
-			border-color: $ana-renk;
-			color: $ana-renk;
+  &[invalid] &__icerik {
+    input,
+    textarea,
+    select {
+      border-color: $ana-renk;
+      color: $ana-renk;
 
-			&::placeholder {
-				color: $ana-renk;
-			}
-		}
-	}
+      &::placeholder {
+        color: $ana-renk;
+      }
+    }
+  }
 
-	&__icerik {
-		position: relative;
-		border-radius: 5px;
-		display: block;
-		width: 100%;
-	}
+  &__icerik {
+    position: relative;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+  }
 
-	&__after {
-		display: none;
-		position: absolute;
-		right: 1rem;
-		bottom: calc(-1rem + 1px);
-		font-size: 14px;
-		padding: 0.5rem;
-		z-index: 3;
-		justify-content: center;
-		align-items: center;
+  &__after {
+    display: none;
+    position: absolute;
+    right: 1rem;
+    bottom: calc(-1rem + 1px);
+    font-size: 14px;
+    padding: 0.5rem;
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
 
-		span {
-			z-index: 2;
-			position: relative;
-			color: $ana-renk;
-		}
+    span {
+      z-index: 2;
+      position: relative;
+      color: $ana-renk;
+    }
 
-		&::after {
-			content: "";
-			background-color: $beyaz-2;
-			width: 100%;
-			height: 8px;
-			display: block;
-			position: absolute;
-			bottom: 0.5rem;
-			z-index: 1;
-		}
-	}
+    &::after {
+      content: '';
+      background-color: $beyaz-2;
+      width: 100%;
+      height: 8px;
+      display: block;
+      position: absolute;
+      bottom: 0.5rem;
+      z-index: 1;
+    }
+  }
 
-	&__required-error {
-		right: unset;
-		left: 1rem;
-	}
+  &__required-error {
+    right: unset;
+    left: 1rem;
+  }
 
-	&__aciklama {
-		font-size: 14px;
-		display: block;
-		margin-left: 1rem;
-		@include truncate(1);
-	}
+  &__aciklama {
+    font-size: 14px;
+    display: block;
+    margin-left: 1rem;
+    @include truncate(1);
+  }
 }
 
 .input,
 .checkbox,
 .radio {
-	@include margin(1rem);
-	@include font-size(1rem);
-	max-width: 24rem;
+  @include margin(1rem);
+  @include font-size(1rem);
+  max-width: 24rem;
 
-	a {
-		text-transform: capitalize;
-		color: $siyah-3;
-	}
+  a {
+    text-transform: capitalize;
+    color: $siyah-3;
+  }
 }
 
 .checkbox,
 .radio {
-	input {
-		display: none;
+  input {
+    display: none;
 
-		&:checked + label .checkbox__label-kutu::after,
-		&:checked + label .radio__label-kutu::after {
-			transform: scale(1);
-			opacity: 1;
-		}
+    &:checked + label .checkbox__label-kutu::after,
+    &:checked + label .radio__label-kutu::after {
+      transform: scale(1);
+      opacity: 1;
+    }
 
-		&:checked + label .checkbox__label-kutu,
-		&:checked + label .radio__label-kutu {
-			border-color: $siyah-3 !important;
-		}
-	}
+    &:checked + label .checkbox__label-kutu,
+    &:checked + label .radio__label-kutu {
+      border-color: $siyah-3 !important;
+    }
+  }
 
-	&[required] {
-		&::after {
-			content: "Required field *";
-			font-size: 14px;
-			display: block;
-			margin-left: 2rem;
-			color: $ana-renk;
-		}
-	}
+  &[required] {
+    &::after {
+      content: 'Required field *';
+      font-size: 14px;
+      display: block;
+      margin-left: 2rem;
+      color: $ana-renk;
+    }
+  }
 
-	&__label {
-		@include flex-row;
-		gap: 0.5rem;
-		align-items: center;
-	}
+  &__label {
+    @include flex-row;
+    gap: 0.5rem;
+    align-items: center;
+  }
 
-	&__label-kutu {
-		cursor: pointer;
-		width: 1.2rem;
-		height: 1.2rem;
-		min-width: 1.2rem;
-		background-color: transparent;
-		border: 1px solid $siyah-3;
-		margin: 2px 0;
-		border-radius: 25%;
-		display: grid;
-		place-content: center;
+  &__label-kutu {
+    cursor: pointer;
+    width: 1.2rem;
+    height: 1.2rem;
+    min-width: 1.2rem;
+    background-color: transparent;
+    border: 1px solid $siyah-3;
+    margin: 2px 0;
+    border-radius: 25%;
+    display: grid;
+    place-content: center;
 
-		&::after {
-			content: "✔";
-			display: block;
-			color: $siyah-3;
-			position: relative;
-			transform: scale(0);
-			opacity: 0.5;
-			top: -3px;
-			right: -2px;
-			transform-origin: center;
-			font-size: 22px;
-			transition: all 100ms cubic-bezier(0.05, 1.79, 1, 0.99);
-		}
-	}
+    &::after {
+      content: '✔';
+      display: block;
+      color: $siyah-3;
+      position: relative;
+      transform: scale(0);
+      opacity: 0.5;
+      top: -3px;
+      right: -2px;
+      transform-origin: center;
+      font-size: 22px;
+      transition: all 100ms cubic-bezier(0.05, 1.79, 1, 0.99);
+    }
+  }
 
-	&__label-yazi {
-		display: block;
-		user-select: none;
-	}
+  &__label-yazi {
+    display: block;
+    user-select: none;
+  }
 }
 
 .radio {
-	&__label-kutu {
-		border-radius: 50%;
-	}
+  &__label-kutu {
+    border-radius: 50%;
+  }
 }

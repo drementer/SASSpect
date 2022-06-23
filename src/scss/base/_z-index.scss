@@ -1,9 +1,9 @@
 $z-index-listesi: (
-	".loader",
-	".modal",
-	".popup",
-	".go-top",
-	".nav"
+  ".loader",
+  ".modal",
+  ".popup",
+  ".go-top",
+  ".nav"
 ) !default;
 
 @include z-index($z-index-listesi);

@@ -1,19 +1,19 @@
 [kapali] {
-	display: none !important;
+  display: none !important;
 }
 
 .konteyner {
-	@include padding(3rem 2rem);
-	max-width: 1400px;
-	margin: auto;
+  @include padding(3rem 2rem);
+  max-width: 1400px;
+  margin: auto;
 
-	@include medya(md) {
-		@include padding(2rem 1rem);
-	}
+  @include medya(md) {
+    @include padding(2rem 1rem);
+  }
 }
 
 .hata-ayiklama {
-	* {
-		background-color: rgba(0, 100, 0, 0.1) !important;
-	}
+  * {
+    background-color: rgba(0, 100, 0, 0.1) !important;
+  }
 }
