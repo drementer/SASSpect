@@ -2,34 +2,30 @@
  * @author drementer
  * klncarslanburak@gmail.com
  * @license MIT (https://github.com/drementer/dred/blob/master/LICENSE)
-*/
+ */
 
 @charset "utf-8";
 
-/////////////////////////////////////
-// İmport
-
 @import 
 
-	// Vendors
-	"vendors/all",
+  // Vendors
+  "vendors/all",
 
-	// Utils
-	"utils/all",
+  // Utils
+  "utils/all",
 
-	// Base 
-	"base/all",
+  // Base 
+  "base/all",
 
-	// Layouts
-	"layouts/all",
+  // Layouts
+  "layouts/all",
 
-	// Components
-	"components/all",
+  // Components
+  "components/all",
 
-	// Pages
-	"pages/all",
+  // Pages
+  "pages/all",
 
-	// Themes
-	"themes/all"
+  // Themes
+  "themes/all"
 ;
-/////////////////////////////////////
