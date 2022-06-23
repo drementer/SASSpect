@@ -1,4 +1,14 @@
 /// Medya
+///
+/// Css @media sorgularının süpergücü
+///
+/// @param {number} $bitis - girilen max-width değeri
+/// @param {number} $baslangic - girilen min-width değeri
+/// @param {number} $max-width - atanan max-width değeri
+/// @param {number} $$min-width - atanan min-width değeri
+/// @param {string} $medya-query - medya sorgusu
+/// @param {string} $medya-query-tipi - atanan değerlerin unit tipi
+///
 @mixin medya($bitis: null, $baslangic: null) {
 	$max-width: null;
 	$min-width: null;
@@ -34,56 +44,68 @@
 }
 
 // Kısayollar
+
+/// Min Medya
 @mixin min-medya($deger) {
 	@include medya(null, $deger) {
 		@content;
 	}
 }
 
+/// Max Medya
 @mixin max-medya($deger) {
 	@include medya($deger) {
 		@content;
 	}
 }
 
+/// Aralık Medya
 @mixin aralik-medya($baslangic, $bitis) {
 	@include medya($bitis, $baslangic) {
 		@content;
 	}
 }
 
+/// Medya Boyutlarını Göster
+///
+/// Ekranda medya boyutlarını gösterir
+///
+/// @param {map} $boyutlar - gösterilecek medya boyutları
+///
 @mixin medya-boyutlarini-goster($boyutlar) {
-	body::after {
-		position: fixed;
-		z-index: 99;
-		right: 0;
-		top: 0;
-		padding: 0.5rem 1rem;
-		background-color: $beyaz-3;
-		border: 1px solid $siyah;
+	@if $medya-boyutlarini-goster {
+		body::after {
+			position: fixed;
+			z-index: 99;
+			right: 0;
+			top: 0;
+			padding: 0.5rem 1rem;
+			background-color: $beyaz-3;
+			border: 1px solid $siyah;
 
-		@each $medya-boyutu-ismi, $medya-boyutu in $boyutlar {
-			$boyut: $medya-boyutu-ismi;
-			$icerik: "#{$medya-boyutu-ismi}";
-			
-			@if $medya-boyutu {
-				$boyut: $medya-boyutu * 1px;
-				$icerik: "#{$medya-boyutu-ismi}: >= #{$boyut}";
-			}
+			@each $medya-boyutu-ismi, $medya-boyutu in $boyutlar {
+				$boyut: $medya-boyutu-ismi;
+				$icerik: "#{$medya-boyutu-ismi}";
 
-			@include min-medya($boyut) {
-				content: "#{$icerik}";
+				@if $medya-boyutu {
+					$boyut: $medya-boyutu * 1px;
+					$icerik: "#{$medya-boyutu-ismi}: >= #{$boyut}";
+				}
+
+				@include min-medya($boyut) {
+					content: "#{$icerik}";
+				}
 			}
 		}
 	}
 }
 
 $medya-boyutlarini-goster: true;
-@if $medya-boyutlarini-goster {
-	$boyutlar: $medya-boyutlari;
-	$boyutlar: (
-		xs: null,
-		sm: 576,
-	);
-	@include medya-boyutlarini-goster($boyutlar);
-}
+
+$boyutlar: $medya-boyutlari;
+$boyutlar: (
+	xs: null,
+	sm: 576,
+);
+
+@include medya-boyutlarini-goster($boyutlar);
