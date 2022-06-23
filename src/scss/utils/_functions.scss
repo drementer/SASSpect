@@ -27,6 +27,7 @@
 /// Medya değerini $medya-boyutlari'dan alır
 /// 
 /// @param {string} $deger - alınacak değer
+/// @param {map} $medya-boyutlari - önceden belirlenmiş medya boyutlari
 /// 
 /// @return {number} - medya değeri
 /// 
