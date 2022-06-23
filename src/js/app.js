@@ -1,9 +1,3 @@
-/*!
- * @author drementer
- * klncarslanburak@gmail.com
- * @license MIT (https://github.com/drementer/dred/blob/master/LICENSE)
- */
-
 // İmportlar
 import {
 	scroll_ac,
