@@ -46,6 +46,11 @@
 // Kısayollar
 
 /// Min Medya
+/// 
+/// Minimum medya ve üzerinde çalışacak sorgu
+/// 
+/// @param {string | number} $deger - girilen max-width değeri
+/// 
 @mixin min-medya($deger) {
 	@include medya(null, $deger) {
 		@content;
@@ -53,6 +58,11 @@
 }
 
 /// Max Medya
+/// 
+/// Maximum medya ve üzerinde çalışacak sorgu
+/// 
+/// @param {string | number} $deger - girilen max-width değeri
+/// 
 @mixin max-medya($deger) {
 	@include medya($deger) {
 		@content;
@@ -60,6 +70,12 @@
 }
 
 /// Aralık Medya
+/// 
+/// Maximum medya ve üzerinde çalışacak sorgu
+/// 
+/// @param {string | number} $bitis - girilen max-width değeri
+/// @param {string | number} $baslangic - girilen min-width değeri
+/// 
 @mixin aralik-medya($baslangic, $bitis) {
 	@include medya($bitis, $baslangic) {
 		@content;
