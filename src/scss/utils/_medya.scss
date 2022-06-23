@@ -117,12 +117,20 @@
 }
 
 /// Ekranda medya boyutlarını gösteri açıp kapatır
+/// 
 /// @param {boolen} $medya-boyutlarini-goster [true] - özelliği açıp kapatabilirsiniz
+/// 
 $medya-boyutlarini-goster: true;
 
 /// Medya boyutları ayarını varsayılan $medya-boyutlari ile kullanılmasını açıp kapatır
+/// 
 /// @param {boolen} $varsayilan-medya-boyutlarini-kullan [true] - özelliği açıp kapatabilirsiniz
+/// @param {map} $boyutlar [null] - ekranda gösterilecek boyutları belirler
+/// 
 $varsayilan-medya-boyutlarini-kullan: true;
+
+$boyutlar: '';
+
 @if $varsayilan-medya-boyutlarini-kullan {
   $boyutlar: $medya-boyutlari;
 } @else {
@@ -133,5 +141,4 @@ $varsayilan-medya-boyutlarini-kullan: true;
 }
 
 /// Medya boyutlarını gösteri çalıştırır
-/// @param {map} $boyutlar - ekranda gösterilecek boyutları belirler
 @include medya-boyutlarini-goster($boyutlar);
