@@ -70,14 +70,6 @@ iframe {
   border-style: none;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  overflow-x: hidden;
-}
-
 table {
   border-collapse: collapse;
   border-color: currentColor;
@@ -188,10 +180,6 @@ code {
 
 template {
   display: none !important;
-}
-
-[disabled] {
-  cursor: not-allowed;
 }
 
 p,
