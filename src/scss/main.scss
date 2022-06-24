@@ -4,6 +4,7 @@
 /// 
 @charset "UTF-8";
 
+
 /// Import
 /// 
 /// Modul'ler import ediliyor
@@ -14,56 +15,41 @@
   /// 
   /// Dışardan alınan hazır şeyler
   /// 
-  'vendors/rfs',
-  'vendors/reduce-motion',
+  'vendors/all',
 
   /// 2. Utils
   /// 
   /// Ayarlar & araçlar
   /// 
-  'utils/functions',
-  'utils/variables',
-  'utils/medya',
-  'utils/mixins',
-  'utils/placeholders',
-  'utils/flex',
-  // 'utils/bosluklar'
+  'utils/all',
 
   /// 3. Base 
   /// 
   /// Proje temeli
   /// 
-  'base/reset', 
-  'base/typography', 
-  'base/z-index', 
-  'base/layout',
+  'base/all',
 
   /// 4. Layouts
   /// 
   /// Yerleşim şemaları
   /// 
-  'layouts/cerez-popup',
-  'layouts/go-top',
-  'layouts/loader',
-  'layouts/no-js',
+  'layouts/all',
 
   /// 5. Components
   /// 
   /// Bileşenler
   /// 
-  'components/buton', 
-  'components/form-elemanlari',
+  'components/all',
 
   /// 6. Pages
   /// 
   /// Sayfaya özel stiller
   /// 
-  'pages/home',
+  'pages/all',
 
   /// 7. Themes
   /// 
   /// Temaya özel stiller
   /// 
-  'themes/dark',
-  'themes/default'
+  'themes/all'
 ;
