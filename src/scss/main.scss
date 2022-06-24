@@ -1,55 +1,19 @@
 /// Charset
-/// 
+///
 /// Css için charset belirleniyor
-/// 
+///
 @charset "UTF-8";
 
-
 /// Import
-/// 
+///
 /// Modul'ler import ediliyor
-/// 
+///
 @import 
-
-  /// 1. Vendors
-  /// 
-  /// Dışardan alınan hazır şeyler
-  /// 
   'vendors/all',
-
-  /// 2. Utils
-  /// 
-  /// Ayarlar & araçlar
-  /// 
   'utils/all',
-
-  /// 3. Base 
-  /// 
-  /// Proje temeli
-  /// 
   'base/all',
-
-  /// 4. Layouts
-  /// 
-  /// Yerleşim şemaları
-  /// 
   'layouts/all',
-
-  /// 5. Components
-  /// 
-  /// Bileşenler
-  /// 
   'components/all',
-
-  /// 6. Pages
-  /// 
-  /// Sayfaya özel stiller
-  /// 
   'pages/all',
-
-  /// 7. Themes
-  /// 
-  /// Temaya özel stiller
-  /// 
   'themes/all'
 ;
