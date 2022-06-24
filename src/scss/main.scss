@@ -1,25 +1,69 @@
+/// Charset
+/// 
+/// Css için charset belirleniyor
+/// 
 @charset "UTF-8";
 
+/// Import
+/// 
+/// Alt dosyalar import ediliyor
+/// 
 @import 
 
-  // Vendors
-  'vendors/all',
+  /// 1. Vendors
+  /// 
+  /// Dışardan alınan hazır şeyler
+  /// 
+  'vendors/rfs',
+  'vendors/reduce-motion',
 
-  // Utils
-  'utils/all',
+  /// 2. Utils
+  /// 
+  /// Ayarlar & araçlar
+  /// 
+  'utils/functions',
+  'utils/variables',
+  'utils/medya',
+  'utils/mixins',
+  'utils/placeholders',
+  'utils/flex',
+  // 'utils/bosluklar'
 
-  // Base 
-  'base/all',
+  /// 3. Base 
+  /// 
+  /// Proje temeli
+  /// 
+  'base/reset', 
+  'base/typography', 
+  'base/z-index', 
+  'base/layout',
 
-  // Layouts
-  'layouts/all',
+  /// 4. Layouts
+  /// 
+  /// Yerleşim şemaları
+  /// 
+  'layouts/cerez-popup',
+  'layouts/go-top',
+  'layouts/loader',
+  'layouts/no-js',
 
-  // Components
-  'components/all',
+  /// 5. Components
+  /// 
+  /// Bileşenler
+  /// 
+  'components/buton', 
+  'components/form-elemanlari',
 
-  // Pages
-  'pages/all',
+  /// 6. Pages
+  /// 
+  /// Sayfaya özel stiller
+  /// 
+  'pages/home',
 
-  // Themes
-  'themes/all'
+  /// 7. Themes
+  /// 
+  /// Temaya özel stiller
+  /// 
+  'themes/dark',
+  'themes/default'
 ;
