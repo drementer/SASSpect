@@ -93,23 +93,18 @@
 /// başlıyor ve her seferinde z-index 1 azaltılarak
 /// liste elemanı ise 1 arttırılarak devam ediyor
 ///
-/// @param {map} $liste - z-index verilecek elemanlar
+/// @param {list} $liste - z-index verilecek elemanlar
 /// @param {string} $eleman - $liste elemanı
 /// @param {number} $z-index [99] - z-index başlangıç değeri
 ///
 /// @example scss - Basit kullanım
-/// $liste: (
-/// 	".elm1",
-/// 	".elm2"
-/// );
+/// $liste: ".elm1", ".elm2";
 /// @include z-index($liste);
 ///
 /// @output css - .elm1 { z-index: 99; } .elm2 { z-index: 98; }
 ///
 /// @example scss - Varyant algılama
-/// $liste: (
-/// 	".buton"
-/// );
+/// $liste: ".buton";
 /// .buton{
 /// 	color: red;
 /// 	&-2{
@@ -121,9 +116,7 @@
 /// @output css - .buton, .buton-2 { z-index: 99; }
 ///
 /// @example scss - Ortak z-index değeri
-/// $liste: (
-/// 	".elm, .elm2, .elm3 "
-/// );
+/// $liste: ".elm, .elm2, .elm3 ";
 /// @include z-index($liste);
 ///
 /// @output css - .elm, .elm2, .elm3 { z-index: 99; }
