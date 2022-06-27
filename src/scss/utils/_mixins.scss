@@ -137,13 +137,14 @@
   }
 }
 
-
-/// Event wrapper
-/// 
+/// On Event
+///
 /// @author Harry Roberts
+///
 /// @param {Bool} $self [false] - Whether or not to include current selector
+///
 /// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
-/// 
+///
 @mixin on-event($self: false) {
   @if $self {
     &,
@@ -161,9 +162,13 @@
   }
 }
 
+/// When Inside
 /// Make a context based selector a little more friendly
+///
 /// @author Hugo Giraudel
+///
 /// @param {String} $context
+///
 @mixin when-inside($context) {
   #{$context} & {
     @content;
@@ -171,22 +176,22 @@
 }
 
 /// Font Sizes
-/// 
+///
 /// Font boyutlarını hızlı şekilde ayarlamak için
-/// 
+///
 /// @param {map} $font-listesi - Font boyutlarının listesi
 /// @param {string} $eleman - Liste elemanı
 /// @param {number} $font-degeri - Font değeri
-/// 
+///
 /// @example scss - Basit kullanım
 /// $font-listesi: (
 ///   ".elm1": 1,
 ///   ".elm2": 1.2,
 /// );
 /// @include font-size($font-listesi);
-/// 
+///
 /// @output css - .elm1 { font-size: 1rem; } .elm2 { font-size: 1.2rem; }
-/// 
+///
 @mixin font-sizes($font-listesi) {
   @each $eleman, $font-degeri in $font-listesi {
     #{$eleman} {
