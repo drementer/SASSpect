@@ -9,12 +9,6 @@ $root-font-size:                16px                        !default;
 /// @type number
 $root-font-size--mobil:         14px                        !default;
 
-/// @type number
-$root-line-height:              1.2                         !default;
-
-/// @type number
-$heading-line-height:           1.5                         !default;
-
 /// @type map
 /// 1.250 Major Third
 /// @link https://type-scale.com/
@@ -54,61 +48,61 @@ $beyaz:                       #fff                        !default;
 $beyaz-2:                     #eff3f4                     !default;
 $beyaz-3:                     #f4f5f5                     !default;
 $beyaz-4:                     #f0f4ef                     !default;
-$beyaz--100:                    tint-color($beyaz, 80%)     !default;
-$beyaz--200:                    tint-color($beyaz, 60%)     !default;
-$beyaz--300:                    tint-color($beyaz, 40%)     !default;
-$beyaz--400:                    tint-color($beyaz, 20%)     !default;
+$beyaz--100:                    tint($beyaz, 80%)           !default;
+$beyaz--200:                    tint($beyaz, 60%)           !default;
+$beyaz--300:                    tint($beyaz, 40%)           !default;
+$beyaz--400:                    tint($beyaz, 20%)           !default;
 $beyaz--500:                    $beyaz                      !default;
-$beyaz--600:                    shade-color($beyaz, 20%)    !default;
-$beyaz--700:                    shade-color($beyaz, 40%)    !default;
-$beyaz--800:                    shade-color($beyaz, 60%)    !default;
-$beyaz--900:                    shade-color($beyaz, 80%)    !default;
+$beyaz--600:                    shade($beyaz, 20%)          !default;
+$beyaz--700:                    shade($beyaz, 40%)          !default;
+$beyaz--800:                    shade($beyaz, 60%)          !default;
+$beyaz--900:                    shade($beyaz, 80%)          !default;
 
 $siyah:                       #000                        !default;
 $siyah-2:                     #000814                     !default;
 $siyah-3:                     #130022                     !default;
 $siyah-4:                     #070707                     !default;
 $siyah-5:                     #0a0a0a                     !default;
-$siyah--100:                    tint-color($siyah, 80%)     !default;
-$siyah--200:                    tint-color($siyah, 60%)     !default;
-$siyah--300:                    tint-color($siyah, 40%)     !default;
-$siyah--400:                    tint-color($siyah, 20%)     !default;
+$siyah--100:                    tint($siyah, 80%)           !default;
+$siyah--200:                    tint($siyah, 60%)           !default;
+$siyah--300:                    tint($siyah, 40%)           !default;
+$siyah--400:                    tint($siyah, 20%)           !default;
 $siyah--500:                    $siyah !default;
-$siyah--600:                    shade-color($siyah, 20%)    !default;
-$siyah--700:                    shade-color($siyah, 40%)    !default;
-$siyah--800:                    shade-color($siyah, 60%)    !default;
-$siyah--900:                    shade-color($siyah, 80%)    !default;
+$siyah--600:                    shade($siyah, 20%)          !default;
+$siyah--700:                    shade($siyah, 40%)          !default;
+$siyah--800:                    shade($siyah, 60%)          !default;
+$siyah--900:                    shade($siyah, 80%)          !default;
 
 $ana-renk:                    #ff0a54                     !default;
-$ana-renk--100:                 tint-color($ana-renk, 80%)  !default;
-$ana-renk--200:                 tint-color($ana-renk, 60%)  !default;
-$ana-renk--300:                 tint-color($ana-renk, 40%)  !default;
-$ana-renk--400:                 tint-color($ana-renk, 20%)  !default;
+$ana-renk--100:                 tint($ana-renk, 80%)        !default;
+$ana-renk--200:                 tint($ana-renk, 60%)        !default;
+$ana-renk--300:                 tint($ana-renk, 40%)        !default;
+$ana-renk--400:                 tint($ana-renk, 20%)        !default;
 $ana-renk--500:                 $ana-renk                   !default;
-$ana-renk--600:                 shade-color($ana-renk, 20%) !default;
-$ana-renk--700:                 shade-color($ana-renk, 40%) !default;
-$ana-renk--800:                 shade-color($ana-renk, 60%) !default;
-$ana-renk--900:                 shade-color($ana-renk, 80%) !default;
+$ana-renk--600:                 shade($ana-renk, 20%)       !default;
+$ana-renk--700:                 shade($ana-renk, 40%)       !default;
+$ana-renk--800:                 shade($ana-renk, 60%)       !default;
+$ana-renk--900:                 shade($ana-renk, 80%)       !default;
 
 $yan-renk:                    #f9a620                     !default;
-$yan-renk--100:                 tint-color($yan-renk, 80%)  !default;
-$yan-renk--200:                 tint-color($yan-renk, 60%)  !default;
-$yan-renk--300:                 tint-color($yan-renk, 40%)  !default;
-$yan-renk--400:                 tint-color($yan-renk, 20%)  !default;
+$yan-renk--100:                 tint($yan-renk, 80%)        !default;
+$yan-renk--200:                 tint($yan-renk, 60%)        !default;
+$yan-renk--300:                 tint($yan-renk, 40%)        !default;
+$yan-renk--400:                 tint($yan-renk, 20%)        !default;
 $yan-renk--500:                 $yan-renk                   !default;
-$yan-renk--600:                 shade-color($yan-renk, 20%) !default;
-$yan-renk--700:                 shade-color($yan-renk, 40%) !default;
-$yan-renk--800:                 shade-color($yan-renk, 60%) !default;
-$yan-renk--900:                 shade-color($yan-renk, 80%) !default;
+$yan-renk--600:                 shade($yan-renk, 20%)       !default;
+$yan-renk--700:                 shade($yan-renk, 40%)       !default;
+$yan-renk--800:                 shade($yan-renk, 60%)       !default;
+$yan-renk--900:                 shade($yan-renk, 80%)       !default;
 
 $aksan:                       #027353                     !default;
-$aksan--100:                    tint-color($aksan, 80%)     !default;
-$aksan--200:                    tint-color($aksan, 60%)     !default;
-$aksan--300:                    tint-color($aksan, 40%)     !default;
-$aksan--400:                    tint-color($aksan, 20%)     !default;
+$aksan--100:                    tint($aksan, 80%)           !default;
+$aksan--200:                    tint($aksan, 60%)           !default;
+$aksan--300:                    tint($aksan, 40%)           !default;
+$aksan--400:                    tint($aksan, 20%)           !default;
 $aksan--500:                    $aksan                      !default;
-$aksan--600:                    shade-color($aksan, 20%)    !default;
-$aksan--700:                    shade-color($aksan, 40%)    !default;
-$aksan--800:                    shade-color($aksan, 60%)    !default;
-$aksan--900:                    shade-color($aksan, 80%)    !default;
+$aksan--600:                    shade($aksan, 20%)          !default;
+$aksan--700:                    shade($aksan, 40%)          !default;
+$aksan--800:                    shade($aksan, 60%)          !default;
+$aksan--900:                    shade($aksan, 80%)          !default;
 // ------------------------------------------------------------------
