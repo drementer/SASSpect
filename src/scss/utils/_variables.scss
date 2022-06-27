@@ -1,4 +1,4 @@
-// Typografi
+// ------------------------- Typografi ------------------------------
 
 /// @type string | map
 $root-font-family:              'Fira Code'                 !default;
@@ -28,8 +28,10 @@ $font-listesi: (
   'p': 1,
   'label': 0.875,
 ) !default;
+// ------------------------------------------------------------------
 
-// Medya
+
+// ------------------------- Medya ----------------------------------
 
 /// @type string
 $varsayilan-medya-unit:         px                          !default;
@@ -43,9 +45,10 @@ $medya-boyutlari:(
   xl: 1200,
   ul: 1400,
 ) !default;
+// ------------------------------------------------------------------
 
 
-// Renk Paleti
+// ------------------------- Renk Paleti ----------------------------
 
 $beyaz:                       #fff                        !default;
 $beyaz-2:                     #eff3f4                     !default;
@@ -108,3 +111,4 @@ $aksan--600:                    shade-color($aksan, 20%)    !default;
 $aksan--700:                    shade-color($aksan, 40%)    !default;
 $aksan--800:                    shade-color($aksan, 60%)    !default;
 $aksan--900:                    shade-color($aksan, 80%)    !default;
+// ------------------------------------------------------------------
