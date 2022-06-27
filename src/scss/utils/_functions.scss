@@ -4,8 +4,10 @@
 ///
 /// Rengi beyaz ile harmanlar
 ///
-/// @param {string} $renk - tint edilecek renk
-/// @param {number} $agirlik - rengin tint yoğunluğunu belirler
+/// @param {string} $renk - Tint edilecek renk
+/// @param {number} $agirlik - Rengin tint yoğunluğunu belirler
+/// 
+/// @return {string} - Tint edilmiş rengi
 ///
 @function tint-color($renk, $agirlik) {
   @return mix(white, $renk, $agirlik);
@@ -15,8 +17,10 @@
 ///
 /// Rengi siyah ile harmanlar
 ///
-/// @param {string} $renk - shade edilecek renk
-/// @param {number} $agirlik - rengin shade yoğunluğunu belirler
+/// @param {string} $renk - Shade edilecek renk
+/// @param {number} $agirlik - Rengin shade yoğunluğunu belirler
+/// 
+/// @return {string} - Shade edilmiş rengi
 ///
 @function shade-color($renk, $agirlik) {
   @return mix(black, $renk, $agirlik);
@@ -26,15 +30,16 @@
 ///
 /// Medya değerini $medya-boyutlari'dan alır
 ///
-/// @param {string} $deger - alınacak değer
-/// @param {map} $medya-boyutlari - önceden belirlenmiş medya boyutlari
+/// @param {string} $deger - Alınacak değer
+/// @param {map} $medya-boyutlari - Önceden belirlenmiş medya boyutlari
 ///
-/// @return {number} - medya değeri
+/// @return {number} - Medya değeri
+/// @throw Aranan değer $medya-boyutlari (hazir değerler) içinde yoksa hata verir
 ///
 @function hazir-medya-degeri-al($deger) {
   @if map-has-key($medya-boyutlari, $deger) {
     @return map-get($medya-boyutlari, $deger);
   } @else {
-    @warn "#{$deger}'i hazır değerler içinde yok.";
+    @error "#{$deger}'i hazır değerler içinde yok.";
   }
 }
