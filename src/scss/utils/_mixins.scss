@@ -2,7 +2,7 @@
 ///
 /// Temaya özel still ayarlarını yapar
 ///
-/// @param {string} $tema [default] - temaya ismi
+/// @param {string} $tema [default] - Temaya ismi
 ///
 @mixin tema($tema: 'default') {
   @at-root html[data-theme='#{$tema}'] #{&} {
@@ -14,10 +14,10 @@
 ///
 /// Elementin arkaplan resmini ayarlar
 ///
-/// @param {string} $url - resim (url/dosya yolu)
-/// @param {string | number} $size [cover] - resim boyutu
-/// @param {string | number} $position [center]  - resim konumu
-/// @param {string} $repeat [no-repeat] - resmin tekrar edip etmeyeceğini belirler
+/// @param {string} $url - Resim (url/dosya yolu)
+/// @param {string | number} $size [cover] - Resim boyutu
+/// @param {string | number} $position [center]  - Resim konumu
+/// @param {string} $repeat [no-repeat] - Resmin tekrar edip etmeyeceğini belirler
 ///
 @mixin arkaplan($url, $size: cover, $position: center, $repeat: no-repeat) {
   background-image: $url;
@@ -32,7 +32,7 @@
 /// Eğer maksimum satır aşılır ise fazla satırları kesip
 /// son satırın sonuna "..." koyar
 ///
-/// @param {number} $max-satir [2] - maksimum satır sayısı
+/// @param {number} $max-satir [2] - Maksimum satır sayısı
 ///
 @mixin truncate($max-satir: 2) {
   display: -webkit-box;
@@ -48,8 +48,8 @@
 /// Eğer maksimum satır aşılır ise fazla satırları kesip
 /// son satıra linear gradient ile şeffaflık yapar
 ///
-/// @param {number} $max-satir [2] - maksimum satır sayısı
-/// @param {string} $arkaplan-rengi [#fff] - gradient rengi
+/// @param {number} $max-satir [2] - Maksimum satır sayısı
+/// @param {string} $arkaplan-rengi [#fff] - Gradient rengi
 ///
 @mixin truncate-2($max-satir: 2, $arkaplan-rengi: #fff) {
   $font-size: 1em;
@@ -76,8 +76,8 @@
 ///
 /// Elemnt için varsayılan animasyon ayarlarını yapar
 ///
-/// @param {boolen} $backface [true] - backface-visibility özelliğini belirler
-/// @param {number} $perspective [1000] - elementin perspective özelliğini belirler
+/// @param {boolen} $backface [true] - Backface-visibility özelliğini belirler
+/// @param {number} $perspective [1000] - Elementin perspective özelliğini belirler
 ///
 @mixin animasyon($backface: true, $perspective: 1000) {
   @if $backface {
@@ -97,7 +97,7 @@
 /// @param {string} $eleman - $liste elemanı
 /// @param {number} $z-index [99] - z-index başlangıç değeri
 ///
-/// @example scss - basit kullanım
+/// @example scss - Basit kullanım
 /// $liste: (
 /// 	".elm1",
 /// 	".elm2"
@@ -106,7 +106,7 @@
 ///
 /// @output css - .elm1 { z-index: 99; } .elm2 { z-index: 98; }
 ///
-/// @example scss - varyant algılama
+/// @example scss - Varyant algılama
 /// $liste: (
 /// 	".buton"
 /// );
@@ -120,7 +120,7 @@
 ///
 /// @output css - .buton, .buton-2 { z-index: 99; }
 ///
-/// @example scss - ortak z-index değeri
+/// @example scss - Ortak z-index değeri
 /// $liste: (
 /// 	".elm, .elm2, .elm3 "
 /// );

@@ -2,12 +2,12 @@
 ///
 /// Css @media sorgularının süpergücü
 ///
-/// @param {number} $bitis - girilen max-width değeri
-/// @param {number} $baslangic - girilen min-width değeri
-/// @param {number} $max-width - atanan max-width değeri
-/// @param {number} $$min-width - atanan min-width değeri
-/// @param {string} $medya-query - medya sorgusu
-/// @param {string} $medya-query-tipi - atanan değerlerin unit tipi
+/// @param {number} $bitis - Girilen max-width değeri
+/// @param {number} $baslangic - Girilen min-width değeri
+/// @param {number} $max-width - Atanan max-width değeri
+/// @param {number} $$min-width - Atanan min-width değeri
+/// @param {string} $medya-query - Medya sorgusu
+/// @param {string} $medya-query-tipi - Atanan değerlerin unit tipi
 ///
 @mixin medya($bitis: null, $baslangic: null) {
   $max-width: null;
@@ -49,7 +49,7 @@
 ///
 /// Minimum medya ve üzerinde çalışacak sorgu
 ///
-/// @param {string | number} $deger - girilen max-width değeri
+/// @param {string | number} $deger - Girilen max-width değeri
 ///
 @mixin min-medya($deger) {
   @include medya(null, $deger) {
@@ -61,7 +61,7 @@
 ///
 /// Maximum medya ve üzerinde çalışacak sorgu
 ///
-/// @param {string | number} $deger - girilen max-width değeri
+/// @param {string | number} $deger - Girilen max-width değeri
 ///
 @mixin max-medya($deger) {
   @include medya($deger) {
@@ -73,8 +73,8 @@
 ///
 /// Maximum medya ve üzerinde çalışacak sorgu
 ///
-/// @param {string | number} $bitis - girilen max-width değeri
-/// @param {string | number} $baslangic - girilen min-width değeri
+/// @param {string | number} $bitis - Girilen max-width değeri
+/// @param {string | number} $baslangic - Girilen min-width değeri
 ///
 @mixin aralik-medya($baslangic, $bitis) {
   @include medya($bitis, $baslangic) {
@@ -86,7 +86,7 @@
 ///
 /// Ekranda medya boyutlarını gösterir
 ///
-/// @param {map} $boyutlar [$medya-boyutlari] - gösterilecek medya boyutları
+/// @param {map} $boyutlar [$medya-boyutlari] - Gösterilecek medya boyutları
 ///
 @mixin medya-boyutlarini-goster($boyutlar: $medya-boyutlari) {
   @if $medya-boyutlarini-goster {
@@ -116,19 +116,13 @@
   }
 }
 
-/// Ekranda medya boyutlarını gösteri açıp kapatır
-/// 
-/// @param {boolen} $medya-boyutlarini-goster [true] - özelliği açıp kapatabilirsiniz
-/// 
+/// @type boolen
 $medya-boyutlarini-goster: true;
 
-/// Medya boyutları ayarını varsayılan $medya-boyutlari ile kullanılmasını açıp kapatır
-/// 
-/// @param {boolen} $varsayilan-medya-boyutlarini-kullan [true] - özelliği açıp kapatabilirsiniz
-/// @param {map} $boyutlar [null] - ekranda gösterilecek boyutları belirler
-/// 
+/// @type boolen
 $varsayilan-medya-boyutlarini-kullan: true;
 
+/// @type map
 $boyutlar: '';
 
 @if $varsayilan-medya-boyutlarini-kullan {
