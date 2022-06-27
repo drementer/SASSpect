@@ -15,6 +15,21 @@ $root-line-height:              1.2                         !default;
 /// @type number
 $heading-line-height:           1.5                         !default;
 
+/// @type map
+/// 1.250 Major Third
+/// @link https://type-scale.com/
+$font-listesi: (
+  'h1': 3.815,
+  'h2': 3.052,
+  'h3': 2.441,
+  'h4': 1.953,
+  'h5': 1.563,
+  'h6': 1.25,
+  'p': 1,
+  'label': 0.875,
+) !default;
+
+// Medya
 
 /// @type string
 $varsayilan-medya-unit:         px                          !default;
@@ -31,6 +46,7 @@ $medya-boyutlari:(
 
 
 // Renk Paleti
+
 $beyaz:                       #fff                        !default;
 $beyaz-2:                     #eff3f4                     !default;
 $beyaz-3:                     #f4f5f5                     !default;
