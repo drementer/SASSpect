@@ -169,3 +169,28 @@
     @content;
   }
 }
+
+/// Font Sizes
+/// 
+/// Font boyutlarını hızlı şekilde ayarlamak için
+/// 
+/// @param {map} $font-listesi - Font boyutlarının listesi
+/// @param {string} $eleman - Liste elemanı
+/// @param {number} $font-degeri - Font değeri
+/// 
+/// @example scss - Basit kullanım
+/// $font-listesi: (
+///   ".elm1": 1,
+///   ".elm2": 1.2,
+/// );
+/// @include font-size($font-listesi);
+/// 
+/// @output css - .elm1 { font-size: 1rem; } .elm2 { font-size: 1.2rem; }
+/// 
+@mixin font-sizes($font-listesi) {
+  @each $eleman, $font-degeri in $font-listesi {
+    #{$eleman} {
+      @include font-size($font-degeri * 1rem);
+    }
+  }
+}
