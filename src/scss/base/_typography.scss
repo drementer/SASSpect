@@ -4,13 +4,6 @@ html {
   font-family: $root-font-family;
   font-size: $root-font-size;
 
-  text-rendering: optimizeLegibility !important;
-
-  -webkit-font-smoothing: antialiased !important;
-  -moz-osx-font-smoothing: grayscale !important;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-
   @include medya(lg) {
     font-size: $root-font-size--mobil;
   }
@@ -29,25 +22,4 @@ h6 {
   line-height: $heading-line-height;
 }
 
-/// Font Sizes
-///
-/// 1.250 Major Third
-///
-/// @link https://type-scale.com/
-///
-$font-listesi: (
-  'h1': 3.815,
-  'h2': 3.052,
-  'h3': 2.441,
-  'h4': 1.953,
-  'h5': 1.563,
-  'h6': 1.25,
-  'p': 1,
-  'label': 0.875,
-) !default;
-
-@each $element, $font-degeri in $font-listesi {
-  #{$element} {
-    @include font-size($font-degeri * 1rem);
-  }
-}
+@include font-sizes($font-listesi);
