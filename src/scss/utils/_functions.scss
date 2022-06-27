@@ -7,7 +7,7 @@
 /// @param {string} $renk - Tint edilecek renk
 /// @param {number} $agirlik - Rengin tint yoğunluğunu belirler
 /// 
-/// @return {string} - Tint edilmiş rengi
+/// @return {string} - Tint edilmiş renk
 ///
 @function tint-color($renk, $agirlik) {
   @return mix(white, $renk, $agirlik);
@@ -20,7 +20,7 @@
 /// @param {string} $renk - Shade edilecek renk
 /// @param {number} $agirlik - Rengin shade yoğunluğunu belirler
 /// 
-/// @return {string} - Shade edilmiş rengi
+/// @return {string} - Shade edilmiş renk
 ///
 @function shade-color($renk, $agirlik) {
   @return mix(black, $renk, $agirlik);
