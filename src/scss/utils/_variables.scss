@@ -1,16 +1,25 @@
 // Typografi
+
+/// @type string | map
 $root-font-family:              'Fira Code'                 !default;
 
+/// @type number
 $root-font-size:                16px                        !default;
+
+/// @type number
 $root-font-size--mobil:         14px                        !default;
 
+/// @type number
 $root-line-height:              1.2                         !default;
+
+/// @type number
 $heading-line-height:           1.5                         !default;
 
 
-// Medya
+/// @type string
 $varsayilan-medya-unit:         px                          !default;
 
+/// @type map
 $medya-boyutlari:(
   xs: 360,
   sm: 576,
