@@ -475,3 +475,7 @@ summary {
 audio:not([controls]) {
   display: none;
 }
+
+[disabled] {
+  cursor: not-allowed;
+}
