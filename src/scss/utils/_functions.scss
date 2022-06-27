@@ -1,31 +1,5 @@
 @use './variables' as *;
 
-/// Tint Color
-///
-/// Rengi beyaz ile harmanlar
-///
-/// @param {string} $renk - Tint edilecek renk
-/// @param {number} $agirlik - Rengin tint yoğunluğunu belirler
-/// 
-/// @return {string} - Tint edilmiş renk
-///
-@function tint-color($renk, $agirlik) {
-  @return mix(white, $renk, $agirlik);
-}
-
-/// Shade Color
-///
-/// Rengi siyah ile harmanlar
-///
-/// @param {string} $renk - Shade edilecek renk
-/// @param {number} $agirlik - Rengin shade yoğunluğunu belirler
-/// 
-/// @return {string} - Shade edilmiş renk
-///
-@function shade-color($renk, $agirlik) {
-  @return mix(black, $renk, $agirlik);
-}
-
 /// Hazır Medya Değeri Al
 ///
 /// Medya değerini $medya-boyutlari'dan alır
