@@ -236,21 +236,29 @@ summary {
   display: list-item;
 }
 
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in all browsers (opinionated).
+ */
 :where(h1, h2, h3, h4, h5, h6) {
-  font-weight: normal;
-  text-transform: capitalize;
-  margin: 0;
-  padding: 0;
+  font-weight: normal; /* 1 */
+  text-transform: capitalize; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 2 */
 }
 
-:where(output) {
-  display: inline-block;
-}
-
+/**
+ * Change the cursor on disabled, not-editable, or otherwise
+ * inoperable elements in all browsers (opinionated).
+ */
 [disabled] {
   cursor: not-allowed;
 }
 
+/**
+ * Change the display on visually hidden accessible elements
+ * in all browsers (opinionated).
+ */
 [hidden] {
   display: none !important;
 }
@@ -272,7 +280,6 @@ summary {
   width: -moz-fit-content;
   width: fit-content;
 }
-
 :where(dialog:not([open])) {
   display: none;
 }
@@ -284,17 +291,26 @@ summary {
   display: list-item;
 }
 
+/**
+ * Prevent the display of empty elements in all browsers (opinionated).
+ */
 :where(p, span) {
   &:empty {
     display: none;
   }
 }
 
+/**
+ * Prevent the selection of icons in all browsers (opinionated).
+ */
 ion-icon {
   user-select: none;
   pointer-events: none;
 }
 
+/**
+ * Prevent the scaling of media items in all browsers (opinionated).
+ */
 img,
 video {
   height: auto;
