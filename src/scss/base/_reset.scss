@@ -16,7 +16,6 @@
  * 1. Add border box sizing in all browsers (opinionated).
  * 2. Backgrounds do not repeat by default (opinionated).
  */
-
 *,
 ::before,
 ::after {
@@ -28,7 +27,6 @@
  * 1. Add text decoration inheritance in all browsers (opinionated).
  * 2. Add vertical alignment inheritance in all browsers (opinionated).
  */
-
 ::before,
 ::after {
   text-decoration: inherit; /* 1 */
@@ -43,15 +41,15 @@
  * 5. Remove the grey highlight on links in iOS (opinionated).
  * 6. Prevent adjustments of font size after orientation changes in iOS.
  */
-
 html {
   scroll-behavior: smooth;
 
   cursor: default; /* 1 */
   line-height: 1.5; /* 2 */
-  overflow-wrap: break-word; /* 3 */
-  tab-size: 4; /* 4 */
 
+  overflow-wrap: break-word; /* 3 */
+
+  tab-size: 4; /* 4 */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* 5 */
   -webkit-tap-highlight-color: transparent; /* 5 */
 
@@ -68,7 +66,6 @@ html {
  * 1. Remove the margin in all browsers (opinionated).
  * 2. Remove the overflow-x in all browsers (opinionated).
  */
-
 :where(body) {
   margin: 0; /* 1 */
   overflow-x: hidden; /* 2 */
@@ -78,7 +75,6 @@ html {
  * 1. Correct the inheritance of border color in Firefox.
  * 2. Add the correct box sizing in Firefox.
  */
-
 :where(hr) {
   color: inherit; /* 1 */
   height: 0; /* 2 */
@@ -87,7 +83,6 @@ html {
 /**
  * Remove the margin on nested lists in Chrome, Edge, and Safari.
  */
-
 :where(dl, ol, ul) :where(dl, ol, ul) {
   margin: 0;
 }
@@ -95,7 +90,6 @@ html {
 /**
  * Add the correct text decoration in Safari.
  */
-
 :where(abbr[title]) {
   text-decoration: underline;
   text-decoration: underline dotted;
@@ -104,7 +98,6 @@ html {
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
-
 :where(b, strong) {
   font-weight: bolder;
 }
@@ -113,7 +106,6 @@ html {
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-
 :where(code, kbd, samp, pre) {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
@@ -122,7 +114,6 @@ html {
 /**
  * 1. Prevent overflow of the container in all browsers (opinionated).
  */
-
 :where(pre) {
   overflow: auto; /* 1 */
 }
@@ -130,7 +121,6 @@ html {
 /**
  * Remove the list style on navigation lists in all browsers (opinionated).
  */
-
 :where(nav) :where(ol, ul) {
   list-style-type: none;
   padding: 0;
@@ -139,7 +129,6 @@ html {
 /**
  * Prevent VoiceOver from ignoring list semantics in Safari (opinionated).
  */
-
 :where(nav li)::before {
   content: '\200B';
   float: left;
@@ -148,7 +137,6 @@ html {
 /**
  * Add the correct font size in all browsers.
  */
-
 :where(small) {
   font-size: 80%;
 }
@@ -157,14 +145,12 @@ html {
  * Prevent `sub` and `sup` elements from affecting the line height in
  * all browsers.
  */
-
 :where(sub, sup) {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
-
 :where(sub) {
   bottom: -0.25em;
 }
@@ -176,11 +162,9 @@ html {
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
  */
-
 /**
  * Change the alignment on media elements in all browsers (opinionated).
  */
-
 :where(audio, canvas, iframe, img, svg, video) {
   vertical-align: middle;
 }
@@ -188,7 +172,6 @@ html {
 /**
  * Remove the border on iframes in all browsers (opinionated).
  */
-
 :where(iframe) {
   border-style: none;
 }
@@ -196,7 +179,6 @@ html {
 /**
  * Change the fill color to match the text color in all browsers (opinionated).
  */
-
 :where(svg:not([fill])) {
   fill: currentColor;
 }
@@ -206,7 +188,6 @@ html {
  * 2. Correct table border color in Chrome, Edge, and Safari.
  * 3. Remove text indentation from table contents in Chrome, Edge, and Safari.
  */
-
 :where(table) {
   border-collapse: collapse; /* 1 */
   border-color: currentColor; /* 2 */
@@ -216,7 +197,6 @@ html {
 /**
  * Remove the all padding for all browsers (opinionated).
  */
-
 :where(td, th) {
   padding: 0;
 }
@@ -236,7 +216,6 @@ html {
 /**
  * 1. Change the resize direction in all browsers (opinionated).
  */
-
 :where(textarea) {
   resize: vertical; /* 2 */
 }
@@ -244,7 +223,6 @@ html {
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
-
 progress {
   vertical-align: baseline;
 }
@@ -252,7 +230,6 @@ progress {
 /**
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
-
 details {
   display: block;
 }
@@ -260,7 +237,6 @@ details {
 /**
  * Add the correct display in all browsers.
  */
-
 summary {
   display: list-item;
 }
@@ -287,7 +263,6 @@ summary {
 /**
  * Add the correct styles in Safari.
  */
-
 :where(dialog) {
   background-color: white;
   border: solid;
@@ -310,7 +285,6 @@ summary {
 /**
  * Add the correct display in Safari.
  */
-
 :where(details > summary:first-of-type) {
   display: list-item;
 }
@@ -335,7 +309,6 @@ video {
 /**
  * Change the inconsistent appearance in all browsers (opinionated).
  */
-
 :where(fieldset) {
   border: 1px solid #a0a0a0;
 }
@@ -344,7 +317,6 @@ video {
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
-
 button,
 select {
   /* 1 */
@@ -354,7 +326,6 @@ select {
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */
-
 button,
 [type='button'],
 [type='reset'],
@@ -365,7 +336,6 @@ button,
 /**
  * Remove the inner border and padding in Firefox.
  */
-
 button::-moz-focus-inner,
 [type='button']::-moz-focus-inner,
 [type='reset']::-moz-focus-inner,
@@ -377,7 +347,6 @@ button::-moz-focus-inner,
 /**
  * Restore the focus styles unset by the previous rule.
  */
-
 button:-moz-focusring,
 [type='button']:-moz-focusring,
 [type='reset']:-moz-focusring,
@@ -389,7 +358,6 @@ button:-moz-focusring,
  * 1. Correct the odd appearance in Chrome, Edge, and Safari.
  * 2. Correct the outline style in Safari.
  */
-
 :where([type='search']) {
   -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
@@ -398,7 +366,6 @@ button:-moz-focusring,
 /**
  * Remove the inner padding in Chrome, Edge, and Safari on macOS.
  */
-
 ::-webkit-search-decoration {
   -webkit-appearance: none;
 }
@@ -407,7 +374,6 @@ button:-moz-focusring,
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
  */
-
 ::-webkit-file-upload-button {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
@@ -416,7 +382,6 @@ button:-moz-focusring,
 /**
  * Correct the cursor style of increment and decrement buttons in Safari.
  */
-
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
   height: auto;
@@ -425,7 +390,6 @@ button:-moz-focusring,
 /**
  * Correct the text style of placeholders in Chrome, Edge, and Safari.
  */
-
 ::-webkit-input-placeholder {
   color: inherit;
   opacity: 0.54;
