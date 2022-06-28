@@ -7,18 +7,22 @@
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-  
+
   @include padding(2rem 1rem);
 }
 
+/**
+ * Owerflow hatalarını çözümlemek için her öğeye arkaplan verir
+ *    see: https://www.youtube.com/shorts/ii-lSK2_Nu4 - Kewin Powell'ın videosu6
+ */
 .hata-ayiklama {
   * {
-    border: 1px solid transparent;
+    outline: 1px solid transparent !important;
     border-radius: 0;
     background-color: rgba(0, 100, 0, 0.1) !important;
 
     &:hover {
-      border: 1px solid rgb(0, 0, 0) !important;
+      outline-color: rgb(0, 0, 0) !important;
       background-color: rgba(0, 100, 0, 0.15) !important;
     }
   }
