@@ -52,6 +52,15 @@ $medya-boyutlari:(
   xl: 1200,
   ul: 1400,
 ) !default;
+
+/// @type boolen
+$medya-boyutlarini-goster: true !default;
+
+/// @type boolen
+$varsayilan-medya-boyutlarini-kullan: true !default;
+
+/// @type map
+$boyutlar: '' !default;
 // ------------------------------------------------------------------
 
 

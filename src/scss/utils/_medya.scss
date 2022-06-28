@@ -116,23 +116,5 @@
   }
 }
 
-/// @type boolen
-$medya-boyutlarini-goster: true;
-
-/// @type boolen
-$varsayilan-medya-boyutlarini-kullan: true;
-
-/// @type map
-$boyutlar: '';
-
-@if $varsayilan-medya-boyutlarini-kullan {
-  $boyutlar: $medya-boyutlari;
-} @else {
-  $boyutlar: (
-    xs: null,
-    sm: 576,
-  );
-}
-
 /// Medya boyutlarını gösteri çalıştırır
-@include medya-boyutlarini-goster($boyutlar);
+@include medya-boyutlarini-goster();
