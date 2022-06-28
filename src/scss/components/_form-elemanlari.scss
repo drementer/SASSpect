@@ -2,7 +2,6 @@ input,
 textarea,
 select {
   padding: 0;
-  margin: 0;
   width: 100%;
   outline: 0;
   border: none;
@@ -51,17 +50,21 @@ textarea {
   }
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-input[type='number'] {
-  -moz-appearance: textfield;
+.input,
+.checkbox,
+.radio {
+  @include margin(1rem);
+  @include font-size(1rem);
+  max-width: 24rem;
+
+  a {
+    text-transform: capitalize;
+    color: $siyah-3;
+  }
 }
 
 .input {
-  margin: 0;
+  margin: 1rem;
   outline: 0;
   background-color: transparent;
   gap: 0.5rem;
@@ -153,21 +156,9 @@ input[type='number'] {
   &__aciklama {
     font-size: 14px;
     display: block;
+    margin: 0;
     margin-left: 1rem;
     @include truncate(1);
-  }
-}
-
-.input,
-.checkbox,
-.radio {
-  @include margin(1rem);
-  @include font-size(1rem);
-  max-width: 24rem;
-
-  a {
-    text-transform: capitalize;
-    color: $siyah-3;
   }
 }
 
