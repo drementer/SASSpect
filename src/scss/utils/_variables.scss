@@ -57,10 +57,10 @@ $medya-boyutlari:(
 
 // ------------------------- Renk Paleti ----------------------------
 
-$beyaz:                       #fff                        !default;
-$beyaz-2:                     #eff3f4                     !default;
-$beyaz-3:                     #f4f5f5                     !default;
-$beyaz-4:                     #f0f4ef                     !default;
+$beyaz:                       hsl(0, 0%, 100%)            !default;
+$beyaz-2:                     hsl(192, 19%, 95%)          !default;
+$beyaz-3:                     hsl(180, 5%, 96%)           !default;
+$beyaz-4:                     hsl(108, 19%, 95%)          !default;
 $beyaz--100:                    tint($beyaz, 80%)           !default;
 $beyaz--200:                    tint($beyaz, 60%)           !default;
 $beyaz--300:                    tint($beyaz, 40%)           !default;
@@ -71,11 +71,11 @@ $beyaz--700:                    shade($beyaz, 40%)          !default;
 $beyaz--800:                    shade($beyaz, 60%)          !default;
 $beyaz--900:                    shade($beyaz, 80%)          !default;
 
-$siyah:                       #000                        !default;
-$siyah-2:                     #000814                     !default;
-$siyah-3:                     #130022                     !default;
-$siyah-4:                     #070707                     !default;
-$siyah-5:                     #0a0a0a                     !default;
+$siyah:                       hsl(0, 0%, 0%)              !default;
+$siyah-2:                     hsl(216, 100%, 4%)          !default;
+$siyah-3:                     hsl(274, 100%, 7%)          !default;
+$siyah-4:                     hsl(0, 0%, 3%)              !default;
+$siyah-5:                     hsl(0, 0%, 4%)              !default;
 $siyah--100:                    tint($siyah, 80%)           !default;
 $siyah--200:                    tint($siyah, 60%)           !default;
 $siyah--300:                    tint($siyah, 40%)           !default;
@@ -86,7 +86,7 @@ $siyah--700:                    shade($siyah, 40%)          !default;
 $siyah--800:                    shade($siyah, 60%)          !default;
 $siyah--900:                    shade($siyah, 80%)          !default;
 
-$ana-renk:                    #ff0a54                     !default;
+$ana-renk:                    hsl(342, 100%, 52%)         !default;
 $ana-renk--100:                 tint($ana-renk, 80%)        !default;
 $ana-renk--200:                 tint($ana-renk, 60%)        !default;
 $ana-renk--300:                 tint($ana-renk, 40%)        !default;
@@ -97,7 +97,7 @@ $ana-renk--700:                 shade($ana-renk, 40%)       !default;
 $ana-renk--800:                 shade($ana-renk, 60%)       !default;
 $ana-renk--900:                 shade($ana-renk, 80%)       !default;
 
-$yan-renk:                    #f9a620                     !default;
+$yan-renk:                    hsl(350, 100%, 50%)         !default;
 $yan-renk--100:                 tint($yan-renk, 80%)        !default;
 $yan-renk--200:                 tint($yan-renk, 60%)        !default;
 $yan-renk--300:                 tint($yan-renk, 40%)        !default;
@@ -108,7 +108,7 @@ $yan-renk--700:                 shade($yan-renk, 40%)       !default;
 $yan-renk--800:                 shade($yan-renk, 60%)       !default;
 $yan-renk--900:                 shade($yan-renk, 80%)       !default;
 
-$aksan:                       #027353                     !default;
+$aksan:                       hsl(184, 100%, 51%)         !default;
 $aksan--100:                    tint($aksan, 80%)           !default;
 $aksan--200:                    tint($aksan, 60%)           !default;
 $aksan--300:                    tint($aksan, 40%)           !default;
