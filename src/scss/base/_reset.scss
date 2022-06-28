@@ -66,7 +66,7 @@ html {
 
 /**
  * 1. Remove the margin in all browsers (opinionated).
-  * 2. Remove the overflow-x in all browsers (opinionated).
+ * 2. Remove the overflow-x in all browsers (opinionated).
  */
 
 :where(body) {
@@ -214,6 +214,14 @@ html {
 }
 
 /**
+ * Remove the all padding for all browsers (opinionated).
+ */
+
+:where(td, th) {
+  padding: 0;
+}
+
+/**
 1. Change the font styles in all browsers.
 2. Remove the margin in Firefox and Safari.
 */
@@ -226,59 +234,54 @@ html {
 }
 
 /**
- * 1. Remove the margin in Firefox and Safari.
- * 2. Change the resize direction in all browsers (opinionated).
+ * 1. Change the resize direction in all browsers (opinionated).
  */
 
 :where(textarea) {
-  margin: 0; /* 1 */
   resize: vertical; /* 2 */
 }
 
 /**
- * 1. Correct the odd appearance in Chrome, Edge, and Safari.
- * 2. Correct the outline style in Safari.
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 
-:where([type='search']) {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+progress {
+  vertical-align: baseline;
 }
 
 /**
- * Correct the cursor style of increment and decrement buttons in Safari.
+ * Add the correct display in Edge, IE 10+, and Firefox.
  */
 
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
-  height: auto;
+details {
+  display: block;
 }
 
 /**
- * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ * Add the correct display in all browsers.
  */
 
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.54;
+summary {
+  display: list-item;
 }
 
-/**
- * Remove the inner padding in Chrome, Edge, and Safari on macOS.
- */
-
-::-webkit-search-decoration {
-  -webkit-appearance: none;
+:where(h1, h2, h3, h4, h5, h6) {
+  font-weight: normal;
+  text-transform: capitalize;
+  margin: 0;
+  padding: 0;
 }
 
-/**
- * 1. Correct the inability to style upload buttons in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
+:where(output) {
+  display: inline-block;
+}
 
-::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+[disabled] {
+  cursor: not-allowed;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 /**
@@ -337,8 +340,6 @@ video {
   border: 1px solid #a0a0a0;
 }
 
-//----------------------
-
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
@@ -385,12 +386,13 @@ button:-moz-focusring,
 }
 
 /**
- * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ * 1. Correct the odd appearance in Chrome, Edge, and Safari.
+ * 2. Correct the outline style in Safari.
  */
 
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.54;
+:where([type='search']) {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 
 /**
@@ -398,14 +400,6 @@ button:-moz-focusring,
  */
 
 ::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-
-[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -420,64 +414,19 @@ button:-moz-focusring,
 }
 
 /**
- * Change the inconsistent appearance in all browsers (opinionated).
+ * Correct the cursor style of increment and decrement buttons in Safari.
  */
 
-:where(fieldset) {
-  border: 1px solid #a0a0a0;
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
 }
 
 /**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
  */
 
-progress {
-  vertical-align: baseline;
-}
-
-/**
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
-
-details {
-  display: block;
-}
-
-/**
- * Add the correct display in all browsers.
- */
-
-summary {
-  display: list-item;
-}
-
-:where(ul) {
-  list-style: none;
-}
-
-/**
- * Remove the all padding for all browsers (opinionated).
- */
-
-:where(td, th) {
-  padding: 0;
-}
-
-:where(h1, h2, h3, h4, h5, h6) {
-  font-weight: normal;
-  text-transform: capitalize;
-  margin: 0;
-  padding: 0;
-}
-
-:where(output) {
-  display: inline-block;
-}
-
-[disabled] {
-  cursor: not-allowed;
-}
-
-[hidden] {
-  display: none !important;
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
 }
