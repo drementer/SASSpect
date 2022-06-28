@@ -8,7 +8,6 @@
 /// @link https://github.com/jensimmons/cssremedy
 /// @link https://github.com/adamgruber/opinionate.css
 /// @link https://github.com/twbs/bootstrap/blob/main/scss/_reboot.scss
-///
 /// @link https://codepen.io/chriscoyier/pen/JpLzjd?editors=1010
 ///
 
@@ -50,6 +49,7 @@ html {
   overflow-wrap: break-word; /* 3 */
 
   tab-size: 4; /* 4 */
+
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* 5 */
   -webkit-tap-highlight-color: transparent; /* 5 */
 
@@ -159,10 +159,6 @@ html {
 }
 
 /**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
-/**
  * Change the alignment on media elements in all browsers (opinionated).
  */
 :where(audio, canvas, iframe, img, svg, video) {
@@ -205,7 +201,6 @@ html {
 1. Change the font styles in all browsers.
 2. Remove the margin in Firefox and Safari.
 */
-
 :where(button, input, optgroup, select, textarea) {
   font-family: inherit; /* 1 */
   font-size: 100%; /* 1 */
