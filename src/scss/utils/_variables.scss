@@ -30,6 +30,17 @@ $font-listesi: (
 $z-index-listesi: '.loader', '.modal', '.popup', '.go-top', '.nav' !default;
 // ------------------------------------------------------------------
 
+// ------------------------- Display --------------------------------
+
+/// @type boolen
+/// Display modlarini açıp kapatmak için kullanılır.
+$display-modlari-acik: true !default;
+
+/// @type map | list
+$display-listesi: 'block', 'inline', 'inline-block', 'flex', 'inline-flex',
+  'initial', 'none' !default;
+// ------------------------------------------------------------------
+
 // ------------------------- Medya ----------------------------------
 
 /// @type map
