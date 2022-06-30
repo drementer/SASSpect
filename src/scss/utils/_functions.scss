@@ -17,3 +17,35 @@
     @error "#{$deger}'i hazır değerler içinde yok.";
   }
 }
+
+/// Px to Em
+///
+/// Px değerini em değerine çevirir
+/// @param {number} $px - Çevrilecek px değeri
+/// @return {number} - Em değeri
+///
+@function px2em($px) {
+  @if unitless($px) {
+    $px: $px * 1px;
+  }
+  @if comparable($px, 1em) {
+    @return $px;
+  }
+  @return calc($px / $root-font-size) * 1em;
+}
+
+/// Px to Rem
+///
+/// Px değerini rem değerine çevirir
+/// @param {number} $px - Çevrilecek px değeri
+/// @return {number} - Rem değeri
+///
+@function px2rem($px) {
+  @if unitless($px) {
+    $px: $px * 1px;
+  }
+  @if comparable($px, 1rem) {
+    @return $px;
+  }
+  @return calc($px / $root-font-size) * 1rem;
+}
