@@ -2,6 +2,13 @@
   display: none !important;
 }
 
+$display: ('block', 'inline', 'inline-block', 'flex', 'inline-flex', 'none');
+@each $display in $display {
+  .d-#{$display} {
+    display: #{$display} !important;
+  }
+}
+
 .konteyner {
   width: min(100% - 2rem, 85.5rem);
   margin-inline: auto;
@@ -49,4 +56,9 @@
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+.text-truncate,
+.truncate {
+  @include truncate();
 }
