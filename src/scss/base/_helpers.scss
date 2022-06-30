@@ -2,11 +2,8 @@
   display: none !important;
 }
 
-$display: ('block', 'inline', 'inline-block', 'flex', 'inline-flex', 'none');
-@each $display in $display {
-  .d-#{$display} {
-    display: #{$display} !important;
-  }
+@if $display-modlari-acik{
+  @include display();
 }
 
 .konteyner {
