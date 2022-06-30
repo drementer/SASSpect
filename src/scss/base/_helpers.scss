@@ -12,8 +12,11 @@
 }
 
 /**
- * Owerflow hatalarını çözümlemek için her öğeye arkaplan verir
- *    see: https://www.youtube.com/shorts/ii-lSK2_Nu4 - Kewin Powell'ın videosu6
+ * Overflow hatalarını çözümlemek için her dom elemanına arkaplan ve hoverda
+ * arkaplan yoğunlaştırılıp outline ekleniyor bu sayede hangi eleman overflow
+ * hatası olduğu belirleniyor.
+ *
+ * @link https://www.youtube.com/shorts/ii-lSK2_Nu4 - Kewin Powell'ın videosu
  */
 .hata-ayiklama {
   * {
