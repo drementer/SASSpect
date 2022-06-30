@@ -1,13 +1,13 @@
 // ------------------------- Typografi ------------------------------
 
 /// @type string | list
-$root-font-family:              'Fira Code'                 !default;
+$root-font-family: 'Fira Code' !default;
 
 /// @type stirng
-$root-font-size:                16px                        !default;
+$root-font-size: 16px !default;
 
 /// @type stirng
-$root-font-size--mobil:         14px                        !default;
+$root-font-size--mobil: 14px !default;
 
 /// @type map
 /// 1.250 Major Third
@@ -24,33 +24,35 @@ $font-listesi: (
 ) !default;
 // ------------------------------------------------------------------
 
-
 // ------------------------- z-index ----------------------------------
 
 /// @type list
-$z-index-listesi: 
-  '.loader', 
-  '.modal', 
-  '.popup', 
-  '.go-top', 
-  '.nav' 
-  !default;
+$z-index-listesi: '.loader', '.modal', '.popup', '.go-top', '.nav' !default;
 // ------------------------------------------------------------------
-
 
 // ------------------------- Medya ----------------------------------
 
-/// @type string
-$varsayilan-medya-unit:         px                          !default;
-
 /// @type map
-$medya-boyutlari:(
-  xs: 360,
-  sm: 576,
-  md: 768,
-  lg: 992,
-  xl: 1200,
-  ul: 1400,
+///
+/// @example scss - Px ile kullanım
+/// $medya-boyutlari: (
+///  'xs': 360px,
+///  'sm': 576px
+/// ) !default;
+///
+/// @example scss - Em ile kullanım
+/// $medya-boyutlari: (
+///  'xs': px2em(360),
+///  'sm': px2em(768)
+/// ) !default;
+///
+$medya-boyutlari: (
+  xs: px2em(360),
+  sm: px2em(576),
+  md: px2em(768),
+  lg: px2em(992),
+  xl: px2em(1200),
+  ul: px2em(1400),
 ) !default;
 
 /// @type boolen
@@ -63,68 +65,67 @@ $varsayilan-medya-boyutlarini-kullan: true !default;
 $boyutlar: '' !default;
 // ------------------------------------------------------------------
 
-
 // ------------------------- Renk Paleti ----------------------------
 
-$beyaz:                       hsl(0, 0%, 100%)            !default;
-$beyaz-2:                     hsl(192, 19%, 95%)          !default;
-$beyaz-3:                     hsl(180, 5%, 96%)           !default;
-$beyaz-4:                     hsl(108, 19%, 95%)          !default;
-$beyaz--100:                    tint($beyaz, 80%)           !default;
-$beyaz--200:                    tint($beyaz, 60%)           !default;
-$beyaz--300:                    tint($beyaz, 40%)           !default;
-$beyaz--400:                    tint($beyaz, 20%)           !default;
-$beyaz--500:                    $beyaz                      !default;
-$beyaz--600:                    shade($beyaz, 20%)          !default;
-$beyaz--700:                    shade($beyaz, 40%)          !default;
-$beyaz--800:                    shade($beyaz, 60%)          !default;
-$beyaz--900:                    shade($beyaz, 80%)          !default;
+$beyaz: hsl(0, 0%, 100%) !default;
+$beyaz-2: hsl(192, 19%, 95%) !default;
+$beyaz-3: hsl(180, 5%, 96%) !default;
+$beyaz-4: hsl(108, 19%, 95%) !default;
+$beyaz--100: tint($beyaz, 80%) !default;
+$beyaz--200: tint($beyaz, 60%) !default;
+$beyaz--300: tint($beyaz, 40%) !default;
+$beyaz--400: tint($beyaz, 20%) !default;
+$beyaz--500: $beyaz !default;
+$beyaz--600: shade($beyaz, 20%) !default;
+$beyaz--700: shade($beyaz, 40%) !default;
+$beyaz--800: shade($beyaz, 60%) !default;
+$beyaz--900: shade($beyaz, 80%) !default;
 
-$siyah:                       hsl(0, 0%, 0%)              !default;
-$siyah-2:                     hsl(216, 100%, 4%)          !default;
-$siyah-3:                     hsl(274, 100%, 7%)          !default;
-$siyah-4:                     hsl(0, 0%, 3%)              !default;
-$siyah-5:                     hsl(0, 0%, 4%)              !default;
-$siyah--100:                    tint($siyah, 80%)           !default;
-$siyah--200:                    tint($siyah, 60%)           !default;
-$siyah--300:                    tint($siyah, 40%)           !default;
-$siyah--400:                    tint($siyah, 20%)           !default;
-$siyah--500:                    $siyah !default;
-$siyah--600:                    shade($siyah, 20%)          !default;
-$siyah--700:                    shade($siyah, 40%)          !default;
-$siyah--800:                    shade($siyah, 60%)          !default;
-$siyah--900:                    shade($siyah, 80%)          !default;
+$siyah: hsl(0, 0%, 0%) !default;
+$siyah-2: hsl(216, 100%, 4%) !default;
+$siyah-3: hsl(274, 100%, 7%) !default;
+$siyah-4: hsl(0, 0%, 3%) !default;
+$siyah-5: hsl(0, 0%, 4%) !default;
+$siyah--100: tint($siyah, 80%) !default;
+$siyah--200: tint($siyah, 60%) !default;
+$siyah--300: tint($siyah, 40%) !default;
+$siyah--400: tint($siyah, 20%) !default;
+$siyah--500: $siyah !default;
+$siyah--600: shade($siyah, 20%) !default;
+$siyah--700: shade($siyah, 40%) !default;
+$siyah--800: shade($siyah, 60%) !default;
+$siyah--900: shade($siyah, 80%) !default;
 
-$ana-renk:                    hsl(342, 100%, 52%)         !default;
-$ana-renk--100:                 tint($ana-renk, 80%)        !default;
-$ana-renk--200:                 tint($ana-renk, 60%)        !default;
-$ana-renk--300:                 tint($ana-renk, 40%)        !default;
-$ana-renk--400:                 tint($ana-renk, 20%)        !default;
-$ana-renk--500:                 $ana-renk                   !default;
-$ana-renk--600:                 shade($ana-renk, 20%)       !default;
-$ana-renk--700:                 shade($ana-renk, 40%)       !default;
-$ana-renk--800:                 shade($ana-renk, 60%)       !default;
-$ana-renk--900:                 shade($ana-renk, 80%)       !default;
+$ana-renk: hsl(342, 100%, 52%) !default;
+$ana-renk--100: tint($ana-renk, 80%) !default;
+$ana-renk--200: tint($ana-renk, 60%) !default;
+$ana-renk--300: tint($ana-renk, 40%) !default;
+$ana-renk--400: tint($ana-renk, 20%) !default;
+$ana-renk--500: $ana-renk !default;
+$ana-renk--600: shade($ana-renk, 20%) !default;
+$ana-renk--700: shade($ana-renk, 40%) !default;
+$ana-renk--800: shade($ana-renk, 60%) !default;
+$ana-renk--900: shade($ana-renk, 80%) !default;
 
-$yan-renk:                    hsl(350, 100%, 50%)         !default;
-$yan-renk--100:                 tint($yan-renk, 80%)        !default;
-$yan-renk--200:                 tint($yan-renk, 60%)        !default;
-$yan-renk--300:                 tint($yan-renk, 40%)        !default;
-$yan-renk--400:                 tint($yan-renk, 20%)        !default;
-$yan-renk--500:                 $yan-renk                   !default;
-$yan-renk--600:                 shade($yan-renk, 20%)       !default;
-$yan-renk--700:                 shade($yan-renk, 40%)       !default;
-$yan-renk--800:                 shade($yan-renk, 60%)       !default;
-$yan-renk--900:                 shade($yan-renk, 80%)       !default;
+$yan-renk: hsl(350, 100%, 50%) !default;
+$yan-renk--100: tint($yan-renk, 80%) !default;
+$yan-renk--200: tint($yan-renk, 60%) !default;
+$yan-renk--300: tint($yan-renk, 40%) !default;
+$yan-renk--400: tint($yan-renk, 20%) !default;
+$yan-renk--500: $yan-renk !default;
+$yan-renk--600: shade($yan-renk, 20%) !default;
+$yan-renk--700: shade($yan-renk, 40%) !default;
+$yan-renk--800: shade($yan-renk, 60%) !default;
+$yan-renk--900: shade($yan-renk, 80%) !default;
 
-$aksan:                       hsl(184, 100%, 51%)         !default;
-$aksan--100:                    tint($aksan, 80%)           !default;
-$aksan--200:                    tint($aksan, 60%)           !default;
-$aksan--300:                    tint($aksan, 40%)           !default;
-$aksan--400:                    tint($aksan, 20%)           !default;
-$aksan--500:                    $aksan                      !default;
-$aksan--600:                    shade($aksan, 20%)          !default;
-$aksan--700:                    shade($aksan, 40%)          !default;
-$aksan--800:                    shade($aksan, 60%)          !default;
-$aksan--900:                    shade($aksan, 80%)          !default;
+$aksan: hsl(184, 100%, 51%) !default;
+$aksan--100: tint($aksan, 80%) !default;
+$aksan--200: tint($aksan, 60%) !default;
+$aksan--300: tint($aksan, 40%) !default;
+$aksan--400: tint($aksan, 20%) !default;
+$aksan--500: $aksan !default;
+$aksan--600: shade($aksan, 20%) !default;
+$aksan--700: shade($aksan, 40%) !default;
+$aksan--800: shade($aksan, 60%) !default;
+$aksan--900: shade($aksan, 80%) !default;
 // ------------------------------------------------------------------
