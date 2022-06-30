@@ -175,6 +175,8 @@
 /// @param {map} $font-listesi - Font boyutlarının listesi
 /// @param {string} $eleman - Liste elemanı
 /// @param {number} $font-degeri - Font değeri
+/// 
+/// @require {mixin} font-size
 ///
 /// @example scss - Basit kullanım
 /// $font-listesi: (
