@@ -3,12 +3,8 @@
 }
 
 .konteyner {
-  width: 100%;
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
-
-  @include padding(2rem 1rem);
+  width: min(100% - 2rem, 85.5rem);
+  margin-inline: auto;
 }
 
 /**
