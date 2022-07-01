@@ -27,7 +27,7 @@ $cerez-popup__arkaplan: #f9faff !default;
   }
 
   &__butonlar {
-    @include flex-center-row;
+    @include flex-row-center;
     flex-wrap: wrap;
   }
 
