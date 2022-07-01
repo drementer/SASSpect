@@ -1,6 +1,8 @@
 @use './variables' as *;
 
 /// Medya değerini '$medya-boyutlari'ndan alır
+/// 
+/// @group medya
 ///
 /// @param {string} $deger - Alınacak değer
 /// @require {variable} $medya-boyutlari - Medya boyutlari

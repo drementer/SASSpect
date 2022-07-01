@@ -47,7 +47,9 @@ $display-listesi: 'block', 'inline', 'inline-block', 'flex', 'inline-flex',
 
 // ------------------------- Medya ----------------------------------
 
+/// @group medya
 /// @type map
+/// @require {function} px2em
 ///
 /// @example scss - Px ile kullanım
 /// $medya-boyutlari: (
@@ -70,12 +72,15 @@ $medya-boyutlari: (
   ul: px2em(1400px),
 ) !default;
 
+/// @group medya
 /// @type boolen
 $medya-boyutlarini-goster: true !default;
 
+/// @group medya
 /// @type boolen
 $varsayilan-medya-boyutlarini-kullan: true !default;
 
+/// @group medya
 /// @type map
 $boyutlar: '' !default;
 // ------------------------------------------------------------------

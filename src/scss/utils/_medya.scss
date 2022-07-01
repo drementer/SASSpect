@@ -1,4 +1,6 @@
 /// Css @media sorgularının süpergücü.
+/// 
+/// @group medya
 ///
 /// @param {number} $bitis [null] - Girilen max-width değeri
 /// @param {number} $baslangic [null] - Girilen min-width değeri
@@ -143,6 +145,7 @@
 
 /// Minimum medya ve üzerinde çalışacak sorgu
 /// 
+/// @group medya
 /// @alias medya
 ///
 /// @param {string | number} $deger - Girilen min-width değeri
@@ -166,6 +169,7 @@
 /// `medya` mixin'in varsayılan kullanımına çok benzer ama
 /// daha pratik bir kullanım sunar.
 /// 
+/// @group medya
 /// @alias medya
 ///
 /// @param {string | number} $deger - Girilen max-width değeri
@@ -187,6 +191,7 @@
 
 /// Maximum medya ve üzerinde çalışacak sorgu.
 /// 
+/// @group medya
 /// @alias medya
 ///
 /// @param {string | number} $bitis - Girilen max-width değeri
@@ -200,6 +205,8 @@
 }
 
 /// Ekranda medya boyutlarını gösterir
+/// 
+/// @group medya
 ///
 /// @param {map} $boyutlar [$medya-boyutlari] - Gösterilecek medya boyutları
 /// @require {mixin} min-medya - Medya sorgusu kısayolu
