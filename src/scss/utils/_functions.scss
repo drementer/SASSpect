@@ -1,28 +1,33 @@
 @use './variables' as *;
 
-/// Medya Değeri Al
-///
-/// Medya değerini $medya-boyutlari'dan alır
+/// Medya değerini '$medya-boyutlari'ndan alır
 ///
 /// @param {string} $deger - Alınacak değer
-/// @param {map} $medya-boyutlari - Önceden belirlenmiş medya boyutlari
-///
+/// @require {variable} $medya-boyutlari - Medya boyutlari
 /// @return {number} - Medya değeri
-/// @throw Aranan değer $medya-boyutlari (hazir değerler) içinde yoksa hata verir
+/// @throw Aranan değer `$medya-boyutlari` içinde yok
+/// 
+/// @example
+///   @debug medya-degeri-al(xl);
+///     //-> 75em
 ///
 @function medya-degeri-al($deger) {
   @if map-has-key($medya-boyutlari, $deger) {
     @return map-get($medya-boyutlari, $deger);
   } @else {
-    @error "#{$deger}'i hazır değerler içinde yok.";
+    @error $deger + "'i hazır değerler içinde yok.";
   }
 }
 
-/// Px to Em
-///
 /// Px değerini em değerine çevirir
+///
 /// @param {number} $px - Çevrilecek px değeri
+/// @require {variable} $root-font-size - Root font size
 /// @return {number} - Em değeri
+/// 
+/// @example
+///   @debug px2em(16);
+///    //-> 1em
 ///
 @function px2em($px) {
   @if unitless($px) {
@@ -34,11 +39,15 @@
   @return calc($px / $root-font-size) * 1em;
 }
 
-/// Px to Rem
-///
 /// Px değerini rem değerine çevirir
+///
 /// @param {number} $px - Çevrilecek px değeri
+/// @require {variable} $root-font-size - Root font size
 /// @return {number} - Rem değeri
+/// 
+/// @example
+///   @debug px2em(16);
+///    //-> 1rem
 ///
 @function px2rem($px) {
   @if unitless($px) {
