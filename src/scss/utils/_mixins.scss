@@ -1,8 +1,20 @@
-/// Tema
-///
 /// Temaya özel still ayarlarını yapar
 ///
-/// @param {string} $tema [default] - Temaya ismi
+/// @param {string} $tema [default] - Tema ismi
+/// 
+/// @example scss
+///   .foo {
+///      @include tema() {
+///        color: black;
+///     }
+///   }
+/// 
+/// @example scss
+///   .foo {
+///      @include tema(dark) {
+///        color: white;
+///     }
+///   }
 ///
 @mixin tema($tema: 'default') {
   @at-root html[data-theme='#{$tema}'] #{&} {
@@ -10,8 +22,6 @@
   }
 }
 
-/// Arkaplan
-///
 /// Elementin arkaplan resmini ayarlar
 ///
 /// @param {string} $url - Resim (url/dosya yolu)
@@ -26,13 +36,16 @@
   background-repeat: $repeat;
 }
 
-/// Truncate
-///
-/// Elementin maksimum kaç satır olacaığını belirler
+/// Elementin maksimum kaç satır olacağını belirler
 /// Eğer maksimum satır aşılır ise fazla satırları kesip
 /// son satırın sonuna "..." koyar
 ///
 /// @param {number} $max-satir [2] - Maksimum satır sayısı
+/// 
+/// @example scss
+///  .foo {
+///    @include truncate();
+///  }
 ///
 @mixin truncate($max-satir: 2) {
   display: -webkit-box;
@@ -42,9 +55,7 @@
   text-overflow: ellipsis;
 }
 
-/// Truncate 2
-///
-/// Elementin maksimum kaç satır olacaığını belirler
+/// Elementin maksimum kaç satır olacağını belirler
 /// Eğer maksimum satır aşılır ise fazla satırları kesip
 /// son satıra linear gradient ile şeffaflık yapar
 ///
@@ -72,8 +83,6 @@
   }
 }
 
-/// Animasyon
-///
 /// Elemnt için varsayılan animasyon ayarlarını yapar
 ///
 /// @param {boolen} $backface [true] - Backface-visibility özelliğini belirler
@@ -86,8 +95,6 @@
   perspective: $perspective;
 }
 
-/// z-index sistem
-///
 /// Liste elemanlarının z-index hiyerarşisini belirler
 /// z-index değeri 99'dan liste ise ilk elemanından
 /// başlıyor ve her seferinde z-index 1 azaltılarak
@@ -130,8 +137,6 @@
   }
 }
 
-/// On Event
-///
 /// @author Harry Roberts
 ///
 /// @param {Bool} $self [false] - Whether or not to include current selector
@@ -155,7 +160,6 @@
   }
 }
 
-/// When Inside
 /// Make a context based selector a little more friendly
 ///
 /// @author Hugo Giraudel
@@ -168,8 +172,6 @@
   }
 }
 
-/// Font Sizes
-///
 /// Font boyutlarını hızlı şekilde ayarlamak için
 ///
 /// @param {map} $font-listesi - Font boyutlarının listesi
@@ -195,8 +197,6 @@
   }
 }
 
-/// Display
-/// 
 /// Display özelliğini class kullanarak ayarlamak için
 /// 
 /// @param {map | list} $display-listesi - Display özelliklerinin listesi
