@@ -3,3 +3,4 @@ display:
   watermark: true
 groups:
   medya: Medya
+  flex: Flex
