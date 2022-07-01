@@ -1,10 +1,5 @@
 dest: docs/sassdoc
 display:
   watermark: true
-#groups:
-#  number: Number
-#  string: String
-#  list: List
-#  map: Map
-#  color: Color
-#  random: Random
+groups:
+  medya: Medya
