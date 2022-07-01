@@ -7,7 +7,20 @@
 /// @param {number} $max-width - Atanan max-width değeri
 /// @param {number} $min-width - Atanan min-width değeri
 /// @param {string} $medya-query - Medya sorgusu
-/// @param {string} $medya-query-tipi - Atanan değerlerin unit tipi
+///
+/// @require {function} medya-degeri-al - Medya değerini çekmek için
+/// @require {variable} $medya-boyutlari - Medya Boyutları
+///
+/// @output {string} - Medya sorgusu
+///
+/// @example scss - Hazır boyutlar ile kullanım
+/// @include medya(lg){ color: #fff; }
+///
+/// @example css - Output css
+/// @media (max-width: 1200px) { color: #fff; }
+///
+/// @example scss - Özel boyut ile kullanım
+/// @include medya(1400){ color: #fff; }
 ///
 @mixin medya($bitis: null, $baslangic: null) {
   $max-width: null;
@@ -16,21 +29,30 @@
 
   @if $bitis {
     @if type-of($bitis) == number {
-      $max-width: $bitis;
+      @if unitless($bitis) {
+        $max-width: $bitis + 'px';
+      } @else {
+        $max-width: $bitis;
+      }
     } @else {
-      $max-width: #{hazir-medya-degeri-al($bitis)}#{$varsayilan-medya-unit};
+      $max-width: #{medya-degeri-al($bitis)};
     }
   }
 
   @if $baslangic {
     @if type-of($baslangic) == number {
+      @if unitless($baslangic) {
+        $max-width: $baslangic + 'px';
+      } @else {
+        $max-width: $baslangic;
+      }
       $min-width: $baslangic;
     } @else {
-      $min-width: #{hazir-medya-degeri-al($baslangic)}#{$varsayilan-medya-unit};
+      $min-width: #{medya-degeri-al($baslangic)};
     }
   }
 
-  @if ($max-width != null) and ($min-width != null) {
+  @if $max-width and $min-width {
     $medya-query: '(min-width: #{$min-width}) and (max-width: #{$max-width})';
   } @else if $max-width {
     $medya-query: '(max-width: #{$max-width})';
@@ -116,5 +138,6 @@
   }
 }
 
-/// Medya boyutlarını gösteri çalıştırır
+/* /// Medya boyutlarını gösteri çalıştırır
 @include medya-boyutlarini-goster();
+ */
