@@ -19,9 +19,7 @@ Terminal kullanarak indir
 
 ## Kullanım/Örnekler
 
-```javascript
-
-```
+### Henüz dökümantasyon yazmayı bitiremedim :'(
 
 ## Geliştirici
 
