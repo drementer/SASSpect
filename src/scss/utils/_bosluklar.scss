@@ -73,7 +73,6 @@ $bosluklar: false;
 
         // mt-nauto, m-nauto
         $negatif-auto-kapat: not($negatif and $bosluk-degerleri-isim == 'auto');
-        /////////////////////
 
         // Dışlanan değerler kontrol edilip işleve başlıyor
         @if ($negatif-auto-kapat) and
@@ -160,7 +159,6 @@ $bosluklar: false;
             $negatif-auto-kapat: not(
               $negatif and $bosluk-degerleri-isim == 'auto'
             );
-            /////////////////////
 
             // Dışlanan değerler kontrol edilip işleve başlıyor
             @if ($negatif-auto-kapat) and
