@@ -3,6 +3,11 @@
 	"version": "1.4.3",
 	"homepage": "https://github.com/drementer/dred",
 	"description": "Projelerimin altyapısı",
+	"scripts": {
+		"sass-doc": "sass-doc src/scss",
+		"sass-build": "sass scss/main.scss css/main.min.css --style compressed --no-error-css",
+		"sass-watch": "sass --watch scss/main.scss css/main.min.css --style expanded --error-css"
+	},
 	"keywords": [
 		"scss",
 		"javascript"
@@ -15,5 +20,9 @@
 		"url": "https://github.com/drementer/dred/issues"
 	},
 	"author": "drementer <klncarslanburak@gmail.com> (https://github.com/drementer)",
-	"license": "MIT"
+	"license": "MIT",
+	"dependencies": {
+		"sass": "^1.53.0",
+		"sassdoc": "^2.7.4"
+	}
 }
