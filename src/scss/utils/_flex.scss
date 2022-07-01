@@ -1,62 +1,86 @@
-// Flex
+/// Hızlıca flexbox yaratmak için
+///
+/// @require {placeholder} flex-start
+/// @require {placeholder} flex-center
+/// @require {placeholder} flex-end
+///
+/// @example scss
+///   .foo {
+///       @include flex;
+///
+///       @include flex-row;
+///       @include flex-row-start;
+///       @include flex-row-center;
+///       @include flex-row-end;
+///
+///       @include flex-column;
+///       @include flex-column-start;
+///       @include flex-column-center;
+///       @include flex-column-end;
+///   }
+///
 @mixin flex {
   display: flex;
 }
 
-@mixin flex-center {
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-}
-
-@mixin flex-start {
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-}
-
-@mixin flex-end {
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-}
-
+/// @alias flex
+/// @require {mixin} flex
 @mixin flex-row {
   @include flex;
   flex-direction: row;
 }
 
+/// @alias flex
+/// @require {mixin} flex-row
+/// @require {placeholder} %flex-start
+@mixin flex-row-start {
+  @include flex-row;
+  @extend %flex-start;
+}
+
+/// @alias flex
+/// @require {mixin} flex-row
+/// @require {placeholder} %flex-center
+@mixin flex-row-center {
+  @include flex-row;
+  @extend %flex-center;
+}
+
+/// @alias flex
+/// @require {mixin} flex-row
+/// @require {placeholder} %flex-end
+@mixin flex-row-end {
+  @include flex-row;
+  @extend %flex-end;
+}
+
+/// @alias flex
+/// @require {mixin} flex
 @mixin flex-column {
   @include flex;
   flex-direction: column;
 }
 
-@mixin flex-center-row {
-  @include flex-row;
-  @include flex-center;
-}
-
-@mixin flex-start-row {
-  @include flex-row;
-  @include flex-start;
-}
-
-@mixin flex-end-row {
-  @include flex-row;
-  @include flex-end;
-}
-
-@mixin flex-center-column {
+/// @alias flex
+/// @require {mixin} flex-column
+/// @require {placeholder} %flex-start
+@mixin flex-column-start {
   @include flex-column;
-  @include flex-center;
+  @extend %flex-start;
 }
 
-@mixin flex-start-column {
+/// @alias flex
+/// @require {mixin} flex-column
+/// @require {placeholder} %flex-center
+@mixin flex-column-center {
   @include flex-column;
-  @include flex-start;
+  @extend %flex-center;
 }
 
-@mixin flex-end-column {
+/// @alias flex
+/// @require {mixin} flex-column
+/// @require {placeholder} %flex-end
+@mixin flex-column-end {
   @include flex-column;
-  @include flex-end;
+  @extend %flex-end;
 }
