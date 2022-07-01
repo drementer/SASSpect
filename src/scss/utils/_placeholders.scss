@@ -12,3 +12,24 @@
   outline: none;
   cursor: pointer;
 }
+
+/// Flex start
+%flex-start {
+  align-items: start;
+  align-content: start;
+  justify-content: start;
+}
+
+/// Flex center
+%flex-center {
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+/// Flex end
+%flex-end {
+  align-items: end;
+  align-content: end;
+  justify-content: end;
+}
