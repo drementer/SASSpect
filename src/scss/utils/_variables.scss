@@ -58,12 +58,12 @@ $display-listesi: 'block', 'inline', 'inline-block', 'flex', 'inline-flex',
 /// ) !default;
 ///
 $medya-boyutlari: (
-  xs: px2em(360),
-  sm: px2em(576),
-  md: px2em(768),
-  lg: px2em(992),
-  xl: px2em(1200),
-  ul: px2em(1400),
+  xs: px2em(360px),
+  sm: px2em(576px),
+  md: px2em(768px),
+  lg: px2em(992px),
+  xl: px2em(1200px),
+  ul: px2em(1400px),
 ) !default;
 
 /// @type boolen
