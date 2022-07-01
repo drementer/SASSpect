@@ -105,28 +105,31 @@
 /// @param {number} $z-index [99] - z-index başlangıç değeri
 ///
 /// @example scss - Basit kullanım
-/// $liste: ".elm1", ".elm2";
-/// @include z-index($liste);
+///   $liste: ".elm1", ".elm2";
+///   @include z-index($liste);
 ///
-/// @output css - .elm1 { z-index: 99; } .elm2 { z-index: 98; }
+/// @example css - Output css 
+///   .elm1 { z-index: 99; } .elm2 { z-index: 98; }
 ///
 /// @example scss - Varyant algılama
-/// $liste: ".buton";
-/// .buton{
-/// 	color: red;
-/// 	&-2{
-/// 		color: blue;
-/// 	}
-/// }
-/// @include z-index($liste);
+///   $liste: ".buton";
+///   .buton{
+///   	color: red;
+///   	&-2{
+///   		color: blue;
+///   	}
+///   }
+///   @include z-index($liste);
 ///
-/// @output css - .buton, .buton-2 { z-index: 99; }
+/// @example css - Output css  
+///   .buton, .buton-2 { z-index: 99; }
 ///
 /// @example scss - Ortak z-index değeri
-/// $liste: ".elm, .elm2, .elm3 ";
-/// @include z-index($liste);
+///   $liste: ".elm, .elm2, .elm3 ";
+///   @include z-index($liste);
 ///
-/// @output css - .elm, .elm2, .elm3 { z-index: 99; }
+/// @example css - Output css 
+///   .elm, .elm2, .elm3 { z-index: 99; }
 ///
 @mixin z-index($liste, $z-index: 99) {
   @each $eleman in $liste {
@@ -137,10 +140,9 @@
   }
 }
 
-/// @author Harry Roberts
-///
 /// @param {Bool} $self [false] - Whether or not to include current selector
 ///
+/// @author Harry Roberts
 /// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
 ///
 @mixin on-event($self: false) {
@@ -177,17 +179,16 @@
 /// @param {map} $font-listesi - Font boyutlarının listesi
 /// @param {string} $eleman - Liste elemanı
 /// @param {number} $font-degeri - Font değeri
-/// 
-/// @require {mixin} font-size
 ///
 /// @example scss - Basit kullanım
-/// $font-listesi: (
-///   ".elm1": 1,
-///   ".elm2": 1.2,
-/// );
-/// @include font-size($font-listesi);
+///   $font-listesi: (
+///     ".elm1": 1,
+///     ".elm2": 1.2,
+///   );
+///   @include font-size($font-listesi);
 ///
-/// @output css - .elm1 { font-size: 1rem; } .elm2 { font-size: 1.2rem; }
+/// @example css - Output css 
+///   .elm1 { font-size: 1rem; } .elm2 { font-size: 1.2rem; }
 ///
 @mixin font-sizes($font-listesi) {
   @each $eleman, $font-degeri in $font-listesi {
