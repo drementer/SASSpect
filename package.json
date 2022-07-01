@@ -4,7 +4,7 @@
 	"homepage": "https://github.com/drementer/dred",
 	"description": "Projelerimin altyapısı",
 	"scripts": {
-		"sass-doc": "sass-doc src/scss",
+		"sass-doc": "sassdoc src/scss",
 		"sass-build": "sass scss/main.scss css/main.min.css --style compressed --no-error-css",
 		"sass-watch": "sass --watch scss/main.scss css/main.min.css --style expanded --error-css"
 	},
