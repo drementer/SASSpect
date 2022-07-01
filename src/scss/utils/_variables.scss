@@ -52,16 +52,16 @@ $display-listesi: 'block', 'inline', 'inline-block', 'flex', 'inline-flex',
 /// @require {function} px2em
 ///
 /// @example scss - Px ile kullanım
-/// $medya-boyutlari: (
-///  'xs': 360px,
-///  'sm': 576px
-/// ) !default;
+///   $medya-boyutlari: (
+///    'xs': 360px,
+///    'sm': 576px
+///   ) !default;
 ///
 /// @example scss - Em ile kullanım
-/// $medya-boyutlari: (
-///  'xs': px2em(360),
-///  'sm': px2em(768)
-/// ) !default;
+///   $medya-boyutlari: (
+///    'xs': px2em(360),
+///    'sm': px2em(768)
+///   ) !default;
 ///
 $medya-boyutlari: (
   xs: px2em(360px),
