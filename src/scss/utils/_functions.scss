@@ -22,6 +22,8 @@
 }
 
 /// Px değerini em değerine çevirir
+/// 
+/// @group unit
 ///
 /// @param {number} $px - Çevrilecek px değeri
 /// @require {variable} $root-font-size - Root font size
@@ -42,6 +44,8 @@
 }
 
 /// Px değerini rem değerine çevirir
+/// 
+/// @group unit
 ///
 /// @param {number} $px - Çevrilecek px değeri
 /// @require {variable} $root-font-size - Root font size
