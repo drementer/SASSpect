@@ -15,6 +15,7 @@
 /// @example
 ///   @debug strip-unit(5px);
 ///   //=> 5
+///
 @function strip-unit($number) {
   @return $number / ($number * 0 + 1);
 }
@@ -31,6 +32,7 @@
 /// @example
 ///   @debug math-clamp(1, 2, 4);
 ///   //=> 2
+///
 @function number-clamp($number, $min, $max) {
   @return min(max($number, $min), $max);
 }
@@ -45,6 +47,7 @@
 /// @example
 ///   @debug number-invert(5);
 ///   //=> -5
+///
 @function number-invert($number) {
   @return $number * -1;
 }
@@ -60,6 +63,7 @@
 /// @example
 ///   @debug string-contains('foo bar baz', $substring: 'bar');
 ///   //=> true
+///
 @function string-contains($string, $substring) {
   @return str-index($string, $substring) != null;
 }
@@ -75,6 +79,7 @@
 /// @example
 ///   @debug string-starts-with('foo bar', $substring: 'foo');
 ///   //=> true
+///
 @function string-starts-with($string, $substring) {
   @return str-index($string, $substring) == 1;
 }
@@ -90,6 +95,7 @@
 /// @example
 ///   @debug string-ends-with('foo bar', $substring: 'bar');
 ///   //=> true
+///
 @function string-ends-with($string, $substring) {
   // This crashes libsass…
   // @return str-slice($string, str-length($substring) * -1) == $substring;
@@ -109,6 +115,7 @@
 /// @example
 ///   @debug string-replace('foo bar baz', $search: 'bar', $replacement: 'unicorn');
 ///   //=> 'foo unicorn baz'
+///
 @function string-replace($string, $search, $replacement: '') {
   $index: str-index(
     $string: $string,
@@ -137,6 +144,7 @@
 /// @example
 ///   @debug list-first((1, 2, 3));
 ///   //=> 1
+///
 @function list-first($list) {
   @return nth($list, 1);
 }
@@ -151,6 +159,7 @@
 /// @example
 ///   @debug list-last((1, 2, 3));
 ///   //=> 3
+///
 @function list-last($list) {
   @return nth($list, -1);
 }
@@ -166,6 +175,7 @@
 /// @example
 ///   @debug seed-random-integer(5);
 ///   //=> 84035
+///
 @function seed-random-integer($seed) {
   $max-int32: 2147483647;
   $minstd: 16807;
@@ -191,6 +201,7 @@
 /// @example
 ///   @debug seed-random-float(5);
 ///   //=> 0.0000391314
+///
 @function seed-random-float($seed) {
   $max-int32: 2147483647;
   $integer: seed-random-integer($seed);
@@ -208,6 +219,7 @@
 /// @example
 ///   @debug seed-random-boolean(5);
 ///   //=> false
+///
 @function seed-random-boolean($seed) {
   @return seed-random-integer($seed) % 2 == 0;
 }
@@ -229,6 +241,7 @@
 ///   .foo {
 ///   	background-color: random-color();
 ///   }
+///
 @function random-color($saturation: 0.5, $lightness: 0.5) {
   /* stylelint-disable-next-line number-max-precision */
   $golden-ratio-conjugate: 0.618033988749895;
@@ -294,6 +307,7 @@
 ///   a {
 ///   	color: #ffc6d0;
 ///   }
+///
 @function tint($color, $percentage) {
   @return mix(#fff, $color, $percentage);
 }
@@ -315,6 +329,7 @@
 ///   a {
 ///   	color: #e6adb7;
 ///   }
+///
 @function shade($color, $percentage) {
   @return mix(#000, $color, $percentage);
 }
@@ -335,6 +350,7 @@
 ///   a {
 ///   	color: rgba(0, 0, 0, 0.1);
 ///   }
+///
 @function black($opacity) {
   @return rgba(0, 0, 0, $opacity / 100%);
 }
@@ -355,6 +371,7 @@
 ///   a {
 ///   	color: rgba(255, 255, 255, 0.1);
 ///   }
+///
 @function white($opacity) {
   @return rgba(255, 255, 255, $opacity / 100%);
 }
@@ -367,6 +384,7 @@
 ///   body {
 ///   	background: svg-url('<svg>…</svg>');
 ///   }
+///
 @function svg-url($svg) {
   // Add missing namespace
   $namespace: 'xmlns="http://www.w3.org/2000/svg"';
@@ -389,6 +407,7 @@
 ///   body {
 ///   	@include background-svg('<svg>…</svg>');
 ///   }
+///
 @mixin background-svg($svg) {
   background-image: svg-url($svg);
 }
@@ -423,6 +442,7 @@
 ///   .tabs .tab:hover .icon {
 ///   	color: blue;
 ///   }
+///
 @mixin context($changed, $to) {
   @at-root #{selector-replace(&, $changed, $to)} {
     @content;
@@ -437,6 +457,7 @@
 ///   body {
 ///   	font-family: $system-fonts;
 ///   }
+///
 $system-fonts: 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica',
   'Arial', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji' !default;
 
