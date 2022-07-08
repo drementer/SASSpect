@@ -67,19 +67,29 @@
 
 /// Hsl renk değerini hex değerine çevirir
 /// Orjinalinde hsl to rgb olarak geçiyor ama malesef hex derliyor
+/// Elbette farklı renk formatlarıda kullanılabilir
 /// 
 /// @group renk
 ///
 /// @author Max Glenister
 /// @link https://gist.github.com/omgmog/6192734 - Original gist
+/// 
+/// @example scss - Hsl ile kullanım
+///  @debug hsl2hex(hsl(40, 100%, 50%));
+///   //-> #ffaa00
 ///
 @function hsl2hex($hsl-color) {
   @return mix($hsl-color, $hsl-color);
 }
 
 /// Hsl renk değerini rgb değerine çevirir
+/// Elbette farklı renk formatlarıda kullanılabilir
 /// 
 /// @group renk
+/// 
+/// @example scss - Hsl ile kullanım
+///  @debug hsl2rgb(hsl(40, 100%, 50%));
+///   //-> rgb(255, 170, 0)
 ///
 @function hsl2rgb($hsl-color) {
   @return rgb(red($hsl-color), green($hsl-color), blue($hsl-color));
