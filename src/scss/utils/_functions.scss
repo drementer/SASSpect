@@ -1,14 +1,14 @@
 @use './variables' as *;
 
 /// Medya değerini '$medya-boyutlari'ndan alır
-/// 
+///
 /// @group medya
 ///
 /// @param {string} $deger - Alınacak değer
 /// @require {variable} $medya-boyutlari - Medya boyutlari
 /// @return {number} - Medya değeri
 /// @throw Aranan değer `$medya-boyutlari` içinde yok
-/// 
+///
 /// @example
 ///   @debug medya-degeri-al(xl);
 ///     //-> 75em
@@ -26,7 +26,7 @@
 /// @param {number} $px - Çevrilecek px değeri
 /// @require {variable} $root-font-size - Root font size
 /// @return {number} - Em değeri
-/// 
+///
 /// @example
 ///   @debug px2em(16);
 ///    //-> 1em
@@ -46,7 +46,7 @@
 /// @param {number} $px - Çevrilecek px değeri
 /// @require {variable} $root-font-size - Root font size
 /// @return {number} - Rem değeri
-/// 
+///
 /// @example
 ///   @debug px2em(16);
 ///    //-> 1rem
