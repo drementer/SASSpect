@@ -2,7 +2,7 @@
   display: none !important;
 }
 
-@if $display-modlari-acik{
+@if $display-modlari-acik {
   @include display();
 }
 

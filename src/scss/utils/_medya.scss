@@ -1,6 +1,6 @@
 ////
 /// @group medya
-//// 
+////
 
 /// Css @media sorgularının süpergücü.
 ///
@@ -22,7 +22,7 @@
 ///     }
 ///   }
 ///   @media screen and (max-width: 75em) { .foo { color: white; }
-/// 
+///
 /// @example scss - Özel değer ile kullanım
 ///   .foo {
 ///     @include medya(1400px) {
@@ -30,7 +30,7 @@
 ///     }
 ///   }
 ///   @media screen and (max-width: 1400px) { .foo { color: white; }
-/// 
+///
 /// @example scss - Unit değeri olmayan özel değer ile kullanım
 ///   .foo {
 ///     @include medya(1400) {
@@ -38,7 +38,7 @@
 ///     }
 ///   }
 ///   @media screen and (max-width: 1400px) { .foo { color: white; }
-/// 
+///
 /// @example scss - Em tipi ile özel değer kullanımı
 ///   .foo {
 ///     @include medya(px2em(1400px)) {
@@ -46,7 +46,7 @@
 ///     }
 ///   }
 ///   @media screen and (max-width: 87.5em) { .foo { color: white; }
-/// 
+///
 /// @example scss - Em tipi ile özel değer kullanımı
 ///   .foo {
 ///     $medya-boyutu: px2em(1400px);
@@ -55,7 +55,7 @@
 ///     }
 ///   }
 ///   @media screen and (max-width: 87.5em) { .foo { color: white; }
-/// 
+///
 /// @example scss - min-width query oluşturma
 ///   .foo {
 ///     @include min-medya(xl) {
@@ -63,7 +63,7 @@
 ///     }
 ///   }
 ///   @media screen and (min-width: 75em) { .foo { color: white; }
-/// 
+///
 /// @example scss - max-width query oluşturma
 ///   .foo {
 ///     @include max-medya(xl) {
@@ -71,7 +71,7 @@
 ///     }
 ///   }
 ///   @media screen and (max-width: 75em) { .foo { color: white; }
-/// 
+///
 /// @example scss - Aralık belirleme
 ///   .foo {
 ///     $bitis: ul;
@@ -81,7 +81,7 @@
 ///     }
 ///   }
 ///   @media screen and (min-width: 75em) and (max-width: 87.5em) { .foo { color: white; }
-/// 
+///
 /// @example scss - Aralık belirleme
 ///   .foo {
 ///     @include medya($baslangic: xl, $bitis: ul) {
@@ -89,7 +89,7 @@
 ///     }
 ///   }
 ///   @media screen and (min-width: 75em) and (max-width: 87.5em) { .foo { color: white; }
-/// 
+///
 /// @example scss - Aralık belirleme
 ///   .foo{
 ///     $bitis: ul;
@@ -146,12 +146,12 @@
 // Kısayollar
 
 /// Minimum medya ve üzerinde çalışacak sorgu
-/// 
+///
 /// @alias medya
 ///
 /// @param {string | number} $deger - Girilen min-width değeri
 /// @require {mixin} medya - Medya sorgusu
-/// 
+///
 /// @example scss - Hazır boyutlar ile kullanım
 ///   .foo {
 ///     @include min-medya(xl) {
@@ -169,12 +169,12 @@
 /// Maximum medya ve üzerinde çalışacak sorgu.
 /// `medya` mixin'in varsayılan kullanımına çok benzer ama
 /// daha pratik bir kullanım sunar.
-/// 
+///
 /// @alias medya
 ///
 /// @param {string | number} $deger - Girilen max-width değeri
 /// @require {mixin} medya - Medya sorgusu
-/// 
+///
 /// @example scss - Hazır boyutlar ile kullanım
 ///   .foo {
 ///     @include max-medya(xl) {
@@ -190,7 +190,7 @@
 }
 
 /// Maximum medya ve üzerinde çalışacak sorgu.
-/// 
+///
 /// @alias medya
 ///
 /// @param {string | number} $bitis - Girilen max-width değeri

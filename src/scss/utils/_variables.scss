@@ -11,9 +11,9 @@ $root-font-size: 16px !default;
 $root-font-size--mobil: 14px !default;
 
 /// 1.250 Major Third
-/// 
+///
 /// @type map
-/// 
+///
 /// @link https://type-scale.com/
 $font-listesi: (
   'h1': 3.815,
@@ -36,7 +36,7 @@ $z-index-listesi: '.loader', '.modal', '.popup', '.go-top', '.nav' !default;
 // ------------------------- Display --------------------------------
 
 /// Display modlarini açıp kapatmak için kullanılır.
-/// 
+///
 /// @type boolen
 $display-modlari-acik: true !default;
 

@@ -1,14 +1,14 @@
 /// Temaya özel still ayarlarını yapar
 ///
 /// @param {string} $tema [default] - Tema ismi
-/// 
+///
 /// @example scss
 ///   .foo {
 ///      @include tema() {
 ///        color: black;
 ///     }
 ///   }
-/// 
+///
 /// @example scss
 ///   .foo {
 ///      @include tema(dark) {
@@ -41,7 +41,7 @@
 /// son satırın sonuna "..." koyar
 ///
 /// @param {number} $max-satir [2] - Maksimum satır sayısı
-/// 
+///
 /// @example scss
 ///  .foo {
 ///    @include truncate();
@@ -108,7 +108,7 @@
 ///   $liste: ".elm1", ".elm2";
 ///   @include z-index($liste);
 ///
-/// @example css - Output css 
+/// @example css - Output css
 ///   .elm1 { z-index: 99; } .elm2 { z-index: 98; }
 ///
 /// @example scss - Varyant algılama
@@ -121,14 +121,14 @@
 ///   }
 ///   @include z-index($liste);
 ///
-/// @example css - Output css  
+/// @example css - Output css
 ///   .buton, .buton-2 { z-index: 99; }
 ///
 /// @example scss - Ortak z-index değeri
 ///   $liste: ".elm, .elm2, .elm3 ";
 ///   @include z-index($liste);
 ///
-/// @example css - Output css 
+/// @example css - Output css
 ///   .elm, .elm2, .elm3 { z-index: 99; }
 ///
 @mixin z-index($liste, $z-index: 99) {
@@ -187,7 +187,7 @@
 ///   );
 ///   @include font-size($font-listesi);
 ///
-/// @example css - Output css 
+/// @example css - Output css
 ///   .elm1 { font-size: 1rem; } .elm2 { font-size: 1.2rem; }
 ///
 @mixin font-sizes($font-listesi) {
@@ -199,11 +199,11 @@
 }
 
 /// Display özelliğini class kullanarak ayarlamak için
-/// 
+///
 /// @param {map | list} $display-listesi - Display özelliklerinin listesi
 /// @param {string} $$display-eleman - Liste elemanı
 /// @param {string} $medya-boyutlari [$medya-boyutlari] - Medya boyutları
-/// 
+///
 /// @require {variable} $medya-boyutlari
 /// @require {mixin} medya
 ///
