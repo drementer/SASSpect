@@ -7,6 +7,8 @@
 
 /// Strip the unit from a number.
 ///
+/// @group number
+///
 /// @parameter {Number} $number
 /// @return {Number}
 ///
@@ -18,6 +20,8 @@
 }
 
 /// Clamp `$number` between `$min` and `$max`.
+///
+/// @group number
 ///
 /// @parameter {Number} $number - Number to clamp
 /// @parameter {Number} $min - Minimum number
@@ -33,6 +37,8 @@
 
 /// Invert a number.
 ///
+/// @group number
+///
 /// @parameter {Number} $number - Number to invert
 /// @return {Number}
 ///
@@ -44,6 +50,8 @@
 }
 
 /// Check if `$string` contains the given `$substring`.
+///
+/// @group string
 ///
 /// @parameter {String} $string - String to check
 /// @parameter {String} $substring - Substring to search for in `$string`
@@ -58,6 +66,8 @@
 
 /// Check if `$string` starts with the given `$substring`.
 ///
+/// @group string
+///
 /// @parameter {String} $string - String to check
 /// @parameter {String} $substring - Substring to search for at the start of `$string`
 /// @return {Boolean}
@@ -70,6 +80,8 @@
 }
 
 /// Check if `$string` ends with the given `$substring`.
+///
+/// @group string
 ///
 /// @parameter {String} $string - String to check
 /// @parameter {String} $substring - Substring to search for at the end of `$string`
@@ -86,6 +98,8 @@
 }
 
 /// Replace substring `$search` in `$string` with `$replacement`.
+///
+/// @group string
 ///
 /// @parameter {String} $string - String to search
 /// @parameter {String} $search - Substring to search for in `$string`
@@ -115,6 +129,8 @@
 
 /// Get the first element of `$list`.
 ///
+/// @group list
+///
 /// @parameter {List} $list
 /// @return {*}
 ///
@@ -126,6 +142,8 @@
 }
 
 /// Get the last element of `$list`.
+///
+/// @group list
 ///
 /// @parameter {List} $list
 /// @return {*}
@@ -139,6 +157,8 @@
 
 /// Generate a pseudorandom integer.
 /// Uses the [`Park-Miller` algorithm](https://en.wikipedia.org/wiki/Lehmer_random_number_generator).
+///
+/// @group random
 ///
 /// @parameter {Number} $seed - The same [`$seed`](https://en.wikipedia.org/wiki/Random_seed) will generate the same number
 /// @return {Number}
@@ -163,6 +183,8 @@
 ///
 /// Note: You'll need to increase the default Sass precision to at least 10 for this method to be useful.
 ///
+/// @group random
+///
 /// @parameter {Number} $seed - The same [`$seed`](https://en.wikipedia.org/wiki/Random_seed) will generate the same number
 /// @return {Number}
 ///
@@ -178,6 +200,8 @@
 /// Generate a pseudorandom boolean.
 /// Uses the [`Park-Miller` algorithm](https://en.wikipedia.org/wiki/Lehmer_random_number_generator).
 ///
+/// @group random
+///
 /// @parameter {Number} $seed - The same [`$seed`](https://en.wikipedia.org/wiki/Random_seed) will generate the same number
 /// @return {Boolean}
 ///
@@ -189,6 +213,8 @@
 }
 
 /// Get a random [aesthetically pleasing color](https://martin.ankerl.com/2009/12/09/how-to-create-random-colors-programmatically/).
+///
+/// @group random
 ///
 /// @parameter {Number} $saturation [0.5] - Color saturation in the range `0...1`
 /// @parameter {Number} $lightness [0.5] - Color lightness in the range `0...1`
@@ -253,6 +279,8 @@
 
 /// Lighten a color by mixing it with white.
 ///
+/// @group color
+///
 /// @parameter {Color} $color - Color to lighten
 /// @parameter {Number} $percentage - Amount of white color to mix in
 /// @return {Color}
@@ -271,6 +299,8 @@
 }
 
 /// Darken a color by mixing it with black.
+///
+/// @group color
 ///
 /// @parameter {Color} $color - Color to darken
 /// @parameter {Number} $percentage - Amount of black color to mix in
@@ -291,6 +321,8 @@
 
 /// Get the color black with a given `$opacity`.
 ///
+/// @group color
+///
 /// @parameter {Number} $opacity - Opacity percentage
 /// @return {Color}
 ///
@@ -308,6 +340,8 @@
 }
 
 /// Get the color white with a given `$opacity`.
+///
+/// @group color
 ///
 /// @parameter {Number} $opacity - Opacity percentage
 /// @return {Color}
