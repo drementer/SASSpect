@@ -7,7 +7,7 @@
 
 /// Strip the unit from a number.
 ///
-/// @group number
+/// @group sayi
 ///
 /// @parameter {Number} $number
 /// @return {Number}
@@ -22,7 +22,7 @@
 
 /// Clamp `$number` between `$min` and `$max`.
 ///
-/// @group number
+/// @group sayi
 ///
 /// @parameter {Number} $number - Number to clamp
 /// @parameter {Number} $min - Minimum number
@@ -39,7 +39,7 @@
 
 /// Invert a number.
 ///
-/// @group number
+/// @group sayi
 ///
 /// @parameter {Number} $number - Number to invert
 /// @return {Number}
@@ -167,7 +167,6 @@
 /// Generate a pseudorandom integer.
 /// Uses the [`Park-Miller` algorithm](https://en.wikipedia.org/wiki/Lehmer_random_number_generator).
 ///
-/// @group random
 ///
 /// @parameter {Number} $seed - The same [`$seed`](https://en.wikipedia.org/wiki/Random_seed) will generate the same number
 /// @return {Number}
@@ -193,7 +192,6 @@
 ///
 /// Note: You'll need to increase the default Sass precision to at least 10 for this method to be useful.
 ///
-/// @group random
 ///
 /// @parameter {Number} $seed - The same [`$seed`](https://en.wikipedia.org/wiki/Random_seed) will generate the same number
 /// @return {Number}
@@ -211,7 +209,6 @@
 /// Generate a pseudorandom boolean.
 /// Uses the [`Park-Miller` algorithm](https://en.wikipedia.org/wiki/Lehmer_random_number_generator).
 ///
-/// @group random
 ///
 /// @parameter {Number} $seed - The same [`$seed`](https://en.wikipedia.org/wiki/Random_seed) will generate the same number
 /// @return {Boolean}
@@ -226,7 +223,6 @@
 
 /// Get a random [aesthetically pleasing color](https://martin.ankerl.com/2009/12/09/how-to-create-random-colors-programmatically/).
 ///
-/// @group random
 ///
 /// @parameter {Number} $saturation [0.5] - Color saturation in the range `0...1`
 /// @parameter {Number} $lightness [0.5] - Color lightness in the range `0...1`
@@ -292,7 +288,7 @@
 
 /// Lighten a color by mixing it with white.
 ///
-/// @group color
+/// @group renk
 ///
 /// @parameter {Color} $color - Color to lighten
 /// @parameter {Number} $percentage - Amount of white color to mix in
@@ -314,7 +310,7 @@
 
 /// Darken a color by mixing it with black.
 ///
-/// @group color
+/// @group renk
 ///
 /// @parameter {Color} $color - Color to darken
 /// @parameter {Number} $percentage - Amount of black color to mix in
@@ -336,7 +332,7 @@
 
 /// Get the color black with a given `$opacity`.
 ///
-/// @group color
+/// @group renk
 ///
 /// @parameter {Number} $opacity - Opacity percentage
 /// @return {Color}
@@ -357,7 +353,7 @@
 
 /// Get the color white with a given `$opacity`.
 ///
-/// @group color
+/// @group renk
 ///
 /// @parameter {Number} $opacity - Opacity percentage
 /// @return {Color}
