@@ -1,6 +1,9 @@
+////
+/// @group flex
+////
+
 /// Hızlıca flexbox yaratmak için
 /// 
-/// @group flex
 ///
 /// @require {placeholder} flex-start
 /// @require {placeholder} flex-center
@@ -26,7 +29,6 @@
 }
 
 /// @alias flex
-/// @group flex
 /// @require {mixin} flex
 @mixin flex-row {
   @include flex;
@@ -34,7 +36,6 @@
 }
 
 /// @alias flex
-/// @group flex
 /// @require {mixin} flex-row
 /// @require {placeholder} %flex-start
 @mixin flex-row-start {
@@ -43,7 +44,6 @@
 }
 
 /// @alias flex
-/// @group flex
 /// @require {mixin} flex-row
 /// @require {placeholder} %flex-center
 @mixin flex-row-center {
@@ -52,7 +52,6 @@
 }
 
 /// @alias flex
-/// @group flex
 /// @require {mixin} flex-row
 /// @require {placeholder} %flex-end
 @mixin flex-row-end {
@@ -61,7 +60,6 @@
 }
 
 /// @alias flex
-/// @group flex
 /// @require {mixin} flex
 @mixin flex-column {
   @include flex;
@@ -69,7 +67,6 @@
 }
 
 /// @alias flex
-/// @group flex
 /// @require {mixin} flex-column
 /// @require {placeholder} %flex-start
 @mixin flex-column-start {
@@ -78,7 +75,6 @@
 }
 
 /// @alias flex
-/// @group flex
 /// @require {mixin} flex-column
 /// @require {placeholder} %flex-center
 @mixin flex-column-center {
@@ -87,7 +83,6 @@
 }
 
 /// @alias flex
-/// @group flex
 /// @require {mixin} flex-column
 /// @require {placeholder} %flex-end
 @mixin flex-column-end {
