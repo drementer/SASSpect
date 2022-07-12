@@ -2,10 +2,6 @@
   display: none !important;
 }
 
-@if $display-modlari-acik {
-  @include display();
-}
-
 .konteyner {
   width: min(100% - 2rem, 85.5rem);
   margin-inline: auto;
@@ -58,7 +54,20 @@
   width: 1px;
 }
 
-.text-truncate,
 .truncate {
   @include truncate();
+}
+
+/**
+ * Dinamik yapmaya çalışıyorum ama
+ * `-webkit-line-clamp`, `attr` veya `var` fonksiyonlarını
+ * kabul etmiyor.
+ */
+[truncate] {
+  @include truncate();
+  -webkit-line-clamp: attr(satir number, 4);
+}
+
+@if $display-modlari-acik {
+  @include display();
 }
