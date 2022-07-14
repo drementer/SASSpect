@@ -33,7 +33,7 @@ $medya-boyutlari: (
 ) !default;
 
 /// @type boolen
-$medya-boyutlarini-goster: false !default;
+$medya-boyutlarini-goster: true !default;
 
 /// @type boolen
 $varsayilan-medya-boyutlarini-kullan: true !default;
@@ -268,7 +268,7 @@ $boyutlar: '' !default;
         $icerik: '#{$medya-boyutu-ismi}';
 
         @if $medya-boyutu {
-          $boyut: $medya-boyutu * 1px;
+          $boyut: $medya-boyutu;
           $icerik: '#{$medya-boyutu-ismi}: >= #{$boyut}';
         }
 
@@ -283,6 +283,4 @@ $boyutlar: '' !default;
 /**
  * Medya boyutlarını ekranda göstermek için 
  */
-@if $medya-boyutlarini-goster {
-  @include medya-boyutlarini-goster;
-}
+@include medya-boyutlarini-goster();
