@@ -27,7 +27,7 @@ $medya-boyutlari: (
 ) !default;
 
 /// @type boolen
-$medya-boyutlarini-goster: true !default;
+$medya-boyutlarini-goster: false !default;
 
 /// @type boolen
 $varsayilan-medya-boyutlarini-kullan: true !default;
@@ -291,6 +291,9 @@ $boyutlar: '' !default;
   }
 }
 
-/* /// Medya boyutlarını gösteri çalıştırır.
-@include medya-boyutlarini-goster();
+/**
+ * Medya boyutlarını ekranda göstermek için 
  */
+@if $medya-boyutlarini-goster {
+  @include medya-boyutlarini-goster;
+}
