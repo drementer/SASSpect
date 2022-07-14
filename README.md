@@ -20,6 +20,7 @@ Terminal kullanarak indir
 ## Kullanım/Örnekler
 
 ### Henüz dökümantasyon yazmayı bitiremedim :'(
+Ama elbetteki yinede [SassDoc GH](https://github.com/drementer/dred/tree/master/docs/sassdoc) ve [SassDoc](https://dred-docs.netlify.app/) dosyalarımı inceleyebilirsiniz.
 
 ## Geliştirici
 
