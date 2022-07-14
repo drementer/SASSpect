@@ -1,73 +1,41 @@
 .go-top {
-  font-size: 1rem;
+  @extend %buton;
+  @include flex-row-center;
+
   position: fixed;
-  padding: 0.75em;
-  cursor: pointer;
+  bottom: 2rem;
+  right: 2rem;
+  transform: translateX(5rem);
+
   border: none;
-  outline: 0;
-  bottom: 2em;
-  right: -5em;
+  padding: 0;
   border-radius: 5em;
-  width: 3em;
-  height: 3em;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  background-color: black;
-  overflow: hidden;
-  transition: all 200ms cubic-bezier(0.66, 0, 0.34, 1) 0.1s;
+  width: 3rem;
+  height: 3rem;
   color: $beyaz;
-  pointer-events: none;
+  background-color: black;
   opacity: 0.95;
+  overflow: hidden;
+
+  transition: all 200ms cubic-bezier(0.66, 0, 0.34, 1) 0.1s;
+  pointer-events: none;
+
+  &:hover {
+    opacity: 1;
+  }
 
   @include medya(md) {
-    bottom: 1em;
+    bottom: 1rem;
+    right: 1rem;
   }
 
   &--aktif {
+    transform: translateX(0);
     pointer-events: all;
-    right: 2em;
-
-    @include medya(md) {
-      right: 1em;
-    }
   }
 
-  > ion-icon {
+  &__ikon {
     color: inherit;
     font-size: 1.4em;
-    margin: 1px;
-    align-self: flex-start;
-    z-index: 2;
-  }
-
-  > span {
-    position: absolute;
-    right: -10em;
-    white-space: nowrap;
-    opacity: 0;
-    z-index: 0;
-    color: inherit;
-    display: block;
-    transition: inherit;
-    font-weight: 500;
-    @include font-size(0.875rem);
-
-    &:first-letter {
-      text-transform: capitalize;
-    }
-  }
-
-  @include min-medya(md) {
-    &:hover {
-      width: 8em;
-      opacity: 1;
-      padding: 0.75em 1em;
-
-      > span {
-        right: 1.3em;
-        opacity: 1;
-      }
-    }
   }
 }
