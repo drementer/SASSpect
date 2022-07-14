@@ -241,7 +241,10 @@ $boyutlar: '' !default;
   }
 }
 
-/// Maximum medya ve üzerinde çalışacak sorgu.
+/// 2 nokta arası veya dışında çalışacak sorgu.
+/// `medya` mixin'in aralık kullanımına çok benzer ama
+/// elbetteki ona göre daha kolay ve anlaşılır bir kullanım sunar
+/// ve de önerilen kullanımdır.
 ///
 /// @alias medya
 ///
