@@ -43,7 +43,10 @@
  &#39;sm&#39;: 576px
 ) !default;</code></pre></div><div class="item__example example"><div class="example__description"><p>Em ile kullanım</p></div><pre class="example__code language-scss"><code>$medya-boyutlari: (
  &#39;xs&#39;: px2em(360),
- &#39;sm&#39;: px2em(768)
+ &#39;sm&#39;: px2em(576)
+) !default;</code></pre></div><div class="item__example example"><div class="example__description"><p>Karma kullanım</p></div><pre class="example__code language-scss"><code>$medya-boyutlari: (
+ &#39;xs&#39;: 360px,
+ &#39;sm&#39;: px2em(576)
 ) !default;</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#medya-function-medya-degeri-al"><code>medya-degeri-al</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#medya-mixin-medya"><code>medya</code></a></li></ul></section><section class="main__item container item" id="medya-variable-medya-boyutlarini-goster"><h3 class="item__heading"><a class="item__name" href="#variable-medya-boyutlarini-goster">medya-boyutlarini-goster</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$medya-boyutlarini-goster: true !default;</code></pre></div><h3 class="item__sub-heading">Type</h3><p><code>Boolen</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#medya-mixin-medya-boyutlarini-goster"><code>medya-boyutlarini-goster</code></a></li></ul></section><section class="main__item container item" id="medya-variable-varsayilan-medya-boyutlarini-kullan"><h3 class="item__heading"><a class="item__name" href="#variable-varsayilan-medya-boyutlarini-kullan">varsayilan-medya-boyutlarini-kullan</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$varsayilan-medya-boyutlarini-kullan: true !default;</code></pre></div><h3 class="item__sub-heading">Type</h3><p><code>Boolen</code></p></section><section class="main__item container item" id="medya-variable-boyutlar"><h3 class="item__heading"><a class="item__name" href="#variable-boyutlar">boyutlar</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$boyutlar: &#39;&#39; !default;</code></pre></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#medya-mixin-medya-boyutlarini-goster"><code>medya-boyutlarini-goster</code></a></li></ul></section></section><section class="main__sub-section" id="medya-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="medya-function-medya-degeri-al"><h3 class="item__heading"><a class="item__name" href="#function-medya-degeri-al">medya-degeri-al</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function medya-degeri-al($deger) { 
   @if map-has-key($medya-boyutlari, $deger) {
     @return map-get($medya-boyutlari, $deger);
@@ -71,11 +74,10 @@
   @if $baslangic {
     @if type-of($baslangic) == number {
       @if unitless($baslangic) {
-        $max-width: $baslangic + &#39;px&#39;;
+        $min-width: $baslangic + &#39;px&#39;;
       } @else {
-        $max-width: $baslangic;
+        $min-width: $baslangic;
       }
-      $min-width: $baslangic;
     } @else {
       $min-width: #{medya-degeri-al($baslangic)};
     }
@@ -102,24 +104,23 @@
     color: white;
   }
 }
-@media screen and (max-width: 1400px) { .foo { color: white; }</code></pre></div><div class="item__example example"><div class="example__description"><p>Unit değeri olmayan özel değer ile kullanım</p></div><pre class="example__code language-scss"><code>.foo {
+@media screen and (max-width: 1400px) { .foo { color: white; }</code></pre></div><div class="item__example example"><div class="example__description"><p>Unitless değer ile kullanım</p></div><pre class="example__code language-scss"><code>.foo {
   @include medya(1400) {
     color: white;
   }
 }
-@media screen and (max-width: 1400px) { .foo { color: white; }</code></pre></div><div class="item__example example"><div class="example__description"><p>Em tipi ile özel değer kullanımı</p></div><pre class="example__code language-scss"><code>.foo {
+@media screen and (max-width: 1400px) { .foo { color: white; }</code></pre></div><div class="item__example example"><div class="example__description"><p>px2em fonksiyon ile kullanımı</p></div><pre class="example__code language-scss"><code>.foo {
   @include medya(px2em(1400px)) {
-    color: white;
-  }
-}
-@media screen and (max-width: 87.5em) { .foo { color: white; }</code></pre></div><div class="item__example example"><div class="example__description"><p>Em tipi ile özel değer kullanımı</p></div><pre class="example__code language-scss"><code>.foo {
-  $medya-boyutu: px2em(1400px);
-  @include medya($medya-boyutu) {
     color: white;
   }
 }
 @media screen and (max-width: 87.5em) { .foo { color: white; }</code></pre></div><div class="item__example example"><div class="example__description"><p>min-width query oluşturma</p></div><pre class="example__code language-scss"><code>.foo {
   @include min-medya(xl) {
+    color: white;
+  }
+}
+@media screen and (min-width: 75em) { .foo { color: white; }</code></pre></div><div class="item__example example"><div class="example__description"><p>min-width query oluşturma</p></div><pre class="example__code language-scss"><code>.foo {
+  @include medya($baslangic: xl) {
     color: white;
   }
 }
@@ -147,7 +148,7 @@
     color: white;
   }
 }
-@media screen and (min-width: 75em) and (max-width: 87.5em) { .foo { color: white; }</code></pre></div><h3 class="item__sub-heading">Output</h3><div class="item__description"><p>{string} - Medya sorgusu</p></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#medya-function-medya-degeri-al"><code>medya-degeri-al</code></a> &mdash; Medya değerini çekmek için</li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#medya-variable-medya-boyutlari"><code>medya-boyutlari</code></a> &mdash; Medya Boyutları</li></ul></section><section class="main__item container item" id="medya-mixin-medya-boyutlarini-goster"><h3 class="item__heading"><a class="item__name" href="#mixin-medya-boyutlarini-goster">medya-boyutlarini-goster</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin medya-boyutlarini-goster($boyutlar: $medya-boyutlari) { 
+@media screen and (min-width: 75em) and (max-width: 87.5em) { .foo { color: white; }</code></pre></div><h3 class="item__sub-heading">Output</h3><div class="item__description"><p>{string} - Medya sorgusu</p></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#medya-function-medya-degeri-al"><code>medya-degeri-al</code></a> &mdash; Medya değerini çekmek için</li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#medya-variable-medya-boyutlari"><code>medya-boyutlari</code></a> &mdash; Medya Boyutları</li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#medya-mixin-medya-boyutlarini-goster"><code>medya-boyutlarini-goster</code></a></li></ul></section><section class="main__item container item" id="medya-mixin-medya-boyutlarini-goster"><h3 class="item__heading"><a class="item__name" href="#mixin-medya-boyutlarini-goster">medya-boyutlarini-goster</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin medya-boyutlarini-goster($boyutlar: $medya-boyutlari) { 
   @if $medya-boyutlarini-goster {
     body::after {
       position: fixed;
@@ -163,7 +164,7 @@
         $icerik: &#39;#{$medya-boyutu-ismi}&#39;;
 
         @if $medya-boyutu {
-          $boyut: $medya-boyutu * 1px;
+          $boyut: $medya-boyutu;
           $icerik: &#39;#{$medya-boyutu-ismi}: &gt;= #{$boyut}&#39;;
         }
 
@@ -173,7 +174,7 @@
       }
     }
   }
- }" data-collapsed="@mixin medya-boyutlarini-goster($boyutlar: $medya-boyutlari) { ... }"><code>@mixin medya-boyutlarini-goster($boyutlar: $medya-boyutlari) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Ekranda medya boyutlarını gösterir</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$boyutlar</code></th><td data-label="desc"><p>Gösterilecek medya boyutları</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>$medya-boyutlari</code></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#medya-variable-medya-boyutlarini-goster"><code>medya-boyutlarini-goster</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#medya-variable-boyutlar"><code>boyutlar</code></a></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="renk"><div class="container">renk</div></h1><section class="main__sub-section" id="renk-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="renk-function-hsl2hex"><h3 class="item__heading"><a class="item__name" href="#function-hsl2hex">hsl2hex</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function hsl2hex() { 
+ }" data-collapsed="@mixin medya-boyutlarini-goster($boyutlar: $medya-boyutlari) { ... }"><code>@mixin medya-boyutlarini-goster($boyutlar: $medya-boyutlari) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Ekranda medya boyutlarını gösterir.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$boyutlar</code></th><td data-label="desc"><p>Gösterilecek medya boyutları</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>$medya-boyutlari</code></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#medya-variable-medya-boyutlarini-goster"><code>medya-boyutlarini-goster</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#medya-variable-boyutlar"><code>boyutlar</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#medya-mixin-medya"><code>medya</code></a> &mdash; Medya sorgusu</li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="renk"><div class="container">renk</div></h1><section class="main__sub-section" id="renk-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="renk-function-hsl2hex"><h3 class="item__heading"><a class="item__name" href="#function-hsl2hex">hsl2hex</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function hsl2hex() { 
   @return mix($hsl-color, $hsl-color);
  }" data-collapsed="@function hsl2hex() { ... }"><code>@function hsl2hex() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Hsl renk değerini hex değerine çevirir Orjinalinde hsl to rgb olarak geçiyor ama malesef hex derliyor Elbette farklı renk formatlarıda kullanılabilir</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><div class="example__description"><p>Hsl ile kullanım</p></div><pre class="example__code language-scss"><code>@debug hsl2hex(hsl(40, 100%, 50%));
  //-&gt; #ffaa00</code></pre></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://gist.github.com/omgmog/6192734">- Original gist</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Max Glenister</p></li></ul></section><section class="main__item container item" id="renk-function-hsl2rgb"><h3 class="item__heading"><a class="item__name" href="#function-hsl2rgb">hsl2rgb</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function hsl2rgb() { 
@@ -212,6 +213,7 @@
   }
   @return calc($px / $root-font-size) * 1em;
  }" data-collapsed="@function px2em($px) { ... }"><code>@function px2em($px) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Px değerini em değerine çevirir</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$px</code></th><td data-label="desc"><p>Çevrilecek px değeri</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Number</code> &mdash;<p>Em değeri</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>@debug px2em(16);
+ //-&gt; 1em</code></pre></div><div class="item__example example"><pre class="example__code language-scss"><code>@debug px2em(16px);
  //-&gt; 1em</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-root-font-size"><code>root-font-size</code></a> &mdash; Root font size</li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[variable]</span> <a href="#medya-variable-medya-boyutlari"><code>medya-boyutlari</code></a></li></ul></section><section class="main__item container item" id="sayi-function-px2rem"><h3 class="item__heading"><a class="item__name" href="#function-px2rem">px2rem</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function px2rem($px) { 
   @if unitless($px) {
     $px: $px * 1px;
@@ -221,6 +223,7 @@
   }
   @return calc($px / $root-font-size) * 1rem;
  }" data-collapsed="@function px2rem($px) { ... }"><code>@function px2rem($px) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Px değerini rem değerine çevirir</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$px</code></th><td data-label="desc"><p>Çevrilecek px değeri</p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Number</code> &mdash;<p>Rem değeri</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>@debug px2em(16);
+ //-&gt; 1rem</code></pre></div><div class="item__example example"><pre class="example__code language-scss"><code>@debug px2em(16px);
  //-&gt; 1rem</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-root-font-size"><code>root-font-size</code></a> &mdash; Root font size</li></ul></section><section class="main__item container item" id="sayi-function-strip-unit"><h3 class="item__heading"><a class="item__name" href="#function-strip-unit">strip-unit</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function strip-unit($number) { 
   @return $number / ($number * 0 + 1);
  }" data-collapsed="@function strip-unit($number) { ... }"><code>@function strip-unit($number) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Strip the unit from a number.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$number</code></th><td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Number</code></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>@debug strip-unit(5px);

@@ -249,7 +249,7 @@ $boyutlar: '' !default;
 /// Ekranda medya boyutlarını gösterir.
 ///
 /// @param {map} $boyutlar [$medya-boyutlari] - Gösterilecek medya boyutları
-/// @require {mixin} min-medya - Medya sorgusu kısayolu
+/// @require {mixin} medya - Medya sorgusu
 ///
 @mixin medya-boyutlarini-goster($boyutlar: $medya-boyutlari) {
   @if $medya-boyutlarini-goster {
