@@ -30,6 +30,30 @@
 
 /// @alias flex
 /// @require {mixin} flex
+/// @require {placeholder} %flex-start
+@mixin flex-start {
+  @include flex;
+  @extend %flex-start;
+}
+
+/// @alias flex
+/// @require {mixin} flex
+/// @require {placeholder} %flex-center
+@mixin flex-center {
+  @include flex;
+  @extend %flex-center;
+}
+
+/// @alias flex
+/// @require {mixin} flex
+/// @require {placeholder} %flex-end
+@mixin flex-end {
+  @include flex;
+  @extend %flex-end;
+}
+
+/// @alias flex
+/// @require {mixin} flex
 @mixin flex-row {
   @include flex;
   flex-direction: row;
