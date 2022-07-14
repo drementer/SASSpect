@@ -32,14 +32,16 @@ $medya-boyutlari: (
   ul: px2em(1400px),
 ) !default;
 
+/// `medya-boyutlarini-goster`i çalıştırır.
+/// 
 /// @type boolen
 $medya-boyutlarini-goster: true !default;
 
+/// `medya-boyutlarini-goster` için `$medya-boyutlari`ni kullanıp
+/// kullanmayacağını belirler.
+/// 
 /// @type boolen
 $varsayilan-medya-boyutlarini-kullan: true !default;
-
-/// @type map
-$boyutlar: '' !default;
 
 /// Medya değerini '$medya-boyutlari'ndan alır
 ///
