@@ -3,7 +3,7 @@ body {
   min-height: 200vh;
 }
 
-.test {
+.testt {
   @include medya(1400) {
     color: #fff;
   }
