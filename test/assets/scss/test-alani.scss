@@ -7,4 +7,13 @@ body {
   @include medya(1400) {
     color: #fff;
   }
+  @include medya($bitis: 1400px) {
+    color: #fff;
+  }
+  @include medya($baslangic: xl) {
+    color: #fff;
+  }
+  @include min-medya(1400) {
+    color: #fff;
+  }
 }
