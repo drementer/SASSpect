@@ -50,7 +50,7 @@ $boyutlar: '' !default;
   @if map-has-key($medya-boyutlari, $deger) {
     @return map-get($medya-boyutlari, $deger);
   } @else {
-    @error $deger + "'i hazır değerler içinde yok.";
+    @error "Aranan değer `$medya-boyutlari` içinde yok";
   }
 }
 
