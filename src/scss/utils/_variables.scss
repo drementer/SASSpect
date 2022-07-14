@@ -35,11 +35,6 @@ $z-index-listesi: '.loader', '.modal', '.popup', '.go-top', '.nav' !default;
 
 // ------------------------- Display --------------------------------
 
-/// Display modlarini açıp kapatmak için kullanılır.
-///
-/// @type boolen
-$display-modlari-acik: true !default;
-
 /// @type map | list
 $display-listesi: 'block', 'inline', 'inline-block', 'flex', 'inline-flex',
   'initial', 'none' !default;
