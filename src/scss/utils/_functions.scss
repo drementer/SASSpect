@@ -1,26 +1,5 @@
 @use './variables' as *;
 
-/// Medya değerini '$medya-boyutlari'ndan alır
-///
-/// @group medya
-///
-/// @param {string} $deger - Alınacak değer
-/// @require {variable} $medya-boyutlari - Medya boyutlari
-/// @return {number} - Medya değeri
-/// @throw Aranan değer `$medya-boyutlari` içinde yok
-///
-/// @example
-///   @debug medya-degeri-al(xl);
-///     //-> 75em
-///
-@function medya-degeri-al($deger) {
-  @if map-has-key($medya-boyutlari, $deger) {
-    @return map-get($medya-boyutlari, $deger);
-  } @else {
-    @error $deger + "'i hazır değerler içinde yok.";
-  }
-}
-
 /// Px değerini em değerine çevirir
 ///
 /// @group sayi

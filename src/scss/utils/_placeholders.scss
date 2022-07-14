@@ -14,27 +14,3 @@
   outline: none;
   cursor: pointer;
 }
-
-/// Flex start
-/// @group flex
-%flex-start {
-  align-items: start;
-  align-content: start;
-  justify-content: start;
-}
-
-/// Flex center
-/// @group flex
-%flex-center {
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-}
-
-/// Flex end
-/// @group flex
-%flex-end {
-  align-items: end;
-  align-content: end;
-  justify-content: end;
-}

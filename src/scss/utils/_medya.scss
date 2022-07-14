@@ -2,6 +2,58 @@
 /// @group medya
 ////
 
+/// @type map
+/// @require {function} px2em
+///
+/// @example scss - Px ile kullanım
+///   $medya-boyutlari: (
+///    'xs': 360px,
+///    'sm': 576px
+///   ) !default;
+///
+/// @example scss - Em ile kullanım
+///   $medya-boyutlari: (
+///    'xs': px2em(360),
+///    'sm': px2em(768)
+///   ) !default;
+///
+$medya-boyutlari: (
+  xs: px2em(360px),
+  sm: px2em(576px),
+  md: px2em(768px),
+  lg: px2em(992px),
+  xl: px2em(1200px),
+  ul: px2em(1400px),
+) !default;
+
+/// @type boolen
+$medya-boyutlarini-goster: true !default;
+
+/// @type boolen
+$varsayilan-medya-boyutlarini-kullan: true !default;
+
+/// @type map
+$boyutlar: '' !default;
+
+/// Medya değerini '$medya-boyutlari'ndan alır
+///
+/// @param {string} $deger - Alınacak değer
+/// @require {variable} $medya-boyutlari - Medya boyutlari
+/// @return {number} - Medya değeri
+/// @throw Aranan değer `$medya-boyutlari` içinde yok
+///
+/// @example
+///   @debug medya-degeri-al(xl);
+///     //-> 75em
+///
+@function medya-degeri-al($deger) {
+  @if map-has-key($medya-boyutlari, $deger) {
+    @return map-get($medya-boyutlari, $deger);
+  } @else {
+    @error $deger + "'i hazır değerler içinde yok.";
+  }
+}
+
 /// Css @media sorgularının süpergücü.
 ///
 /// @param {number} $bitis [null] - Girilen max-width değeri

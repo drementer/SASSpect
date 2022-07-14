@@ -45,46 +45,6 @@ $display-listesi: 'block', 'inline', 'inline-block', 'flex', 'inline-flex',
   'initial', 'none' !default;
 // ------------------------------------------------------------------
 
-// ------------------------- Medya ----------------------------------
-
-/// @group medya
-/// @type map
-/// @require {function} px2em
-///
-/// @example scss - Px ile kullanım
-///   $medya-boyutlari: (
-///    'xs': 360px,
-///    'sm': 576px
-///   ) !default;
-///
-/// @example scss - Em ile kullanım
-///   $medya-boyutlari: (
-///    'xs': px2em(360),
-///    'sm': px2em(768)
-///   ) !default;
-///
-$medya-boyutlari: (
-  xs: px2em(360px),
-  sm: px2em(576px),
-  md: px2em(768px),
-  lg: px2em(992px),
-  xl: px2em(1200px),
-  ul: px2em(1400px),
-) !default;
-
-/// @group medya
-/// @type boolen
-$medya-boyutlarini-goster: true !default;
-
-/// @group medya
-/// @type boolen
-$varsayilan-medya-boyutlarini-kullan: true !default;
-
-/// @group medya
-/// @type map
-$boyutlar: '' !default;
-// ------------------------------------------------------------------
-
 // ------------------------- Renk Paleti ----------------------------
 
 $beyaz: hsl(0, 0%, 100%) !default;
