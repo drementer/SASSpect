@@ -16,7 +16,7 @@
 ///    'xs': px2em(360),
 ///    'sm': px2em(576)
 ///   ) !default;
-/// 
+///
 /// @example scss - Karma kullanım
 ///   $medya-boyutlari: (
 ///    'xs': 360px,
@@ -112,7 +112,7 @@ $boyutlar: '' !default;
 ///     }
 ///   }
 ///   @media screen and (min-width: 75em) { .foo { color: white; }
-/// 
+///
 /// @example scss - min-width query oluşturma
 ///   .foo {
 ///     @include medya($baslangic: xl) {
