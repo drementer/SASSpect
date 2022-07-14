@@ -4,3 +4,7 @@ display:
 groups:
   medya: Medya
   flex: Flex
+  renk: Renk
+  sayi: Sayi
+  list: List
+  string: String
