@@ -197,7 +197,7 @@ $boyutlar: '' !default;
 
 // Kısayollar
 
-/// Minimum medya ve üzerinde çalışacak sorgu
+/// Minimum medya ve üzerinde çalışacak sorgu.
 ///
 /// @alias medya
 ///
@@ -258,7 +258,7 @@ $boyutlar: '' !default;
   }
 }
 
-/// Ekranda medya boyutlarını gösterir
+/// Ekranda medya boyutlarını gösterir.
 ///
 /// @param {map} $boyutlar [$medya-boyutlari] - Gösterilecek medya boyutları
 /// @require {mixin} min-medya - Medya sorgusu kısayolu
@@ -291,6 +291,6 @@ $boyutlar: '' !default;
   }
 }
 
-/* /// Medya boyutlarını gösteri çalıştırır
+/* /// Medya boyutlarını gösteri çalıştırır.
 @include medya-boyutlarini-goster();
  */
