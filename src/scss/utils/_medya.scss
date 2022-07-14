@@ -40,7 +40,7 @@ $boyutlar: '' !default;
 /// @param {string} $deger - Alınacak değer
 /// @require {variable} $medya-boyutlari - Medya boyutlari
 /// @return {number} - Medya değeri
-/// @throw Aranan değer `$medya-boyutlari` içinde yok
+/// @throw `$deger`, `$medya-boyutlari` içinde yok
 ///
 /// @example
 ///   @debug medya-degeri-al(xl);
@@ -50,7 +50,7 @@ $boyutlar: '' !default;
   @if map-has-key($medya-boyutlari, $deger) {
     @return map-get($medya-boyutlari, $deger);
   } @else {
-    @error "Aranan değer `$medya-boyutlari` içinde yok";
+    @error $deger + " `$medya-boyutlari` içinde yok";
   }
 }
 
