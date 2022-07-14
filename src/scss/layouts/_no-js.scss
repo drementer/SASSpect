@@ -1,7 +1,11 @@
-$no-js__border: $ana-renk--700 !default;
-$no-js__arkaplan: #f9faff !default;
-
 .no-js {
+  $no-js__border: $ana-renk--700 !default;
+  $no-js__arkaplan: #f9faff !default;
+
+  @include margin(1rem 2rem);
+  @extend %golge;
+  @include flex;
+
   position: fixed;
   top: 0;
   right: 0;
@@ -10,14 +14,21 @@ $no-js__arkaplan: #f9faff !default;
   max-width: 50em;
   align-content: stretch;
 
-  @include margin(1rem 2rem);
-  @extend %golge;
-  @include flex;
-
   @include medya(md) {
     @include flex-column;
     justify-content: center;
     align-items: center;
+    border-radius: 0;
+  }
+
+  @include medya(xl) {
+    border-right: none;
+    margin: 0;
+    border-top: 3px solid $no-js__border;
+    top: 1em;
+    left: 1em;
+    right: 1em;
+    max-width: none;
   }
 
   &__ikon {
@@ -65,19 +76,5 @@ $no-js__arkaplan: #f9faff !default;
         text-align: center;
       }
     }
-  }
-
-  @include medya(xl) {
-    border-right: none;
-    margin: 0;
-    border-top: 3px solid $no-js__border;
-    top: 1em;
-    left: 1em;
-    right: 1em;
-    max-width: none;
-  }
-
-  @include medya(md) {
-    border-radius: 0;
   }
 }

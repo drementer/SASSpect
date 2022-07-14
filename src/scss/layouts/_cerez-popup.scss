@@ -1,6 +1,6 @@
-$cerez-popup__arkaplan: #f9faff !default;
-
 .cerez-popup {
+  $cerez-popup__arkaplan: #f9faff !default;
+
   @include margin(2rem);
   @include padding(1rem 2rem);
   @include flex-row;
