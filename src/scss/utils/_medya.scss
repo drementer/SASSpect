@@ -14,7 +14,13 @@
 /// @example scss - Em ile kullanım
 ///   $medya-boyutlari: (
 ///    'xs': px2em(360),
-///    'sm': px2em(768)
+///    'sm': px2em(576)
+///   ) !default;
+/// 
+/// @example scss - Karma kullanım
+///   $medya-boyutlari: (
+///    'xs': 360px,
+///    'sm': px2em(576)
 ///   ) !default;
 ///
 $medya-boyutlari: (
@@ -60,7 +66,7 @@ $boyutlar: '' !default;
 /// @param {number} $baslangic [null] - Girilen min-width değeri
 /// @param {number} $max-width [null] - Atanan max-width değeri
 /// @param {number} $min-width [null] - Atanan min-width değeri
-/// @param {string} $medya-query [] - Medya sorgusu
+/// @param {string} $medya-query - Medya sorgusu
 ///
 /// @require {function} medya-degeri-al - Medya değerini çekmek için
 /// @require {variable} $medya-boyutlari - Medya Boyutları
@@ -83,7 +89,7 @@ $boyutlar: '' !default;
 ///   }
 ///   @media screen and (max-width: 1400px) { .foo { color: white; }
 ///
-/// @example scss - Unit değeri olmayan özel değer ile kullanım
+/// @example scss - Unitless değer ile kullanım
 ///   .foo {
 ///     @include medya(1400) {
 ///       color: white;
@@ -91,18 +97,9 @@ $boyutlar: '' !default;
 ///   }
 ///   @media screen and (max-width: 1400px) { .foo { color: white; }
 ///
-/// @example scss - Em tipi ile özel değer kullanımı
+/// @example scss - px2em fonksiyon ile kullanımı
 ///   .foo {
 ///     @include medya(px2em(1400px)) {
-///       color: white;
-///     }
-///   }
-///   @media screen and (max-width: 87.5em) { .foo { color: white; }
-///
-/// @example scss - Em tipi ile özel değer kullanımı
-///   .foo {
-///     $medya-boyutu: px2em(1400px);
-///     @include medya($medya-boyutu) {
 ///       color: white;
 ///     }
 ///   }
@@ -111,6 +108,14 @@ $boyutlar: '' !default;
 /// @example scss - min-width query oluşturma
 ///   .foo {
 ///     @include min-medya(xl) {
+///       color: white;
+///     }
+///   }
+///   @media screen and (min-width: 75em) { .foo { color: white; }
+/// 
+/// @example scss - min-width query oluşturma
+///   .foo {
+///     @include medya($baslangic: xl) {
 ///       color: white;
 ///     }
 ///   }
@@ -204,14 +209,6 @@ $boyutlar: '' !default;
 /// @param {string | number} $deger - Girilen min-width değeri
 /// @require {mixin} medya - Medya sorgusu
 ///
-/// @example scss - Hazır boyutlar ile kullanım
-///   .foo {
-///     @include min-medya(xl) {
-///       color: white;
-///     }
-///   }
-///   @media screen and (min-width: 75em) { .foo { color: white; }
-///
 @mixin min-medya($deger) {
   @include medya(null, $deger) {
     @content;
@@ -226,14 +223,6 @@ $boyutlar: '' !default;
 ///
 /// @param {string | number} $deger - Girilen max-width değeri
 /// @require {mixin} medya - Medya sorgusu
-///
-/// @example scss - Hazır boyutlar ile kullanım
-///   .foo {
-///     @include max-medya(xl) {
-///       color: white;
-///     }
-///   }
-///   @media screen and (max-width: 75em) { .foo { color: white; }
 ///
 @mixin max-medya($deger) {
   @include medya($deger) {
