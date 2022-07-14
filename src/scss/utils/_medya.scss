@@ -177,11 +177,10 @@ $boyutlar: '' !default;
   @if $baslangic {
     @if type-of($baslangic) == number {
       @if unitless($baslangic) {
-        $max-width: $baslangic + 'px';
+        $min-width: $baslangic + 'px';
       } @else {
-        $max-width: $baslangic;
+        $min-width: $baslangic;
       }
-      $min-width: $baslangic;
     } @else {
       $min-width: #{medya-degeri-al($baslangic)};
     }
