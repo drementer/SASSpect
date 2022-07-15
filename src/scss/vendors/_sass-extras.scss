@@ -445,18 +445,3 @@
     @content;
   }
 }
-
-/// System font stack.
-///
-/// @type List
-///
-/// @example
-///   body {
-///   	font-family: $system-fonts;
-///   }
-///
-$system-fonts: 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica',
-  'Arial', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji' !default;
-
-$system-fonts-mono: 'ui-monospace', 'SFMono-Regular', 'Consolas',
-  'Liberation Mono', 'Menlo', 'monospace' !default;
