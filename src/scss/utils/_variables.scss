@@ -30,7 +30,7 @@ $font-listesi: (
 // ------------------------- z-index --------------------------------
 
 /// @type list
-$z-index-listesi: '.loader', '.modal', '.popup', '.go-top', '.nav' !default;
+$z-index-listesi: '.loader', '.popup', '.nav' '.go-top' !default;
 // ------------------------------------------------------------------
 
 // ------------------------- Display --------------------------------
