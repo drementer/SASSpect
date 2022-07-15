@@ -114,10 +114,10 @@
 /// @example scss - Varyant algılama
 ///   $liste: ".buton";
 ///   .buton{
-///   	color: red;
-///   	&-2{
-///   		color: blue;
-///   	}
+///     color: red;
+///     &-2{
+///       color: blue;
+///     }
 ///   }
 ///   @include z-index($liste);
 ///
