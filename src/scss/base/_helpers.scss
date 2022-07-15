@@ -7,6 +7,10 @@
   margin-inline: auto;
 }
 
+.clear-fix{
+  @include clearfix();
+}
+
 /**
  * Overflow hatalarını çözümlemek için her dom elemanına arkaplan veriliyor 
  * ve hoverda arkaplan yoğunlaştırılıp outline ekleniyor bu 
