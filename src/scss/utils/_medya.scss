@@ -33,13 +33,13 @@ $medya-boyutlari: (
 ) !default;
 
 /// `medya-boyutlarini-goster`i çalıştırır.
-/// 
+///
 /// @type boolen
 $medya-boyutlarini-goster: true !default;
 
 /// `medya-boyutlarini-goster` için `$medya-boyutlari`ni kullanıp
 /// kullanmayacağını belirler.
-/// 
+///
 /// @type boolen
 $varsayilan-medya-boyutlarini-kullan: true !default;
 
@@ -282,6 +282,6 @@ $varsayilan-medya-boyutlarini-kullan: true !default;
 }
 
 /**
- * Medya boyutlarını ekranda göstermek için 
+ * Medya boyutlarını ekranda göstermek için
  */
 @include medya-boyutlarini-goster();
