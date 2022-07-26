@@ -1,369 +1,343 @@
 <!DOCTYPE html>
 <html lang="tr-TR" data-theme="default">
 <head>
-	<!-- Genel -->
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta
-		name="viewport"
-		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-	/>
-	<base href="assets/">
-	<link rel="stylesheet" href="css/test-alani.min.css?v=1">
+  <!-- Genel -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
+  <base href="assets/" />
+  <link rel="stylesheet" href="css/test-alani.min.css?v=1" />
 
-	<!-- Sayfa bilgileri -->
-	<title>drementer | Test Alanı</title>
-	<meta name="description" content="drementer | Test Alanı">
+  <!-- Sayfa bilgileri -->
+  <title>drementer | Test Alanı</title>
+  <meta name="description" content="drementer | Test Alanı" />
 </head>
 <body class="">
-	<main class="test">
+  <main class="test">
+    <!-- Loader -->
+    <div id="loader" class="loader" kapali>
+      <!-- Spinner -->
+      <div class="loader__spinner">
+        <!-- Logo -->
+        <!-- <img src="" alt="drementer"> -->
+        <span>drementer</span>
+      </div>
+    </div>
+    <!-- Loader SON -->
 
-		<!-- Loader -->
-		<div id="loader" class="loader" kapali>
-			<!-- Spinner -->
-			<div class="loader__spinner">
-				<!-- Logo -->
-				<!-- <img src="" alt="drementer"> -->
-				<span>drementer</span>
-			</div>
-		</div>
-		<!-- Loader SON -->
+    <section class="bosluk-test p-10">
+      <div class="mb-n5"></div>
+      <div class=""></div>
+    </section>
 
-		<section class="bosluk-test p-10">
-			<div class="mb-n5"></div>
-			<div class=""></div>
-		</section>
+    <section class="truncate-test">
+      <p truncate satir="3" style="max-width: 200px">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere illum
+        mollitia atque voluptatem id similique fugiat facilis totam, modi
+        dolorem quae placeat, repellendus, nulla earum. Nostrum sit et ad
+        repellat?
+      </p>
+    </section>
 
-		<section class="truncate-test">
-			<p truncate satir="3" style="max-width: 200px;">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere illum mollitia atque voluptatem id similique fugiat facilis totam, modi dolorem quae placeat, repellendus, nulla earum. Nostrum sit et ad repellat?
-			</p>
-		</section>
+    <section class="form-elemanlari my-5">
+      <!-- Checkbox -->
+      <div class="checkbox" required>
+        <!-- İnput -->
+        <input type="checkbox" name="box1" id="box1" />
 
-		<section class="form-elemanlari my-5">
-			<!-- Checkbox -->
-			<div class="checkbox" required>
-				<!-- İnput -->
-				<input type="checkbox" name="box1" id="box1" />
+        <!-- Label -->
+        <label for="box1" class="checkbox__label">
+          <div class="checkbox__label-kutu"></div>
+          <span class="checkbox__label-yazi">
+            Lorem ipsum dolor sit amet consectetur
+          </span>
+        </label>
+      </div>
 
-				<!-- Label -->
-				<label for="box1" class="checkbox__label">
-					<div class="checkbox__label-kutu"></div>
-					<span class="checkbox__label-yazi">
-						Lorem ipsum dolor sit amet consectetur
-					</span>
-				</label>
-			</div>
+      <!-- Checkbox -->
+      <div class="checkbox" checked>
+        <!-- İnput -->
+        <input type="checkbox" name="box6" id="box6" />
 
-			<!-- Checkbox -->
-			<div class="checkbox" checked>
-				<!-- İnput -->
-				<input type="checkbox" name="box6" id="box6" />
+        <!-- Label -->
+        <label for="box6" class="checkbox__label">
+          <div class="checkbox__label-kutu"></div>
+          <span class="checkbox__label-yazi">
+            Lorem ipsum dolor sit amet consectetur
+          </span>
+        </label>
+      </div>
 
-				<!-- Label -->
-				<label for="box6" class="checkbox__label">
-					<div class="checkbox__label-kutu"></div>
-					<span class="checkbox__label-yazi">
-						Lorem ipsum dolor sit amet consectetur
-					</span>
-				</label>
-			</div>
+      <!-- Radio -->
+      <div class="radio" checked>
+        <!-- İnput -->
+        <input type="radio" name="rad" id="rad1" />
 
-			<!-- Radio -->
-			<div class="radio" checked>
-				<!-- İnput -->
-				<input type="radio" name="rad" id="rad1" />
+        <!-- Label -->
+        <label for="rad1" class="radio__label">
+          <div class="radio__label-kutu"></div>
+          <span class="radio__label-yazi">
+            Lorem ipsum dolor sit amet consectetur
+          </span>
+        </label>
+      </div>
 
-				<!-- Label -->
-				<label for="rad1" class="radio__label">
-					<div class="radio__label-kutu"></div>
-					<span class="radio__label-yazi">
-						Lorem ipsum dolor sit amet consectetur
-					</span>
-				</label>
-			</div>
+      <!-- Radio -->
+      <div class="radio">
+        <!-- İnput -->
+        <input type="radio" name="rad" id="rad2" />
 
-			<!-- Radio -->
-			<div class="radio">
-				<!-- İnput -->
-				<input type="radio" name="rad" id="rad2" />
+        <!-- Label -->
+        <label for="rad2" class="radio__label">
+          <div class="radio__label-kutu"></div>
+          <span class="radio__label-yazi">
+            Lorem ipsum dolor sit amet consectetur
+          </span>
+        </label>
+      </div>
 
-				<!-- Label -->
-				<label for="rad2" class="radio__label">
-					<div class="radio__label-kutu"></div>
-					<span class="radio__label-yazi">
-						Lorem ipsum dolor sit amet consectetur
-					</span>
-				</label>
-			</div>
+      <!-- Radio -->
+      <div class="radio">
+        <!-- İnput -->
+        <input type="radio" name="rad" id="rad3" />
 
-			<!-- Radio -->
-			<div class="radio">
-				<!-- İnput -->
-				<input type="radio" name="rad" id="rad3" />
+        <!-- Label -->
+        <label for="rad3" class="radio__label">
+          <div class="radio__label-kutu"></div>
+          <span class="radio__label-yazi">
+            Lorem ipsum dolor sit amet consectetur
+          </span>
+        </label>
+      </div>
 
-				<!-- Label -->
-				<label for="rad3" class="radio__label">
-					<div class="radio__label-kutu"></div>
-					<span class="radio__label-yazi">
-						Lorem ipsum dolor sit amet consectetur
-					</span>
-				</label>
-			</div>
+      <!-- text -->
+      <div class="input" required>
+        <!-- Label -->
+        <label class="input__label" for="text">text</label>
 
-			<!-- text -->
-			<div class="input" required>
-				<!-- Label -->
-				<label class="input__label" for="text">text</label>
+        <!-- İçerik -->
+        <div class="input__icerik">
+          <!-- İnput -->
+          <input
+            type="text"
+            id="text"
+            placeholder="falan felan 123"
+            autocomplete="off"
+          />
 
-				<!-- İçerik -->
-				<div class="input__icerik">
-					<!-- İnput -->
-					<input
-						type="text"
-						id="text"
-						placeholder="falan felan 123"
-						autocomplete="off"
-					/>
+          <!-- İnvalid Mesajı -->
+          <div class="input__after input__incorrect-error">
+            <span class="input__after-yazi">incorret input</span>
+          </div>
 
-					<!-- İnvalid Mesajı -->
-					<div class="input__after input__incorrect-error">
-						<span class="input__after-yazi"
-							>incorret input</span
-						>
-					</div>
+          <!-- Required Mesajı -->
+          <div class="input__after input__required-error">
+            <span class="input__after-yazi">this field is required</span>
+          </div>
+        </div>
 
-					<!-- Required Mesajı -->
-					<div class="input__after input__required-error">
-						<span class="input__after-yazi"
-							>this field is required</span
-						>
-					</div>
-				</div>
+        <!-- Açıklama -->
+        <p class="input__aciklama">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+      </div>
 
-				<!-- Açıklama -->
-				<p class="input__aciklama">
-					Lorem ipsum, dolor sit amet consectetur adipisicing
-					elit.
-				</p>
-			</div>
+      <!-- Mail -->
+      <div class="input" required>
+        <!-- Label -->
+        <label class="input__label" for="mail">email</label>
 
-			<!-- Mail -->
-			<div class="input" required>
-				<!-- Label -->
-				<label class="input__label" for="mail">email</label>
+        <!-- İçerik -->
+        <div class="input__icerik">
+          <!-- İnput -->
+          <input
+            type="email"
+            placeholder="drementer@gmail.com"
+            id="mail"
+            autocomplete="off"
+          />
 
-				<!-- İçerik -->
-				<div class="input__icerik">
-					<!-- İnput -->
-					<input
-						type="email"
-						placeholder="drementer@gmail.com"
-						id="mail"
-						autocomplete="off"
-					/>
+          <!-- İnvalid Mesajı -->
+          <div class="input__after input__incorrect-error">
+            <span class="input__after-yazi">incorret input</span>
+          </div>
 
-					<!-- İnvalid Mesajı -->
-					<div class="input__after input__incorrect-error">
-						<span class="input__after-yazi"
-							>incorret input</span
-						>
-					</div>
+          <!-- Required Mesajı -->
+          <div class="input__after input__required-error">
+            <span class="input__after-yazi">this field is required</span>
+          </div>
+        </div>
 
-					<!-- Required Mesajı -->
-					<div class="input__after input__required-error">
-						<span class="input__after-yazi"
-							>this field is required</span
-						>
-					</div>
-				</div>
+        <!-- Açıklama -->
+        <p class="input__aciklama">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+      </div>
 
-				<!-- Açıklama -->
-				<p class="input__aciklama">
-					Lorem ipsum, dolor sit amet consectetur adipisicing
-					elit.
-				</p>
-			</div>
+      <!-- Textarea -->
+      <div class="input" required>
+        <!-- Label -->
+        <label class="input__label" for="textarea">Textarea</label>
 
-			<!-- Textarea -->
-			<div class="input" required>
-				<!-- Label -->
-				<label class="input__label" for="textarea">Textarea</label>
+        <!-- İçerik -->
+        <div class="input__icerik">
+          <!-- İnput -->
+          <textarea
+            name="textarea"
+            id="textarea"
+            placeholder="textarea"
+          ></textarea>
 
-				<!-- İçerik -->
-				<div class="input__icerik">
-					<!-- İnput -->
-					<textarea
-						name="textarea"
-						id="textarea"
-						placeholder="textarea"
-					></textarea>
+          <!-- Required Mesajı -->
+          <div class="input__after input__required-error">
+            <span class="input__after-yazi">this field is required</span>
+          </div>
+        </div>
 
-					<!-- Required Mesajı -->
-					<div class="input__after input__required-error">
-						<span class="input__after-yazi"
-							>this field is required</span
-						>
-					</div>
-				</div>
+        <!-- Açıklama -->
+        <p class="input__aciklama">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+      </div>
 
-				<!-- Açıklama -->
-				<p class="input__aciklama">
-					Lorem ipsum, dolor sit amet consectetur adipisicing
-					elit.
-				</p>
-			</div>
+      <!-- Select -->
+      <div class="input" required>
+        <!-- Label -->
+        <label class="input__label" for="country">country</label>
 
-			<!-- Select -->
-			<div class="input" required>
-				<!-- Label -->
-				<label class="input__label" for="country">country</label>
+        <!-- İçerik -->
+        <div class="input__icerik">
+          <!-- İnput -->
+          <select name="country" id="country">
+            <option value="" selected disabled>Select</option>
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+          </select>
 
-				<!-- İçerik -->
-				<div class="input__icerik">
-					<!-- İnput -->
-					<select name="country" id="country">
-						<option value="" selected disabled>Select</option>
-						<option value="">1</option>
-						<option value="">2</option>
-						<option value="">3</option>
-					</select>
+          <!-- İnvalid Mesajı -->
+          <div class="input__after input__incorrect-error">
+            <span class="input__after-yazi">incorret input</span>
+          </div>
 
-					<!-- İnvalid Mesajı -->
-					<div class="input__after input__incorrect-error">
-						<span class="input__after-yazi"
-							>incorret input</span
-						>
-					</div>
+          <!-- Required Mesajı -->
+          <div class="input__after input__required-error">
+            <span class="input__after-yazi">this field is required</span>
+          </div>
+        </div>
 
-					<!-- Required Mesajı -->
-					<div class="input__after input__required-error">
-						<span class="input__after-yazi"
-							>this field is required</span
-						>
-					</div>
-				</div>
+        <!-- Açıklama -->
+        <p class="input__aciklama">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+      </div>
+    </section>
 
-				<!-- Açıklama -->
-				<p class="input__aciklama">
-					Lorem ipsum, dolor sit amet consectetur adipisicing
-					elit.
-				</p>
-			</div>
-		</section>
+    <section class="typografi">
+      <h1>Lorem ipsum</h1>
+      <h2>Lorem ipsum</h2>
+      <h3>Lorem ipsum</h3>
+      <h4>Lorem ipsum</h4>
+      <h5>Lorem ipsum</h5>
+      <h6>Lorem ipsum</h6>
+    </section>
 
-		<section class="typografi">
-			<h1>Lorem ipsum</h1>
-			<h2>Lorem ipsum</h2>
-			<h3>Lorem ipsum</h3>
-			<h4>Lorem ipsum</h4>
-			<h5>Lorem ipsum</h5>
-			<h6>Lorem ipsum</h6>
-		</section>
+    <section class="butonlar">
+      <h1>butonlar</h1>
+      <table>
+        <thead>
+          <tr>
+            <th><h4>tipler</h4></th>
+            <th><h4>normal</h4></th>
+            <th><h4>buyuk</h4></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ana buton</td>
+            <td>
+              <button class="buton">buton</button>
+            </td>
+            <td>
+              <button class="buton buton--buyuk">buton</button>
+            </td>
+          </tr>
+          <tr>
+            <td>tip 2</td>
+            <td>
+              <button class="buton-2">buton</button>
+            </td>
+            <td>
+              <button class="buton-2 buton--buyuk">buton</button>
+            </td>
+          </tr>
+          <tr>
+            <td>hayalet</td>
+            <td>
+              <button class="buton-hayalet">buton</button>
+            </td>
+            <td>
+              <button class="buton-hayalet buton--buyuk">buton</button>
+            </td>
+          </tr>
+          <tr>
+            <td>link</td>
+            <td>
+              <button class="buton-link">buton</button>
+            </td>
+            <td>
+              <button class="buton-link buton--buyuk">buton</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-		<section class="butonlar">
-			<h1>butonlar</h1>
-			<table>
-				<thead>
-					<tr>
-						<th><h4>tipler</h4></th>
-						<th><h4>normal</h4></th>
-						<th><h4>buyuk</h4></th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>ana buton</td>
-						<td>
-							<button class="buton">buton</button>
-						</td>
-						<td>
-							<button class="buton buton--buyuk">
-								buton
-							</button>
-						</td>
-					</tr>
-					<tr>
-						<td>tip 2</td>
-						<td>
-							<button class="buton-2">buton</button>
-						</td>
-						<td>
-							<button class="buton-2 buton--buyuk">
-								buton
-							</button>
-						</td>
-					</tr>
-					<tr>
-						<td>hayalet</td>
-						<td>
-							<button class="buton-hayalet">buton</button>
-						</td>
-						<td>
-							<button class="buton-hayalet buton--buyuk">
-								buton
-							</button>
-						</td>
-					</tr>
-					<tr>
-						<td>link</td>
-						<td>
-							<button class="buton-link">buton</button>
-						</td>
-						<td>
-							<button class="buton-link buton--buyuk">
-								buton
-							</button>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</section>
+    <section class="no-js-section" kapali>
+      <div id="no-js" class="no-js">
+        <div class="no-js__ikon">
+          <ion-icon name="logo-javascript"></ion-icon>
+        </div>
+        <div class="no-js__icerik">
+          <p>
+            Tarayıcınızın JavaScript desteği şuan pasif durumda, sizlere daha
+            iyi bir hizmet sunabilmemiz için lütfen aktif edin.
+          </p>
+        </div>
+      </div>
+    </section>
 
-		<section class="no-js-section" kapali>
-			<div id="no-js" class="no-js">
-				<div class="no-js__ikon">
-					<ion-icon name="logo-javascript"></ion-icon>
-				</div>
-				<div class="no-js__icerik">
-					<p>
-						Tarayıcınızın JavaScript desteği şuan pasif durumda,
-						sizlere daha iyi bir hizmet sunabilmemiz için lütfen
-						aktif edin.
-					</p>
-				</div>
-			</div>
-		</section>
+    <section class="cookie" kapali>
+      <div id="cerez-popup" class="cerez-popup">
+        <a href="#" class="cerez-popup__icerik">
+          <p>
+            Bilginiz olsun diye söylüyorum, bu web sitesi çerez kullanıyor.
+          </p>
+          <span>detayli bilgi</span>
+        </a>
+        <div class="cerez-popup__butonlar">
+          <button class="buton buton--kabul">anladım</button>
+          <button class="buton buton--2 buton--daha-sonra">
+            sonra hatırlat
+          </button>
+        </div>
+      </div>
+    </section>
 
-		<section class="cookie" kapali>
-			<div id="cerez-popup" class="cerez-popup">
-				<a href="#" class="cerez-popup__icerik">
-					<p>
-						Bilginiz olsun diye söylüyorum, bu web sitesi çerez
-						kullanıyor.
-					</p>
-					<span>detayli bilgi</span>
-				</a>
-				<div class="cerez-popup__butonlar">
-					<button class="buton buton--kabul">anladım</button>
-					<button class="buton buton--2 buton--daha-sonra">
-						sonra hatırlat
-					</button>
-				</div>
-			</div>
-		</section>
+    <!-- Go Top -->
+    <button class="go-top">
+      <ion-icon class="go-top__ikon" name="arrow-up-sharp"></ion-icon>
+    </button>
+    <!-- Go Top SON -->
+  </main>
 
-		<!-- Go Top -->
-		<button class="go-top">
-			<ion-icon class="go-top__ikon" name="arrow-up-sharp"></ion-icon>
-		</button>
-		<!-- Go Top SON -->
-	</main>
-
-	<!-- Js -->
-	<script type="module" src="../../src/js/app.js"></script>
-		<!-- İon İcon -->
-		<script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-	<!-- Js SON -->
+  <!-- Js -->
+  <script type="module" src="../../src/js/app.js"></script>
+  <!-- İon İcon -->
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- Js SON -->
 </body>
 </html>
