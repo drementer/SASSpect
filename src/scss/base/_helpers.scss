@@ -7,13 +7,13 @@
   margin-inline: auto;
 }
 
-.clearfix{
+.clearfix {
   @include clearfix();
 }
 
 /**
- * Overflow hatalarını çözümlemek için her dom elemanına arkaplan veriliyor 
- * ve hoverda arkaplan yoğunlaştırılıp outline ekleniyor bu 
+ * Overflow hatalarını çözümlemek için her dom elemanına arkaplan veriliyor
+ * ve hoverda arkaplan yoğunlaştırılıp outline ekleniyor bu
  * sayede hangi eleman overflow hatası olduğu belirleniyor.
  *
  * https://www.youtube.com/shorts/ii-lSK2_Nu4 - Kewin Powell'ın videosu
@@ -75,7 +75,7 @@
 }
 
 /**
- * Display özelliğini class kullanarak ayarlamak için 
+ * Display özelliğini class kullanarak ayarlamak için
  */
 @each $display-eleman in $display-listesi {
   // Normal Modlar
