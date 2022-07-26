@@ -1,12 +1,12 @@
 // İmportlar
 import {
-	scroll_ac,
-	scroll_kapat,
-	log,
-	go_top,
-	pozisyon,
 	doc,
 	body,
+	log,
+	scrollKapat,
+	scrollAc,
+	goTop,
+	pozisyon,
 } from "./scripts/_utils.js";
 import cerez_popup from "./components/_cerez-popup.js";
 import form_elemanlari from "./components/_form-elemanlari.js";
