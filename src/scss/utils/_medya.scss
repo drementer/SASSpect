@@ -32,17 +32,6 @@ $medya-boyutlari: (
   ul: px2em(1400px),
 ) !default;
 
-/// `medya-boyutlarini-goster`i çalıştırır.
-///
-/// @type boolen
-$medya-boyutlarini-goster: true !default;
-
-/// `medya-boyutlarini-goster` için `$medya-boyutlari`ni kullanıp
-/// kullanmayacağını belirler.
-///
-/// @type boolen
-$varsayilan-medya-boyutlarini-kullan: true !default;
-
 /// Medya değerini '$medya-boyutlari'ndan alır
 ///
 /// @param {string} $deger - Alınacak değer
@@ -248,40 +237,35 @@ $varsayilan-medya-boyutlarini-kullan: true !default;
   }
 }
 
-/// Ekranda medya boyutlarını gösterir.
+/// `medya-boyutlarini-goster`i çalıştırır.
 ///
-/// @param {map} $boyutlar [$medya-boyutlari] - Gösterilecek medya boyutları
-/// @require {mixin} medya - Medya sorgusu
-///
-@mixin medya-boyutlarini-goster($boyutlar: $medya-boyutlari) {
-  @if $medya-boyutlarini-goster {
-    body::after {
-      position: fixed;
-      z-index: 99;
-      right: 0;
-      top: 0;
-      padding: 0.5rem 1rem;
-      background-color: $beyaz-3;
-      border: 1px solid $siyah;
+/// @type boolen
+$medya-boyutlarini-goster: false !default;
 
-      @each $medya-boyutu-ismi, $medya-boyutu in $boyutlar {
-        $boyut: $medya-boyutu-ismi;
-        $icerik: '#{$medya-boyutu-ismi}';
+@if $medya-boyutlarini-goster {
+  body::after {
+    position: fixed;
+    z-index: 99;
+    right: 0;
+    top: 0;
+    padding: 0.5rem 1rem;
+    background-color: $beyaz-3;
+    border: 1px solid $siyah;
 
-        @if $medya-boyutu {
-          $boyut: $medya-boyutu;
-          $icerik: '#{$medya-boyutu-ismi}: >= #{$boyut}';
-        }
+    $boyutlar: $medya-boyutlari;
 
-        @include min-medya($boyut) {
-          content: '#{$icerik}';
-        }
+    @each $medya-boyutu-ismi, $medya-boyutu in $boyutlar {
+      $boyut: $medya-boyutu-ismi;
+      $icerik: '#{$medya-boyutu-ismi}';
+
+      @if $medya-boyutu {
+        $boyut: $medya-boyutu;
+        $icerik: '#{$medya-boyutu-ismi}: >= #{$boyut}';
+      }
+
+      @include min-medya($boyut) {
+        content: '#{$icerik}';
       }
     }
   }
 }
-
-/**
- * Medya boyutlarını ekranda göstermek için
- */
-@include medya-boyutlarini-goster();
