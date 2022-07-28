@@ -30,7 +30,7 @@
 /// @param {string} $repeat [no-repeat] - Resmin tekrar edip etmeyeceğini belirler
 ///
 @mixin arkaplan($url, $size: cover, $position: center, $repeat: no-repeat) {
-  background-image: $url;
+  background-image: url('#{$url}');
   background-size: $size;
   background-position: $position;
   background-repeat: $repeat;
