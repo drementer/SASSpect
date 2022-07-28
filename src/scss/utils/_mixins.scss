@@ -9,12 +9,10 @@
 ///     }
 ///   }
 ///
-/// @example scss
-///   .foo {
-///      @include tema(dark) {
-///        color: white;
-///     }
-///   }
+/// @example css - Output Css
+///	  html[data-theme=default] .foo {
+///	    color: black;
+///	  }
 ///
 @mixin tema($tema: 'default') {
   @at-root html[data-theme='#{$tema}'] #{&} {
