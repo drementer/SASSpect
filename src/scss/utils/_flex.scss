@@ -3,6 +3,8 @@
 ////
 
 /// Flex start
+///
+/// @access private
 %flex-start {
   align-items: start;
   align-content: start;
@@ -10,6 +12,8 @@
 }
 
 /// Flex center
+///
+/// @access private
 %flex-center {
   align-items: center;
   align-content: center;
@@ -17,6 +21,8 @@
 }
 
 /// Flex end
+///
+/// @access private
 %flex-end {
   align-items: end;
   align-content: end;
