@@ -39,6 +39,8 @@ $medya-boyutlari: (
 /// @return {number} - Medya değeri
 /// @throw `$deger`, `$medya-boyutlari` içinde yok
 ///
+/// @access private
+///
 /// @example
 ///   @debug medya-degeri-al(xl);
 ///     //-> 75em
