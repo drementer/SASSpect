@@ -1,0 +1,23 @@
+/// @type map | list
+/// @access private
+$display-list: 'block', 'inline', 'inline-block', 'flex', 'inline-flex',
+  'initial', 'none' !default;
+
+/**
+ * Display özelliğini class kullanarak ayarlamak için
+ */
+@each $element in $display-list {
+  // Normal Modlar
+  .d-#{$element} {
+    display: #{$element} !important;
+  }
+
+  // Responsive modlar
+  @each $medya-ismi, $medya-boyutu in $medya-boyutlari {
+    .d-#{$medya-ismi}-#{$element} {
+      @include medya($medya-ismi) {
+        display: #{$element} !important;
+      }
+    }
+  }
+}

@@ -73,22 +73,3 @@
   @include truncate();
   -webkit-line-clamp: attr(satir number, 4);
 }
-
-/**
- * Display özelliğini class kullanarak ayarlamak için
- */
-@each $display-eleman in $display-listesi {
-  // Normal Modlar
-  .d-#{$display-eleman} {
-    display: #{$display-eleman} !important;
-  }
-
-  // Responsive modlar
-  @each $medya-ismi, $medya-boyutu in $medya-boyutlari {
-    .d-#{$medya-ismi}-#{$display-eleman} {
-      @include medya($medya-ismi) {
-        display: #{$display-eleman} !important;
-      }
-    }
-  }
-}
