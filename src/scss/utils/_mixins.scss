@@ -1,10 +1,10 @@
 /// Temaya özel still ayarlarını yapar
 ///
-/// @param {string} $tema [default] - Tema ismi
+/// @param {string} $theme [default] - Tema ismi
 ///
 /// @example scss
 ///   .foo {
-///      @include tema() {
+///      @include theme() {
 ///        color: black;
 ///     }
 ///   }
@@ -14,8 +14,8 @@
 ///	    color: black;
 ///	  }
 ///
-@mixin tema($tema: 'default') {
-  @at-root html[data-theme='#{$tema}'] #{&} {
+@mixin theme($theme: 'default') {
+  @at-root html[data-theme='#{$theme}'] #{&} {
     @content;
   }
 }
@@ -40,7 +40,7 @@
 ///      background-repeat: no-repeat;
 ///    }
 ///
-@mixin arkaplan($url, $size: cover, $position: center, $repeat: no-repeat) {
+@mixin background-image($url, $size: cover, $position: center, $repeat: no-repeat) {
   background-image: url('#{$url}');
   background-size: $size;
   background-position: $position;
@@ -99,7 +99,7 @@
 /// @param {boolen} $backface [true] - Backface-visibility özelliğini belirler
 /// @param {number} $perspective [1000] - Elementin perspective özelliğini belirler
 ///
-@mixin animasyon($backface: true, $perspective: 1000) {
+@mixin animation($backface: true, $perspective: 1000) {
   @if $backface {
     backface-visibility: hidden;
   }
