@@ -4,7 +4,7 @@
   @include margin(2rem);
   @include padding(1rem 2rem);
   @include flex-row;
-  @extend %golge;
+  @extend %shadow;
 
   position: fixed;
   bottom: 0;
