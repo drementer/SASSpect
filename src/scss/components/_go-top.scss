@@ -29,12 +29,12 @@
     right: 1rem;
   }
 
-  &--aktif {
+  &--active {
     transform: translateX(0);
     pointer-events: all;
   }
 
-  &__ikon {
+  &__icon {
     color: inherit;
     font-size: 1.4em;
   }

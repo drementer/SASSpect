@@ -87,7 +87,7 @@ textarea {
     }
   }
 
-  &[focus] &__icerik {
+  &[focus] &__inner {
     border-color: $siyah-3;
   }
 
@@ -99,7 +99,7 @@ textarea {
     @include flex;
   }
 
-  &[invalid] &__icerik {
+  &[invalid] &__inner {
     input,
     textarea,
     select {
@@ -112,7 +112,7 @@ textarea {
     }
   }
 
-  &__icerik {
+  &__inner {
     position: relative;
     border-radius: 5px;
     display: block;
@@ -153,7 +153,7 @@ textarea {
     left: 1rem;
   }
 
-  &__aciklama {
+  &__information {
     font-size: 14px;
     display: block;
     margin: 0;
@@ -167,14 +167,14 @@ textarea {
   input {
     display: none;
 
-    &:checked + label .checkbox__label-kutu::after,
-    &:checked + label .radio__label-kutu::after {
+    &:checked + label .checkbox__label-box::after,
+    &:checked + label .radio__label-box::after {
       transform: scale(1);
       opacity: 1;
     }
 
-    &:checked + label .checkbox__label-kutu,
-    &:checked + label .radio__label-kutu {
+    &:checked + label .checkbox__label-box,
+    &:checked + label .radio__label-box {
       border-color: $siyah-3 !important;
     }
   }
@@ -222,14 +222,14 @@ textarea {
     }
   }
 
-  &__label-yazi {
+  &__label-text {
     display: block;
     user-select: none;
   }
 }
 
 .radio {
-  &__label-kutu {
+  &__label-box {
     border-radius: 50%;
   }
 }

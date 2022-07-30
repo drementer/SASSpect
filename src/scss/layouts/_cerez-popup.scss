@@ -1,5 +1,5 @@
-.cerez-popup {
-  $cerez-popup__arkaplan: #f9faff !default;
+.cookie-popup {
+  $cookie-popup__background: #f9faff !default;
 
   @include margin(2rem);
   @include padding(1rem 2rem);
@@ -9,7 +9,7 @@
   position: fixed;
   bottom: 0;
   right: 0;
-  background-color: $cerez-popup__arkaplan;
+  background-color: $cookie-popup__background;
   border-right: 3px solid $ana-renk;
   align-items: center;
   justify-content: flex-end;
@@ -26,12 +26,12 @@
     border-top: 3px solid $ana-renk;
   }
 
-  &__butonlar {
+  &__buttons {
     @include flex-row-center;
     flex-wrap: wrap;
   }
 
-  &__icerik {
+  &__inner {
     @include font-size(1rem);
 
     width: 100%;
