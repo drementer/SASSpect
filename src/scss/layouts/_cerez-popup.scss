@@ -10,7 +10,7 @@
   bottom: 0;
   right: 0;
   background-color: $cookie-popup__background;
-  border-right: 3px solid $ana-renk;
+  border-right: 3px solid $primary-color;
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
@@ -23,7 +23,7 @@
     margin: 0;
     justify-content: center;
     border-right: none;
-    border-top: 3px solid $ana-renk;
+    border-top: 3px solid $primary-color;
   }
 
   &__buttons {
@@ -54,14 +54,14 @@
 
       text-transform: capitalize;
       display: inline-block;
-      color: $ana-renk;
+      color: $primary-color;
       border-bottom: 1px solid transparent;
       transition: none;
     }
 
     &:hover {
       span {
-        border-bottom-color: $ana-renk;
+        border-bottom-color: $primary-color;
       }
     }
   }

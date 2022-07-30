@@ -2,7 +2,7 @@
   position: fixed;
   inset: 0;
   bottom: 0;
-  background-color: $beyaz;
+  background-color: $white;
   display: grid;
   place-content: center;
   overflow: hidden;
@@ -38,7 +38,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: $siyah;
+      background-color: $black;
       animation: pulse 1.2s infinite;
       animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
     }
@@ -60,7 +60,7 @@
 
   @keyframes pulse {
     0% {
-      background-color: $siyah;
+      background-color: $black;
       transform: scale(0);
     }
     100% {

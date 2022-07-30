@@ -9,30 +9,30 @@
   position: relative;
   vertical-align: middle;
   border: 1px solid transparent;
-  color: $beyaz;
-  background-color: $ana-renk;
+  color: $white;
+  background-color: $primary-color;
 
   &:hover {
-    background-color: $ana-renk--600;
+    background-color: $primary-color--600;
   }
 
   &-2 {
     @extend .button;
 
-    color: $ana-renk;
+    color: $primary-color;
     background-color: transparent;
     border-color: currentColor;
 
     &:hover {
-      color: $beyaz;
-      background-color: $ana-renk;
+      color: $white;
+      background-color: $primary-color;
     }
   }
 
   &-ghost {
     @extend .button;
 
-    color: $ana-renk;
+    color: $primary-color;
     background-color: transparent;
 
     &:hover {
@@ -44,7 +44,7 @@
   &-link {
     @extend .button;
 
-    color: $ana-renk;
+    color: $primary-color;
     background-color: transparent;
     margin: 0;
     padding: 0;

@@ -18,11 +18,11 @@ select {
   }
 
   border-radius: 5px;
-  border: 1px solid $siyah-3;
+  border: 1px solid $black-3;
 
   &:hover,
   &:focus {
-    border-color: $siyah-3;
+    border-color: $black-3;
   }
 
   &::-webkit-input-placeholder {
@@ -59,7 +59,7 @@ textarea {
 
   a {
     text-transform: capitalize;
-    color: $siyah-3;
+    color: $black-3;
   }
 }
 
@@ -82,13 +82,13 @@ textarea {
       &::after {
         content: '*';
         margin-left: 0.5rem;
-        color: $ana-renk;
+        color: $primary-color;
       }
     }
   }
 
   &[focus] &__inner {
-    border-color: $siyah-3;
+    border-color: $black-3;
   }
 
   &[invalid] &__incorrect-error {
@@ -103,11 +103,11 @@ textarea {
     input,
     textarea,
     select {
-      border-color: $ana-renk;
-      color: $ana-renk;
+      border-color: $primary-color;
+      color: $primary-color;
 
       &::placeholder {
-        color: $ana-renk;
+        color: $primary-color;
       }
     }
   }
@@ -133,12 +133,12 @@ textarea {
     span {
       z-index: 2;
       position: relative;
-      color: $ana-renk;
+      color: $primary-color;
     }
 
     &::after {
       content: '';
-      background-color: $beyaz-2;
+      background-color: $white-2;
       width: 100%;
       height: 8px;
       display: block;
@@ -175,7 +175,7 @@ textarea {
 
     &:checked + label .checkbox__label-box,
     &:checked + label .radio__label-box {
-      border-color: $siyah-3 !important;
+      border-color: $black-3 !important;
     }
   }
 
@@ -185,7 +185,7 @@ textarea {
       font-size: 14px;
       display: block;
       margin-left: 2rem;
-      color: $ana-renk;
+      color: $primary-color;
     }
   }
 
@@ -201,7 +201,7 @@ textarea {
     height: 1.2rem;
     min-width: 1.2rem;
     background-color: transparent;
-    border: 1px solid $siyah-3;
+    border: 1px solid $black-3;
     margin: 2px 0;
     border-radius: 25%;
     display: grid;
@@ -210,7 +210,7 @@ textarea {
     &::after {
       content: '✔';
       display: block;
-      color: $siyah-3;
+      color: $black-3;
       position: relative;
       transform: scale(0);
       opacity: 0.5;
