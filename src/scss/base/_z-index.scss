@@ -46,6 +46,7 @@
 }
 
 /// @type list
+/// @access private
 $z-index-listesi: '.loader', '.popup', '.nav' '.go-top' !default;
 
 @include z-index($z-index-listesi);
