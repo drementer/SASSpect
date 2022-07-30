@@ -1,31 +1,4 @@
-// ------------------------- Typografi ------------------------------
 
-/// @type string | list
-$root-font-family: 'Fira Code' !default;
-
-/// @type stirng
-$root-font-size: 16px !default;
-
-/// @type stirng
-/// @alias root-font-size
-$root-font-size--mobil: 14px !default;
-
-/// 1.250 Major Third
-///
-/// @type map
-///
-/// @link https://type-scale.com/
-$font-listesi: (
-  'h1': 3.815,
-  'h2': 3.052,
-  'h3': 2.441,
-  'h4': 1.953,
-  'h5': 1.563,
-  'h6': 1.25,
-  'p': 1,
-  'label': 0.875,
-) !default;
-// ------------------------------------------------------------------
 
 // ------------------------- Display --------------------------------
 
