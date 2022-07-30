@@ -1,5 +1,5 @@
 .go-top {
-  @extend %buton;
+  @extend %button;
   @include flex-row-center;
 
   position: fixed;
