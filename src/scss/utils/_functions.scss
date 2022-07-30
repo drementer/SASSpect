@@ -16,7 +16,7 @@
 ///   @debug px2em(16px);
 ///    //-> 1em
 ///
-@function px2em($px) {
+@function px2em($px, $root-font-size: 16px) {
   @if unitless($px) {
     $px: $px * 1px;
   }
@@ -42,7 +42,7 @@
 ///   @debug px2em(16px);
 ///    //-> 1rem
 ///
-@function px2rem($px) {
+@function px2rem($px, $root-font-size: 16px) {
   @if unitless($px) {
     $px: $px * 1px;
   }
