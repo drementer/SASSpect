@@ -27,6 +27,19 @@
 /// @param {string | number} $position [center]  - Resim konumu
 /// @param {string} $repeat [no-repeat] - Resmin tekrar edip etmeyeceğini belirler
 ///
+/// @example scss
+///   .foo {
+///     @include background-image('http://unsplash.it/0?random&gravity=center', $size, $position, $repeat);
+///   }
+///
+/// @example css - Output Css
+///   .foo {
+///      background-image: url('http://unsplash.it/0?random&gravity=center');
+///      background-size: cover;
+///      background-position: center;
+///      background-repeat: no-repeat;
+///    }
+///
 @mixin arkaplan($url, $size: cover, $position: center, $repeat: no-repeat) {
   background-image: url('#{$url}');
   background-size: $size;
@@ -101,6 +114,8 @@
 /// @param {list} $liste - z-index verilecek elemanlar
 /// @param {string} $eleman - $liste elemanı
 /// @param {number} $z-index [99] - z-index başlangıç değeri
+///
+/// @access private
 ///
 /// @example scss - Basit kullanım
 ///   $liste: ".elm1", ".elm2";
@@ -196,6 +211,11 @@
   }
 }
 
+/// Elementin width ve height stilini ayarlamanın kısa yolu
+///
+/// @param {number} $width - Elementin width değeri
+/// @param {number} $height [$width] - Elementin height değeri
+///
 @mixin size($width, $height: $width) {
   width: $width;
   height: $height;
@@ -210,7 +230,7 @@
 ///     @include clearfix;
 ///   }
 ///
-///   // CSS Output
+/// @example css - Output Css
 ///   .element::after {
 ///     clear: both;
 ///     content: "";
