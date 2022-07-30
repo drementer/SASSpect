@@ -29,7 +29,7 @@
     }
   }
 
-  &-hayalet {
+  &-ghost {
     @extend .button;
 
     color: $ana-renk;
@@ -55,7 +55,7 @@
     }
   }
 
-  &#{&}--buyuk {
+  &#{&}--big {
     @include font-size(1.5rem);
   }
 }
