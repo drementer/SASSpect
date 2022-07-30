@@ -11,23 +11,14 @@
   pointer-events: all;
   clip-path: circle(100% at 50% 50%);
 
-  &[kapat] {
-    animation: kapat 1s cubic-bezier(0.19, 1, 0.22, 1);
+  &[hidden] {
+    animation: close 1s cubic-bezier(0.19, 1, 0.22, 1);
     animation-fill-mode: forwards;
     pointer-events: all;
   }
 
-  &[kapat] &__spinner {
+  &[hidden] &__spinner {
     opacity: 0;
-  }
-
-  @keyframes kapat {
-    0% {
-      clip-path: circle(100% at 50% 50%);
-    }
-    100% {
-      clip-path: circle(0% at 50% 50%);
-    }
   }
 
   &__spinner {
@@ -55,6 +46,15 @@
     img {
       width: 100%;
       max-height: 100%;
+    }
+  }
+
+  @keyframes close {
+    0% {
+      clip-path: circle(100% at 50% 50%);
+    }
+    100% {
+      clip-path: circle(0% at 50% 50%);
     }
   }
 
