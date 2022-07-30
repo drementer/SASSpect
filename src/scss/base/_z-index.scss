@@ -1,15 +1,17 @@
 /// @type list
 /// @access private
-$z-index-listesi: '.loader', '.popup', '.nav', '.go-top' !default;
+$z-index-list: '.loader', '.popup', '.nav', '.go-top' !default;
 
 /// @type number
 /// @access private
 $z-index-start: 99 !default;
 
-@each $eleman in $z-index-listesi {
+@each $element in $z-index-list {
   $z-index: $z-index-start;
-  #{$eleman} {
+
+  #{$element} {
     z-index: $z-index;
   }
+
   $z-index: $z-index - 1;
 }
