@@ -1,8 +1,8 @@
-[kapali] {
+[hidden] {
   display: none !important;
 }
 
-.konteyner {
+.container {
   width: min(100% - 2rem, 85.5rem);
   margin-inline: auto;
 }
@@ -20,7 +20,7 @@
  *
  * TODO: Mixin kullanarak yapılabilir.
  */
-.hata-ayiklama {
+.bugger {
   * {
     outline: 1px solid transparent !important;
     border-radius: 0;
