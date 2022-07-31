@@ -2,7 +2,7 @@ dest: docs/sassdoc
 display:
   watermark: true
 groups:
-  medya: Medya
+  mq: mq
   flex: Flex
   renk: Renk
   sayi: Sayi
