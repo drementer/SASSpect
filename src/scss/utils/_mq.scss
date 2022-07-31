@@ -196,7 +196,7 @@ $breakpoints: (
 
 /// Minimum medya ve üzerinde çalışacak sorgu.
 ///
-/// @alias medya
+/// @alias mq
 ///
 /// @param {string | number} $value - Girilen min-width değeri
 /// @require {mixin} mq - Medya sorgusu
@@ -211,7 +211,7 @@ $breakpoints: (
 /// `medya` mixin'in varsayılan kullanımına çok benzer ama
 /// daha pratik bir kullanım sunar.
 ///
-/// @alias medya
+/// @alias mq
 ///
 /// @param {string | number} $value - Girilen max-width değeri
 /// @require {mixin} mq - Medya sorgusu
@@ -227,7 +227,7 @@ $breakpoints: (
 /// elbetteki ona göre daha kolay ve anlaşılır bir kullanım sunar
 /// ve de önerilen kullanımdır.
 ///
-/// @alias medya
+/// @alias mq
 ///
 /// @param {string | number} $until - Girilen max-width değeri
 /// @param {string | number} $from - Girilen min-width değeri
