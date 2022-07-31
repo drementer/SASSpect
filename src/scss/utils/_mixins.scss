@@ -51,16 +51,16 @@
 /// Eğer maksimum satır aşılır ise fazla satırları kesip
 /// son satırın sonuna "..." koyar
 ///
-/// @param {number} $max-satir [2] - Maksimum satır sayısı
+/// @param {number} $max-line [2] - Maksimum satır sayısı
 ///
 /// @example scss
 ///  .foo {
 ///    @include truncate();
 ///  }
 ///
-@mixin truncate($max-satir: 2) {
+@mixin truncate($max-line: 2) {
   display: -webkit-box;
-  -webkit-line-clamp: $max-satir;
+  -webkit-line-clamp: $max-line;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -70,15 +70,15 @@
 /// Eğer maksimum satır aşılır ise fazla satırları kesip
 /// son satıra linear gradient ile şeffaflık yapar
 ///
-/// @param {number} $max-satir [2] - Maksimum satır sayısı
-/// @param {string} $arkaplan-rengi [#fff] - Gradient rengi
+/// @param {number} $max-line [2] - Maksimum satır sayısı
+/// @param {string} background-color [#fff] - Gradient rengi
 ///
-@mixin truncate-2($max-satir: 2, $arkaplan-rengi: #fff) {
+@mixin truncate-2($max-line: 2, $background-color: #fff) {
   $font-size: 1em;
   $line-height: $font-size * $root-line-height;
 
   line-height: $line-height;
-  height: $max-satir * $line-height;
+  height: $max-line * $line-height;
   overflow: hidden;
   position: relative;
 
@@ -90,7 +90,7 @@
     height: $line-height;
     width: 75%;
 
-    background: linear-gradient(90deg, transparent, $arkaplan-rengi);
+    background: linear-gradient(90deg, transparent, $background-color);
   }
 }
 
