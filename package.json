@@ -23,6 +23,6 @@
 	"license": "MIT",
 	"dependencies": {
 		"sass": "^1.53.0",
-		"sassdoc": "^1.10.12"
+		"sassdoc": "^2.7.4"
 	}
 }
