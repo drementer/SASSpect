@@ -24,7 +24,7 @@
     opacity: 1;
   }
 
-  @include medya(md) {
+  @include mq(md) {
     bottom: 1rem;
     right: 1rem;
   }

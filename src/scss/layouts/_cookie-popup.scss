@@ -16,7 +16,7 @@
   flex-wrap: wrap;
   gap: 1em;
 
-  @include medya(xl) {
+  @include mq(xl) {
     bottom: 1em;
     right: 1em;
     left: 1em;
@@ -39,7 +39,7 @@
     color: black;
     text-decoration: none;
 
-    @include medya(md) {
+    @include mq(md) {
       text-align: center;
     }
 

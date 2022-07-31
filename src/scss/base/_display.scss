@@ -13,9 +13,9 @@ $display-list: 'block', 'inline', 'inline-block', 'flex', 'inline-flex',
   }
 
   // Responsive modlar
-  @each $medya-ismi, $medya-boyutu in $medya-boyutlari {
+  @each $medya-ismi, $medya-boyutu in $breakpoints {
     .d-#{$medya-ismi}-#{$element} {
-      @include medya($medya-ismi) {
+      @include mq($medya-ismi) {
         display: #{$element} !important;
       }
     }

@@ -4,16 +4,16 @@ body {
 }
 
 .testt {
-  @include medya(1400) {
+  @include mq(1400) {
     color: #fff;
   }
-  @include medya($bitis: 1400px) {
+  @include mq($until: 1400px) {
     color: #fff;
   }
-  @include medya($baslangic: xl) {
+  @include mq($from: xl) {
     color: #fff;
   }
-  @include min-medya(1400) {
+  @include min-mq(1400) {
     color: #fff;
   }
 }

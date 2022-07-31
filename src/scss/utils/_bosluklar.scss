@@ -126,7 +126,7 @@ $bosluklar: false;
   /* Duyarlı Modlar */
   // Ana Hat
   @each $medya-boyutlari-ismi, $medya-boyutlari-degeri in $medya-boyutlari {
-    @include medya($medya-boyutlari-ismi) {
+    @include mq($medya-boyutlari-ismi) {
       @each $bosluk-hali-isim, $bosluk-hali-deger in $bosluk-hali {
         @each $bosluk-isimleri-isim, $bosluk-isimleri-deger in $bosluk-isimleri
         {
