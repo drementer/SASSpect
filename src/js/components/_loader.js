@@ -5,7 +5,7 @@ const loader = () => {
       'load',
       () => {
         setInterval(() => {
-          loader.setAttribute('kapat', '');
+          loader.setAttribute('hidden', '');
         }, 1000);
       },
       false

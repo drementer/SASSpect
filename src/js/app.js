@@ -3,19 +3,18 @@ import {
   doc,
   body,
   log,
-  scrollKapat,
-  scrollAc,
-  goTop,
-  pozisyon,
+  select,
+  scroll,
+  position,
 } from './scripts/_utils.js';
-import cerez_popup from './components/_cerez-popup.js';
-import form_elemanlari from './components/_form-elemanlari.js';
+import cookiePopup from './components/_cookie-popup.js';
+import formElements from './components/_form-elements.js';
 import goTopButon from './components/_go-top.js';
 import loader from './components/_loader.js';
-import lazy_load from './vendors/_lazy-load.js';
+import lazyLoad from './vendors/_lazy-load.js';
 
-cerez_popup();
-form_elemanlari();
+cookiePopup();
+formElements();
 goTopButon();
 loader();
-lazy_load();
+lazyLoad();

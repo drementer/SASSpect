@@ -1,18 +1,18 @@
 const goTop = () => {
-  const goTopButon = document.querySelector('.go-top');
+  const button = document.querySelector('.go-top');
 
-  const ekranKontrol = () => {
+  const event = () => {
     if (window.pageYOffset >= window.innerHeight) {
       // >= 100vh
-      goTopButon.classList.add('go-top--aktif');
+      button.classList.add('go-top--active');
 
       return;
     }
     // < 100vh
-    goTopButon.classList.remove('go-top--aktif');
+    button.classList.remove('go-top--active');
   };
 
-  const event = () => {
+  const goTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
@@ -20,17 +20,17 @@ const goTop = () => {
   };
 
   // Buton varsa
-  if (goTopButon) {
+  if (button) {
     // Sayfa yenilendiğinde konum kontrolü için
-    ekranKontrol();
+    event();
 
     // Sayfadaki kaydırma işleminde konum kontrolü için
     window.addEventListener('scroll', () => {
-      ekranKontrol();
+      event();
     });
 
     // İşlem
-    goTopButon.addEventListener('click', event);
+    button.addEventListener('click', goTop);
   }
 };
 

@@ -1,10 +1,10 @@
 const sliders = () => {
-  let ayarlar, slide;
+  let settings, slider;
   document.addEventListener('DOMContentLoaded', () => {
-    ayarlar = {};
+    settings = {};
 
-    slide = document.querySelector('');
-    if (slide) {
+    slider = document.querySelector('');
+    if (slider) {
     }
   });
 };

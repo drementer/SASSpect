@@ -3,15 +3,30 @@ const doc = document,
 
 const log = console.log.bind(doc);
 
-const scrollKapat = () => {
-    doc.querySelector('body').style.overflowY = 'hidden';
-  },
-  scrollAc = () => {
-    doc.querySelector('body').style.overflowY = 'auto';
-  },
-  goTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+const select = (selector, isMultiSelect = 0) => {
+  if (isMultiSelect == 0) {
+    return doc.querySelector(selector);
+  }
 
-const pozisyon = (obje) => {
+  return doc.querySelectorAll(selector);
+};
+
+const scroll = (val = 1) => {
+  const close = () => {
+      doc.querySelector('body').style.overflowY = 'hidden';
+    },
+    open = () => {
+      doc.querySelector('body').style.overflowY = 'auto';
+    };
+
+  if (val == 0) {
+    close();
+    return;
+  }
+  open();
+};
+
+const position = (obje) => {
   const box = obje.getBoundingClientRect(),
     docEl = doc.documentElement;
 
@@ -25,4 +40,4 @@ const pozisyon = (obje) => {
   return { top: Math.round(top), left: Math.round(left) };
 };
 
-export { doc, body, log, scrollKapat, scrollAc, goTop, pozisyon };
+export { doc, body, log, select, scroll, position };
