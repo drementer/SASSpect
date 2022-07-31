@@ -108,7 +108,7 @@ $breakpoints: (
 ///
 /// @example scss - min-width query oluşturma
 ///   .foo {
-///     @include mq($baslangic: xl) {
+///     @include mq($from: xl) {
 ///       color: white;
 ///     }
 ///   }
@@ -124,9 +124,9 @@ $breakpoints: (
 ///
 /// @example scss - Aralık belirleme
 ///   .foo {
-///     $bitis: ul;
-///     $baslangic: xl;
-///     @include mq($bitis, $baslangic) {
+///     $until: ul;
+///     $from: xl;
+///     @include mq($until, $from) {
 ///       color: white;
 ///     }
 ///   }
@@ -134,7 +134,7 @@ $breakpoints: (
 ///
 /// @example scss - Aralık belirleme
 ///   .foo {
-///     @include mq($baslangic: xl, $bitis: ul) {
+///     @include mq($from: xl, $until: ul) {
 ///       color: white;
 ///     }
 ///   }
@@ -142,9 +142,9 @@ $breakpoints: (
 ///
 /// @example scss - Aralık belirleme
 ///   .foo{
-///     $bitis: ul;
-///     $baslangic: xl;
-///     @include range-mq($baslangic, $bitis){
+///     $until: ul;
+///     $from: xl;
+///     @include range-mq($from, $until){
 ///       color: white;
 ///     }
 ///   }
