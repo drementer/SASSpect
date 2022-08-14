@@ -3,15 +3,23 @@ const doc = document,
 
 const log = console.log.bind(doc);
 
-const select = (selector, isMultiSelect = 0) => {
+const select = (selector, isMultiSelect = 0, scope) => {
+  scope = scope ? scope : document;
+
   if (isMultiSelect == 0) {
-    return doc.querySelector(selector);
+    return scope.querySelector(selector);
   }
 
-  return doc.querySelectorAll(selector);
+  return scope.querySelectorAll(selector);
 };
 
-const scroll = (val = 1) => {
+const selects = (selector, scope) => {
+  scope = scope ? scope : document;
+
+  return select(selector, 1, scope);
+};
+
+const scroll = (status = 1) => {
   const close = () => {
       doc.querySelector('body').style.overflowY = 'hidden';
     },
@@ -19,7 +27,7 @@ const scroll = (val = 1) => {
       doc.querySelector('body').style.overflowY = 'auto';
     };
 
-  if (val == 0) {
+  if (status == 0) {
     close();
     return;
   }
@@ -40,4 +48,4 @@ const position = (obje) => {
   return { top: Math.round(top), left: Math.round(left) };
 };
 
-export { doc, body, log, select, scroll, position };
+export { doc, body, log, select, selects, scroll, position };
