@@ -1,28 +1,28 @@
 {
-	"name": "dred",
-	"version": "1.4.3",
-	"homepage": "https://dred-docs.netlify.app/",
-	"description": "Projelerimin altyapısı",
-	"scripts": {
-		"sass-doc": "sassdoc src/scss",
-		"sass-build": "sass src/scss/main.scss src/css/main.min.css --style compressed --no-error-css",
-		"sass-watch": "sass --watch src/scss/main.scss src/css/main.min.css --style expanded --error-css"
-	},
-	"keywords": [
-		"scss",
-		"javascript"
-	],
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/drementer/dred.git"
-	},
-	"bugs": {
-		"url": "https://github.com/drementer/dred/issues"
-	},
-	"author": "drementer <klncarslanburak@gmail.com> (https://github.com/drementer)",
-	"license": "MIT",
-	"dependencies": {
-		"sass": "^1.53.0",
-		"sassdoc": "^2.7.4"
-	}
+  "name": "dred",
+  "version": "1.4.3",
+  "homepage": "https://dred-docs.netlify.app/",
+  "description": "Projelerimin altyapısı",
+  "scripts": {
+    "sass-doc": "sassdoc src/scss",
+    "sass-build": "sass src/scss/main.scss src/css/main.min.css --style compressed --no-error-css",
+    "sass-watch": "sass --watch src/scss/main.scss src/css/main.min.css --style expanded --error-css"
+  },
+  "keywords": [
+    "scss",
+    "javascript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drementer/dred.git"
+  },
+  "bugs": {
+    "url": "https://github.com/drementer/dred/issues"
+  },
+  "author": "drementer <klncarslanburak@gmail.com> (https://github.com/drementer)",
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.53.0",
+    "sassdoc": "^2.7.4"
+  }
 }
