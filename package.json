@@ -6,7 +6,8 @@
   "scripts": {
     "sass-doc": "sassdoc src/scss",
     "sass-build": "sass src/scss/main.scss src/css/main.min.css --style compressed --no-error-css",
-    "sass-watch": "sass --watch src/scss/main.scss src/css/main.min.css --style expanded --error-css"
+    "sass-watch": "sass --watch src/scss/main.scss src/css/main.min.css --style expanded --error-css",
+    "js-doc": "jsdoc -c jsdoc-conf.json"
   },
   "keywords": [
     "scss",

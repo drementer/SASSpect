@@ -1,0 +1,14 @@
+{
+  "sourceType": "module",
+  "source": {
+    "include": ["src/js/"],
+    "includePattern": ".+\\.js(doc|x)?$",
+    "excludePattern": ""
+  },
+  "opts": {
+    "template": "templates/default",
+    "encoding": "utf8",
+    "destination": "./docs/jsdoc/",
+    "recurse": true
+  }
+}
