@@ -4,9 +4,9 @@
   "homepage": "https://dred-docs.netlify.app/",
   "description": "Projelerimin altyapısı",
   "scripts": {
-    "sass-doc": "sassdoc src/scss",
-    "sass-build": "sass src/scss/main.scss src/css/main.min.css --style compressed --no-error-css",
+		"sass-build": "sass src/scss/main.scss src/css/main.min.css --style compressed --no-error-css",
     "sass-watch": "sass --watch src/scss/main.scss src/css/main.min.css --style expanded --error-css",
+    "sass-doc": "sassdoc src/scss",
     "js-doc": "jsdoc -c jsdoc-conf.json"
   },
   "keywords": [
@@ -23,7 +23,7 @@
   "author": "drementer <klncarslanburak@gmail.com> (https://github.com/drementer)",
   "license": "MIT",
   "dependencies": {
-    "sass": "^1.53.0",
+		"sass": "^1.53.0",
     "sassdoc": "^2.7.4",
 		"jsdoc": "^3.6.11"
   }
