@@ -24,6 +24,7 @@
   "license": "MIT",
   "dependencies": {
     "sass": "^1.53.0",
-    "sassdoc": "^2.7.4"
+    "sassdoc": "^2.7.4",
+		"jsdoc": "^3.6.11"
   }
 }
