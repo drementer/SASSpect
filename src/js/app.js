@@ -1,4 +1,6 @@
-// İmportlar
+/*
+	Imports
+*/
 import {
   doc,
   body,
@@ -6,16 +8,21 @@ import {
   select,
   selects,
   scroll,
+  addClass,
+  removeClass,
   position,
-} from './scripts/_utils.js';
-import cookiePopup from './components/_cookie-popup.js';
-import formElements from './components/_form-elements.js';
-import goTopButon from './components/_go-top.js';
-import loader from './components/_loader.js';
+} from './_utils.js';
+import cookiePopup from './_cookie-popup.js';
+import formElements from './_form-elements.js';
+import goTop from './_go-top.js';
+import loader from './_loader.js';
 import lazyLoad from './vendors/_lazy-load.js';
 
-cookiePopup();
+/*
+	Inits
+*/
+/* cookiePopup(); */
 formElements();
-goTopButon();
+goTop();
 loader();
 lazyLoad();
