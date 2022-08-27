@@ -40,7 +40,12 @@
 ///      background-repeat: no-repeat;
 ///    }
 ///
-@mixin background-image($url, $size: cover, $position: center, $repeat: no-repeat) {
+@mixin background-image(
+  $url,
+  $size: cover,
+  $position: center,
+  $repeat: no-repeat
+) {
   background-image: url('#{$url}');
   background-size: $size;
   background-position: $position;
