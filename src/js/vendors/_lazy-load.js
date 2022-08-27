@@ -13,7 +13,6 @@ const lazy_load = () => {
    * @param {Array} elemanlar lazy_load elemanlarının bulunduğu dizi
    * @param {function} io IntersectionObserver Api
    * @param {object} ayarlar io ayarları
-   * @param {elemanlar[i]} eleman io'ya gönderilecek eleman
    */
   const elemanlar = document.querySelectorAll('[lazy-load]');
 
