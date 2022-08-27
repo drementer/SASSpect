@@ -1,6 +1,6 @@
-/// Temaya özel still ayarlarını yapar
+/// Sets theme-specific style settings
 ///
-/// @param {string} $theme [default] - Tema ismi
+/// @param {string} $theme [default] - Theme name
 ///
 /// @example scss
 ///   .foo {
@@ -20,12 +20,12 @@
   }
 }
 
-/// Elementin arkaplan resmi stillerinin kısayolu
+/// Shortcut to element's background image styles
 ///
-/// @param {string} $url - Resim (url/dosya yolu)
-/// @param {string | number} $size [cover] - Resim boyutu
-/// @param {string | number} $position [center]  - Resim konumu
-/// @param {string} $repeat [no-repeat] - Resmin tekrar edip etmeyeceğini belirler
+/// @param {string} $url - Image (url/file path)
+/// @param {string | number} $size [cover] - Image size
+/// @param {string | number} $position [center]  - Resim position
+/// @param {string} $repeat [no-repeat] - Determines whether the image repeats
 ///
 /// @example scss
 ///   .foo {
@@ -47,11 +47,11 @@
   background-repeat: $repeat;
 }
 
-/// Elementin maksimum kaç satır olacağını belirler
-/// Eğer maksimum satır aşılır ise fazla satırları kesip
-/// son satırın sonuna "..." koyar
+/// Determines the maximum number of lines of the element.
+/// If the maximum line is exceeded, it cuts off the extra lines
+/// and puts "..." at the end of the last line.
 ///
-/// @param {number} $max-line [2] - Maksimum satır sayısı
+/// @param {number} $max-line [2] - Maximum number of rows
 ///
 /// @example scss
 ///  .foo {
@@ -66,12 +66,12 @@
   text-overflow: ellipsis;
 }
 
-/// Elementin maksimum kaç satır olacağını belirler
-/// Eğer maksimum satır aşılır ise fazla satırları kesip
-/// son satıra linear gradient ile şeffaflık yapar
+/// It determines the maximum number of lines of the element.
+/// If the maximum line is exceeded, it cuts off the excess lines
+/// and makes the last line transparent with a linear gradient.
 ///
-/// @param {number} $max-line [2] - Maksimum satır sayısı
-/// @param {string} background-color [#fff] - Gradient rengi
+/// @param {number} $max-line [2] - Maximum number of rows
+/// @param {string} background-color [#fff] - Gradient color
 ///
 @mixin truncate-2($max-line: 2, $background-color: #fff) {
   $font-size: 1em;
@@ -94,10 +94,10 @@
   }
 }
 
-/// Elemnt için varsayılan animasyon ayarlarını yapar
+/// Sets the default animation settings for the element
 ///
-/// @param {boolen} $backface [true] - Backface-visibility özelliğini belirler
-/// @param {number} $perspective [1000] - Elementin perspective özelliğini belirler
+/// @param {boolen} $backface [true] - Sets the backface-visibility property
+/// @param {number} $perspective [1000] - Sets the element's perspective property
 ///
 @mixin animation($backface: true, $perspective: 1000) {
   @if $backface {
@@ -140,10 +140,10 @@
   }
 }
 
-/// Elementin width ve height stilini ayarlamanın kısa yolu
+/// Shortcut to set element's width and height style
 ///
-/// @param {number} $width - Elementin width değeri
-/// @param {number} $height [$width] - Elementin height değeri
+/// @param {number} $width - The width of the element
+/// @param {number} $height [$width] - The height of the element
 ///
 @mixin size($width, $height: $width) {
   width: $width;

@@ -1,12 +1,12 @@
 @use './variables' as *;
 
-/// Px değerini em değerine çevirir
+/// Converts px to em
 ///
 /// @group sayi
 ///
-/// @param {number} $px - Çevrilecek px değeri
+/// @param {number} $px - Px value to translate
 /// @require {variable} $root-font-size - Root font size
-/// @return {number} - Em değeri
+/// @return {number} - Em value
 ///
 /// @example
 ///   @debug px2em(16);
@@ -26,13 +26,13 @@
   @return calc($px / $root-font-size) * 1em;
 }
 
-/// Px değerini rem değerine çevirir
+/// Converts rem to px
 ///
 /// @group sayi
 ///
-/// @param {number} $px - Çevrilecek px değeri
+/// @param {number} $px - Px value to translate
 /// @require {variable} $root-font-size - Root font size
-/// @return {number} - Rem değeri
+/// @return {number} - Rem value
 ///
 /// @example
 ///   @debug px2em(16);
@@ -52,15 +52,13 @@
   @return calc($px / $root-font-size) * 1rem;
 }
 
-/// Hsl renk değerini hex değerine çevirir
-/// Orjinalinde hsl to rgb olarak geçiyor ama malesef hex derliyor
-/// Elbette farklı renk formatlarıda kullanılabilir
+/// Converts hsl color value to hex value
 ///
 /// @group renk
 ///
 /// @author Max Glenister
 ///
-/// @example scss - Hsl ile kullanım
+/// @example scss - Default using
 ///  @debug hsl2hex(hsl(40, 100%, 50%));
 ///   //-> #ffaa00
 ///
@@ -68,12 +66,11 @@
   @return mix($hsl-color, $hsl-color);
 }
 
-/// Hsl renk değerini rgb değerine çevirir
-/// Elbette farklı renk formatlarıda kullanılabilir
+/// Converts hsl color value to rgb value
 ///
 /// @group renk
 ///
-/// @example scss - Hsl ile kullanım
+/// @example scss - Default using
 ///  @debug hsl2rgb(hsl(40, 100%, 50%));
 ///   //-> rgb(255, 170, 0)
 ///

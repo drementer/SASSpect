@@ -12,13 +12,7 @@
 }
 
 /**
- * Overflow hatalarını çözümlemek için her dom elemanına arkaplan veriliyor
- * ve hoverda arkaplan yoğunlaştırılıp outline ekleniyor bu
- * sayede hangi elemanın overflow hatası olduğu belirleniyor.
- *
- * https://www.youtube.com/shorts/ii-lSK2_Nu4 - Kewin Powell'ın videosu
- *
- * TODO: Mixin kullanarak yapılabilir.
+ * Each dom element is given a background and outline to resolve overflow errors.
  */
 .debugging {
   * {
@@ -65,9 +59,8 @@
 }
 
 /**
- * Dinamik yapmaya çalışıyorum ama
- * `-webkit-line-clamp`, `attr` veya `var` fonksiyonlarını
- * kabul etmiyor.
+ * I'm trying to make it dynamic but
+ * `-webkit-line-clamp` does not accept `attr` or `var` functions.
  */
 [truncate] {
   @include truncate();
