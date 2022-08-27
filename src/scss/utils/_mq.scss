@@ -5,19 +5,19 @@
 /// @type map
 /// @require {function} px2em
 ///
-/// @example scss - Px ile kullanım
+/// @example scss - Use with px
 ///   $breakpoints: (
 ///    'xs': 360px,
 ///    'sm': 576px
 ///   ) !default;
 ///
-/// @example scss - Em ile kullanım
+/// @example scss - Use with Em
 ///   $breakpoints: (
 ///    'xs': px2em(360),
 ///    'sm': px2em(576)
 ///   ) !default;
 ///
-/// @example scss - Karma kullanım
+/// @example scss - Mixed use
 ///   $breakpoints: (
 ///    'xs': 360px,
 ///    'sm': px2em(576)
@@ -32,12 +32,12 @@ $breakpoints: (
   ul: px2em(1400px),
 ) !default;
 
-/// Medya değerini '$breakpoints'ndan alır
+/// Gets the media value from '$breakpoints'
 ///
-/// @param {string} $value - Alınacak değer
-/// @require {variable} $breakpoints - Medya boyutlari
-/// @return {number} - Medya değeri
-/// @throw `$value`, `$breakpoints` içinde yok
+/// @param {string} $value - Value to be taken
+/// @require {variable} $breakpoints - Media sizes
+/// @return {number} - Media value
+/// @throw `$value` does not exist in `$breakpoints`
 ///
 /// @access private
 ///
@@ -49,24 +49,24 @@ $breakpoints: (
   @if map-has-key($breakpoints, $value) {
     @return map-get($breakpoints, $value);
   } @else {
-    @error $value + " `$breakpoints` içinde yok";
+    @error $value + " does not exist in `$breakpoints`";
   }
 }
 
-/// Css @media sorgularının süpergücü.
+/// The superpower of css @media queries.
 ///
-/// @param {number} $until [null] - Girilen max-width değeri
-/// @param {number} $from [null] - Girilen min-width değeri
-/// @param {number} $max-width [null] - Atanan max-width değeri
-/// @param {number} $min-width [null] - Atanan min-width değeri
-/// @param {string} $media-query - Medya sorgusu
+/// @param {number} $until [null] - Entered max-width value
+/// @param {number} $from [null] - Entered min-width value
+/// @param {number} $max-width [null] - Assigned max-width value
+/// @param {number} $min-width [null] - Assigned min-width value
+/// @param {string} $media-query - Media query
 ///
-/// @require {function} get-breakpoint - Medya değerini çekmek için
-/// @require {variable} $breakpoints - Medya Boyutları
+/// @require {function} get-breakpoint - To pull the media value
+/// @require {variable} $breakpoints - Media Sizes
 ///
-/// @output {string} - Medya sorgusu
+/// @output {string} - Media query
 ///
-/// @example scss - Basit kullanım
+/// @example scss - Simple operation
 ///   .foo {
 ///     @include mq(xl) {
 ///       color: white;
@@ -74,7 +74,7 @@ $breakpoints: (
 ///   }
 ///   @media screen and (max-width: 75em) { .foo { color: white; }
 ///
-/// @example scss - Özel değer ile kullanım
+/// @example scss - Usage with custom value
 ///   .foo {
 ///     @include mq(1400px) {
 ///       color: white;
@@ -82,7 +82,7 @@ $breakpoints: (
 ///   }
 ///   @media screen and (max-width: 1400px) { .foo { color: white; }
 ///
-/// @example scss - Unitless değer ile kullanım
+/// @example scss - Usage with unitless value
 ///   .foo {
 ///     @include mq(1400) {
 ///       color: white;
@@ -90,7 +90,7 @@ $breakpoints: (
 ///   }
 ///   @media screen and (max-width: 1400px) { .foo { color: white; }
 ///
-/// @example scss - px2em fonksiyon ile kullanımı
+/// @example scss - Usage with px2em function
 ///   .foo {
 ///     @include mq(px2em(1400px)) {
 ///       color: white;
@@ -98,7 +98,7 @@ $breakpoints: (
 ///   }
 ///   @media screen and (max-width: 87.5em) { .foo { color: white; }
 ///
-/// @example scss - min-width query oluşturma
+/// @example scss - Creating a min-width query
 ///   .foo {
 ///     @include min-mq(xl) {
 ///       color: white;
@@ -106,7 +106,7 @@ $breakpoints: (
 ///   }
 ///   @media screen and (min-width: 75em) { .foo { color: white; }
 ///
-/// @example scss - min-width query oluşturma
+/// @example scss - Creating a min-width query
 ///   .foo {
 ///     @include mq($from: xl) {
 ///       color: white;
@@ -114,7 +114,7 @@ $breakpoints: (
 ///   }
 ///   @media screen and (min-width: 75em) { .foo { color: white; }
 ///
-/// @example scss - max-width query oluşturma
+/// @example scss - Creating a max-width query
 ///   .foo {
 ///     @include max-mq(xl) {
 ///       color: white;
@@ -122,7 +122,7 @@ $breakpoints: (
 ///   }
 ///   @media screen and (max-width: 75em) { .foo { color: white; }
 ///
-/// @example scss - Aralık belirleme
+/// @example scss - Range determination
 ///   .foo {
 ///     $until: ul;
 ///     $from: xl;
@@ -132,7 +132,7 @@ $breakpoints: (
 ///   }
 ///   @media screen and (min-width: 75em) and (max-width: 87.5em) { .foo { color: white; }
 ///
-/// @example scss - Aralık belirleme
+/// @example scss - Range determination
 ///   .foo {
 ///     @include mq($from: xl, $until: ul) {
 ///       color: white;
@@ -140,7 +140,7 @@ $breakpoints: (
 ///   }
 ///   @media screen and (min-width: 75em) and (max-width: 87.5em) { .foo { color: white; }
 ///
-/// @example scss - Aralık belirleme
+/// @example scss - Range determination
 ///   .foo{
 ///     $until: ul;
 ///     $from: xl;
@@ -192,14 +192,14 @@ $breakpoints: (
   }
 }
 
-// Kısayollar
+// Shortcuts
 
-/// Minimum medya ve üzerinde çalışacak sorgu.
+/// Minimum media and query to run on.
 ///
 /// @alias mq
 ///
-/// @param {string | number} $value - Girilen min-width değeri
-/// @require {mixin} mq - Medya sorgusu
+/// @param {string | number} $value - Entered min-width value
+/// @require {mixin} mq - Media query
 ///
 @mixin min-mq($value) {
   @include mq(null, $value) {
@@ -207,14 +207,14 @@ $breakpoints: (
   }
 }
 
-/// Maximum medya ve üzerinde çalışacak sorgu.
-/// `medya` mixin'in varsayılan kullanımına çok benzer ama
-/// daha pratik bir kullanım sunar.
+/// Maximum media and query to run on.
+/// It is very similar to the default use of the 'media' mixin,
+/// but offers a more practical use.
 ///
 /// @alias mq
 ///
-/// @param {string | number} $value - Girilen max-width değeri
-/// @require {mixin} mq - Medya sorgusu
+/// @param {string | number} $value - Entered max-width value
+/// @require {mixin} mq - Media query
 ///
 @mixin max-mq($value) {
   @include mq($value) {
@@ -222,16 +222,16 @@ $breakpoints: (
   }
 }
 
-/// 2 nokta arası veya dışında çalışacak sorgu.
-/// `medya` mixin'in aralık kullanımına çok benzer ama
-/// elbetteki ona göre daha kolay ve anlaşılır bir kullanım sunar
-/// ve de önerilen kullanımdır.
+/// Query to run between or outside of 2 points.
+/// It is very similar to the interval usage of the `media` mixin,
+/// but of course it offers an easier and more understandable use
+/// and is the recommended usage.
 ///
 /// @alias mq
 ///
-/// @param {string | number} $until - Girilen max-width değeri
-/// @param {string | number} $from - Girilen min-width değeri
-/// @require {mixin} mq - Medya sorgusu
+/// @param {string | number} $until - Entered max-width value
+/// @param {string | number} $from - Entered min-width value
+/// @require {mixin} mq - Media query
 ///
 @mixin range-mq($from, $until) {
   @include mq($until, $from) {

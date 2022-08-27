@@ -4,15 +4,14 @@ $display-list: 'block', 'inline', 'inline-block', 'flex', 'inline-flex',
   'initial', 'none' !default;
 
 /**
- * Display özelliğini class kullanarak ayarlamak için
+ * To set the screen state using the class
  */
 @each $element in $display-list {
-  // Normal Modlar
   .d-#{$element} {
     display: #{$element} !important;
   }
 
-  // Responsive modlar
+  // Responsive
   @each $breakpoint, $breakpoint-value in $breakpoints {
     .d-#{$breakpoint}-#{$element} {
       @include mq($breakpoint) {
