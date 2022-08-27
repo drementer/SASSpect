@@ -78,7 +78,7 @@
 /// @param {number} $max-line [2] - Maximum number of rows
 /// @param {string} background-color [#fff] - Gradient color
 ///
-@mixin truncate-2($max-line: 2, $background-color: #fff) {
+@mixin gradient-truncate($max-line: 2, $background-color: #fff) {
   $font-size: 1em;
   $line-height: $font-size * $root-line-height;
 
