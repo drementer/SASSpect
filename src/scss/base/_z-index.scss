@@ -6,6 +6,10 @@ $z-index-list: '.loader', '.popup', '.nav', '.go-top' !default;
 /// @access private
 $z-index-start: 99 !default;
 
+/// @type number
+/// @access private
+$z-index-interval: 5 !default;
+
 @each $element in $z-index-list {
   $z-index: $z-index-start;
 
@@ -13,5 +17,6 @@ $z-index-start: 99 !default;
     z-index: $z-index;
   }
 
-  $z-index: $z-index - 1;
+  /// Each iteration decrease the z-index value by z-index-interval
+  $z-index: $z-index - $z-index-interval;
 }
