@@ -53,16 +53,3 @@
   position: absolute;
   width: 1px;
 }
-
-.truncate {
-  @include truncate();
-}
-
-/**
- * I'm trying to make it dynamic but
- * `-webkit-line-clamp` does not accept `attr` or `var` functions.
- */
-[truncate] {
-  @include truncate();
-  -webkit-line-clamp: attr(satir number, 4);
-}
