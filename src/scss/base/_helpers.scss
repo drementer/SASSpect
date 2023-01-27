@@ -12,9 +12,9 @@
 }
 
 /**
- * Each dom element is given a background and outline to resolve overflow errors.
+ * Each DOM element is given a background and outline to resolve overflow issiues.
  */
-.debugging {
+.debug {
   * {
     outline: 1px solid transparent !important;
     border-radius: 0;
@@ -41,7 +41,7 @@
 
 /**
  * Hide element while making it readable for screen readers
- * Shamelessly borrowed from HTML5Boilerplate:
+ * Shamelessly borrowed from HTML5Boilerplate
  */
 .visually-hidden {
   border: 0;
