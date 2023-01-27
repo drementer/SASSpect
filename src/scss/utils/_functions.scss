@@ -8,14 +8,6 @@
 /// @require {variable} $root-font-size - Root font size
 /// @return {number} - Em value
 ///
-/// @example
-///   @debug px2em(16);
-///    //-> 1em
-///
-/// @example
-///   @debug px2em(16px);
-///    //-> 1em
-///
 @function px2em($px, $root-font-size: 16px) {
   @if unitless($px) {
     $px: $px * 1px;
@@ -34,14 +26,6 @@
 /// @require {variable} $root-font-size - Root font size
 /// @return {number} - Rem value
 ///
-/// @example
-///   @debug px2em(16);
-///    //-> 1rem
-///
-/// @example
-///   @debug px2em(16px);
-///    //-> 1rem
-///
 @function px2rem($px, $root-font-size: 16px) {
   @if unitless($px) {
     $px: $px * 1px;
@@ -52,28 +36,121 @@
   @return calc($px / $root-font-size) * 1rem;
 }
 
-/// Converts hsl color value to hex value
+/// Replace substring `$search` in `$string` with `$replacement`.
 ///
-/// @group renk
+/// @group string
+/// @author Sindre Sorhus
 ///
-/// @author Max Glenister
+/// @parameter {String} $string - String to search
+/// @parameter {String} $search - Substring to search for in `$string`
+/// @parameter {String} $replacement - Replacement for `$search`
+/// @return {String}
 ///
-/// @example scss - Default using
-///  @debug hsl2hex(hsl(40, 100%, 50%));
-///   //-> #ffaa00
-///
-@function hsl2hex($hsl-color) {
-  @return mix($hsl-color, $hsl-color);
+@function string-replace($string, $search, $replacement: '') {
+  $index: str-index(
+    $string: $string,
+    $substring: $search,
+  );
+
+  @if $index {
+    @return str-slice($string, $start-at: 1, $end-at: $index - 1) + $replacement +
+      string-replace(
+        str-slice($string, $start-at: $index + str-length($search)),
+        $search,
+        $replacement
+      );
+  }
+
+  @return $string;
 }
 
-/// Converts hsl color value to rgb value
+/// Encode URL-unsafe characters in `$string`.
 ///
-/// @group renk
+/// @author Sindre Sorhus
 ///
-/// @example scss - Default using
-///  @debug hsl2rgb(hsl(40, 100%, 50%));
-///   //-> rgb(255, 170, 0)
+/// @parameter {String} $string
+/// @return {String}
 ///
-@function hsl2rgb($hsl-color) {
-  @return rgb(red($hsl-color), green($hsl-color), blue($hsl-color));
+@function url-encode($string) {
+  $map: (
+    // URL reserved characters
+    '!': '%21',
+    '#': '%23',
+    '$': '%24',
+    '&': '%26',
+    "'": '%27',
+    '(': '%28',
+    ')': '%29',
+    '*': '%2A',
+    '+': '%2B',
+    ',': '%2C',
+    '/': '%2F',
+    ':': '%3A',
+    ';': '%3B',
+    '=': '%3D',
+    '?': '%3F',
+    '@': '%40',
+    '[': '%5B',
+    ']': '%5D',
+    // In case the result is wrapped in double-quotes
+    '"': '%22'
+  );
+
+  $ret: $string;
+  @each $search, $replacement in $map {
+    $ret: string-replace($ret, $search, $replacement);
+  }
+
+  @return $ret;
+}
+
+/// Lighten a color by mixing it with white.
+///
+/// @group Color
+/// @author Sindre Sorhus
+///
+/// @parameter {Color} $color - Color to lighten
+/// @parameter {Number} $percentage - Amount of white color to mix in
+/// @return {Color}
+///
+@function tint($color, $percentage) {
+  @return mix(#fff, $color, $percentage);
+}
+
+/// Darken a color by mixing it with black.
+///
+/// @group Color
+/// @author Sindre Sorhus
+///
+/// @parameter {Color} $color - Color to darken
+/// @parameter {Number} $percentage - Amount of black color to mix in
+/// @return {Color}
+///
+@function shade($color, $percentage) {
+  @return mix(#000, $color, $percentage);
+}
+
+/// Use SVG anywhere a `url()` is accepted, like in a `background` property.
+///
+/// @author Sindre Sorhus
+///
+/// @parameter {String} $svg - SVG string. The `xmlns` attribute is added for you.
+///
+/// @example
+///   body {
+///   	background: svg-url('<svg>…</svg>');
+///   }
+///
+@function svg-url($svg) {
+  // Add missing namespace
+  $namespace: 'xmlns="http://www.w3.org/2000/svg"';
+  @if not str-index($string: $svg, $substring: $namespace) {
+    $svg: string-replace(
+      $string: $svg,
+      $search: '<svg',
+      $replacement: '<svg #{$namespace}',
+    );
+  }
+
+  @return url('data:image/svg+xml;utf8,#{url-encode($svg)}');
 }
