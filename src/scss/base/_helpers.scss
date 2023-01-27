@@ -7,8 +7,8 @@
   margin-inline: auto;
 }
 
-.clearfix {
-  @include clearfix();
+.truncate {
+  @include truncate();
 }
 
 /**
