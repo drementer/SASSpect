@@ -1,57 +1,49 @@
 /*!
- * lazy-load.js
- * @description Sayfa yüklenme hızını artırmak için görsel içeriklerini ekranın görünür alanına yaklaşınca yükler
+ * Loads visual content when it approaches
+ * the visible area of ​​the screen to
+ * increase page loading speed.
  *
  * @author drementer
- * @version 1.0.3
+ * @version 1.0.4
  * @license MIT
- * @see {@link https://github.com/drementer/lazy-load.js}
+ * @link https://github.com/drementer/lazy-load.js
  */
 
-const lazy_load = () => {
-  /**
-   * @param {Array} elemanlar lazy_load elemanlarının bulunduğu dizi
-   * @param {function} io IntersectionObserver Api
-   * @param {object} ayarlar io ayarları
-   */
-  const elemanlar = document.querySelectorAll('[lazy-load]');
+const lazyLoad = () => {
+  const lazyLoadItems = document.querySelectorAll('[lazy]');
 
-  elemanlar.forEach((eleman) => {
-    const ayarlar = {
+  const lazyLoad = (item) => {
+    const ioSettings = {
       root: null,
       threshold: 1,
       rootMargin: '300px 0px',
     };
 
-    /**
-     * IntersectionObserver Api fonksiyonu
-     *
-     * @param {string} medya_src eleman'ın lazy-load attr'si
-     */
     const io = new IntersectionObserver((entries, observer) => {
-      // Eleman her ekrana girdiğinde
       entries.forEach((entry) => {
-        // Ekrandan değilse bir şey yapma
-        if (!entry.isIntersecting) {
-          return;
-        }
+        if (!entry.isIntersecting) return;
 
-        // Atamalar
-        const eleman = entry.target,
-          medya_src = eleman.getAttribute('lazy-load');
+        let target = entry.target;
+        let value = target.getAttribute('lazy');
 
-        // Ana işlev
-        eleman.classList.add('yuklendi');
-        eleman.setAttribute('src', medya_src);
+        target.classList.add('-loaded');
+        target.removeAttribute('lazy');
+        target.setAttribute('src', value);
 
-        // İlk entry'den sonra observer'ı kapat
         observer.disconnect();
       });
-    }, ayarlar);
+    }, ioSettings);
 
-    // IntersectionObserver eleman için çalıştırılıyor
-    io.observe(eleman);
-  });
+    io.observe(item);
+  };
+
+  const initLazyLoad = () => {
+    lazyLoadItems.forEach((item) => {
+      lazyLoad(item);
+    });
+  };
+
+  window.onload = initLazyLoad();
 };
 
-export default lazy_load;
+export default lazyLoad;
