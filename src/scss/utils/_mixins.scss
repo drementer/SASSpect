@@ -20,38 +20,6 @@
   }
 }
 
-/// Shortcut to element's background image styles
-///
-/// @param {string} $url - Image (url/file path)
-/// @param {string | number} $size [cover] - Image size
-/// @param {string | number} $position [center]  - Resim position
-/// @param {string} $repeat [no-repeat] - Determines whether the image repeats
-///
-/// @example scss
-///   .foo {
-///     @include background-image('http://unsplash.it/0?random&gravity=center', $size, $position, $repeat);
-///   }
-///
-/// @example css - Output Css
-///   .foo {
-///      background-image: url('http://unsplash.it/0?random&gravity=center');
-///      background-size: cover;
-///      background-position: center;
-///      background-repeat: no-repeat;
-///    }
-///
-@mixin background-image(
-  $url,
-  $size: cover,
-  $position: center,
-  $repeat: no-repeat
-) {
-  background-image: url('#{$url}');
-  background-size: $size;
-  background-position: $position;
-  background-repeat: $repeat;
-}
-
 /// Determines the maximum number of lines of the element.
 /// If the maximum line is exceeded, it cuts off the extra lines
 /// and puts "..." at the end of the last line.
@@ -64,11 +32,11 @@
 ///  }
 ///
 @mixin truncate($max-line: 2) {
+  overflow: hidden;
   display: -webkit-box;
+  text-overflow: ellipsis;
   -webkit-line-clamp: $max-line;
   -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 /// It determines the maximum number of lines of the element.
@@ -82,18 +50,20 @@
   $font-size: 1em;
   $line-height: $font-size * $root-line-height;
 
-  line-height: $line-height;
-  height: $max-line * $line-height;
   overflow: hidden;
   position: relative;
+  height: $max-line * $line-height;
+  line-height: $line-height;
 
   &::after {
     content: '';
+
     position: absolute;
     bottom: 0;
     right: 0;
-    height: $line-height;
+
     width: 75%;
+    height: $line-height;
 
     background: linear-gradient(90deg, transparent, $background-color);
   }
@@ -130,18 +100,6 @@
     &:focus {
       @content;
     }
-  }
-}
-
-/// Make a context based selector a little more friendly
-///
-/// @author Hugo Giraudel
-///
-/// @param {String} $context
-///
-@mixin when-inside($context) {
-  #{$context} & {
-    @content;
   }
 }
 
