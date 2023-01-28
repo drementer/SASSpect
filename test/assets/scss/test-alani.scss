@@ -1,19 +1,1 @@
 @import '../../../src/scss/main.scss';
-body {
-  min-height: 200vh;
-}
-
-.testt {
-  @include mq(1400) {
-    color: #fff;
-  }
-  @include mq($until: 1400px) {
-    color: #fff;
-  }
-  @include mq($from: xl) {
-    color: #fff;
-  }
-  @include min-mq(1400) {
-    color: #fff;
-  }
-}
