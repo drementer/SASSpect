@@ -1,14 +1,9 @@
 {
   "name": "dred",
   "version": "1.4.3",
-  "homepage": "https://dred-docs.netlify.app/",
   "description": "Projelerimin altyapısı",
-  "scripts": {
-    "sass-build": "sass src/scss/main.scss src/css/main.min.css --style compressed --no-error-css",
-    "sass-watch": "sass --watch src/scss/main.scss src/css/main.min.css --style expanded --error-css",
-    "sass-doc": "sassdoc src/scss",
-    "js-doc": "jsdoc -c jsdoc-conf.json"
-  },
+  "homepage": "https://dred-docs.netlify.app/",
+  "author": "drementer <klncarslanburak@gmail.com> (https://github.com/drementer)",
   "keywords": [
     "scss",
     "javascript"
@@ -20,11 +15,16 @@
   "bugs": {
     "url": "https://github.com/drementer/dred/issues"
   },
-  "author": "drementer <klncarslanburak@gmail.com> (https://github.com/drementer)",
+  "scripts": {
+    "sass-build": "sass src/scss/main.scss src/css/main.min.css --style compressed --no-error-css",
+    "sass-watch": "sass --watch src/scss/main.scss src/css/main.min.css --style expanded --error-css",
+    "sass-doc": "sassdoc src/scss",
+    "js-doc": "jsdoc -c jsdoc-conf.json"
+  },
   "license": "MIT",
   "dependencies": {
+    "jsdoc": "^3.6.11",
     "sass": "^1.53.0",
-    "sassdoc": "^2.7.4",
-    "jsdoc": "^3.6.11"
+    "sassdoc": "^1.10.12"
   }
 }
