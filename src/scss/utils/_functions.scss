@@ -1,8 +1,4 @@
-@use './variables' as *;
-
 /// Converts px to em
-///
-/// @group sayi
 ///
 /// @param {number} $px - Px value to translate
 /// @require {variable} $root-font-size - Root font size
@@ -20,8 +16,6 @@
 
 /// Converts rem to px
 ///
-/// @group sayi
-///
 /// @param {number} $px - Px value to translate
 /// @require {variable} $root-font-size - Root font size
 /// @return {number} - Rem value
@@ -38,7 +32,6 @@
 
 /// Replace substring `$search` in `$string` with `$replacement`.
 ///
-/// @group string
 /// @author Sindre Sorhus
 ///
 /// @parameter {String} $string - String to search
@@ -106,7 +99,6 @@
 
 /// Lighten a color by mixing it with white.
 ///
-/// @group Color
 /// @author Sindre Sorhus
 ///
 /// @parameter {Color} $color - Color to lighten
@@ -119,7 +111,6 @@
 
 /// Darken a color by mixing it with black.
 ///
-/// @group Color
 /// @author Sindre Sorhus
 ///
 /// @parameter {Color} $color - Color to darken
