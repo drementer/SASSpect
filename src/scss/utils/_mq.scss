@@ -40,8 +40,6 @@ $breakpoints: (
 /// @param {number} $until [null] - Entered max-width value
 /// @param {number} $from [null] - Entered min-width value
 ///
-/// @return {string} - Media query
-///
 @mixin mq($from: null, $until: null) {
   $max-width: null;
   $min-width: null;
