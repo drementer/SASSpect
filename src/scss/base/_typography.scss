@@ -41,3 +41,8 @@ html {
     @include font-size($font-value * 1rem);
   }
 }
+
+::selection {
+  color: white;
+  background-color: black;
+}
