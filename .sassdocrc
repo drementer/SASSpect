@@ -3,8 +3,3 @@ display:
   watermark: true
 groups:
   mq: mq
-  flex: Flex
-  renk: Renk
-  sayi: Sayi
-  list: List
-  string: String
