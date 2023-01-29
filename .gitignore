@@ -27,6 +27,6 @@ package-lock.json
 
 # Project
 /dist/*
-/src/*.css
-/test/*.css
+*.css
+*.min.css
 /tmp/
