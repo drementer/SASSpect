@@ -1,3 +1,7 @@
+img:not([alt]) {
+  outline: 1px solid red;
+}
+
 .-disabled {
   display: none !important;
 }
