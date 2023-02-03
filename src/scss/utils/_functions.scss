@@ -30,6 +30,30 @@
   @return calc($px / $root-font-size) * 1rem;
 }
 
+/// Lighten a color by mixing it with white.
+///
+/// @author Sindre Sorhus
+///
+/// @parameter {Color} $color - Color to lighten
+/// @parameter {Number} $percentage - Amount of white color to mix in
+/// @return {Color}
+///
+@function tint($color, $percentage) {
+  @return mix(#fff, $color, $percentage);
+}
+
+/// Darken a color by mixing it with black.
+///
+/// @author Sindre Sorhus
+///
+/// @parameter {Color} $color - Color to darken
+/// @parameter {Number} $percentage - Amount of black color to mix in
+/// @return {Color}
+///
+@function shade($color, $percentage) {
+  @return mix(#000, $color, $percentage);
+}
+
 /// Replace substring `$search` in `$string` with `$replacement`.
 ///
 /// @author Sindre Sorhus
@@ -95,30 +119,6 @@
   }
 
   @return $ret;
-}
-
-/// Lighten a color by mixing it with white.
-///
-/// @author Sindre Sorhus
-///
-/// @parameter {Color} $color - Color to lighten
-/// @parameter {Number} $percentage - Amount of white color to mix in
-/// @return {Color}
-///
-@function tint($color, $percentage) {
-  @return mix(#fff, $color, $percentage);
-}
-
-/// Darken a color by mixing it with black.
-///
-/// @author Sindre Sorhus
-///
-/// @parameter {Color} $color - Color to darken
-/// @parameter {Number} $percentage - Amount of black color to mix in
-/// @return {Color}
-///
-@function shade($color, $percentage) {
-  @return mix(#000, $color, $percentage);
 }
 
 /// Use SVG anywhere a `url()` is accepted, like in a `background` property.
