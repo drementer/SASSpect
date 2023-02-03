@@ -1,11 +1,6 @@
 /**
  * Print styles.
- *
- * Inlined to avoid the additional HTTP request:
- *
- * https://www.phpied.com/delay-loading-your-print-css/
- * https://github.com/h5bp/html5-boilerplate/blob/5.3.0/dist/doc/css.md#print-styles
-*/
+ */
 @media print {
   *,
   *::before,
@@ -25,10 +20,6 @@
     content: ' (' attr(href) ')' !important;
   }
 
-  abbr[title]::after {
-    content: ' (' attr(title) ')' !important;
-  }
-
   /**
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
@@ -36,32 +27,5 @@
   a[href^='#']::after,
   a[href^='javascript:']::after {
     content: '' !important;
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999 !important;
-    page-break-inside: avoid !important;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid !important;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3 !important;
-    widows: 3 !important;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid !important;
   }
 }
