@@ -1,24 +1,16 @@
 input,
 textarea,
 select {
-  padding: 0;
+  @include padding(0.5rem 1rem);
+
   width: 100%;
   outline: 0;
-  border: none;
-  font-size: inherit;
-  background-color: transparent;
-  border: none;
-  display: block;
-
-  @include padding(0.5rem 1rem);
-  z-index: 1;
-
-  &:not([type='email'])::placeholder {
-    text-transform: capitalize;
-  }
-
   border-radius: 5px;
   border: 1px solid $black-3;
+  font-size: inherit;
+  display: block;
+  z-index: 1;
+  background-color: transparent;
 
   &:hover,
   &:focus {
@@ -28,6 +20,10 @@ select {
   &::-webkit-input-placeholder {
     color: inherit;
     opacity: 0.54;
+  }
+
+  &:not([type='email'])::placeholder {
+    text-transform: capitalize;
   }
 }
 
@@ -50,66 +46,69 @@ textarea {
   }
 }
 
-.input,
-.checkbox,
-.radio {
-  @include margin(1rem);
-  @include font-size(1rem);
-  max-width: 24rem;
+.checkbox {
+  input {
+    display: none;
 
-  a {
-    text-transform: capitalize;
-    color: $black-3;
+    &:checked + label .checkbox__box,
+    &:checked + label .radio__box {
+      border-color: $black-3 !important;
+
+      &::after {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  }
+
+  &__label {
+    @include flex-row;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  &__box {
+    display: grid;
+    place-content: center;
+    width: 1.2rem;
+    height: 1.2rem;
+		margin-top: 1px;
+    background-color: transparent;
+    border: 1px solid $black-3;
+    border-radius: 25%;
+    cursor: pointer;
+
+    &::after {
+      content: '✔';
+      display: block;
+      position: relative;
+      top: -3px;
+      right: -2px;
+      opacity: 0.5;
+      font-size: 22px;
+      color: $black-3;
+      transform: scale(0);
+      transform-origin: center;
+      transition: all 100ms cubic-bezier(0.05, 1.79, 1, 0.99);
+    }
+  }
+
+  &__text {
+    display: block;
+		margin: 0;
   }
 }
 
 .input {
-  margin: 1rem;
-  outline: 0;
-  background-color: transparent;
-  gap: 0.5rem;
-
   @include flex-column;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 0.5rem;
+
+  background-color: transparent;
 
   label {
     text-transform: capitalize;
-  }
-
-  &[required] {
-    label {
-      &::after {
-        content: '*';
-        margin-left: 0.5rem;
-        color: $primary-color;
-      }
-    }
-  }
-
-  &[focus] &__inner {
-    border-color: $black-3;
-  }
-
-  &[invalid] &__incorrect-error {
-    @include flex;
-  }
-
-  &[null] &__required-error {
-    @include flex;
-  }
-
-  &[invalid] &__inner {
-    input,
-    textarea,
-    select {
-      border-color: $primary-color;
-      color: $primary-color;
-
-      &::placeholder {
-        color: $primary-color;
-      }
-    }
   }
 
   &__inner {
@@ -159,77 +158,5 @@ textarea {
     margin: 0;
     margin-left: 1rem;
     @include truncate(1);
-  }
-}
-
-.checkbox,
-.radio {
-  input {
-    display: none;
-
-    &:checked + label .checkbox__label-box::after,
-    &:checked + label .radio__label-box::after {
-      transform: scale(1);
-      opacity: 1;
-    }
-
-    &:checked + label .checkbox__label-box,
-    &:checked + label .radio__label-box {
-      border-color: $black-3 !important;
-    }
-  }
-
-  &[required] {
-    &::after {
-      content: 'Required field *';
-      font-size: 14px;
-      display: block;
-      margin-left: 2rem;
-      color: $primary-color;
-    }
-  }
-
-  &__label {
-    @include flex-row;
-    gap: 0.5rem;
-    align-items: center;
-  }
-
-  &__label-kutu {
-    cursor: pointer;
-    width: 1.2rem;
-    height: 1.2rem;
-    min-width: 1.2rem;
-    background-color: transparent;
-    border: 1px solid $black-3;
-    margin: 2px 0;
-    border-radius: 25%;
-    display: grid;
-    place-content: center;
-
-    &::after {
-      content: '✔';
-      display: block;
-      color: $black-3;
-      position: relative;
-      transform: scale(0);
-      opacity: 0.5;
-      top: -3px;
-      right: -2px;
-      transform-origin: center;
-      font-size: 22px;
-      transition: all 100ms cubic-bezier(0.05, 1.79, 1, 0.99);
-    }
-  }
-
-  &__label-text {
-    display: block;
-    user-select: none;
-  }
-}
-
-.radio {
-  &__label-box {
-    border-radius: 50%;
   }
 }

@@ -1,0 +1,14 @@
+.form {
+  @include flex-column;
+
+  &__item {
+    @include padding(0.5rem 0.875rem);
+    @include font-size(1rem);
+    /* max-width: 24rem; */
+
+    a {
+      text-transform: capitalize;
+      color: $black-3;
+    }
+  }
+}
