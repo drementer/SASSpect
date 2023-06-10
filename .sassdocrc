@@ -1,5 +1,3 @@
 dest: docs/sassdoc
 display:
   watermark: true
-groups:
-  mq: mq
