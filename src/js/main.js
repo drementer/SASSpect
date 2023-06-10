@@ -1,6 +1,3 @@
-import formElements from './_form-elements.js';
-import lazyLoad from './vendors/_lazy-load.js';
-
 /**
  * Shorthand for console log.
  * @param {*} log - Console logged value.
@@ -44,4 +41,3 @@ const select = (selector, scope = document) => {
 const selectAll = (selector, scope = document) => {
   return scope.querySelectorAll(selector);
 };
-
