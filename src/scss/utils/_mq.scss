@@ -85,7 +85,7 @@ $breakpoints: (
   }
 
   @if $max-width {
-    $media-query: join($media-query, '(max-width: #{$max-width})', auto);
+    $media-query: join($media-query, '(max-width: #{$max-width - 0.01})', auto);
   }
 
   @if $min-width and $max-width {
@@ -109,7 +109,7 @@ $breakpoints: (
     padding: 0.5rem 1rem;
 
     font-size: 2rem;
-		color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 100%);
 
     background-color: hsl(308, 100%, 50%);
     border: 1px solid hsl(0, 0%, 100%);
@@ -118,6 +118,14 @@ $breakpoints: (
       @include mq(null, $name) {
         content: '#{$name} >= #{$value}';
       }
+    }
+  }
+
+	body {
+    background-color: red;
+
+    @include mq(992) {
+      background-color: green;
     }
   }
 }
