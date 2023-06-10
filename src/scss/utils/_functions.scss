@@ -1,33 +1,33 @@
 /// Converts px to em
 ///
 /// @param {number} $px - Px value to translate
-/// @require {variable} $root-font-size - Root font size
+/// @param {number} $base-font-size [16px] - Base font size
 /// @return {number} - Em value
 ///
-@function px2em($px, $root-font-size: 16px) {
+@function px2em($px, $base-font-size: 16px) {
   @if unitless($px) {
     $px: $px * 1px;
   }
   @if comparable($px, 1em) {
     @return $px;
   }
-  @return calc($px / $root-font-size) * 1em;
+  @return calc($px / $base-font-size) * 1em;
 }
 
 /// Converts rem to px
 ///
 /// @param {number} $px - Px value to translate
-/// @require {variable} $root-font-size - Root font size
+/// @param {number} $base-font-size [16px] - Base font size
 /// @return {number} - Rem value
 ///
-@function px2rem($px, $root-font-size: 16px) {
+@function px2rem($px, $base-font-size: 16px) {
   @if unitless($px) {
     $px: $px * 1px;
   }
   @if comparable($px, 1rem) {
     @return $px;
   }
-  @return calc($px / $root-font-size) * 1rem;
+  @return calc($px / $base-font-size) * 1rem;
 }
 
 /// Lighten a color by mixing it with white.
