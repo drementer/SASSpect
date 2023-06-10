@@ -16,13 +16,13 @@
     "url": "https://github.com/drementer/dred/issues"
   },
   "scripts": {
-    "sass-build": "sass src/scss/main.scss src/css/main.min.css --style compressed --no-error-css",
-    "sass-watch": "sass --watch src/scss/main.scss src/css/main.min.css --style expanded --error-css",
+    "sass-build": "sass --style compressed --no-error-css",
+    "sass-watch": "sass --watch --style expanded --error-css",
     "sass-doc": "sassdoc src/scss",
     "js-doc": "jsdoc -c jsdoc-conf.json"
   },
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "jsdoc": "^3.6.11",
     "sass": "^1.53.0",
     "sassdoc": "^2.7.4"
