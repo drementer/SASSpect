@@ -1,4 +1,4 @@
-img:not([alt]) {
+img:not([alt='']) {
   outline: 1px solid red;
 }
 
@@ -12,7 +12,7 @@ img:not([alt]) {
 }
 
 .truncate {
-  @include truncate();
+  @include truncate(2);
 }
 
 /**
