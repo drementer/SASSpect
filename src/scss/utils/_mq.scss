@@ -141,7 +141,7 @@ $show-breakpoints: false !default;
 
     $breakpoints: $breakpoints;
 
-    @each $breakpoint, $breakpoint-value in $boyutlar {
+    @each $breakpoint, $breakpoint-value in $breakpoints {
       $element: $breakpoint;
       $content: '#{$breakpoint}';
 
