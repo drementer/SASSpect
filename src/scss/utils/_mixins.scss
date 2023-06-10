@@ -48,7 +48,7 @@
 ///
 @mixin gradient-truncate($max-line: 2, $background-color: #fff) {
   $font-size: 1em;
-  $line-height: $font-size * $root-line-height;
+  $line-height: $font-size * 1.2;
 
   overflow: hidden;
   position: relative;
@@ -67,48 +67,4 @@
 
     background: linear-gradient(90deg, transparent, $background-color);
   }
-}
-
-/// Sets the default animation settings for the element
-///
-/// @param {boolen} $backface [true] - Sets the backface-visibility property
-/// @param {number} $perspective [1000] - Sets the element's perspective property
-///
-@mixin animation($backface: true, $perspective: 1000) {
-  @if $backface {
-    backface-visibility: hidden;
-  }
-  perspective: $perspective;
-}
-
-/// @param {Bool} $self [false] - Whether or not to include current selector
-///
-/// @author Harry Roberts
-/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
-///
-@mixin on-event($self: false) {
-  @if $self {
-    &,
-    &:hover,
-    &:active,
-    &:focus {
-      @content;
-    }
-  } @else {
-    &:hover,
-    &:active,
-    &:focus {
-      @content;
-    }
-  }
-}
-
-/// Shortcut to set element's width and height style
-///
-/// @param {number} $width - The width of the element
-/// @param {number} $height [$width] - The height of the element
-///
-@mixin size($width, $height: $width) {
-  width: $width;
-  height: $height;
 }
