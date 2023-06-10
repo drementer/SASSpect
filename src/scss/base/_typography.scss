@@ -29,16 +29,16 @@ $font-scales: (
 
 html {
   font-family: $root-font-family;
-  font-size: $root-font-size;
+  font-size: $root-font-size--mobile;
 
   @include mq(lg) {
-    font-size: $root-font-size--mobile;
+    font-size: $root-font-size;
   }
 }
 
 @each $element, $font-value in $font-scales {
   #{$element} {
-		font-size: $font-value * 1rem
+    font-size: $font-value * 1rem;
   }
 }
 
