@@ -1,3 +1,6 @@
+/// @type boolen
+$debug-mode: true !default;
+
 /// A collection of media breakpoints.
 ///
 /// @type Map
@@ -94,32 +97,26 @@ $breakpoints: (
   }
 }
 
-/// @type boolen
-$show-breakpoints: false !default;
-
-@if $show-breakpoints {
+@if $debug-mode {
   body::after {
-    position: fixed;
     z-index: 99;
+
+    position: fixed;
+
     right: 0;
     top: 0;
+
     padding: 0.5rem 1rem;
-    background-color: $white-3;
-    border: 1px solid $black;
 
-    $breakpoints: $breakpoints;
+    font-size: 2rem;
+		color: hsl(0, 0%, 100%);
 
-    @each $breakpoint, $breakpoint-value in $breakpoints {
-      $element: $breakpoint;
-      $content: '#{$breakpoint}';
+    background-color: hsl(308, 100%, 50%);
+    border: 1px solid hsl(0, 0%, 100%);
 
-      @if $breakpoint-value {
-        $element: $breakpoint-value;
-        $content: '#{$breakpoint}: >= #{$element}';
-      }
-
-      @include min-mq($element) {
-        content: '#{$content}';
+    @each $name, $value in $breakpoints {
+      @include mq(null, $name) {
+        content: '#{$name} >= #{$value}';
       }
     }
   }
