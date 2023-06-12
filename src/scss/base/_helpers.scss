@@ -1,5 +1,18 @@
-img:not([alt='']) {
-  outline: 1px solid red;
+img {
+  text-align: center;
+
+  &::before {
+    content: '\01F614' ' ' 'Broken image link: ';
+  }
+
+  &::after {
+    content: '(' attr(src) ')';
+    display: block;
+  }
+
+  &[alt=''] {
+    outline: 1px solid red;
+  }
 }
 
 .-hidden {
