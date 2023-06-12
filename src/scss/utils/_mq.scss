@@ -14,6 +14,8 @@ $breakpoints: (
 
 /// @type boolean
 $debug-mode: true !default;
+
+/// @type Map
 $debug-breakpoints: $breakpoints !default;
 
 /// Retrieves the value of a breakpoint from the breakpoints map.
