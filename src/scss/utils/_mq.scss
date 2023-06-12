@@ -98,21 +98,28 @@ $breakpoints: (
 }
 
 @if $debug-mode {
+  $firstBreakpoint: nth(map-keys($breakpoints), 1);
+  $firstBreakpointValue: nth(map-values($breakpoints), 1);
+
   body::after {
     z-index: 99;
+
+    content: '< (#{$firstBreakpoint} >= #{$firstBreakpointValue})';
 
     position: fixed;
 
     right: 0;
     top: 0;
 
-    padding: 0.5rem 1rem;
+		margin: 0.5rem;
+    padding: 0.5rem 1.2rem;
 
-    font-size: 2rem;
+    font-size: 0.875rem;
     color: hsl(0, 0%, 100%);
 
-    background-color: hsl(308, 100%, 50%);
     border: 1px solid hsl(0, 0%, 100%);
+		border-radius: 5rem;
+    background-color: hsl(308, 100%, 50%);
 
     @each $name, $value in $breakpoints {
       @include mq($name) {
