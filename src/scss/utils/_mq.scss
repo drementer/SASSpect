@@ -20,6 +20,8 @@ $debug-breakpoints: $breakpoints !default;
 ///
 /// @param {String} $value - The key or value of the breakpoint.
 ///
+/// @access private
+///
 /// @return {Number} The corresponding value of the breakpoint.
 @function get-breakpoint($value) {
   @if map-has-key($breakpoints, $value) {
@@ -32,6 +34,8 @@ $debug-breakpoints: $breakpoints !default;
 /// Checks the provided value and converts it to a valid breakpoint value.
 ///
 /// @param {String|Number} $value - The value to check.
+///
+/// @access private
 ///
 /// @return {Number} The valid breakpoint value.
 @function get-value($value) {
