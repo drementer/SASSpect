@@ -1,12 +1,8 @@
 img {
   text-align: center;
 
-  &::before {
-    content: '\01F614' ' ' 'Broken image link: ';
-  }
-
   &::after {
-    content: '(' attr(src) ')';
+    content: '\01F614' ' ' 'Broken image (' attr(src) ')';
     display: block;
   }
 
