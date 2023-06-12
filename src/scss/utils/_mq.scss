@@ -115,7 +115,7 @@ $breakpoints: (
     border: 1px solid hsl(0, 0%, 100%);
 
     @each $name, $value in $breakpoints {
-      @include mq(null, $name) {
+      @include mq($name) {
         content: '#{$name} >= #{$value}';
       }
     }
