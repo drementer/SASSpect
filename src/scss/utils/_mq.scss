@@ -120,12 +120,4 @@ $breakpoints: (
       }
     }
   }
-
-  body {
-    background-color: red;
-
-    @include mq(992) {
-      background-color: green;
-    }
-  }
 }
