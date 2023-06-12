@@ -49,10 +49,10 @@ $breakpoints: (
   @return $value;
 }
 
-/// Generates a media query mixin based on the provided maximum and minimum breakpoints.
+/// Generates a media query mixin based on the provided minimum and maximum breakpoints.
 ///
-/// @param {Number|Null} $max - The maximum breakpoint value.
 /// @param {Number|Null} $min - The minimum breakpoint value.
+/// @param {Number|Null} $max - The maximum breakpoint value.
 ///
 /// @example
 /// // Usage 1: Only minimum breakpoint
@@ -75,9 +75,9 @@ $breakpoints: (
 ///   // Styles for screens smaller than extra-large
 ///   background: lightgray;
 /// }
-@mixin mq($max: null, $min: null) {
-  $max-width: get-value($max);
+@mixin mq($min: null, $max: null) {
   $min-width: get-value($min);
+  $max-width: get-value($max);
   $media-query: ();
 
   @if $min-width {
@@ -121,7 +121,7 @@ $breakpoints: (
     }
   }
 
-	body {
+  body {
     background-color: red;
 
     @include mq(992) {
