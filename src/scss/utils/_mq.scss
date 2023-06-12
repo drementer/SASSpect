@@ -1,6 +1,3 @@
-/// @type boolean
-$debug-mode: true !default;
-
 /// A collection of media breakpoints.
 ///
 /// @type Map
@@ -14,6 +11,10 @@ $breakpoints: (
   xl: px2em(1200),
   ul: px2em(1400),
 ) !default;
+
+/// @type boolean
+$debug-mode: true !default;
+$debug-breakpoints: $breakpoints !default;
 
 /// Retrieves the value of a breakpoint from the breakpoints map.
 ///
@@ -98,8 +99,8 @@ $breakpoints: (
 }
 
 @if $debug-mode {
-  $firstBreakpoint: nth(map-keys($breakpoints), 1);
-  $firstBreakpointValue: nth(map-values($breakpoints), 1);
+  $firstBreakpoint: nth(map-keys($debug-breakpoints), 1);
+  $firstBreakpointValue: nth(map-values($debug-breakpoints), 1);
 
   body::after {
     z-index: 99;
@@ -111,17 +112,17 @@ $breakpoints: (
     right: 0;
     top: 0;
 
-		margin: 0.5rem;
+    margin: 0.5rem;
     padding: 0.5rem 1.2rem;
 
     font-size: 0.875rem;
     color: hsl(0, 0%, 100%);
 
     border: 1px solid hsl(0, 0%, 100%);
-		border-radius: 5rem;
+    border-radius: 5rem;
     background-color: hsl(308, 100%, 50%);
 
-    @each $name, $value in $breakpoints {
+    @each $name, $value in $debug-breakpoints {
       @include mq($name) {
         content: '#{$name} >= #{$value}';
       }
