@@ -3,12 +3,12 @@
  */
 @media print {
   *,
-  *::before,
-  *::after {
-    background: hsl(0, 0%, 100%) !important;
+  ::before,
+  ::after {
     color: hsl(0, 0%, 0%) !important;
-    box-shadow: none !important;
+    background: hsl(0, 0%, 100%) !important;
     text-shadow: none !important;
+    box-shadow: none !important;
   }
 
   a,
