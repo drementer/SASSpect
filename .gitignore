@@ -1,11 +1,9 @@
-# Folder config file
+# OS folder config files
 [Dd]esktop.ini
+.DS_Store
 
 # Windows shortcuts
 *.lnk
-
-# MacOS general
-.DS_Store
 
 # Sass
 .sass-cache/
