@@ -1,11 +1,13 @@
 /**
  * Shorthand for console log.
+ *
  * @param {*} log - Console logged value.
  */
 const { log } = console;
 
 /**
  * Fast add class from element.
+ *
  * @param {object} element - Manipulation element
  * @param {string} className - Class name
  */
@@ -15,6 +17,7 @@ const addClass = (element, className) => {
 
 /**
  * Fast remove class from element.
+ *
  * @param {object} element - Manipulation element
  * @param {string} className - Class name
  */
@@ -24,8 +27,10 @@ const removeClass = (element, className) => {
 
 /**
  * Fast select item.
+ *
  * @param {string} selector - Css selector
  * @param {object} [scope = document] - The parent of the item to be selected
+ *
  * @return {object} Selected element
  */
 const select = (selector, scope = document) => {
@@ -34,8 +39,10 @@ const select = (selector, scope = document) => {
 
 /**
  * Fast select items.
+ *
  * @param {string} selector - Css selector
  * @param {object} [scope = document] - The parent of the items to be selected
+ *
  * @returns {object} Selected elements
  */
 const selectAll = (selector, scope = document) => {
