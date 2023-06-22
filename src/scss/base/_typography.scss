@@ -43,6 +43,6 @@ html {
 }
 
 ::selection {
-  color: white;
-  background-color: black;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 0%);
 }

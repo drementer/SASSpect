@@ -7,7 +7,7 @@ img {
   }
 
   &[alt=''] {
-    outline: 1px solid red;
+    outline: 1px solid hsl(0, 100%, 50%);
   }
 }
 
@@ -31,11 +31,11 @@ img {
   * {
     outline: 1px solid transparent !important;
     border-radius: 0;
-    background-color: rgba(0, 100, 0, 0.1) !important;
+    background-color: hsla(120, 100%, 20%, 0.1) !important;
 
     &:hover {
-      outline-color: rgb(0, 0, 0) !important;
-      background-color: rgba(0, 100, 0, 0.15) !important;
+      outline-color: hsl(0, 0%, 0%) !important;
+      background-color: hsla(120, 100%, 20%, 0.15) !important;
     }
   }
 }

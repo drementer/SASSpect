@@ -5,8 +5,8 @@
   *,
   *::before,
   *::after {
-    background: #fff !important;
-    color: #000 !important;
+    background: hsl(0, 0%, 100%) !important;
+    color: hsl(0, 0%, 0%) !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
