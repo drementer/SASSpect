@@ -1,4 +1,4 @@
-/// Converts px to em
+/// Converts px to em.
 ///
 /// @param {number} $px - Px value to translate
 /// @param {number} $base-font-size [16px] - Base font size
@@ -15,7 +15,7 @@
   @return calc($px / $base-font-size) * 1em;
 }
 
-/// Converts rem to px
+/// Converts rem to px.
 ///
 /// @param {number} $px - Px value to translate
 /// @param {number} $base-font-size [16px] - Base font size
@@ -58,32 +58,28 @@
   @return mix(#000, $color, $percentage);
 }
 
-/// Replace substring `$search` in `$string` with `$replacement`.
+/// `$string` içindeki `$search` alt dizgisini `$replacement` ile değiştirir.
 ///
 /// @author Sindre Sorhus
 ///
-/// @parameter {String} $string - String to search
-/// @parameter {String} $search - Substring to search for in `$string`
-/// @parameter {String} $replacement - Replacement for `$search`
+/// @param {String} $string - Aranacak dize
+/// @param {String} $search - `$string` içinde aranacak alt dizi
+/// @param {String} $replacement - `$search` için yerine konacak değer
 ///
 /// @return {String}
 ///
 @function string-replace($string, $search, $replacement: '') {
-  $index: str-index(
-    $string: $string,
-    $substring: $search,
-  );
+  $index: str-index($string, $search);
 
-  @if $index {
-    @return str-slice($string, $start-at: 1, $end-at: $index - 1) + $replacement +
-      string-replace(
-        str-slice($string, $start-at: $index + str-length($search)),
-        $search,
-        $replacement
-      );
+  @if not $index {
+    @return $string;
   }
 
-  @return $string;
+  $before: str-slice($string, 1, $index - 1);
+  $after: str-slice($string, $index + str-length($search));
+  $replaced: string-replace($after, $search, $replacement);
+
+  @return $before + $replacement + $replaced;
 }
 
 /// Encode URL-unsafe characters in `$string`.
@@ -95,8 +91,7 @@
 /// @return {String}
 ///
 @function url-encode($string) {
-  $map: (
-    // URL reserved characters
+  $url-map: (
     '!': '%21',
     '#': '%23',
     '$': '%24',
@@ -115,38 +110,32 @@
     '@': '%40',
     '[': '%5B',
     ']': '%5D',
-    // In case the result is wrapped in double-quotes
-    '"': '%22'
+    '"': '%22',
   );
 
-  $ret: $string;
-  @each $search, $replacement in $map {
-    $ret: string-replace($ret, $search, $replacement);
+  @each $search, $replacement in $url-map {
+    $string: string-replace($string, $search, $replacement);
   }
 
-  @return $ret;
+  @return $string;
 }
 
 /// Use SVG anywhere a `url()` is accepted, like in a `background` property.
 ///
 /// @author Sindre Sorhus
 ///
-/// @parameter {String} $svg - SVG string. The `xmlns` attribute is added for you.
+/// @param {String} $svg - SVG string. The `xmlns` attribute is added for you.
 ///
 /// @example
 ///   body {
-///   	background: svg-url('<svg>…</svg>');
+///     background: svg-url('<svg>...</svg>');
 ///   }
 ///
 @function svg-url($svg) {
-  // Add missing namespace
   $namespace: 'xmlns="http://www.w3.org/2000/svg"';
-  @if not str-index($string: $svg, $substring: $namespace) {
-    $svg: string-replace(
-      $string: $svg,
-      $search: '<svg',
-      $replacement: '<svg #{$namespace}',
-    );
+
+  @if not str-index($svg, $namespace) {
+    $svg: string-replace($svg, '<svg', '<svg #{$namespace}');
   }
 
   @return url('data:image/svg+xml;utf8,#{url-encode($svg)}');
