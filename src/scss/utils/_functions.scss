@@ -2,6 +2,7 @@
 ///
 /// @param {number} $px - Px value to translate
 /// @param {number} $base-font-size [16px] - Base font size
+///
 /// @return {number} - Em value
 ///
 @function px2em($px, $base-font-size: 16px) {
@@ -18,6 +19,7 @@
 ///
 /// @param {number} $px - Px value to translate
 /// @param {number} $base-font-size [16px] - Base font size
+///
 /// @return {number} - Rem value
 ///
 @function px2rem($px, $base-font-size: 16px) {
@@ -36,6 +38,7 @@
 ///
 /// @parameter {Color} $color - Color to lighten
 /// @parameter {Number} $percentage - Amount of white color to mix in
+///
 /// @return {Color}
 ///
 @function tint($color, $percentage) {
@@ -48,6 +51,7 @@
 ///
 /// @parameter {Color} $color - Color to darken
 /// @parameter {Number} $percentage - Amount of black color to mix in
+///
 /// @return {Color}
 ///
 @function shade($color, $percentage) {
@@ -61,6 +65,7 @@
 /// @parameter {String} $string - String to search
 /// @parameter {String} $search - Substring to search for in `$string`
 /// @parameter {String} $replacement - Replacement for `$search`
+///
 /// @return {String}
 ///
 @function string-replace($string, $search, $replacement: '') {
@@ -86,6 +91,7 @@
 /// @author Sindre Sorhus
 ///
 /// @parameter {String} $string
+///
 /// @return {String}
 ///
 @function url-encode($string) {
