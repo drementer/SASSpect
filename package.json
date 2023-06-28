@@ -1,19 +1,16 @@
 {
-  "name": "dred",
+  "name": "sasspect",
   "version": "1.5",
-  "description": "Projelerimin altyapısı",
-  "homepage": "https://dred-docs.netlify.app/",
+  "description": "SASS Aspect: The Foundation for Modern Websites ",
+  "homepage": "https://sasspect.netlify.app/",
   "author": "drementer <klncarslanburak@gmail.com> (https://github.com/drementer)",
-  "keywords": [
-    "scss",
-    "javascript"
-  ],
+  "keywords": [ "scss" ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/drementer/dred.git"
+    "url": "git+https://github.com/drementer/SASSpect.git"
   },
   "bugs": {
-    "url": "https://github.com/drementer/dred/issues"
+    "url": "https://github.com/drementer/SASSpect/issues"
   },
   "scripts": {
     "sass-build": "sass src/scss/main.scss src/css/main.min.css --style compressed --no-error-css",
