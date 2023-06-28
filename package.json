@@ -15,7 +15,7 @@
   "scripts": {
     "sass-build": "sass src/scss/main.scss src/css/main.min.css --style compressed --no-error-css",
     "sass-watch": "sass --watch src/scss/main.scss src/css/main.min.css --style expanded --error-css",
-    "sass-doc": "sassdoc src/scss"
+    "sass-doc": "sassdoc src/scss -d doc"
   },
   "license": "MIT",
   "devDependencies": {
