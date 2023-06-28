@@ -11,7 +11,7 @@
   vertical-align: inherit;
 }
 
-html {
+:where(html) {
   scroll-behavior: smooth;
   line-height: 1.5;
   overflow-wrap: break-word;
