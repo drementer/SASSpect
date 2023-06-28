@@ -13,9 +13,9 @@
     "url": "https://github.com/drementer/SASSpect/issues"
   },
   "scripts": {
-    "sass-build": "sass src/scss/main.scss src/css/main.min.css --style compressed --no-error-css",
-    "sass-watch": "sass --watch src/scss/main.scss src/css/main.min.css --style expanded --error-css",
-    "sass-doc": "sassdoc src/scss -d doc"
+		"dev": "sass --watch src/scss/main.scss src/css/main.min.css --style expanded --error-css",
+    "prod": "sass src/scss/main.scss src/css/main.min.css --style compressed --no-error-css",
+    "doc": "sassdoc src/scss -d doc"
   },
   "license": "MIT",
   "devDependencies": {
