@@ -4,7 +4,9 @@
   "description": "SASS Aspect: The Foundation for Modern Websites ",
   "homepage": "https://sasspect.netlify.app/",
   "author": "drementer <klncarslanburak@gmail.com> (https://github.com/drementer)",
-  "keywords": [ "scss" ],
+  "keywords": [
+    "scss"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/drementer/SASSpect.git"
@@ -13,7 +15,7 @@
     "url": "https://github.com/drementer/SASSpect/issues"
   },
   "scripts": {
-		"dev": "sass --watch src/scss/main.scss src/css/main.min.css --style expanded --error-css",
+    "dev": "sass --watch src/scss/main.scss src/css/main.min.css --style expanded --error-css",
     "dist": "sass src/scss/main.scss src/css/main.min.css --style compressed --no-error-css",
     "doc": "sassdoc src/scss"
   },
