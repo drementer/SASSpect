@@ -15,18 +15,9 @@
   scroll-behavior: smooth;
   line-height: 1.5;
   overflow-wrap: break-word;
-  tab-size: 4;
 
   -webkit-tap-highlight-color: hsla(0, 0%, 0%, 0);
   -webkit-tap-highlight-color: transparent;
-
-  text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-
-  text-rendering: optimizeLegibility !important;
-  -moz-osx-font-smoothing: grayscale !important;
-  -webkit-font-smoothing: antialiased !important;
 }
 
 :where(body) {
