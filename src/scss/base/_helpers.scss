@@ -1,4 +1,4 @@
-img {
+:where(img) {
   text-align: center;
 
   &::after {
