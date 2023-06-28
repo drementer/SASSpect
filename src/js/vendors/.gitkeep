@@ -1,3 +1,0 @@
-The purpose of the .gitkeep file is to solve problem of Git not pushing empty folders to remote DVCS repos like GitHub or GitLab.
-To get Git to recognize an empty directory, the unwritten rule is to put a file named .gitkeep in it.
-Git will see the .gitkeep file in the otherwise empty folder and make that folder part of the next commit or push.
