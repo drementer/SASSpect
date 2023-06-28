@@ -1,125 +1,76 @@
-/**
- * 1. Add border box sizing.
- * 2. Backgrounds do not repeat by default.
- */
 *,
 ::before,
 ::after {
-  box-sizing: border-box; /* 1 */
-  background-repeat: no-repeat; /* 2 */
+  box-sizing: border-box;
+  background-repeat: no-repeat;
 }
 
-/**
- * 1. Add text decoration inheritance.
- * 2. Add vertical alignment inheritance.
- */
 ::before,
 ::after {
-  text-decoration: inherit; /* 1 */
-  vertical-align: inherit; /* 2 */
+  text-decoration: inherit;
+  vertical-align: inherit;
 }
 
-/**
- * 2. Change the line height.
- * 3. Breaks words to prevent overflow.
- * 4. Use a 4-space tab width.
- * 5. Remove the grey highlight on links in iOS.
- * 6. Prevent adjustments of font size after orientation changes in iOS.
- */
 html {
   scroll-behavior: smooth;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  tab-size: 4;
 
-  line-height: 1.5; /* 2 */
+  -webkit-tap-highlight-color: hsla(0, 0%, 0%, 0);
+  -webkit-tap-highlight-color: transparent;
 
-  overflow-wrap: break-word; /* 3 */
-
-  tab-size: 4; /* 4 */
-
-  -webkit-tap-highlight-color: hsla(0, 0%, 0%, 0); /* 5 */
-  -webkit-tap-highlight-color: transparent; /* 5 */
-
-  text-size-adjust: 100%; /* 6 */
-  -webkit-text-size-adjust: 100%; /* 6 */
-  -ms-text-size-adjust: 100%; /* 6 */
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 
   text-rendering: optimizeLegibility !important;
   -moz-osx-font-smoothing: grayscale !important;
   -webkit-font-smoothing: antialiased !important;
 }
 
-/**
- * 1. Remove the margin.
- * 2. Remove the overflow-x scrolling.
- */
 :where(body) {
-  margin: 0; /* 1 */
-  overflow-x: hidden; /* 2 */
+  margin: 0;
+  overflow-x: hidden;
 }
 
-/**
- * Collapse border spacing.
- */
 :where(table) {
   border-collapse: collapse;
 }
 
-/**
- * Remove the all padding for all browsers.
- */
 :where(td, th) {
   padding: 0;
 }
 
-/**
- * Change the font styles.
- */
 :where(button, input, select, textarea) {
   font: inherit;
 }
 
-/**
- * Change the resize direction.
- */
 :where(textarea) {
   resize: vertical;
 }
 
-/**
- * 1. Remove the margin and paddings.
- * 2. Change the font styles.
- */
 :where(h1, h2, h3, h4, h5, h6) {
-  margin: 0; /* 1 */
-  padding: 0; /* 1 */
-  font-weight: normal; /* 2 */
-  text-transform: capitalize; /* 2 */
+  margin: 0;
+  padding: 0;
+
+  font-weight: normal;
+  text-transform: capitalize;
 }
 
-/**
- * Prevent the display of empty elements.
- */
 :where(p, span):empty {
   display: none;
 }
 
-/**
- * Prevent the scaling of media items.
- */
 :where(img, picture, video, canvas, svg) {
   display: block;
   max-width: 100%;
 }
 
-/**
- * Change the display on visually hidden elements.
- */
 [hidden] {
   display: none !important;
 }
 
-/**
- * Correct the text style of placeholders.
- */
 ::placeholder {
   color: inherit;
   opacity: 0.54;
