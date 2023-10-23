@@ -35,7 +35,7 @@ $debug-breakpoints: $breakpoints !default;
     @return map-get($breakpoints, $value);
   }
 
-  @error "#{$value} does not exist in $breakpoints!!!";
+  @error '#{$value} does not exist in $breakpoints!!!';
 }
 
 /// Checks the provided value and converts it to a valid breakpoint value.
