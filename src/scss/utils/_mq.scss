@@ -13,6 +13,9 @@ $breakpoints: (
   ul: px2em(1400),
 ) !default;
 
+/// @type String
+$media-type: screen !default;
+
 /// @type boolean
 $debug-mode: true !default;
 
@@ -45,7 +48,7 @@ $debug-breakpoints: $breakpoints !default;
 ///
 @function get-value($value) {
   @if $value == null or $value == '' {
-    @return null;
+    @return false;
   }
 
   @if type-of($value) == string {
@@ -86,7 +89,7 @@ $debug-breakpoints: $breakpoints !default;
 ///   background: lightgray;
 /// }
 ///
-@mixin mq($min: null, $max: null) {
+@mixin mq($min: null, $max: null, $and: null, $media-type: $media-type) {
   $min-width: get-value($min);
   $max-width: get-value($max);
   $media-query: ();
@@ -103,7 +106,27 @@ $debug-breakpoints: $breakpoints !default;
     $media-query: '#{nth($media-query, 1)} and #{nth($media-query, 2)}';
   }
 
-  @media screen and #{$media-query} {
+  @if $and {
+    $media-query: '#{$media-query} and #{$and}';
+  }
+
+  $media-query: '#{$media-type} and #{$media-query}';
+
+  @debug $media-query;
+
+  @media #{$media-query} {
+    @content;
+  }
+}
+
+@mixin min-mq($min) {
+  @include mq($min, null) {
+    @content;
+  }
+}
+
+@mixin max-mq($max) {
+  @include mq(null, $max) {
     @content;
   }
 }
