@@ -35,7 +35,7 @@ $debug-breakpoints: $breakpoints !default;
     @return map-get($breakpoints, $value);
   }
 
-  @error "#{$value} does not exist in $breakpoints";
+  @error "#{$value} does not exist in $breakpoints!!!";
 }
 
 /// Checks the provided value and converts it to a valid breakpoint value.
@@ -107,7 +107,7 @@ $debug-breakpoints: $breakpoints !default;
   }
 
   @if length($media-query) == 0 {
-    @error 'No valid breakpoints provided.';
+    @error 'No valid breakpoints provided!!!';
   }
 
   @if $and {
