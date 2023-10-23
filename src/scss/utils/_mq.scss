@@ -106,11 +106,17 @@ $debug-breakpoints: $breakpoints !default;
     $media-query: '#{nth($media-query, 1)} and #{nth($media-query, 2)}';
   }
 
+  @if length($media-query) == 0 {
+    @error 'No valid breakpoints provided.';
+  }
+
   @if $and {
     $media-query: '#{$media-query} and #{$and}';
   }
 
-  $media-query: '#{$media-type} and #{$media-query}';
+  @if $media-type {
+    $media-query: '#{$media-type} and #{$media-query}';
+  }
 
   @debug $media-query;
 
