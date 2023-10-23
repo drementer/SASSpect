@@ -118,8 +118,6 @@ $debug-breakpoints: $breakpoints !default;
     $media-query: '#{$media-type} and #{$media-query}';
   }
 
-  @debug $media-query;
-
   @media #{$media-query} {
     @content;
   }
