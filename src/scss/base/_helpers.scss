@@ -25,7 +25,7 @@
 }
 
 .debug {
-  :is(*, &) {
+  * {
     outline: 1px solid transparent !important;
     border-radius: 0;
     background-color: hsla(120, 100%, 20%, 0.1) !important;
