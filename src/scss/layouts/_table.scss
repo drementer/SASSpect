@@ -1,0 +1,19 @@
+.responsive-table {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: auto;
+
+  td,
+  th {
+    padding: 0.75rem 1rem;
+    border: 1px solid #dbe2f2;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f3f6fa;
+  }
+}
