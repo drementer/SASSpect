@@ -51,6 +51,10 @@
   resize: vertical;
 }
 
+:where(iframe) {
+  border: 0;
+}
+
 :where(table) {
   border-collapse: collapse;
 }
