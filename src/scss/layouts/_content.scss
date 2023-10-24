@@ -35,6 +35,10 @@
   text-decoration: none;
 }
 
+:where(figure) {
+  margin: 0;
+}
+
 :where(figcaption) {
   font-size: 0.875rem;
   margin-top: 1rem;
