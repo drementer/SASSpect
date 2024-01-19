@@ -1,14 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Code:300,regular,500,600,700');
+html {
+  font-family: $root-font-family;
+  font-size: $root-font-size--mobile;
 
-/// @type string | list
-$root-font-family: 'Fira Code' !default;
-
-/// @type stirng
-$root-font-size: 16px !default;
-
-/// @type stirng
-/// @alias root-font-size
-$root-font-size--mobile: 14px !default;
+  @include mq(lg) {
+    font-size: $root-font-size;
+  }
+}
 
 /// 1.250 Major Third
 ///
@@ -27,15 +24,6 @@ $font-scales: (
   'p': 1,
   'label': 0.875,
 ) !default;
-
-html {
-  font-family: $root-font-family;
-  font-size: $root-font-size--mobile;
-
-  @include mq(lg) {
-    font-size: $root-font-size;
-  }
-}
 
 @each $element, $font-value in $font-scales {
   #{$element} {

@@ -1,4 +1,4 @@
-/* Color pallette */
+/// Color pallette
 $white: hsl(0, 0%, 100%) !default;
 $white--100: tint($white, 80%) !default;
 $white--200: tint($white, 60%) !default;
@@ -21,7 +21,18 @@ $black--700: shade($black, 40%) !default;
 $black--800: shade($black, 60%) !default;
 $black--900: shade($black, 80%) !default;
 
-/* cubic-bezier timing functions */
+/// Typography
+/// @type string | list
+$root-font-family: 'Fira Code' !default;
+
+/// @type stirng
+$root-font-size: 16px !default;
+
+/// @type stirng
+/// @alias root-font-size
+$root-font-size--mobile: 14px !default;
+
+/// cubic-bezier Timing Functions
 $ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
 $ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 $ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
