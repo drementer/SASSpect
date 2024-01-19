@@ -1,16 +1,3 @@
-:where(img) {
-  text-align: center;
-
-  &::after {
-    content: '\01F614'' ' 'Broken image (' attr(src) ')';
-    display: block;
-  }
-
-  &[alt=''] {
-    outline: 1px solid hsl(0, 100%, 50%);
-  }
-}
-
 .-hidden {
   display: none !important;
 }
