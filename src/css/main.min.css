@@ -1,1 +1,354 @@
-body::after{z-index:99;content:"< (xs >= 22.5em)";position:fixed;left:0;right:0;top:0;margin:.5rem auto;padding:.5rem 1.2rem;width:fit-content;font-size:.875rem;color:#fff;border:1px solid #fff;border-radius:5rem;background-color:#f0d}@media screen and (min-width: 22.5em){body::after{content:"xs >= 22.5em"}}@media screen and (min-width: 36em){body::after{content:"sm >= 36em"}}@media screen and (min-width: 48em){body::after{content:"md >= 48em"}}@media screen and (min-width: 62em){body::after{content:"lg >= 62em"}}@media screen and (min-width: 75em){body::after{content:"xl >= 75em"}}@media screen and (min-width: 87.5em){body::after{content:"ul >= 87.5em"}}*,::before,::after{box-sizing:border-box;background-repeat:no-repeat}::before,::after{text-decoration:inherit;vertical-align:inherit}:where(html){scroll-behavior:smooth;line-height:1.5;overflow-wrap:break-word;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:rgba(0,0,0,0)}:where(body){margin:0;overflow-x:hidden}:where(h1,h2,h3,h4,h5,h6){margin:0;padding:0;font-weight:normal;text-transform:capitalize}::placeholder{color:inherit;opacity:.54}:where(img,picture,video,canvas,svg){display:block;max-width:100%}:where(button,input,select,textarea){font:inherit}:where(textarea){resize:vertical}:where(iframe){border:0}:where(table){border-collapse:collapse}:where(td,th){padding:0}[hidden]{display:none !important}@media print{*,::before,::after{color:#000 !important;background:#fff !important;text-shadow:none !important;box-shadow:none !important}a,a:visited{text-decoration:underline !important}a[href]::after{content:" (" attr(href) ")" !important}a[href^="#"]::after,a[href^="javascript:"]::after{content:"" !important}}@media(prefers-reduced-motion: reduce){*,::before,::after{animation-delay:-1ms !important;animation-duration:1ms !important;animation-iteration-count:1 !important;background-attachment:initial !important;scroll-behavior:auto !important;transition-duration:0s !important;transition-delay:0s !important}}.-hidden{display:none !important}.container{width:min(100% - 2rem,85.5rem);margin-inline:auto}.truncate{overflow:hidden;display:-webkit-box;text-overflow:ellipsis;-webkit-line-clamp:2;-webkit-box-orient:vertical}.debug *{outline:1px solid rgba(0,0,0,0) !important;border-radius:0;background-color:rgba(0,102,0,.1) !important}.debug *:hover{outline-color:#000 !important;background-color:rgba(0,102,0,.15) !important}.responsive-video{overflow:hidden;position:relative;width:100%;padding-top:56.25%}.responsive-video :is(iframe,video){position:absolute;inset:0;width:100%;height:100%}.responsive-table{overflow-x:auto;width:100%}.hide-text{overflow:hidden;padding:0;text-indent:101%;white-space:nowrap}.visually-hidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}html{font-family:"Fira Code";font-size:14px}@media screen and (min-width: 62em){html{font-size:16px}}h1{font-size:3.815rem}h2{font-size:3.052rem}h3{font-size:2.441rem}h4{font-size:1.953rem}h5{font-size:1.563rem}h6{font-size:1.25rem}a{font-size:1rem}p{font-size:1rem}label{font-size:.875rem}::selection{color:#fff;background-color:#000}:where(a){text-decoration:underline}:where(b,strong){font-weight:bolder}:where(sub,sup){position:relative;font-size:75%;line-height:0;vertical-align:baseline}:where(sub){bottom:-0.25em}:where(sup){top:-0.5em}:where(small){font-size:80%}:where(del){color:red;text-decoration:line-through}:where(ins){color:green;text-decoration:none}:where(figure){margin:0}:where(figcaption){font-size:.875rem;margin-top:1rem;text-align:center}.form{display:flex;flex-direction:column}.form__item{padding:.5rem .875rem;font-size:1rem}table{border-collapse:collapse;table-layout:auto}table td,table th{padding:.75rem 1rem;border:1px solid #dbe2f2;text-align:left}table th{background-color:#f3f6fa}/*# sourceMappingURL=main.min.css.map */
+body::after {
+  z-index: 99;
+  content: "< (xs >= 22.5em)";
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0.5rem auto;
+  padding: 0.5rem 1.2rem;
+  width: fit-content;
+  font-size: 0.875rem;
+  color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 5rem;
+  background-color: hsl(308, 100%, 50%);
+}
+@media screen and (min-width: 22.5em) {
+  body::after {
+    content: "xs >= 22.5em";
+  }
+}
+@media screen and (min-width: 36em) {
+  body::after {
+    content: "sm >= 36em";
+  }
+}
+@media screen and (min-width: 48em) {
+  body::after {
+    content: "md >= 48em";
+  }
+}
+@media screen and (min-width: 62em) {
+  body::after {
+    content: "lg >= 62em";
+  }
+}
+@media screen and (min-width: 75em) {
+  body::after {
+    content: "xl >= 75em";
+  }
+}
+@media screen and (min-width: 87.5em) {
+  body::after {
+    content: "ul >= 87.5em";
+  }
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+:where(html) {
+  scroll-behavior: smooth;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  -webkit-tap-highlight-color: hsla(0, 0%, 0%, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+:where(body) {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+::placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+:where(img, picture, video, canvas, svg) {
+  display: block;
+  max-width: 100%;
+}
+
+:where(button, input, select, textarea) {
+  font: inherit;
+}
+
+:where(textarea) {
+  resize: vertical;
+}
+
+:where(iframe) {
+  border: 0;
+}
+
+:where(table) {
+  border-collapse: collapse;
+}
+
+:where(td, th) {
+  padding: 0;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media print {
+  *,
+  ::before,
+  ::after {
+    color: hsl(0, 0%, 0%) !important;
+    background: hsl(0, 0%, 100%) !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline !important;
+  }
+  a[href]::after {
+    content: " (" attr(href) ")" !important;
+  }
+  /**
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "" !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
+.-hidden {
+  display: none !important;
+}
+
+.container {
+  width: min(100% - 2rem, 85.5rem);
+  margin-inline: auto;
+}
+
+.truncate {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.debug * {
+  outline: 1px solid transparent !important;
+  border-radius: 0;
+  background-color: hsla(120, 100%, 20%, 0.1) !important;
+}
+.debug *:hover {
+  outline-color: hsl(0, 0%, 0%) !important;
+  background-color: hsla(120, 100%, 20%, 0.15) !important;
+}
+
+.responsive-video {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.responsive-video :is(iframe, video) {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.responsive-table {
+  overflow-x: auto;
+  width: 100%;
+}
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.hide-text {
+  overflow: hidden;
+  padding: 0; /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+html {
+  font-family: "Fira Code";
+  font-size: 14px;
+}
+@media screen and (min-width: 62em) {
+  html {
+    font-size: 16px;
+  }
+}
+
+h1 {
+  font-size: 3.815rem;
+}
+
+h2 {
+  font-size: 3.052rem;
+}
+
+h3 {
+  font-size: 2.441rem;
+}
+
+h4 {
+  font-size: 1.953rem;
+}
+
+h5 {
+  font-size: 1.563rem;
+}
+
+h6 {
+  font-size: 1.25rem;
+}
+
+a {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+label {
+  font-size: 0.875rem;
+}
+
+::selection {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 0%);
+}
+
+.link[href] {
+  text-decoration: none;
+}
+.link[href]:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+:where(a) {
+  text-decoration: underline;
+}
+
+:where(b, strong) {
+  font-weight: bolder;
+}
+
+:where(sub, sup) {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+:where(sub) {
+  bottom: -0.25em;
+}
+
+:where(sup) {
+  top: -0.5em;
+}
+
+:where(small) {
+  font-size: 80%;
+}
+
+:where(del) {
+  color: red;
+  text-decoration: line-through;
+}
+
+:where(ins) {
+  color: green;
+  text-decoration: none;
+}
+
+:where(figure) {
+  margin: 0;
+}
+
+:where(figcaption) {
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form__item {
+  padding: 0.5rem 0.875rem;
+  font-size: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: auto;
+}
+table td,
+table th {
+  padding: 0.75rem 1rem;
+  border: 1px solid #dbe2f2;
+  text-align: left;
+}
+table th {
+  background-color: #f3f6fa;
+}
+
+/*# sourceMappingURL=main.min.css.map */
