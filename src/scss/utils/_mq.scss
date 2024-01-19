@@ -141,16 +141,17 @@ $debug-breakpoints: $breakpoints !default;
 
   body::after {
     z-index: 99;
-
     content: '< (#{$firstBreakpoint} >= #{$firstBreakpointValue})';
 
     position: fixed;
-
+    left: 0;
     right: 0;
     top: 0;
 
-    margin: 0.5rem;
+    margin: 0.5rem auto;
     padding: 0.5rem 1.2rem;
+
+    width: fit-content;
 
     font-size: 0.875rem;
     color: hsl(0, 0%, 100%);
